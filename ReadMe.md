@@ -1,4 +1,4 @@
-# Replace and write your Lastname and Name - Replace and write here Project name
+# Szabo Martin - Replace and write here Project name
 ** Example: Mrkva Jozef - SunGlide | Mining Company
 
 ## Table of Contents
