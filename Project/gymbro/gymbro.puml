@@ -1,0 +1,170 @@
+@startuml
+class sk.stuba.fiit.martin.szabo.gymbro.city.Map {
+- ArrayList<Gym> gyms
+- Transform transform
+- Image texture
++ <<Create>> Map()
++ <<Create>> Map(ArrayList<Gym>,Transform,String)
++ void calculatePath(Gym,Vector2D)
++ void draw()
++ void addGym(Gym)
++ void removeGym(Gym)
++ ArrayList<Gym> getGyms()
++ void setGyms(ArrayList<Gym>)
++ Transform getTransform()
++ void setTransform(Transform)
++ Image getTexture()
++ void setTexture(Image)
++ String serialize(int)
++ {static} Property deserialize()
+}
+class sk.stuba.fiit.martin.szabo.gymbro.Main {
++ void start(Stage)
++ {static} void main(String[])
+}
+class sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D {
+- double x
+- double y
++ <<Create>> Vector2D(double,double)
++ <<Create>> Vector2D()
++ Vector2D copy()
++ double getX()
++ void setX(double)
++ double getY()
++ void setY(double)
++ String serialize(int)
++ {static} Vector2D deserialize()
++ boolean equals(Object)
++ int hashCode()
+}
+class sk.stuba.fiit.martin.szabo.gymbro.window.Controller {
+- Label welcomeText
+# void onHelloButtonClick()
+}
+abstract class sk.stuba.fiit.martin.szabo.gymbro.file.Serialization {
++ String addStringProperty(String,String,int,boolean,boolean)
++ String addIntProperty(String,int,int,boolean,boolean)
++ String addFloatProperty(String,float,int,boolean,boolean)
++ String addDoubleProperty(String,double,int,boolean,boolean)
++ String addBooleanProperty(String,boolean,int,boolean,boolean)
++ String beginObjectProperty(String,int)
++ String endObjectProperty(int)
++ String addTabs(int)
++ String addEnding(boolean,boolean)
+}
+class sk.stuba.fiit.martin.szabo.gymbro.utils.Property {
+- String name
+- Object value
++ <<Create>> Property()
++ <<Create>> Property(String,String)
++ String getName()
++ void setName(String)
++ Object getValue()
++ void setValue(Object)
++ String serialize(int)
++ {static} Property deserialize()
+}
+class sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu {
+- ArrayList<Property> properties
+- Transform transform
++ <<Create>> ModalMenu()
++ <<Create>> ModalMenu(ArrayList<Property>,Transform)
++ void show()
++ ArrayList<Property> getProperties()
++ void setProperties(ArrayList<Property>)
++ String serialize(int)
++ {static} Property deserialize()
+}
+class sk.stuba.fiit.martin.szabo.gymbro.utils.Transform {
+- Vector2D position
+- double rotation
+- Vector2D scale
++ <<Create>> Transform()
++ <<Create>> Transform(Vector2D)
++ <<Create>> Transform(Vector2D,double,Vector2D)
++ Transform copy()
++ String toString()
++ Vector2D getPosition()
++ void setPosition(Vector2D)
++ double getRotation()
++ void setRotation(double)
++ Vector2D getScale()
++ void setScale(Vector2D)
++ String serialize(int)
++ {static} Transform deserialize()
+}
+class sk.stuba.fiit.martin.szabo.gymbro.utils.Constants {
++ {static} int SCREEN_WIDTH
++ {static} int SCREEN_HEIGHT
++ {static} String SCREEN_TITLE
++ {static} int BUTTON_OFFSET_X
++ {static} int BUTTON_OFFSET_Y
++ {static} int BUTTON_SPACING_HZ
++ {static} int BUTTON_SPACING_VT
++ {static} int BUTTON_HEIGHT
++ {static} int BUTTON_WIDTH
++ {static} int TAB_WIDTH
++ {static} int TAB_HEIGHT
++ {static} int TAB_OFFSET_X
++ {static} int TAB_OFFSET_Y
++ {static} int TAB_HORIZONTAL_SPACING
+}
+class sk.stuba.fiit.martin.szabo.gymbro.file.Parser {
+- {static} int offset
+- {static} int line
+- {static} byte[] bytes
+- <<Create>> Parser()
++ {static} byte[] getBytes()
++ {static} void openFile(String)
++ {static} byte[] readAllBytes(InputStream)
++ {static} void skipWhitespace()
++ {static} char peek()
++ {static} char advance()
++ {static} void consume(char)
++ {static} boolean atEnd()
++ {static} int parseInt()
++ {static} double parseDouble()
++ {static} float parseFloat()
++ {static} String parseString()
++ {static} boolean parseBoolean()
+- {static} boolean isDigit(char)
++ {static} void consumeBeginObjectProperty(String)
++ {static} void consumeEndObjectProperty()
++ {static} String consumeStringProperty(String)
++ {static} int consumeIntProperty(String)
++ {static} double consumeDoubleProperty(String)
++ {static} float consumeFloatProperty(String)
++ {static} boolean consumeBooleanProperty(String)
+- {static} void consumeProperty(String)
+- {static} void checkString(String)
+- {static} void consumeBoolean(boolean)
+}
+class sk.stuba.fiit.martin.szabo.gymbro.city.Gym {
+- Transform transform
+- Image texture
+- Integer amountOfEquipment
+- ModalMenu menu
++ <<Create>> Gym()
++ <<Create>> Gym(Transform,Integer,String)
++ Transform getTransform()
++ void setTransform(Transform)
++ Image getTexture()
++ void setTexture(Image)
++ ModalMenu getMenu()
++ void setMenu(ModalMenu)
++ Integer getAmountOfEquipment()
++ void setAmountOfEquipment(Integer)
++ String serialize(int)
++ {static} Property deserialize()
+}
+
+' TODO:: Add agregation, composition, asociation
+
+sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|-- sk.stuba.fiit.martin.szabo.gymbro.city.Map
+javafx.application.Application <|-- sk.stuba.fiit.martin.szabo.gymbro.Main
+sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|-- sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D
+sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|-- sk.stuba.fiit.martin.szabo.gymbro.utils.Property
+sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|-- sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu
+sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|-- sk.stuba.fiit.martin.szabo.gymbro.utils.Transform
+sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|-- sk.stuba.fiit.martin.szabo.gymbro.city.Gym
+@enduml
