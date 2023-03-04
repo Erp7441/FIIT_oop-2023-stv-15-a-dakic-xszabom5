@@ -21,14 +21,13 @@ public class Transform extends Serialization{
      *
      * @param position 2D vector containing position coordinates.
      */
-
-    public Transform(){
-        this.position = new Vector2D(); //! Aggregation
+    public Transform (Vector2D position) {
+        this.position = position; //! Aggregation
         this.rotation = 0.0;
         this.scale = new Vector2D(1.0, 1.0); //! Composition
     }
-    public Transform (Vector2D position) {
-        this.position = position; //! Aggregation
+    public Transform(){
+        this.position = new Vector2D(); //! Composition
         this.rotation = 0.0;
         this.scale = new Vector2D(1.0, 1.0); //! Composition
     }

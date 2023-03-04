@@ -160,6 +160,46 @@ class sk.stuba.fiit.martin.szabo.gymbro.city.Gym {
 
 ' TODO:: Add agregation, composition, asociation
 
+'------------------------------------------------
+' Composition
+'------------------------------------------------
+
+sk.stuba.fiit.martin.szabo.gymbro.utils.Transform *--  sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D
+sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu *-- sk.stuba.fiit.martin.szabo.gymbro.utils.Property
+sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu *-- sk.stuba.fiit.martin.szabo.gymbro.utils.Transform
+sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu *-- java.util.ArrayList
+sk.stuba.fiit.martin.szabo.gymbro.city.Map *-- sk.stuba.fiit.martin.szabo.gymbro.city.Gym
+sk.stuba.fiit.martin.szabo.gymbro.city.Map *-- sk.stuba.fiit.martin.szabo.gymbro.utils.Transform
+sk.stuba.fiit.martin.szabo.gymbro.city.Map *-- javafx.scene.image.Image
+sk.stuba.fiit.martin.szabo.gymbro.city.Gym *-- javafx.scene.image.Image
+sk.stuba.fiit.martin.szabo.gymbro.city.Gym *-- sk.stuba.fiit.martin.szabo.gymbro.utils.Transform
+
+'------------------------------------------------
+' Agregation
+'------------------------------------------------
+
+sk.stuba.fiit.martin.szabo.gymbro.utils.Transform o--  sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D
+sk.stuba.fiit.martin.szabo.gymbro.utils.Property o-- java.lang.String
+sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu o-- sk.stuba.fiit.martin.szabo.gymbro.utils.Property
+sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu o-- sk.stuba.fiit.martin.szabo.gymbro.utils.Transform
+sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu o-- java.util.ArrayList
+sk.stuba.fiit.martin.szabo.gymbro.city.Map o-- java.util.ArrayList
+sk.stuba.fiit.martin.szabo.gymbro.city.Map o-- sk.stuba.fiit.martin.szabo.gymbro.city.Gym
+sk.stuba.fiit.martin.szabo.gymbro.city.Map o-- sk.stuba.fiit.martin.szabo.gymbro.utils.Transform
+sk.stuba.fiit.martin.szabo.gymbro.city.Gym o-- sk.stuba.fiit.martin.szabo.gymbro.utils.Transform
+sk.stuba.fiit.martin.szabo.gymbro.city.Gym o-- java.lang.Integer
+
+'------------------------------------------------
+' Association
+'------------------------------------------------
+
+sk.stuba.fiit.martin.szabo.gymbro.city.Gym <-- sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu
+javafx.scene.control.Label <-- sk.stuba.fiit.martin.szabo.gymbro.window.Controller
+
+'------------------------------------------------
+' Inheritance
+'------------------------------------------------
+
 sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|-- sk.stuba.fiit.martin.szabo.gymbro.city.Map
 javafx.application.Application <|-- sk.stuba.fiit.martin.szabo.gymbro.Main
 sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|-- sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D

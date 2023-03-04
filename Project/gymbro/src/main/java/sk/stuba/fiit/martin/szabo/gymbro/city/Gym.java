@@ -5,7 +5,6 @@ import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
-import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
 public class Gym extends Serialization{
 
