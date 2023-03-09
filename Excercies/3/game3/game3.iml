@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Game3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game3a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game3b-Observer" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game3c-Strategy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game3d-PreVisitor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game3e-Visitor" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
