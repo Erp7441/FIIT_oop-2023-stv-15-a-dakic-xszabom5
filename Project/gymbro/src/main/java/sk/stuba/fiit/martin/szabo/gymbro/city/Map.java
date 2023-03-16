@@ -1,12 +1,18 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city;
 
+import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
+import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Map extends Serialization{
     private ArrayList<Gym> gyms = new ArrayList<>();
@@ -15,18 +21,38 @@ public class Map extends Serialization{
 
     public Map(){}
 
-    public Map(ArrayList<Gym> gyms, Transform transform, String texturePath){
-        this.gyms = gyms;
+    public Map(List<Gym> gyms, Transform transform, String texturePath){
+        this.gyms = (ArrayList<Gym>) gyms;
         this.transform = transform;
-        this.texture = new Image(texturePath);
+
+        try{
+            this.texture = new Image(new FileInputStream(texturePath));
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void calculatePath(Gym gym, Vector2D currentVector2D){
 
     }
 
-    public void draw(){
+    public void draw(Stage stage){
+        ImageView view = new ImageView(this.getTexture());
 
+        view.setX(this.getTransform().getPosition().getX());
+        view.setY(this.getTransform().getPosition().getY());
+
+        view.setFitWidth(this.getTransform().getScale().getX());
+        view.setFitHeight(this.getTransform().getScale().getY());
+
+        view.setPreserveRatio(false);
+
+        Group root = new Group(view);
+
+        Scene scene = new Scene(root, this.getTexture().getWidth(), this.getTexture().getHeight());
+
+        stage.setScene(scene);
     }
 
     public void addGym(Gym gym){
@@ -59,6 +85,15 @@ public class Map extends Serialization{
 
     public void setTexture(Image texture){
         this.texture = texture;
+    }
+
+    public void setTexture(String texturePath){
+        try{
+            this.texture = new Image(new FileInputStream(texturePath));
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public String serialize(int tabSize){
