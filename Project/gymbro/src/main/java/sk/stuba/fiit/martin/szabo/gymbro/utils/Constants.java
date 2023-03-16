@@ -1,9 +1,16 @@
 package sk.stuba.fiit.martin.szabo.gymbro.utils;
 
 public class Constants{
-    public static final int SCREEN_WIDTH = 1280;
-    public static final int SCREEN_HEIGHT = 720;
+    private Constants(){}
+
+    public static final int SCREEN_WIDTH = 840;
+    public static final int SCREEN_HEIGHT = 960;
     public static final String SCREEN_TITLE = "GymBro";
+    public static final boolean SCREEN_RESIZABLE = false;
+
+
+    // TODO:: Remove unused constants
+
     public static final int BUTTON_OFFSET_X = 400;
     public static final int BUTTON_OFFSET_Y = 560;
     public static final  int BUTTON_SPACING_HZ = 10;

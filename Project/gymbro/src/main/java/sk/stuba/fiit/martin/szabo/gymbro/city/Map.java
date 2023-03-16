@@ -9,6 +9,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
+import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -37,17 +38,18 @@ public class Map extends Serialization{
 
     }
 
-    public void draw(Stage stage){
+    public void draw(){
+        Stage stage = Window.getInstance().getStage();
         ImageView view = new ImageView(this.getTexture());
 
-        view.setX(this.getTransform().getPosition().getX());
-        view.setY(this.getTransform().getPosition().getY());
-        view.setFitWidth(this.getTransform().getScale().getX());
-        view.setFitHeight(this.getTransform().getScale().getY());
+        view.setX(this.getX());
+        view.setY(this.getY());
+        view.setFitWidth(this.getWidth());
+        view.setFitHeight(this.getHeight());
         view.setPreserveRatio(false);
 
         Group root = new Group(view);
-        Scene scene = new Scene(root, this.getTransform().getScale().getX(), this.getTransform().getScale().getY());
+        Scene scene = new Scene(root, this.getWidth(), this.getHeight());
         stage.setScene(scene);
     }
 
@@ -105,4 +107,63 @@ public class Map extends Serialization{
 
         return null;
     }
+
+    //* Utility getters/setters
+    public Vector2D getPosition(){
+        return this.getTransform().getPosition();
+    }
+
+    public double getRotation(){
+        return this.getTransform().getRotation();
+    }
+
+    public Vector2D getScale(){
+        return this.getTransform().getScale();
+    }
+
+    public double getX(){
+        return this.getPosition().getX();
+    }
+
+    public double getY(){
+        return this.getPosition().getY();
+    }
+
+    public double getWidth(){
+        return this.getScale().getX();
+    }
+
+    public double getHeight(){
+        return this.getScale().getY();
+    }
+
+    public void setPosition(Vector2D position){
+        this.getTransform().setPosition(position);
+    }
+
+    public void setRotation(double rotation){
+        this.getTransform().setRotation(rotation);
+    }
+
+    public void setScale(Vector2D scale){
+        this.getTransform().setScale(scale);
+    }
+
+    public void setX(double x){
+        this.getPosition().setX(x);
+    }
+
+    public void setY(double y){
+        this.getPosition().setY(y);
+    }
+
+    public void setWidth(double width){
+        this.getScale().setX(width);
+    }
+
+    public void setHeight(double height){
+        this.getScale().setY(height);
+    }
+
+
 }

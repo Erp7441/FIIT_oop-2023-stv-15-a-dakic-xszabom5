@@ -8,6 +8,8 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 public class Gym extends Serialization{
 
+    // BIG TODO:: Implement builder for this class
+
     private Transform transform = new Transform();
     private Image texture = null;
     private Integer amountOfEquipment = null;

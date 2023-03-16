@@ -10,14 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ce3646f-4fa9-4e2e-be05-4370be681e7b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro Doc.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1 Diagram Szabo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/Gym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/Gym.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
