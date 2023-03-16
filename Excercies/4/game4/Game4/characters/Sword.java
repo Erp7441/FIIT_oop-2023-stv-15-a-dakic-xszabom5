@@ -19,4 +19,9 @@ public abstract class Sword {
 	// the compiler makes the decision which method is to be run according to the type of the knight parameter
 	public abstract void hit(Knight knight, Ogre ogre);
 	public abstract void hit(BraveKnight knight, Ogre ogre);
+
+	@Override
+	public String toString(){
+		return "Sword ID: " + productNumber;
+	}
 }

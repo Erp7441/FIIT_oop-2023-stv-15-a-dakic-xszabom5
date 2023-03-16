@@ -28,6 +28,8 @@ public class Knight implements Energy {
 	public int getEnergy() {
 		return energy + additionalEnergy;
 	}
+
+	public Sword getSword() { return sword; }
 	
 	public void attack(Ogre ogre) {
 		sword.hit(this, ogre);

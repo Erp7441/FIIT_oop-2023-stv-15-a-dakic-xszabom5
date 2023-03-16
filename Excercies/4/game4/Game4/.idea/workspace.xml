@@ -5,23 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96b80556-3c21-40bb-bc28-2ec404601925" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_openjfx_dialogs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/openjfx_javafx_controls.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/openjfx_javafx_fxml.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/openjfx_javafx_graphics.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/openjfx_javafx_media.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/openjfx_javafx_swing.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/SwordOfWarriors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dc408887ccc32cfb39cecdde48ab3c1e59aff16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/647fc414bf56028b4b76d73473797ead3cb0d7c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/d/4dc408887ccc32cfb39cecdde48ab3c1e59aff16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/4/647fc414bf56028b4b76d73473797ead3cb0d7c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Game4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/GameGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/characters/Sword.java" beforeDir="false" afterPath="$PROJECT_DIR$/characters/Sword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/GameGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/gui/GameGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
@@ -52,8 +57,8 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2974977&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -78,7 +83,9 @@
       <workItem from="1678954703724" duration="16000" />
       <workItem from="1678956025817" duration="134000" />
       <workItem from="1678956182745" duration="1947000" />
-      <workItem from="1678958154103" duration="1105000" />
+      <workItem from="1678958154103" duration="1472000" />
+      <workItem from="1678970135526" duration="960000" />
+      <workItem from="1678971116749" duration="748000" />
     </task>
     <servers />
   </component>

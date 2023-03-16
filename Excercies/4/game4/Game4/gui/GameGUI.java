@@ -11,6 +11,7 @@ import javafx.event.*;
 public class GameGUI extends Application {
 	private Button createWarriors = new Button("Create Warriors");
 	private Button startClash = new Button("Start Clash");
+	private Button delete = new Button("Delete");
 	private TextField knights = new TextField();
 	private TextField braveKnights = new TextField();
 	private TextField badOgres = new TextField();
@@ -19,8 +20,9 @@ public class GameGUI extends Application {
 	private Label badOgresLabel = new Label("Bad ogres");
 	private TextArea output = new TextArea();
 	private ScrollPane scroll = new ScrollPane();
-	
 	private EnergyOfWarriors energyOfWarriors;
+
+	private SwordOfWarriors swordOfWarriors;
 	
 	public void start(Stage mainWindow) {
 		mainWindow.setTitle("Clash");
@@ -31,6 +33,7 @@ public class GameGUI extends Application {
 		
 		pane.getChildren().add(createWarriors);
 		pane.getChildren().add(startClash);
+		pane.getChildren().add(delete);
 		pane.getChildren().add(knights);
 		pane.getChildren().add(knightsLabel);
 		pane.getChildren().add(braveKnights);
@@ -38,7 +41,8 @@ public class GameGUI extends Application {
 		pane.getChildren().add(badOgres);
 		pane.getChildren().add(badOgresLabel);
 		pane.getChildren().add(output);
-		
+
+
 		scroll.setContent(pane);		
 		
 /*
@@ -110,9 +114,17 @@ public class GameGUI extends Application {
 
  		startClash.setOnAction(e -> output.appendText(game.clash()));
 
+		 delete.setOnAction(e -> {
+			 output.clear();
+		 });
+
 		energyOfWarriors = new EnergyOfWarriors(game);
 		game.followClash(energyOfWarriors);
 		pane.getChildren().add(energyOfWarriors);
+
+		swordOfWarriors = new SwordOfWarriors(game);
+		game.followClash(swordOfWarriors);
+		pane.getChildren().add(swordOfWarriors);
 
 //		mainWindow.setScene(new Scene(pane, 500, 300));
 		mainWindow.setScene(new Scene(scroll, 500, 300)); // with scrollbars
