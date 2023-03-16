@@ -42,16 +42,12 @@ public class Map extends Serialization{
 
         view.setX(this.getTransform().getPosition().getX());
         view.setY(this.getTransform().getPosition().getY());
-
         view.setFitWidth(this.getTransform().getScale().getX());
         view.setFitHeight(this.getTransform().getScale().getY());
-
         view.setPreserveRatio(false);
 
         Group root = new Group(view);
-
-        Scene scene = new Scene(root, this.getTexture().getWidth(), this.getTexture().getHeight());
-
+        Scene scene = new Scene(root, this.getTransform().getScale().getX(), this.getTransform().getScale().getY());
         stage.setScene(scene);
     }
 
