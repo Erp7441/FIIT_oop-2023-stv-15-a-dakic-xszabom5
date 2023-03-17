@@ -4,7 +4,6 @@ package sk.stuba.fiit.martin.szabo.gymbro.utils;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Parser;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 
-import java.io.Serializable;
 import java.util.Objects;
 
 /**

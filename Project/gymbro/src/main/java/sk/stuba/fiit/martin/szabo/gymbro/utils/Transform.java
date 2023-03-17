@@ -3,8 +3,6 @@ package sk.stuba.fiit.martin.szabo.gymbro.utils;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Parser;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 
-import java.io.Serializable;
-
 /**
  * Transform class containing one vector for position. One vector for scale and
  * one double value for the amount of rotation. This is used on objects, so they can

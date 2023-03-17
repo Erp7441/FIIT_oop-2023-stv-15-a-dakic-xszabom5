@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sk.stuba.fiit.martin.szabo.gymbro.window.MapController"
+            fx:controller="sk.stuba.fiit.martin.szabo.gymbro.window.MapFxmlController"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>

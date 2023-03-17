@@ -9,7 +9,7 @@
 <VBox   alignment="CENTER"
         xmlns="http://javafx.com/javafx"
         xmlns:fx="http://javafx.com/fxml"
-        fx:controller="sk.stuba.fiit.martin.szabo.gymbro.window.MainMenuController"
+        fx:controller="sk.stuba.fiit.martin.szabo.gymbro.window.MainMenuFxmlController"
         prefHeight="400.0" prefWidth="600.0">
 
     <Button id="start" onAction="#startMap">Start</Button>
