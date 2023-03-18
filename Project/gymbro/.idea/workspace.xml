@@ -13,11 +13,8 @@
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro Doc.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1 Diagram Szabo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,7 @@
       <workItem from="1677956184236" duration="1278000" />
       <workItem from="1678374222541" duration="23000" />
       <workItem from="1679074022157" duration="14691000" />
-      <workItem from="1679096295978" duration="2287000" />
+      <workItem from="1679096295978" duration="2964000" />
     </task>
     <servers />
   </component>
