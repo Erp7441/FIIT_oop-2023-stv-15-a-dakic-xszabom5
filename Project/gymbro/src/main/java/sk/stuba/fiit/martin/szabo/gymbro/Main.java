@@ -27,7 +27,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
  *    useful for parsing.<br /><br />
 
  * 6. ✔ Singleton since we want only one instance of a {@link Window}. We can limit the number of instances by creating static
- *    attribute {@link Window#window} inside {@link Window} class and implementing {@link Window#getInstance()} method which will check if the attribute
+ *    attribute {@link Window}.window inside {@link Window} class and implementing {@link Window#getInstance()} method which will check if the attribute
  *    object is created. If not create it and then return it. Else return it. Also, helpful for getting {@link Stage} and {@link javafx.scene.Scene Scene}
  *    references from places where they would otherwise be unavailable.<br /><br />
  *
