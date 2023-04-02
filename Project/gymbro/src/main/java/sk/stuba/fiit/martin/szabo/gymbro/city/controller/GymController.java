@@ -1,10 +1,12 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.controller;
 
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
+import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
 public class GymController{
 
@@ -14,6 +16,12 @@ public class GymController{
     public GymController(){
         this.model = new GymModel();
         this.view = new GymView(this.model);
+
+        // TODO:: Move to observer
+        // TODO:: Implement clickable object
+        Window.getInstance().getStage().getScene().getRoot().addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
+            System.out.println("Touched gym");
+        });
     }
 
     public GymController(GymModel model){

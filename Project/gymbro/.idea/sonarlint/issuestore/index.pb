@@ -11,7 +11,5 @@ x
 Hsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/GymModel.java,3\0\300ac99f3859be1ada913a96a8817e31cb4356ef
 r
 Bsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Window.java,0\9\09f63d5d1f15244f652ec850c0735438af770f72
-|
-Lsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/GymBuilder.java,b\2\b2dd1ac1d28701bcdbf367ca6b1f9e9f973d91b4
 ‚
 Rsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MainMenuFxmlController.java,0\c\0c77627d7fae941c8e3fedcbf05ce2c86182dbfb
