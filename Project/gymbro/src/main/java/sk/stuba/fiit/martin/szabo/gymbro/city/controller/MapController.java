@@ -31,6 +31,9 @@ public class MapController{
 
     public void draw(){
         this.getView().draw();
+        for(GymController gym: this.getGyms()){
+            gym.draw();
+        }
     }
 
 

@@ -13,8 +13,26 @@
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro Doc.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1 Diagram Szabo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Example Project/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/app/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/controllers/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/functions/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/models/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/resources/img/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/resources/img/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/resources/img/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/resources/img/home_100px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/resources/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/resources/img/warning.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Example Project/bin/views/mainframe.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/MapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/GymView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/GymView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/MapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/MapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MapFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MapFxmlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +43,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,14 +88,17 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Martin/Repos/FIIT/oop-2023-stv-15-a-dakic-xszabom5/Project/gymbro&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -111,6 +144,17 @@
       <workItem from="1678374222541" duration="23000" />
       <workItem from="1679074022157" duration="14691000" />
       <workItem from="1679096295978" duration="3054000" />
+      <workItem from="1679688682749" duration="2321000" />
+      <workItem from="1680353720480" duration="965000" />
+      <workItem from="1680355578981" duration="2119000" />
+      <workItem from="1680362591710" duration="61000" />
+      <workItem from="1680362666132" duration="728000" />
+      <workItem from="1680364132772" duration="172000" />
+      <workItem from="1680364320017" duration="134000" />
+      <workItem from="1680364474551" duration="42000" />
+      <workItem from="1680364570226" duration="71000" />
+      <workItem from="1680364671696" duration="1600000" />
+      <workItem from="1680449151131" duration="2264000" />
     </task>
     <servers />
   </component>
@@ -124,7 +168,17 @@
           <properties class="org.gradle.api.tasks.TaskExecutionException" package="org.gradle.api.tasks" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/GymView.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="javafx.scene.image.ImageView$5" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

@@ -1,9 +1,11 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.view;
 
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel;
@@ -30,13 +32,13 @@ public class MapView{
         Stage stage = Window.getInstance().getStage();
         ImageView view = new ImageView(this.getTexture());
 
-        view.setX(this.getX());
-        view.setY(this.getY());
+        view.setTranslateX(this.getX());
+        view.setTranslateY(this.getY());
         view.setFitWidth(this.getWidth());
         view.setFitHeight(this.getHeight());
         view.setPreserveRatio(false);
 
-        Group root = new Group(view);
+        Parent root = new StackPane(view);
         Scene scene = new Scene(root, this.getWidth(), this.getHeight());
         stage.setScene(scene);
     }
