@@ -1,6 +1,8 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.input.MouseEvent;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.GymBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.MapBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.TransformBuilder;
@@ -43,7 +45,6 @@ public class MapFxmlController{
     public void initializeMap(){
         Window window = Window.getInstance();
 
-        // TODO:: Create Gyms here
         ArrayList<GymController> gyms = new ArrayList<>();
         gyms.add(
             new GymBuilder().
@@ -65,5 +66,24 @@ public class MapFxmlController{
                 addTexture("assets/Bratislava_Map.png").
                 build()
         );
+
+
+        //! DEBUG: playing with handlers start
+
+
+        // TODO:: SETUP OBSERVER FOR THIS
+        // TODO:: MOVE EVERYTHIG TO EXTRA CLASS TO SEPARATE UI FROM LOGIC
+        // TODO:: Extract adding handlers to extra class
+
+        /*
+         * The way I imagine it is. On each mouse event clicked we will go through Gyms and check if mouse colides
+         * with gym position if so we will display apropriate gym menu
+         */
+
+        window.getStage().addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
+            System.out.println("Test");
+        });
+
+        //! DEBUG: playing with handlers end
     }
 }

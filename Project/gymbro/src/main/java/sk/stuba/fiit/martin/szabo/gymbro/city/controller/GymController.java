@@ -17,11 +17,7 @@ public class GymController{
         this.model = new GymModel();
         this.view = new GymView(this.model);
 
-        // TODO:: Move to observer
         // TODO:: Implement clickable object
-        Window.getInstance().getStage().getScene().getRoot().addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
-            System.out.println("Touched gym");
-        });
     }
 
     public GymController(GymModel model){

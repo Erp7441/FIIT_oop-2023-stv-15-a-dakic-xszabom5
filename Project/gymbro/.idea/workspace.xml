@@ -28,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/GymController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MapFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/MapFxmlController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +150,9 @@
       <workItem from="1680364474551" duration="42000" />
       <workItem from="1680364570226" duration="71000" />
       <workItem from="1680364671696" duration="1600000" />
-      <workItem from="1680449151131" duration="4252000" />
+      <workItem from="1680449151131" duration="4319000" />
+      <workItem from="1680722753744" duration="813000" />
+      <workItem from="1680730370116" duration="1674000" />
     </task>
     <servers />
   </component>
@@ -170,5 +173,10 @@
         <PinnedItemInfo parentTag="javafx.scene.image.ImageView$5" memberName="value" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="window.scene.onMouseMoved" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
