@@ -2,10 +2,9 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.builder;
 
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.ModalMenuController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
-import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
-import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 public class GymBuilder{
@@ -75,25 +74,11 @@ public class GymBuilder{
 
     public GymBuilder addTexture(Image texture){
         this.getModel().setTexture(texture);
-
-        // Image view for texture
-        this.getModel().setImageView(new ImageViewInitializer().initialize(
-                this.getModel().getTexture(),
-                this.getModel().getTransform()
-            )
-        );
         return this;
     }
 
     public GymBuilder addTexture(String texturePath){
         this.getModel().setTexture(texturePath);
-
-        // Image view for texture
-        this.getModel().setImageView(new ImageViewInitializer().initialize(
-                this.getModel().getTexture(),
-                this.getModel().getTransform()
-            )
-        );
         return this;
     }
 
@@ -102,7 +87,7 @@ public class GymBuilder{
         return this;
     }
 
-    public GymBuilder addMenu(ModalMenu menu){
+    public GymBuilder addMenu(ModalMenuController menu){
         this.getModel().setMenu(menu);
         return this;
     }

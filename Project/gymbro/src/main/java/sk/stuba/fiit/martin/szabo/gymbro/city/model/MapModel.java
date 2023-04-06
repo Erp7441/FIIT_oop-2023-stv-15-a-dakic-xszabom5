@@ -44,31 +44,13 @@ public class MapModel extends Serialization{
     public MapModel(ArrayList<GymController> gyms, Transform transform, Image texture){
         this.gyms = gyms;
         this.transform = transform;
-        this.texture = texture;
-
-        this.setImageView(new ImageViewInitializer().initialize(
-                this.getTexture(),
-                this.getTransform()
-            )
-        );
+        this.setTexture(texture);
     }
 
     public MapModel(List<GymController> gyms, Transform transform, String texturePath){
         this.gyms = (ArrayList<GymController>) gyms;
         this.transform = transform;
-
-        try{
-            this.texture = new Image(new FileInputStream(texturePath));
-
-            this.setImageView(new ImageViewInitializer().initialize(
-                    this.getTexture(),
-                    this.getTransform()
-                )
-            );
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        this.setTexture(texturePath);
     }
 
     public String serialize(int tabSize){
@@ -172,10 +154,19 @@ public class MapModel extends Serialization{
     }
     public void setTexture(Image texture){
         this.texture = texture;
+        this.setImageView(new ImageViewInitializer().initialize(
+                this.getTexture(),
+                this.getTransform()
+        ));
     }
     public void setTexture(String texturePath){
         try{
             this.texture = new Image(new FileInputStream(texturePath));
+
+            this.setImageView(new ImageViewInitializer().initialize(
+                this.getTexture(),
+                this.getTransform()
+            ));
         }
         catch(Exception e){
             e.printStackTrace();

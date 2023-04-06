@@ -1,4 +1,4 @@
-package sk.stuba.fiit.martin.szabo.gymbro.menu;
+package sk.stuba.fiit.martin.szabo.gymbro.window;
 
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.MapBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.TransformBuilder;
@@ -7,7 +7,6 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.factory.GymFactory;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
-import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,6 @@ import java.util.List;
 // TODO:: Refactor this class (package, name...)
 public class Setup{
     private MapController map = null;
-    private boolean running = true;
 
     public Setup(){
     }
@@ -73,20 +71,11 @@ public class Setup{
         return gyms;
     }
 
-
     public MapController getMap(){
         return map;
     }
 
     public void setMap(MapController map){
         this.map = map;
-    }
-
-    public boolean isRunning(){
-        return running;
-    }
-
-    public void setRunning(boolean running){
-        this.running = running;
     }
 }

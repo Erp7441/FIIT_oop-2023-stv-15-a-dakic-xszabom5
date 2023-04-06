@@ -33,10 +33,9 @@ public class MapView{
         // If we don't have image view to place in the screen we create it
         if(this.getModel().getImageView() == null){
             this.getModel().setImageView(new ImageViewInitializer().initialize(
-                    this.getTexture(),
-                    this.getTransform()
-                )
-            );
+                this.getTexture(),
+                this.getTransform()
+            ));
         }
 
 

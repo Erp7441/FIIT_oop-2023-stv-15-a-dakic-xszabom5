@@ -1,7 +1,6 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window;
 
 import javafx.fxml.FXML;
-import sk.stuba.fiit.martin.szabo.gymbro.menu.Setup;
 
 public class MapFxmlController{
 

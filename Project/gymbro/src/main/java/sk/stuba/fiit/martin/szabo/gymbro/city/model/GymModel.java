@@ -2,8 +2,8 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.ModalMenuController;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
-import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
@@ -15,7 +15,7 @@ public class GymModel extends Serialization{
     private Transform transform = new Transform();
     private Image texture = null;
     private int amountOfEquipment;
-    private ModalMenu menu = null;
+    private ModalMenuController menu = null;
     private ImageView imageView = null;
 
     public GymModel(){}
@@ -23,31 +23,13 @@ public class GymModel extends Serialization{
     public GymModel(Transform transform, int amountOfEquipment, Image texture){
         this.transform = transform;
         this.amountOfEquipment = amountOfEquipment;
-        this.texture = texture;
-
-        this.setImageView(new ImageViewInitializer().initialize(
-                this.getTexture(),
-                this.getTransform()
-            )
-        );
+        this.setTexture(texture);
     }
 
     public GymModel(Transform transform, int amountOfEquipment, String texturePath){
         this.transform = transform;
         this.amountOfEquipment = amountOfEquipment;
-
-        try{
-            this.texture = new Image(new FileInputStream(texturePath));
-
-            this.setImageView(new ImageViewInitializer().initialize(
-                    this.getTexture(),
-                    this.getTransform()
-                )
-            );
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        this.setTexture(texturePath);
     }
 
     // TODO:: Move to controller
@@ -106,7 +88,7 @@ public class GymModel extends Serialization{
     public double getHeight(){
         return this.getScale().getY();
     }
-    public ModalMenu getMenu(){
+    public ModalMenuController getMenu(){
         return menu;
     }
     public Vector2D getPosition(){
@@ -141,7 +123,7 @@ public class GymModel extends Serialization{
     public void setHeight(double height){
         this.getScale().setY(height);
     }
-    public void setMenu(ModalMenu menu){
+    public void setMenu(ModalMenuController menu){
         this.menu = menu;
     }
     public void setPosition(Vector2D position){
@@ -155,17 +137,26 @@ public class GymModel extends Serialization{
     }
     public void setTexture(Image texture){
         this.texture = texture;
-    }
-    public void setTransform(Transform transform){
-        this.transform = transform;
+        this.setImageView(new ImageViewInitializer().initialize(
+            this.getTexture(),
+            this.getTransform()
+        ));
     }
     public void setTexture(String texturePath){
         try{
             this.texture = new Image(new FileInputStream(texturePath));
+
+            this.setImageView(new ImageViewInitializer().initialize(
+                this.getTexture(),
+                this.getTransform()
+            ));
         }
         catch(Exception e){
             e.printStackTrace();
         }
+    }
+    public void setTransform(Transform transform){
+        this.transform = transform;
     }
     public void setX(double x){
         this.getPosition().setX(x);
