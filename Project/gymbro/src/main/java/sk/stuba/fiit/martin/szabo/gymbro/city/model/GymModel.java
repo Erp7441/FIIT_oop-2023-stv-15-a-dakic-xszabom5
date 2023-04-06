@@ -2,7 +2,6 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;

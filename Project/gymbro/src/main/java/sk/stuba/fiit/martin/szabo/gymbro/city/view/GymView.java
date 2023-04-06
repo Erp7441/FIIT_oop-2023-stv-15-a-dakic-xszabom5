@@ -38,6 +38,16 @@ public class GymView{
         ((Pane) parent).getChildren().add(this.getModel().getImageView());
     }
 
+    public void zoomIn(){
+        this.getModel().getImageView().setFitWidth(this.getModel().getImageView().getFitWidth() * 2);
+        this.getModel().getImageView().setFitHeight(this.getModel().getImageView().getFitHeight() * 2);
+    }
+
+    public void zoomOut(){
+        this.getModel().getImageView().setFitWidth(this.getModel().getImageView().getFitWidth() / 2);
+        this.getModel().getImageView().setFitHeight(this.getModel().getImageView().getFitHeight() / 2);
+    }
+
 
 
 

@@ -22,7 +22,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
  *    implement multiple classes for each state, and then we can auto decide the state of that attribute with the
  *    object that we assign it to.<br /><br />
 
- * 5. Factory, creates instance for you without need of specifying any attributes utilize factory to create multiple
+ * 5. ✔ Factory, creates instance for you without need of specifying any attributes utilize factory to create multiple
  *    gyms with their diffrent attributes. Can be also used for Map but that seems to be reduntant, although it could be
  *    useful for parsing.<br /><br />
 

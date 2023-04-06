@@ -3,13 +3,14 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.controller;
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.MapView;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Renderable;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapController{
+public class MapController implements Renderable{
 
     private MapModel model = null;
     private MapView view = null;
@@ -29,11 +30,20 @@ public class MapController{
         this.view = view;
     }
 
+    @Override
     public void draw(){
         this.getView().draw();
         for(GymController gym: this.getGyms()){
             gym.draw();
         }
+    }
+
+    @Override
+    public void update(){
+        for(GymController gym: this.getGyms()){
+            gym.update();
+        }
+        this.draw();
     }
 
     public void calculatePath(GymController gym, Vector2D currentVector2D){

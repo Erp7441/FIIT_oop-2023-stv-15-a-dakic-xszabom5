@@ -1,5 +1,6 @@
 package sk.stuba.fiit.martin.szabo.gymbro.file;
 
+// TODO:: Refactor to interface with static/default methods?
 public abstract class Serialization{
 
     public String addStringProperty(String name, String value, int tabSize, boolean newline, boolean comma) {

@@ -6,10 +6,11 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Renderable;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
-public class GymController{
+public class GymController implements Renderable{
 
     private GymModel model;
     private GymView view;
@@ -29,9 +30,13 @@ public class GymController{
         this.view = view;
     }
 
+    @Override
     public void draw(){
         this.getView().draw();
     }
+
+    @Override
+    public void update(){}
 
     /**
      * Adds event listener for handling mouse click
@@ -64,15 +69,11 @@ public class GymController{
     }
 
     private void handleStartHover(MouseEvent event){
-        /*this.setScale(this.getScale().multiply(new Vector2D(3, 3)));
-        this.draw();*/
-        System.out.println("Test Start Hover");
+        this.getView().zoomIn();
     }
 
     private void handleEndHover(MouseEvent event){
-        /*this.setScale(this.getScale().divide(new Vector2D(3, 3)));
-        this.draw();*/
-        System.out.println("Test End Hover");
+        this.getView().zoomOut();
     }
 
 

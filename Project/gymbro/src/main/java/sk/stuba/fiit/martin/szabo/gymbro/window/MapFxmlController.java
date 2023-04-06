@@ -12,7 +12,7 @@ public class MapFxmlController{
     public void showMap(){
         Setup setup = new Setup();
         if(setup.getMap() == null) setup.initializeMap();
-        setup.getMap().draw();
+        setup.run();
     }
 
 }

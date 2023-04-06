@@ -2,7 +2,6 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.builder;
 
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
-import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
@@ -78,7 +77,6 @@ public class GymBuilder{
         this.getModel().setTexture(texture);
 
         // Image view for texture
-
         this.getModel().setImageView(new ImageViewInitializer().initialize(
                 this.getModel().getTexture(),
                 this.getModel().getTransform()
