@@ -1,8 +1,10 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
@@ -16,6 +18,7 @@ public class MapModel extends Serialization{
     private ArrayList<GymController> gyms = new ArrayList<>();
     private Transform transform = new Transform();
     private Image texture = null;
+    private ImageView imageView = null;
 
     public MapModel(){}
 
@@ -23,6 +26,12 @@ public class MapModel extends Serialization{
         this.gyms = gyms;
         this.transform = transform;
         this.texture = texture;
+
+        this.setImageView(new ImageViewInitializer().initialize(
+                this.getTexture(),
+                this.getTransform()
+            )
+        );
     }
 
     public MapModel(List<GymController> gyms, Transform transform, String texturePath){
@@ -31,6 +40,12 @@ public class MapModel extends Serialization{
 
         try{
             this.texture = new Image(new FileInputStream(texturePath));
+
+            this.setImageView(new ImageViewInitializer().initialize(
+                    this.getTexture(),
+                    this.getTransform()
+                )
+            );
         }
         catch(Exception e){
             e.printStackTrace();
@@ -52,12 +67,44 @@ public class MapModel extends Serialization{
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //**** Getters ****//
     public List<GymController> getGyms(){
         return gyms;
     }
     public double getHeight(){
         return this.getScale().getY();
+    }
+    public ImageView getImageView(){
+        return imageView;
     }
     public Vector2D getPosition(){
         return this.getTransform().getPosition();
@@ -92,6 +139,9 @@ public class MapModel extends Serialization{
     public void setHeight(double height){
         this.getScale().setY(height);
     }
+    public void setImageView(ImageView imageView){
+        this.imageView = imageView;
+    }
     public void setPosition(Vector2D position){
         this.getTransform().setPosition(position);
     }
@@ -124,4 +174,5 @@ public class MapModel extends Serialization{
     public void setWidth(double width){
         this.getScale().setX(width);
     }
+
 }

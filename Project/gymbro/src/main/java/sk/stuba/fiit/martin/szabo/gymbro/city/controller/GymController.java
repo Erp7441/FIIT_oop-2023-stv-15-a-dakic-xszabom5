@@ -2,6 +2,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.controller;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
@@ -15,8 +16,6 @@ public class GymController{
     public GymController(){
         this.model = new GymModel();
         this.view = new GymView(this.model);
-
-        // TODO:: Implement clickable object
     }
 
     public GymController(GymModel model){
@@ -33,10 +32,77 @@ public class GymController{
         this.getView().draw();
     }
 
+    /**
+     * Adds event listener for handling mouse click
+     */
+    public void makeClickable(){
+        if(this.getImageView() != null){
+            this.getImageView().addEventHandler(MouseEvent.MOUSE_CLICKED, e -> handleClick());
+        }
+    }
+
+    /**
+     * Handles click event
+     */
+    private void handleClick(){
+
+        // TODO:: show modal menu here
+        System.out.println("Test click");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //**** Getters ****//
     public double getHeight(){
         return this.getScale().getY();
+    }
+    public ImageView getImageView(){
+        return this.getModel().getImageView();
     }
     public GymModel getModel(){
         return model;
@@ -78,6 +144,9 @@ public class GymController{
     public void setHeight(double height){
         this.getScale().setY(height);
     }
+    public void setImageView(ImageView view){
+        this.getModel().setImageView(view);
+    }
     public void setModel(GymModel model){
         this.model = model;
     }
@@ -115,11 +184,4 @@ public class GymController{
         this.getModel().setParent(parent);
     }
 
-    public ImageView getImageView(){
-        return this.getModel().getImageView();
-    }
-
-    public void setImageView(ImageView view){
-        this.getModel().setImageView(view);
-    }
 }

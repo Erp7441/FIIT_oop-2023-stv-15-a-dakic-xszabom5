@@ -1,14 +1,13 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.view;
 
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
@@ -30,18 +29,72 @@ public class MapView{
 
     public void draw(){
         Stage stage = Window.getInstance().getStage();
-        ImageView view = new ImageView(this.getTexture());
 
-        view.setTranslateX(this.getX());
-        view.setTranslateY(this.getY());
-        view.setFitWidth(this.getWidth());
-        view.setFitHeight(this.getHeight());
-        view.setPreserveRatio(false);
+        // If we don't have image view to place in the screen we create it
+        if(this.getModel().getImageView() == null){
+            this.getModel().setImageView(new ImageViewInitializer().initialize(
+                    this.getTexture(),
+                    this.getTransform()
+                )
+            );
+        }
 
-        Parent root = new StackPane(view);
+
+        Parent root = new StackPane(this.getModel().getImageView());
         Scene scene = new Scene(root, this.getWidth(), this.getHeight());
         stage.setScene(scene);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //**** Getters ****//
     public List<GymController> getGyms(){

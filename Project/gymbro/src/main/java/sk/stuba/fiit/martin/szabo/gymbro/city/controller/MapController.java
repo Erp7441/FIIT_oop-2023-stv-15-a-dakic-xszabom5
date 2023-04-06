@@ -36,10 +36,64 @@ public class MapController{
         }
     }
 
-
     public void calculatePath(GymController gym, Vector2D currentVector2D){
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //**** Getters ****//

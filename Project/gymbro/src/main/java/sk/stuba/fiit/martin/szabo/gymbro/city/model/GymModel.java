@@ -5,6 +5,7 @@ import javafx.scene.image.ImageView;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
@@ -26,6 +27,12 @@ public class GymModel extends Serialization{
         this.amountOfEquipment = amountOfEquipment;
         this.texture = texture;
         this.parent = parent;
+
+        this.setImageView(new ImageViewInitializer().initialize(
+                this.getTexture(),
+                this.getTransform()
+            )
+        );
     }
 
     public GymModel(Transform transform, int amountOfEquipment, String texturePath, MapController parent){
@@ -35,6 +42,12 @@ public class GymModel extends Serialization{
 
         try{
             this.texture = new Image(new FileInputStream(texturePath));
+
+            this.setImageView(new ImageViewInitializer().initialize(
+                    this.getTexture(),
+                    this.getTransform()
+                )
+            );
         }
         catch(Exception e){
             e.printStackTrace();
@@ -55,6 +68,37 @@ public class GymModel extends Serialization{
 
         return null;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,21 +1,14 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.view;
 
-import javafx.collections.ObservableList;
-import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
-
-import java.util.ArrayList;
 
 public class GymView{
 
@@ -30,17 +23,72 @@ public class GymView{
     }
 
     public void draw(){
+
+        // If we don't have image view to place in the screen we create it
+        if(this.getModel().getImageView() == null){
+            this.getModel().setImageView(new ImageViewInitializer().initialize(
+                    this.getTexture(),
+                    this.getTransform()
+                )
+            );
+        }
+
         Stage stage = Window.getInstance().getStage();
-        this.getModel().setImageView(new ImageView(this.getTexture()));
-
-        this.getModel().getImageView().setTranslateX(this.getX());
-        this.getModel().getImageView().setTranslateY(this.getY());
-        this.getModel().getImageView().setFitWidth(this.getWidth());
-        this.getModel().getImageView().setFitHeight(this.getHeight());
-        this.getModel().getImageView().setPreserveRatio(false);
-
-        ((Pane) stage.getScene().getRoot()).getChildren().add(this.getModel().getImageView());
+        Parent parent = stage.getScene().getRoot();
+        ((Pane) parent).getChildren().add(this.getModel().getImageView());
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //**** Getters ****//
     public double getHeight(){

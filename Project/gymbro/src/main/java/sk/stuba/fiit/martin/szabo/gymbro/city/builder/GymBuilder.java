@@ -6,6 +6,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 public class GymBuilder{
@@ -75,11 +76,26 @@ public class GymBuilder{
 
     public GymBuilder addTexture(Image texture){
         this.getModel().setTexture(texture);
+
+        // Image view for texture
+
+        this.getModel().setImageView(new ImageViewInitializer().initialize(
+                this.getModel().getTexture(),
+                this.getModel().getTransform()
+            )
+        );
         return this;
     }
 
     public GymBuilder addTexture(String texturePath){
         this.getModel().setTexture(texturePath);
+
+        // Image view for texture
+        this.getModel().setImageView(new ImageViewInitializer().initialize(
+                this.getModel().getTexture(),
+                this.getModel().getTransform()
+            )
+        );
         return this;
     }
 
@@ -95,6 +111,11 @@ public class GymBuilder{
 
     public GymBuilder addParent(MapController parent){
         this.getModel().setParent(parent);
+        return this;
+    }
+
+    public GymBuilder makeClickable(){
+        this.getController().makeClickable();
         return this;
     }
 
