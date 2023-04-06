@@ -109,11 +109,6 @@ public class GymBuilder{
         return this;
     }
 
-    public GymBuilder addParent(MapController parent){
-        this.getModel().setParent(parent);
-        return this;
-    }
-
     public GymBuilder makeClickable(){
         this.getController().makeClickable();
         return this;

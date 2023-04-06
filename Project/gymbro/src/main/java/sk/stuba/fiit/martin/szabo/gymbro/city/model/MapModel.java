@@ -20,6 +20,25 @@ public class MapModel extends Serialization{
     private Image texture = null;
     private ImageView imageView = null;
 
+    // Constants for places on the map
+    public static final Vector2D DUBRAVKA = new Vector2D(-200, -200);
+    public static final Vector2D LAMAC = new Vector2D(-140, -202);
+    public static final Vector2D DEVIN = new Vector2D(-253, -111);
+    public static final Vector2D KARLOVA_VES = new Vector2D(-132, -70);
+    public static final Vector2D DEVINSKA_NOVA_VES = new Vector2D(-331, -317);
+    public static final Vector2D ZAHORSKA_BYSTRICA = new Vector2D(-161, -313);
+    public static final Vector2D STARE_MESTO = new Vector2D(-58, -71);
+    public static final Vector2D NOVE_MESTO = new Vector2D(17, -124);
+    public static final Vector2D RACA = new Vector2D(80, -228);
+    public static final Vector2D VAJNORY = new Vector2D(210, -227);
+    public static final Vector2D PETRZALKA = new Vector2D(-46, 84);
+    public static final Vector2D RUZINOV = new Vector2D(139, -72);
+    public static final Vector2D VRAKUNA = new Vector2D(232, -32);
+    public static final Vector2D PODDUNAJSKE_BISKUPICE = new Vector2D(211, 46);
+    public static final Vector2D JAROVCE = new Vector2D(-4, 249);
+    public static final Vector2D RUSOVCE = new Vector2D(78, 292);
+    public static final Vector2D CUNOVO = new Vector2D(201, 373);
+
     public MapModel(){}
 
     public MapModel(ArrayList<GymController> gyms, Transform transform, Image texture){

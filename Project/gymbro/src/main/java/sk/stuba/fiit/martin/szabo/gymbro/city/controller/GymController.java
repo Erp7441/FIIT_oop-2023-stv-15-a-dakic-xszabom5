@@ -134,9 +134,6 @@ public class GymController{
     public double getWidth(){
         return this.getScale().getX();
     }
-    public MapController getParent(){
-        return this.getModel().getParent();
-    }
 
 
 
@@ -180,8 +177,4 @@ public class GymController{
     public void setWidth(double width){
         this.getScale().setX(width);
     }
-    public void setParent(MapController parent){
-        this.getModel().setParent(parent);
-    }
-
 }

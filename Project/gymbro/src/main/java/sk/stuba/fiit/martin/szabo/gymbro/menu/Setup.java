@@ -1,10 +1,14 @@
 package sk.stuba.fiit.martin.szabo.gymbro.menu;
 
+import javafx.scene.input.MouseEvent;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.GymBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.MapBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.TransformBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.factory.GymFactory;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
@@ -33,7 +37,6 @@ public class Setup{
                 addTexture("assets/Bratislava_Map.png").
                 build()
         );
-
     }
 
     public List<GymController> initializeGyms(){
@@ -42,20 +45,25 @@ public class Setup{
         // TODO:: Add more gyms
         // TODO:: Add gym type using Factory
 
+        GymFactory gymFactory = new GymFactory();
 
-        gyms.add(
-            new GymBuilder().
-                addTransform(
-                    new TransformBuilder().
-                        addScale(new Vector2D(75, 27)).
-                        addPosition(new Vector2D(-200, -200)).
-                        build()
-                ).
-                addParent(this.getMap()).
-                addTexture("assets/lifegym.png").
-                makeClickable().
-                build()
-        );
+        gyms.add(gymFactory.createLifeGymGym(MapModel.NOVE_MESTO));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.DEVIN));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.KARLOVA_VES));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.CUNOVO));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.JAROVCE));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.DUBRAVKA));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.LAMAC));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.PETRZALKA));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.DEVINSKA_NOVA_VES));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.RACA));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.RUSOVCE));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.ZAHORSKA_BYSTRICA));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.STARE_MESTO));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.RUZINOV));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.VAJNORY));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.VRAKUNA));
+        gyms.add(gymFactory.createLifeGymGym(MapModel.PODDUNAJSKE_BISKUPICE));
 
         return gyms;
     }

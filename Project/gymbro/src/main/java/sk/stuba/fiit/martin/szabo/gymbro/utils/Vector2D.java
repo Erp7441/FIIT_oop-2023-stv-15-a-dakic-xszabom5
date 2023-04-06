@@ -31,6 +31,11 @@ public class Vector2D extends Serialization{
         this.y = 0;
     }
 
+    public void add(Vector2D vector2D){
+        this.setX(this.getX() + vector2D.getX());
+        this.setY(this.getY() + vector2D.getY());
+    }
+
     /**
      * @return New Vector with same X and Y coordinates as this vector.
      */

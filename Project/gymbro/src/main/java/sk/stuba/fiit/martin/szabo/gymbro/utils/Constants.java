@@ -7,8 +7,8 @@ public class Constants{
     public static final int SCREEN_HEIGHT = 960;
     public static final String SCREEN_TITLE = "GymBro";
     public static final boolean SCREEN_RESIZABLE = false;
-    public static final int MOUSE_WIDTH = 25;
-    public static final int MOUSE_HEIGHT = 25;
+    public static final double MOUSE_OFFSET_X = 420.0;
+    public static final double MOUSE_OFFSET_Y = 480.0;
 
 
     // TODO:: Remove unused constants

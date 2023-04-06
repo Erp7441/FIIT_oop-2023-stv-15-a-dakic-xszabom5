@@ -17,16 +17,14 @@ public class GymModel extends Serialization{
     private Image texture = null;
     private int amountOfEquipment;
     private ModalMenu menu = null;
-    private MapController parent = null;
     private ImageView imageView = null;
 
     public GymModel(){}
 
-    public GymModel(Transform transform, int amountOfEquipment, Image texture, MapController parent){
+    public GymModel(Transform transform, int amountOfEquipment, Image texture){
         this.transform = transform;
         this.amountOfEquipment = amountOfEquipment;
         this.texture = texture;
-        this.parent = parent;
 
         this.setImageView(new ImageViewInitializer().initialize(
                 this.getTexture(),
@@ -35,10 +33,9 @@ public class GymModel extends Serialization{
         );
     }
 
-    public GymModel(Transform transform, int amountOfEquipment, String texturePath, MapController parent){
+    public GymModel(Transform transform, int amountOfEquipment, String texturePath){
         this.transform = transform;
         this.amountOfEquipment = amountOfEquipment;
-        this.parent = parent;
 
         try{
             this.texture = new Image(new FileInputStream(texturePath));
@@ -138,10 +135,6 @@ public class GymModel extends Serialization{
         return this.getScale().getX();
     }
 
-    public MapController getParent(){
-        return parent;
-    }
-
     //**** Setters ****//
     public void setAmountOfEquipment(int amountOfEquipment){
         this.amountOfEquipment = amountOfEquipment;
@@ -183,10 +176,6 @@ public class GymModel extends Serialization{
     }
     public void setWidth(double width){
         this.getScale().setX(width);
-    }
-
-    public void setParent(MapController parent){
-        this.parent = parent;
     }
 
 
