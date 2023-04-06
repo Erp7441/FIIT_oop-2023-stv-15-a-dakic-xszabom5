@@ -88,7 +88,7 @@ public class GymModel extends Serialization{
     public double getHeight(){
         return this.getScale().getY();
     }
-    public ModalMenuController getMenu(){
+    public ModalMenuController getModalMenu(){
         return menu;
     }
     public Vector2D getPosition(){
@@ -123,7 +123,7 @@ public class GymModel extends Serialization{
     public void setHeight(double height){
         this.getScale().setY(height);
     }
-    public void setMenu(ModalMenuController menu){
+    public void setModalMenu(ModalMenuController menu){
         this.menu = menu;
     }
     public void setPosition(Vector2D position){

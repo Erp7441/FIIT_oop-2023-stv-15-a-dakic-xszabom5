@@ -87,8 +87,8 @@ public class GymBuilder{
         return this;
     }
 
-    public GymBuilder addMenu(ModalMenuController menu){
-        this.getModel().setMenu(menu);
+    public GymBuilder addModalMenu(ModalMenuController menu){
+        this.getModel().setModalMenu(menu);
         return this;
     }
 

@@ -8,7 +8,7 @@ public class Property extends Serialization{
 
     public Property(){}
 
-    public Property(String name, String value){
+    public Property(String name, Object value){
         this.name = name;
         this.value = value;
     }
@@ -41,5 +41,10 @@ public class Property extends Serialization{
 
 
         return null;
+    }
+
+    @Override
+    public String toString(){
+        return this.getName() + ": " + this.getValue();
     }
 }

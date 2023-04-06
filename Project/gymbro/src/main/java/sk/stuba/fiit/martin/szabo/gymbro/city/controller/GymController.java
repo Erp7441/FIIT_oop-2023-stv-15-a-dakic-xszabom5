@@ -10,6 +10,8 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Renderable;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
+import static java.lang.System.*;
+
 public class GymController implements Renderable{
 
     private GymModel model;
@@ -59,11 +61,11 @@ public class GymController implements Renderable{
 
         if(event.getButton().equals(MouseButton.PRIMARY)){
             // TODO:: show modal menu here
-            System.out.println("Test left click");
+            this.getModel().getModalMenu().getModel().getProperties().forEach(out::println);
         }
         else if(event.getButton().equals(MouseButton.SECONDARY)){
             // TODO:: Show context menu here
-            System.out.println("Test right click");
+            out.println("Test right click");
         }
 
     }
