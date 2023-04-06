@@ -2,6 +2,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.builder;
 
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
@@ -89,6 +90,11 @@ public class GymBuilder{
 
     public GymBuilder addMenu(ModalMenu menu){
         this.getModel().setMenu(menu);
+        return this;
+    }
+
+    public GymBuilder addParent(MapController parent){
+        this.getModel().setParent(parent);
         return this;
     }
 

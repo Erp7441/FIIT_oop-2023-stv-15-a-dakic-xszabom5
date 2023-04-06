@@ -1,6 +1,8 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.menu.ModalMenu;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
@@ -14,18 +16,22 @@ public class GymModel extends Serialization{
     private Image texture = null;
     private int amountOfEquipment;
     private ModalMenu menu = null;
+    private MapController parent = null;
+    private ImageView imageView = null;
 
     public GymModel(){}
 
-    public GymModel(Transform transform, int amountOfEquipment, Image texture){
+    public GymModel(Transform transform, int amountOfEquipment, Image texture, MapController parent){
         this.transform = transform;
         this.amountOfEquipment = amountOfEquipment;
         this.texture = texture;
+        this.parent = parent;
     }
 
-    public GymModel(Transform transform, int amountOfEquipment, String texturePath){
+    public GymModel(Transform transform, int amountOfEquipment, String texturePath, MapController parent){
         this.transform = transform;
         this.amountOfEquipment = amountOfEquipment;
+        this.parent = parent;
 
         try{
             this.texture = new Image(new FileInputStream(texturePath));
@@ -88,6 +94,9 @@ public class GymModel extends Serialization{
         return this.getScale().getX();
     }
 
+    public MapController getParent(){
+        return parent;
+    }
 
     //**** Setters ****//
     public void setAmountOfEquipment(int amountOfEquipment){
@@ -132,5 +141,16 @@ public class GymModel extends Serialization{
         this.getScale().setX(width);
     }
 
+    public void setParent(MapController parent){
+        this.parent = parent;
+    }
 
+
+    public ImageView getImageView(){
+        return imageView;
+    }
+
+    public void setImageView(ImageView view){
+        this.imageView = view;
+    }
 }

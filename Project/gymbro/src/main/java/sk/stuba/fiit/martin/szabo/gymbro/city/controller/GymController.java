@@ -1,12 +1,11 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.controller;
 
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.image.ImageView;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
-import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
 public class GymController{
 
@@ -69,6 +68,10 @@ public class GymController{
     public double getWidth(){
         return this.getScale().getX();
     }
+    public MapController getParent(){
+        return this.getModel().getParent();
+    }
+
 
 
     //**** Setters ****//
@@ -107,5 +110,16 @@ public class GymController{
     }
     public void setWidth(double width){
         this.getScale().setX(width);
+    }
+    public void setParent(MapController parent){
+        this.getModel().setParent(parent);
+    }
+
+    public ImageView getImageView(){
+        return this.getModel().getImageView();
+    }
+
+    public void setImageView(ImageView view){
+        this.getModel().setImageView(view);
     }
 }

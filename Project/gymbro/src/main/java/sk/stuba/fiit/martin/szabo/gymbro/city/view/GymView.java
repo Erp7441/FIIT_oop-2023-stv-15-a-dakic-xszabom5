@@ -31,15 +31,15 @@ public class GymView{
 
     public void draw(){
         Stage stage = Window.getInstance().getStage();
-        ImageView view = new ImageView(this.getTexture());
+        this.getModel().setImageView(new ImageView(this.getTexture()));
 
-        view.setTranslateX(this.getX());
-        view.setTranslateY(this.getY());
-        view.setFitWidth(this.getWidth());
-        view.setFitHeight(this.getHeight());
-        view.setPreserveRatio(false);
+        this.getModel().getImageView().setTranslateX(this.getX());
+        this.getModel().getImageView().setTranslateY(this.getY());
+        this.getModel().getImageView().setFitWidth(this.getWidth());
+        this.getModel().getImageView().setFitHeight(this.getHeight());
+        this.getModel().getImageView().setPreserveRatio(false);
 
-        ((Pane) stage.getScene().getRoot()).getChildren().add(view);
+        ((Pane) stage.getScene().getRoot()).getChildren().add(this.getModel().getImageView());
     }
 
     //**** Getters ****//
