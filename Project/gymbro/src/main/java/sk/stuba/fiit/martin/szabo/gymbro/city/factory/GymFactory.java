@@ -16,13 +16,12 @@ public class GymFactory{
         return new GymBuilder().
             addTransform(
                 new TransformBuilder().
-                    //addScale(new Vector2D(75, 27)).
-                    addScale(new Vector2D(10, 10)).
+                    addScale(new Vector2D(75, 27)).
                     addPosition(position).
                     build()
             ).
             addTexture("assets/lifegym.png").
-            makeClickable().
+            makeInteractive().
             build();
     }
 }

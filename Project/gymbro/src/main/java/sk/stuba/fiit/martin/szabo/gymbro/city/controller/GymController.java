@@ -2,6 +2,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.controller;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
@@ -36,18 +37,42 @@ public class GymController{
      * Adds event listener for handling mouse click
      */
     public void makeClickable(){
-        if(this.getImageView() != null){
-            this.getImageView().addEventHandler(MouseEvent.MOUSE_CLICKED, e -> handleClick());
-        }
+        if(this.getImageView() == null) return;
+        this.getImageView().addEventHandler(MouseEvent.MOUSE_CLICKED, this::handleClick);
+    }
+
+    public void makeHoverable(){
+        if(this.getImageView() == null) return;
+        this.getImageView().addEventHandler(MouseEvent.MOUSE_ENTERED, this::handleStartHover);
+        this.getImageView().addEventHandler(MouseEvent.MOUSE_EXITED, this::handleEndHover);
     }
 
     /**
      * Handles click event
      */
-    private void handleClick(){
+    private void handleClick(MouseEvent event){
 
-        // TODO:: show modal menu here
-        System.out.println("Test click");
+        if(event.getButton().equals(MouseButton.PRIMARY)){
+            // TODO:: show modal menu here
+            System.out.println("Test left click");
+        }
+        else if(event.getButton().equals(MouseButton.SECONDARY)){
+            // TODO:: Show context menu here
+            System.out.println("Test right click");
+        }
+
+    }
+
+    private void handleStartHover(MouseEvent event){
+        /*this.setScale(this.getScale().multiply(new Vector2D(3, 3)));
+        this.draw();*/
+        System.out.println("Test Start Hover");
+    }
+
+    private void handleEndHover(MouseEvent event){
+        /*this.setScale(this.getScale().divide(new Vector2D(3, 3)));
+        this.draw();*/
+        System.out.println("Test End Hover");
     }
 
 

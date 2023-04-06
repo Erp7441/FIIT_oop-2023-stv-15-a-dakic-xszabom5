@@ -114,6 +114,92 @@ public class GymBuilder{
         return this;
     }
 
+    public GymBuilder makeHoverable(){
+        this.getController().makeHoverable();
+        return this;
+    }
+
+    public GymBuilder makeInteractive(){
+        return this.makeClickable().makeHoverable();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //**** Getters ****//
     public GymController getController(){
         return controller;
@@ -135,4 +221,5 @@ public class GymBuilder{
     private void setController(GymController controller){
         this.controller = controller;
     }
+
 }
