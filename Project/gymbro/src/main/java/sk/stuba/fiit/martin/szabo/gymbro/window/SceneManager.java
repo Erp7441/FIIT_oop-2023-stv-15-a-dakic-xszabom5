@@ -1,9 +1,12 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window;
 
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sk.stuba.fiit.martin.szabo.gymbro.Main;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public class SceneManager{
@@ -25,6 +28,16 @@ public class SceneManager{
 
     public void activate(String name){
         this.getScene().setRoot(this.getPaneMap().get(name));
+    }
+
+    public static Pane loadFxml(String path){
+        try{
+            return new FXMLLoader(Main.class.getResource(path)).load();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public Scene getScene(){

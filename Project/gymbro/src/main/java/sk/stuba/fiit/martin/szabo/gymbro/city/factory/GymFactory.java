@@ -7,6 +7,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Places;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
+import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
 public class GymFactory{
 
@@ -25,8 +26,14 @@ public class GymFactory{
             ).
             addModalMenu(
                 new ModalMenuBuilder().
+                    addTransform(
+                        new TransformBuilder().
+                            addScale(new Vector2D(Window.getInstance().getWidth(), Window.getInstance().getHeight())).
+                            build()
+                    ).
                     addProperty(new Property("Name", "LifeGym")).
                     addProperty(new Property("Location", location)).
+                    addTexture("assets/Bratislava_Map.png").
                     build()
             ).
             addTexture("assets/lifegym.png").

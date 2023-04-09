@@ -3,7 +3,6 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.controller;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
-import sk.stuba.fiit.martin.szabo.gymbro.city.model.ModalMenuModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 
 import static java.lang.System.out;
@@ -34,13 +33,8 @@ public class GymController extends Controller{
     private void handleClick(MouseEvent event){
 
         if(event.getButton().equals(MouseButton.PRIMARY)){
-            // TODO:: show modal menu here
-
-            if(this.getModel() instanceof  GymModel){
-                // TODO:: sort out this mess
-                ModalMenuModel model = (ModalMenuModel) (((GymModel) this.getModel()).getModalMenu()).getModel();
-                model.getProperties().forEach(out::println);
-            }
+            ModalMenuController controller = ((GymModel) this.getModel()).getModalMenu();
+            controller.getView().draw();
         }
         else if(event.getButton().equals(MouseButton.SECONDARY)){
             // TODO:: Show context menu here
