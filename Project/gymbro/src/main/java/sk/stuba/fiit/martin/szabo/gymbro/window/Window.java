@@ -2,6 +2,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.window;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import sk.stuba.fiit.martin.szabo.gymbro.Main;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
@@ -13,8 +14,7 @@ import java.io.IOException;
 public class Window{
 
     private static Window instance = null;
-    private Stage stage = null;
-    private Scene scene = null;
+    private SceneManager sceneManager = null;
     private Transform transform;
 
     private Window(){
@@ -26,27 +26,31 @@ public class Window{
     }
 
     public void start(Stage stage) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("fxml/mainMenu.fxml"));
 
-        this.setStage(stage);
-        this.setScene(new Scene(fxmlLoader.load(), this.getWidth(), this.getHeight()));
-        stage.setScene(this.getScene());
-        this.getStage().setResizable(Constants.SCREEN_RESIZABLE);
+        Pane root = new FXMLLoader(Main.class.getResource("fxml/mainMenu.fxml")).load();
+        this.sceneManager = new SceneManager(new Scene(root, this.getWidth(), this.getHeight()));
+        this.getSceneManager().addPane("MainMenu", root);
 
+        stage.setScene(this.getSceneManager().getScene());
+        stage.setResizable(Constants.SCREEN_RESIZABLE);
         stage.setTitle(Constants.SCREEN_TITLE);
         stage.show();
+        this.getSceneManager().setStage(stage);
     }
 
-    //* Getters
     public static Window getInstance(){
         if(Window.instance == null) Window.instance = new Window();
         return Window.instance;
     }
+
     public Stage getStage(){
-        return stage;
+        return this.getSceneManager().getStage();
     }
     public Scene getScene(){
-        return scene;
+        return this.getSceneManager().getScene();
+    }
+    public SceneManager getSceneManager(){
+        return sceneManager;
     }
     public Transform getTransform(){
         return transform;
@@ -73,12 +77,8 @@ public class Window{
         return this.getScale().getY();
     }
 
-    //* Setters
-    public void setStage(Stage stage){
-        this.stage = stage;
-    }
-    public void setScene(Scene scene){
-        this.scene = scene;
+    public void setSceneManager(SceneManager sceneManager){
+        this.sceneManager = sceneManager;
     }
     public void setTransform(Transform transform){
         this.transform = transform;

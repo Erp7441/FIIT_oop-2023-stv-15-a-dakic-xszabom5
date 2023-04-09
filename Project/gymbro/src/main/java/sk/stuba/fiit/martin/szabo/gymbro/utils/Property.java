@@ -2,7 +2,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.utils;
 
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 
-public class Property extends Serialization{
+public class Property implements Serialization{
     private String name = null;
     private Object value = null;
 

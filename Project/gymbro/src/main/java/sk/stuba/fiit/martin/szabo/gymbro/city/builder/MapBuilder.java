@@ -49,8 +49,12 @@ public class MapBuilder{
             this.setModel(model);
             this.getController().setModel(model);
         }
-        else if(this.getModel() == null && this.getController().getModel() != null){
-            this.setModel(this.getController().getModel());
+        else if(
+            this.getModel() == null &&
+            this.getController().getModel() != null &&
+            this.getController().getModel() instanceof MapModel
+        ){
+            this.setModel((MapModel) this.getController().getModel());
         }
         return this;
     }
@@ -62,8 +66,12 @@ public class MapBuilder{
             this.setView(view);
             this.getController().setView(view);
         }
-        else if(this.getView() == null && this.getController().getView() != null){
-            this.setView(this.getController().getView());
+        else if(
+            this.getView() == null &&
+            this.getController().getView() != null &&
+            this.getController().getView() instanceof MapView
+        ){
+            this.setView((MapView) this.getController().getView());
         }
         return this;
     }
@@ -88,7 +96,6 @@ public class MapBuilder{
         return this;
     }
 
-    //**** Getters ****//
     public MapController getController(){
         return controller;
     }
@@ -99,7 +106,6 @@ public class MapBuilder{
         return view;
     }
 
-    //**** Setters ****//
     private void setController(MapController controller){
         this.controller = controller;
     }

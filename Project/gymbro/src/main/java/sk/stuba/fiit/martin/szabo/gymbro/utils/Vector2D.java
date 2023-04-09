@@ -9,7 +9,7 @@ import java.util.Objects;
 /**
  * Vector class representing 2 dimensional vector from physics with X and Y coordinates.
  */
-public class Vector2D extends Serialization{
+public class Vector2D implements Serialization{
     private double x;
     private double y;
 

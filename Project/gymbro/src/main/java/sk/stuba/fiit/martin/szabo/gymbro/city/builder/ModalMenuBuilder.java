@@ -51,8 +51,12 @@ public class ModalMenuBuilder{
             this.setModel(model);
             this.getController().setModel(model);
         }
-        else if(this.getModel() == null && this.getController().getModel() != null){
-            this.setModel(this.getController().getModel());
+        else if(
+            this.getModel() == null &&
+            this.getController().getModel() != null &&
+            this.getController().getModel() instanceof ModalMenuModel
+        ){
+            this.setModel((ModalMenuModel) this.getController().getModel());
         }
         return this;
     }
@@ -64,8 +68,12 @@ public class ModalMenuBuilder{
             this.setView(view);
             this.getController().setView(view);
         }
-        else if(this.getView() == null && this.getController().getView() != null){
-            this.setView(this.getController().getView());
+        else if(
+            this.getView() == null &&
+            this.getController().getView() != null &&
+            this.getController().getView() instanceof ModalMenuView
+        ){
+            this.setView((ModalMenuView) this.getController().getView());
         }
         return this;
     }
@@ -98,7 +106,6 @@ public class ModalMenuBuilder{
         return this;
     }
 
-    //**** Getters ****//
     public ModalMenuController getController(){
         return controller;
     }
@@ -109,7 +116,6 @@ public class ModalMenuBuilder{
         return view;
     }
 
-    //**** Setters ****//
     private void setModel(ModalMenuModel model){
         this.model = model;
     }

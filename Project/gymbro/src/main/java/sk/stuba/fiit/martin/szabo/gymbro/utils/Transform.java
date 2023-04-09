@@ -8,7 +8,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
  * one double value for the amount of rotation. This is used on objects, so they can
  * be placed in different places on the screen.
  */
-public class Transform extends Serialization{
+public class Transform implements Serialization{
     private Vector2D position;
     private double rotation;
     private Vector2D scale;

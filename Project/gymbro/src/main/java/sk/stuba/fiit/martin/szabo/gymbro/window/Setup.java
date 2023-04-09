@@ -1,11 +1,11 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window;
 
+import javafx.scene.input.MouseEvent;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.MapBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.TransformBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.factory.GymFactory;
-import sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Places;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
@@ -26,6 +26,10 @@ public class Setup{
     public void initializeMap(){
         Window window = Window.getInstance();
 
+        window.getStage().addEventFilter(MouseEvent.MOUSE_CLICKED, event -> {
+            System.out.println("X: " + event.getSceneX() + " Y: " + event.getSceneY());
+        });
+
         // Creating map
         this.setMap(
             new MapBuilder().
@@ -34,13 +38,6 @@ public class Setup{
                 addTexture("assets/Bratislava_Map.png").
                 build()
         );
-    }
-
-    /**
-     * Main method that generates frames
-     */
-    public void run(){
-        this.getMap().update();
     }
 
     public List<GymController> initializeGyms(){

@@ -48,8 +48,12 @@ public class GymBuilder{
             this.setModel(model);
             this.getController().setModel(model);
         }
-        else if(this.getModel() == null && this.getController().getModel() != null){
-            this.setModel(this.getController().getModel());
+        else if(
+            this.getModel() == null &&
+            this.getController().getModel() != null &&
+            this.getController().getModel() instanceof GymModel
+        ){
+            this.setModel((GymModel) this.getController().getModel());
         }
         return this;
     }
@@ -61,8 +65,12 @@ public class GymBuilder{
             this.setView(view);
             this.getController().setView(view);
         }
-        else if(this.getView() == null && this.getController().getView() != null){
-            this.setView(this.getController().getView());
+        else if(
+            this.getView() == null &&
+            this.getController().getView() != null &&
+            this.getController().getView() instanceof GymView
+        ){
+            this.setView((GymView) this.getController().getView());
         }
         return this;
     }

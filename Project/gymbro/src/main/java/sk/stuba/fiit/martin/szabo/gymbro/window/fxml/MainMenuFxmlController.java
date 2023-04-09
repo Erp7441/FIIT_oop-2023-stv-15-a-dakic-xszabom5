@@ -1,4 +1,4 @@
-package sk.stuba.fiit.martin.szabo.gymbro.window;
+package sk.stuba.fiit.martin.szabo.gymbro.window.fxml;
 
 import javafx.fxml.FXML;
 
