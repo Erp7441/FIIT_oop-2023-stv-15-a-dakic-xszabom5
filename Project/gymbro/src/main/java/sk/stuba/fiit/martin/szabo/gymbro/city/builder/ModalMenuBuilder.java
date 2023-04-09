@@ -1,96 +1,28 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.builder;
 
 import javafx.scene.image.Image;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.ModalMenuController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.ModalMenuModel;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.Model;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.ModalMenuView;
+import sk.stuba.fiit.martin.szabo.gymbro.city.view.View;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 import java.util.ArrayList;
 
-public class ModalMenuBuilder{
-
-    private ModalMenuController controller;
-    private ModalMenuModel model;
-    private ModalMenuView view;
+public class ModalMenuBuilder extends BuilderMVC{
 
     public ModalMenuBuilder(){
-        this.model = new ModalMenuModel();
-        this.view = new ModalMenuView(this.model);
-        this.controller = new ModalMenuController(this.model, this.view);
+        super(new ModalMenuModel(), null, null);
+        this.setView(new ModalMenuView(this.getModel()));
+        this.setController(new ModalMenuController(this.getModel(), this.getView()));
     }
 
     public ModalMenuBuilder(ModalMenuModel model){
-        this.model = model;
-        this.view = new ModalMenuView(this.model);
-        this.controller = new ModalMenuController(this.model, this.view);
-    }
-
-    public ModalMenuBuilder(ModalMenuModel model, ModalMenuView view, ModalMenuController controller){
-        this.model = model;
-        this.view = view;
-        this.controller = controller;
-    }
-
-    public ModalMenuController build(){
-        return this.getController();
-    }
-
-    public ModalMenuBuilder addController(ModalMenuController controller){
-        if(controller != null && this.getController() == null){
-            this.setController(controller);
-        }
-        return this;
-    }
-
-    public ModalMenuBuilder addModel(ModalMenuModel model){
-        if(model == null) return this;
-
-        if(this.getModel() == null && this.getController().getModel() == null){
-            this.setModel(model);
-            this.getController().setModel(model);
-        }
-        else if(
-            this.getModel() == null &&
-            this.getController().getModel() != null &&
-            this.getController().getModel() instanceof ModalMenuModel
-        ){
-            this.setModel((ModalMenuModel) this.getController().getModel());
-        }
-        return this;
-    }
-
-    public ModalMenuBuilder addView(ModalMenuView view){
-        if(view == null) return this;
-
-        if(this.getView() == null && this.getController().getView() == null){
-            this.setView(view);
-            this.getController().setView(view);
-        }
-        else if(
-            this.getView() == null &&
-            this.getController().getView() != null &&
-            this.getController().getView() instanceof ModalMenuView
-        ){
-            this.setView((ModalMenuView) this.getController().getView());
-        }
-        return this;
-    }
-
-    public ModalMenuBuilder addTransform(Transform transform){
-        this.getModel().setTransform(transform);
-        return this;
-    }
-
-    public ModalMenuBuilder addTexture(Image texture){
-        this.getModel().setTexture(texture);
-        return this;
-    }
-
-    public ModalMenuBuilder addTexture(String texturePath){
-        this.getModel().setTexture(texturePath);
-        return this;
+        super(model, new ModalMenuView(model), null);
+        this.setController(new ModalMenuController(this.getModel(), this.getView()));
     }
 
     public ModalMenuBuilder addProperties(ArrayList<Property> properties){
@@ -106,23 +38,64 @@ public class ModalMenuBuilder{
         return this;
     }
 
-    public ModalMenuController getController(){
-        return controller;
-    }
-    public ModalMenuModel getModel(){
-        return model;
-    }
-    public ModalMenuView getView(){
-        return view;
+
+    //* Mandatory casting overrides
+    @Override
+    public ModalMenuController build(){
+        return (ModalMenuController) super.build();
     }
 
-    private void setModel(ModalMenuModel model){
-        this.model = model;
+    @Override
+    public ModalMenuBuilder addController(Controller controller){
+        if(controller instanceof ModalMenuController){
+            return (ModalMenuBuilder) super.addController(controller);
+        }
+        return this;
     }
-    private void setView(ModalMenuView view){
-        this.view = view;
+
+    @Override
+    public ModalMenuBuilder addModel(Model model){
+        if(model instanceof ModalMenuModel){
+            return (ModalMenuBuilder) super.addModel(model);
+        }
+        return this;
     }
-    private void setController(ModalMenuController controller){
-        this.controller = controller;
+
+    @Override
+    public ModalMenuBuilder addView(View view){
+        if(view instanceof ModalMenuView){
+            return (ModalMenuBuilder) super.addView(view);
+        }
+        return this;
+    }
+
+    @Override
+    public ModalMenuBuilder addTransform(Transform transform){
+        return (ModalMenuBuilder) super.addTransform(transform);
+    }
+
+    @Override
+    public ModalMenuBuilder addTexture(Image texture){
+        return (ModalMenuBuilder) super.addTexture(texture);
+    }
+
+    @Override
+    public ModalMenuBuilder addTexture(String texturePath){
+        return (ModalMenuBuilder) super.addTexture(texturePath);
+    }
+
+    @Override
+    public ModalMenuController getController(){
+        return (ModalMenuController) super.getController();
+    }
+
+    @Override
+    public ModalMenuModel getModel(){
+        return (ModalMenuModel) super.getModel();
+    }
+
+    @Override
+    public ModalMenuView getView(){
+        return (ModalMenuView) super.getView();
     }
 }

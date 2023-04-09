@@ -1,119 +1,95 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.builder;
 
 import javafx.scene.image.Image;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.Model;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.MapView;
+import sk.stuba.fiit.martin.szabo.gymbro.city.view.View;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MapBuilder{
-    private MapController controller;
-    private MapModel model;
-    private MapView view;
+public class MapBuilder extends BuilderMVC{
 
     public MapBuilder(){
-        this.model = new MapModel();
-        this.view = new MapView(this.model);
-        this.controller = new MapController(this.model, this.view);
+        super(new MapModel(), null, null);
+        this.setView(new MapView(this.getModel()));
+        this.setController(new MapController(this.getModel(), this.getView()));
     }
 
     public MapBuilder(MapModel model){
-        this.model = model;
-        this.view = new MapView(this.model);
-        this.controller = new MapController(this.model, this.view);
-    }
-    public MapBuilder(MapModel model, MapView view, MapController controller){
-        this.model = model;
-        this.view = view;
-        this.controller = controller;
+        super(model, new MapView(model), null);
+        this.setController(new MapController(this.getModel(), this.getView()));
     }
 
+    public MapBuilder addGyms(List<GymController> gyms){
+        if(gyms instanceof ArrayList){
+            this.getModel().setGyms((ArrayList<GymController>) gyms);
+        }
+        return this;
+    }
+
+    //* Mandatory casting overrides
+    @Override
     public MapController build(){
-        return this.getController();
+        return (MapController) super.build();
     }
 
-    public MapBuilder addController(MapController controller){
-        if(controller != null && this.getController() == null){
-            this.setController(controller);
+    @Override
+    public MapBuilder addController(Controller controller){
+        if(controller instanceof MapController){
+            return (MapBuilder) super.addController(controller);
         }
         return this;
     }
 
-    public MapBuilder addModel(MapModel model){
-        if(model == null) return this;
-
-        if(this.getModel() == null && this.getController().getModel() == null){
-            this.setModel(model);
-            this.getController().setModel(model);
-        }
-        else if(
-            this.getModel() == null &&
-            this.getController().getModel() != null &&
-            this.getController().getModel() instanceof MapModel
-        ){
-            this.setModel((MapModel) this.getController().getModel());
+    @Override
+    public MapBuilder addModel(Model model){
+        if(model instanceof MapModel){
+            return (MapBuilder) super.addModel(model);
         }
         return this;
     }
 
-    public MapBuilder addView(MapView view){
-        if(view == null) return this;
-
-        if(this.getView() == null && this.getController().getView() == null){
-            this.setView(view);
-            this.getController().setView(view);
-        }
-        else if(
-            this.getView() == null &&
-            this.getController().getView() != null &&
-            this.getController().getView() instanceof MapView
-        ){
-            this.setView((MapView) this.getController().getView());
+    @Override
+    public MapBuilder addView(View view){
+        if(view instanceof MapView){
+            return (MapBuilder) super.addView(view);
         }
         return this;
     }
 
+    @Override
     public MapBuilder addTransform(Transform transform){
-        this.getModel().setTransform(transform);
-        return this;
+        return (MapBuilder) super.addTransform(transform);
     }
 
+    @Override
     public MapBuilder addTexture(Image texture){
-        this.getModel().setTexture(texture);
-        return this;
+        return (MapBuilder) super.addTexture(texture);
     }
 
+    @Override
     public MapBuilder addTexture(String texturePath){
-        this.getModel().setTexture(texturePath);
-        return this;
+        return (MapBuilder) super.addTexture(texturePath);
     }
 
-    public MapBuilder addGyms(ArrayList<GymController> gyms){
-        this.getModel().setGyms(gyms);
-        return this;
-    }
-
+    @Override
     public MapController getController(){
-        return controller;
+        return (MapController) super.getController();
     }
+
+    @Override
     public MapModel getModel(){
-        return model;
+        return (MapModel) super.getModel();
     }
+
+    @Override
     public MapView getView(){
-        return view;
+        return (MapView) super.getView();
     }
-
-    private void setController(MapController controller){
-        this.controller = controller;
-    }
-    private void setModel(MapModel model){
-        this.model = model;
-    }
-    private void setView(MapView view){
-        this.view = view;
-    }
-
 }

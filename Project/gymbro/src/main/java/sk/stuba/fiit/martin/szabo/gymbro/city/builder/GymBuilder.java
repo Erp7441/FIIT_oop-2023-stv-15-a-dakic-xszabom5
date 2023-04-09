@@ -1,102 +1,35 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.builder;
 
 import javafx.scene.image.Image;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.ModalMenuController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.Model;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
+import sk.stuba.fiit.martin.szabo.gymbro.city.view.View;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
-public class GymBuilder{
-    private GymController controller;
-    private GymModel model;
-    private GymView view;
+public class GymBuilder extends BuilderMVC{
 
     public GymBuilder(){
-        this.model = new GymModel();
-        this.view = new GymView(this.model);
-        this.controller = new GymController(this.model, this.view);
+        super(new GymModel(), null, null);
+        this.setView(new GymView(this.getModel()));
+        this.setController(new GymController(this.getModel(), this.getView()));
     }
 
     public GymBuilder(GymModel model){
-        this.model = model;
-        this.view = new GymView(this.model);
-        this.controller = new GymController(this.model, this.view);
+        super(model, new GymView(model), null);
+        this.setController(new GymController(this.getModel(), this.getView()));
     }
 
-    public GymBuilder(GymModel model, GymView view, GymController controller){
-        this.model = model;
-        this.view = view;
-        this.controller = controller;
-    }
-
-    public GymController build(){
-        return this.getController();
-    }
-
-    public GymBuilder addController(GymController controller){
-        if(controller != null && this.getController() == null){
-            this.setController(controller);
-        }
-        return this;
-    }
-
-    public GymBuilder addModel(GymModel model){
-        if(model == null) return this;
-
-        if(this.getModel() == null && this.getController().getModel() == null){
-            this.setModel(model);
-            this.getController().setModel(model);
-        }
-        else if(
-            this.getModel() == null &&
-            this.getController().getModel() != null &&
-            this.getController().getModel() instanceof GymModel
-        ){
-            this.setModel((GymModel) this.getController().getModel());
-        }
-        return this;
-    }
-
-    public GymBuilder addView(GymView view){
-        if(view == null) return this;
-
-        if(this.getView() == null && this.getController().getView() == null){
-            this.setView(view);
-            this.getController().setView(view);
-        }
-        else if(
-            this.getView() == null &&
-            this.getController().getView() != null &&
-            this.getController().getView() instanceof GymView
-        ){
-            this.setView((GymView) this.getController().getView());
-        }
-        return this;
-    }
-
-    public GymBuilder addTransform(Transform transform){
-        this.getModel().setTransform(transform);
-        return this;
-    }
-
-    public GymBuilder addTexture(Image texture){
-        this.getModel().setTexture(texture);
-        return this;
-    }
-
-    public GymBuilder addTexture(String texturePath){
-        this.getModel().setTexture(texturePath);
+    public GymBuilder addModalMenu(ModalMenuController menu){
+        this.getModel().setModalMenu(menu);
         return this;
     }
 
     public GymBuilder addAmountOfEquipment(int amount){
         this.getModel().setAmountOfEquipment(amount);
-        return this;
-    }
-
-    public GymBuilder addModalMenu(ModalMenuController menu){
-        this.getModel().setModalMenu(menu);
         return this;
     }
 
@@ -114,103 +47,65 @@ public class GymBuilder{
         return this.makeClickable().makeHoverable();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //**** Getters ****//
+    //* Mandatory casting overrides
+    @Override
+    public GymController build(){
+        return (GymController) super.build();
+    }
+
+    @Override
+    public GymBuilder addController(Controller controller){
+        if(controller instanceof GymController){
+            return (GymBuilder) super.addController(controller);
+        }
+        return this;
+    }
+
+    @Override
+    public GymBuilder addModel(Model model){
+        if(model instanceof GymModel){
+            return (GymBuilder) super.addModel(model);
+        }
+        return this;
+    }
+
+    @Override
+    public GymBuilder addView(View view){
+        if(view instanceof GymView){
+            return (GymBuilder) super.addView(view);
+        }
+        return this;
+    }
+
+    @Override
+    public GymBuilder addTransform(Transform transform){
+        return (GymBuilder) super.addTransform(transform);
+    }
+
+    @Override
+    public GymBuilder addTexture(Image texture){
+        return (GymBuilder) super.addTexture(texture);
+    }
+
+    @Override
+    public GymBuilder addTexture(String texturePath){
+        return (GymBuilder) super.addTexture(texturePath);
+    }
+
+    @Override
     public GymController getController(){
-        return controller;
-    }
-    public GymModel getModel(){
-        return model;
-    }
-    public GymView getView(){
-        return view;
+        return (GymController) super.getController();
     }
 
-    //**** Setters ****//
-    private void setModel(GymModel model){
-        this.model = model;
+    @Override
+    public GymModel getModel(){
+        return (GymModel) super.getModel();
     }
-    private void setView(GymView view){
-        this.view = view;
-    }
-    private void setController(GymController controller){
-        this.controller = controller;
+
+    @Override
+    public GymView getView(){
+        return (GymView) super.getView();
     }
 
 }
+
