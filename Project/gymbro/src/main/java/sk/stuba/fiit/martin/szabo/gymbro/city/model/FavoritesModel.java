@@ -38,20 +38,17 @@ public class FavoritesModel extends Model{
     public String serialize(int tabSize){
         StringBuilder builder = new StringBuilder();
 
-        builder.append(beginObjectProperty("FavoritesModel", tabSize + 1));
-        builder.append(addEnding(true, true));
+        builder.append(beginObjectProperty("FavoritesModel", tabSize));
 
         int count = 0;
         for(GymController gym : this.getFavorites()){
-            String str = gym.getModel().serialize(tabSize + 2);
-            if(str.compareTo("") != 0){
-                builder.append(str);
-                builder.append(addEnding(true, count != this.getFavorites().size() - 1));
-            }
+            builder.append(gym.getModel().serialize(tabSize + 1));
+            builder.append(addEnding(true, count != this.getFavorites().size() - 1));
             count++;
         }
 
-        return null;
+        builder.append(endObjectProperty(tabSize));
+        return builder.toString();
     }
 
     public static FavoritesModel deserialize(){
@@ -61,7 +58,7 @@ public class FavoritesModel extends Model{
 
         if(Parser.peek() == ','){
             Parser.consume(',');
-            Parser.consumeBeginObjectProperty("Gym model");
+            Parser.consumeBeginObjectProperty("GymModel");
             model.getFavorites().add(Parser.parseGymModel());
 
             while(Parser.peek() == ','){

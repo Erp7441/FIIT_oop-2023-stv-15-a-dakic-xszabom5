@@ -38,18 +38,9 @@ public class FavoritesHandler{
             ZipOutputStream zos = new ZipOutputStream(fos);
             zos.putNextEntry(new ZipEntry(fileName + ".json"));
 
-            int count = 0;
             zos.write("{\n".getBytes()); //? Begin JSON file
-            for (GymController gym : ((FavoritesModel) FavoritesHandler.getFavorites().getModel()).getFavorites()){
-                String str = gym.getModel().serialize(1);
-                if (str.compareTo("") != 0){
-                    zos.write(str.getBytes());
-                    if(count != ((FavoritesModel) FavoritesHandler.getFavorites().getModel()).getFavorites().size()-1){
-                        zos.write(",\n".getBytes());
-                    }
-                }
-                count++;
-            }
+            String str = getFavorites().getModel().serialize(1);
+            zos.write(str.getBytes());
             zos.write("\n}".getBytes()); //? End JSON file
 
             zos.closeEntry();
