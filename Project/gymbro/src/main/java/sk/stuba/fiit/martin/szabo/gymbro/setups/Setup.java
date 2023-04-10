@@ -12,17 +12,31 @@ import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Setup.
+ */
 // TODO:: Refactor this class (package, name...)
 public class Setup{
     private MapController map = null;
 
+    /**
+     * Instantiates a new Setup.
+     */
     public Setup(){
     }
 
+    /**
+     * Instantiates a new Setup.
+     *
+     * @param map the map
+     */
     public Setup(MapController map){
         this.map = map;
     }
 
+    /**
+     * Initialize map.
+     */
     public void initializeMap(){
         Window window = Window.getInstance();
         window.setWindowSetup(this);
@@ -37,6 +51,11 @@ public class Setup{
         );
     }
 
+    /**
+     * Initialize gyms list.
+     *
+     * @return the list
+     */
     public List<GymController> initializeGyms(){
         ArrayList<GymController> gyms = new ArrayList<>();
 
@@ -66,10 +85,20 @@ public class Setup{
         return gyms;
     }
 
+    /**
+     * Get map map controller.
+     *
+     * @return the map controller
+     */
     public MapController getMap(){
         return map;
     }
 
+    /**
+     * Set map.
+     *
+     * @param map the map
+     */
     public void setMap(MapController map){
         this.map = map;
     }

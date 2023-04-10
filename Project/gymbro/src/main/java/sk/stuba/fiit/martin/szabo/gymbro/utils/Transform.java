@@ -24,12 +24,23 @@ public class Transform implements Serialization{
         this.rotation = 0.0;
         this.scale = new Vector2D(1.0, 1.0); //! Composition
     }
+
+    /**
+     * Instantiates a new Transform.
+     */
     public Transform(){
         this.position = new Vector2D(); //! Composition
         this.rotation = 0.0;
         this.scale = new Vector2D(1.0, 1.0); //! Composition
     }
 
+    /**
+     * Instantiates a new Transform.
+     *
+     * @param position the position
+     * @param rotation the rotation
+     * @param scale    the scale
+     */
     public Transform (Vector2D position, double rotation, Vector2D scale) {
         this.position = position; //! Aggregation
         this.rotation = rotation;
@@ -38,6 +49,7 @@ public class Transform implements Serialization{
 
     /**
      * Creates new Transform and assigns the values of this Transform to the new one.
+     *
      * @return New Transform with same values as this Transform.
      */
     public Transform copy(){
@@ -55,26 +67,56 @@ public class Transform implements Serialization{
         return "Position (" + position.getX() + ", " + position.getY() + ") Rotation (" + rotation + ") Scale (" + scale.getX() + ", " + scale.getY() +")";
     }
 
+    /**
+     * Get position vector 2 d.
+     *
+     * @return the vector 2 d
+     */
     public Vector2D getPosition(){
         return position;
     }
 
+    /**
+     * Set position.
+     *
+     * @param position the position
+     */
     public void setPosition(Vector2D position){
         this.position = position;
     }
 
+    /**
+     * Get rotation double.
+     *
+     * @return the double
+     */
     public double getRotation(){
         return rotation;
     }
 
+    /**
+     * Set rotation.
+     *
+     * @param rotation the rotation
+     */
     public void setRotation(double rotation){
         this.rotation = rotation;
     }
 
+    /**
+     * Get scale vector 2 d.
+     *
+     * @return the vector 2 d
+     */
     public Vector2D getScale(){
         return scale;
     }
 
+    /**
+     * Set scale.
+     *
+     * @param scale the scale
+     */
     public void setScale(Vector2D scale){
         this.scale = scale;
     }
@@ -100,6 +142,11 @@ public class Transform implements Serialization{
         return builder.toString();
     }
 
+    /**
+     * Deserialize transform.
+     *
+     * @return the transform
+     */
     public static Transform deserialize(){
         Parser.consumeBeginObjectProperty("Transform");
         Parser.consumeBeginObjectProperty("Position");

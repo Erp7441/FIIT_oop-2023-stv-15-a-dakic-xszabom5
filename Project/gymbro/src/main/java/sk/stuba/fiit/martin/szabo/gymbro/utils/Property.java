@@ -2,29 +2,61 @@ package sk.stuba.fiit.martin.szabo.gymbro.utils;
 
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 
+/**
+ * The type Property.
+ */
 public class Property implements Serialization{
     private String name = null;
     private Object value = null;
 
+    /**
+     * Instantiates a new Property.
+     */
     public Property(){}
 
+    /**
+     * Instantiates a new Property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     public Property(String name, Object value){
         this.name = name;
         this.value = value;
     }
 
+    /**
+     * Get name string.
+     *
+     * @return the string
+     */
     public String getName(){
         return name;
     }
 
+    /**
+     * Set name.
+     *
+     * @param name the name
+     */
     public void setName(String name){
         this.name = name;
     }
 
+    /**
+     * Get value object.
+     *
+     * @return the object
+     */
     public Object getValue(){
         return value;
     }
 
+    /**
+     * Set value.
+     *
+     * @param value the value
+     */
     public void setValue(Object value){
         this.value = value;
     }
@@ -42,6 +74,11 @@ public class Property implements Serialization{
         return builder.toString();
     }
 
+    /**
+     * Deserialize property.
+     *
+     * @return the property
+     */
     public static Property deserialize(){
 
 

@@ -9,5 +9,3 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 ‚
 Rsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/TransformBuilder.java,b\9\b969b26a0896aa0765ea68b73d51789c7f490c64
-v
-Fsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/MapView.java,5\e\5ea959010a523e26f419e628d66f5e308fc4a18e

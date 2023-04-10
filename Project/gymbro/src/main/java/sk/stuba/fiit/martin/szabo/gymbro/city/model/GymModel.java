@@ -5,18 +5,38 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuControlle
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
+/**
+ * The type Gym model.
+ */
 public class GymModel extends Model{
 
     private int amountOfEquipment;
     private PropertiesMenuController propertiesMenu = null;
 
+    /**
+     * Instantiates a new Gym model.
+     */
     public GymModel(){ super(); }
 
+    /**
+     * Instantiates a new Gym model.
+     *
+     * @param transform         the transform
+     * @param amountOfEquipment the amount of equipment
+     * @param texture           the texture
+     */
     public GymModel(Transform transform, int amountOfEquipment, Image texture){
         super(transform, texture);
         this.amountOfEquipment = amountOfEquipment;
     }
 
+    /**
+     * Instantiates a new Gym model.
+     *
+     * @param transform         the transform
+     * @param amountOfEquipment the amount of equipment
+     * @param texturePath       the texture path
+     */
     public GymModel(Transform transform, int amountOfEquipment, String texturePath){
         super(transform, texturePath);
         this.amountOfEquipment = amountOfEquipment;
@@ -44,24 +64,49 @@ public class GymModel extends Model{
         return builder.toString();
     }
 
+    /**
+     * Deserialize property.
+     *
+     * @return the property
+     */
     public static Property deserialize(){
 
 
         return null;
     }
 
+    /**
+     * Get amount of equipment int.
+     *
+     * @return the int
+     */
     public int getAmountOfEquipment(){
         return amountOfEquipment;
     }
 
+    /**
+     * Set amount of equipment.
+     *
+     * @param amountOfEquipment the amount of equipment
+     */
     public void setAmountOfEquipment(int amountOfEquipment){
         this.amountOfEquipment = amountOfEquipment;
     }
 
+    /**
+     * Get properties menu properties menu controller.
+     *
+     * @return the properties menu controller
+     */
     public PropertiesMenuController getPropertiesMenu(){
         return propertiesMenu;
     }
 
+    /**
+     * Set properties menu.
+     *
+     * @param propertiesMenu the properties menu
+     */
     public void setPropertiesMenu(PropertiesMenuController propertiesMenu){
         this.propertiesMenu = propertiesMenu;
     }

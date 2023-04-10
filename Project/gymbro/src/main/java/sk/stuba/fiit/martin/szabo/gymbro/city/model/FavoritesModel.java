@@ -7,28 +7,60 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 import java.util.ArrayList;
 
+/**
+ * The type Favorites model.
+ */
 public class FavoritesModel extends Model{
     private ArrayList<GymController> favorites;
 
+    /**
+     * Instantiates a new Favorites model.
+     */
     public FavoritesModel(){
         this.favorites = new ArrayList<>();
     }
 
+    /**
+     * Instantiates a new Favorites model.
+     *
+     * @param transform the transform
+     * @param texture   the texture
+     */
     public FavoritesModel(Transform transform, Image texture){
         super(transform, texture);
         this.favorites = new ArrayList<>();
     }
 
+    /**
+     * Instantiates a new Favorites model.
+     *
+     * @param transform   the transform
+     * @param texturePath the texture path
+     */
     public FavoritesModel(Transform transform, String texturePath){
         super(transform, texturePath);
         this.favorites = new ArrayList<>();
     }
 
+    /**
+     * Instantiates a new Favorites model.
+     *
+     * @param transform the transform
+     * @param texture   the texture
+     * @param favorites the favorites
+     */
     public FavoritesModel(Transform transform, Image texture, ArrayList<GymController> favorites){
         super(transform, texture);
         this.favorites = favorites;
     }
 
+    /**
+     * Instantiates a new Favorites model.
+     *
+     * @param transform   the transform
+     * @param texturePath the texture path
+     * @param favorites   the favorites
+     */
     public FavoritesModel(Transform transform, String texturePath, ArrayList<GymController> favorites){
         super(transform, texturePath);
         this.favorites = favorites;
@@ -51,6 +83,11 @@ public class FavoritesModel extends Model{
         return builder.toString();
     }
 
+    /**
+     * Deserialize favorites model.
+     *
+     * @return the favorites model
+     */
     public static FavoritesModel deserialize(){
         Parser.consumeBeginObjectProperty("FavoritesModel");
         Parser.skipWhitespace();
@@ -71,10 +108,20 @@ public class FavoritesModel extends Model{
         return model;
     }
 
+    /**
+     * Get favorites array list.
+     *
+     * @return the array list
+     */
     public ArrayList<GymController> getFavorites(){
         return favorites;
     }
 
+    /**
+     * Set favorites.
+     *
+     * @param favorites the favorites
+     */
     public void setFavorites(ArrayList<GymController> favorites){
         this.favorites = favorites;
     }

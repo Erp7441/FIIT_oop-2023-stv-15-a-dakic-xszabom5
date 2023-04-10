@@ -9,13 +9,25 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
+/**
+ * The type Gym factory.
+ */
 public class GymFactory{
 
     // TODO:: Implement this class in setups so it will create gym types that are most commonly used
 
 
+    /**
+     * Instantiates a new Gym factory.
+     */
     public GymFactory(){}
 
+    /**
+     * Create life gym gym gym controller.
+     *
+     * @param location the location
+     * @return the gym controller
+     */
     public GymController createLifeGymGym(Places location){
         return new GymBuilder().
             addTransform(
@@ -42,6 +54,12 @@ public class GymFactory{
             build();
     }
 
+    /**
+     * Create fitinn gym gym controller.
+     *
+     * @param location the location
+     * @return the gym controller
+     */
     public GymController createFitinnGym(Places location){
         return new GymBuilder().
             addTransform(

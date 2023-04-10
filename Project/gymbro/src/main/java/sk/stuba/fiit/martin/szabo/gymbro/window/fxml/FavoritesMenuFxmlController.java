@@ -9,14 +9,23 @@ import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
 import java.io.IOException;
 
+/**
+ * The type Favorites menu fxml controller.
+ */
 public class FavoritesMenuFxmlController{
 
 
+    /**
+     * Favorites map.
+     */
     public void favoritesMap(){
         MapFxmlController controller = new MapFxmlController();
         controller.showFavoritesMap();
     }
 
+    /**
+     * Show menu.
+     */
     public void showMenu(){
         try{
             Pane root = new FXMLLoader(Main.class.getResource("fxml/favoritesMenu.fxml")).load();
@@ -28,10 +37,16 @@ public class FavoritesMenuFxmlController{
         }
     }
 
+    /**
+     * Back to main menu.
+     */
     public void backToMainMenu(){
         Window.getInstance().handleBackToMainMenu();
     }
 
+    /**
+     * Save favorites.
+     */
     public void saveFavorites(){
         FavoritesHandler.save("favorite_gyms");
     }

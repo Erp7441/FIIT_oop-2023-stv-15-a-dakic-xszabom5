@@ -12,12 +12,23 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
+/**
+ * The type Properties menu view.
+ */
 public class PropertiesMenuView extends View{
 
+    /**
+     * Instantiates a new Properties menu view.
+     */
     public PropertiesMenuView(){
         super(new PropertiesMenuModel());
     }
 
+    /**
+     * Instantiates a new Properties menu view.
+     *
+     * @param model the model
+     */
     public PropertiesMenuView(PropertiesMenuModel model){
         super(model);
     }
@@ -46,6 +57,9 @@ public class PropertiesMenuView extends View{
         this.addRemoveOnEscapeEvent();
     }
 
+    /**
+     * Remove from view.
+     */
     public void removeFromView(){
         Window.getInstance().getSceneManager().activate(Constants.ID_MAP_PANE);
         Window.getInstance().getSceneManager().removePane(Constants.ID_GYM_MENU_PANE);

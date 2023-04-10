@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+/**
+ * The type Favorites handler.
+ */
 // TODO:: refactor placement of Favorites MVC package?
 public class FavoritesHandler{
 
@@ -18,19 +21,39 @@ public class FavoritesHandler{
 
     private FavoritesHandler(){}
 
+    /**
+     * Initalize favorites favorites controller.
+     *
+     * @return the favorites controller
+     */
     public static FavoritesController initalizeFavorites(){
         if(getFavorites() == null) return new FavoritesBuilder().build();
         else return getFavorites();
     }
 
+    /**
+     * Get favorites favorites controller.
+     *
+     * @return the favorites controller
+     */
     public static FavoritesController getFavorites(){
         return favorites;
     }
 
+    /**
+     * Set favorites.
+     *
+     * @param favorites the favorites
+     */
     public static void setFavorites(FavoritesController favorites){
         FavoritesHandler.favorites = favorites;
     }
 
+    /**
+     * Save.
+     *
+     * @param fileName the file name
+     */
     public static void save(String fileName){
         if(getFavorites() == null) return;
 
@@ -54,6 +77,9 @@ public class FavoritesHandler{
         }
     }
 
+    /**
+     * Load.
+     */
     public static void load(){
         try{
             Parser.openFile("favorite_gyms");

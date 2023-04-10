@@ -1,0 +1,15 @@
+module:sk.stuba.fiit.martin.szabo.gymbro
+sk.stuba.fiit.martin.szabo.gymbro
+sk.stuba.fiit.martin.szabo.gymbro.city.builder
+sk.stuba.fiit.martin.szabo.gymbro.city.controller
+sk.stuba.fiit.martin.szabo.gymbro.city.factory
+sk.stuba.fiit.martin.szabo.gymbro.city.model
+sk.stuba.fiit.martin.szabo.gymbro.city.view
+sk.stuba.fiit.martin.szabo.gymbro.file
+sk.stuba.fiit.martin.szabo.gymbro.handlers
+sk.stuba.fiit.martin.szabo.gymbro.managers.event
+sk.stuba.fiit.martin.szabo.gymbro.managers.scene
+sk.stuba.fiit.martin.szabo.gymbro.setups
+sk.stuba.fiit.martin.szabo.gymbro.utils
+sk.stuba.fiit.martin.szabo.gymbro.window
+sk.stuba.fiit.martin.szabo.gymbro.window.fxml

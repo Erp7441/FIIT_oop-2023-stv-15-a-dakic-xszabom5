@@ -24,6 +24,9 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
 import java.io.IOException;
 
+/**
+ * The type Window.
+ */
 public class Window{
 
     private static Window instance = null;
@@ -41,6 +44,12 @@ public class Window{
         );
     }
 
+    /**
+     * Start.
+     *
+     * @param stage the stage
+     * @throws IOException the io exception
+     */
     public void start(Stage stage) throws IOException{
 
         FavoritesHandler.load();
@@ -78,12 +87,18 @@ public class Window{
         );
     }
 
+    /**
+     * Handle back to main menu.
+     */
     public void handleBackToMainMenu(){
         String current = this.getSceneManager().getActiveName();
         this.getSceneManager().activate(Constants.ID_MAIN_MENU_PANE);
         this.getSceneManager().removePane(current);
     }
 
+    /**
+     * Handle favorites.
+     */
     public void handleFavorites(){
         if(this.getFocusedGym() == null) return;
 
@@ -103,105 +118,274 @@ public class Window{
         }
     }
 
+    /**
+     * Is focused gym favorite boolean.
+     *
+     * @return the boolean
+     */
     public boolean isFocusedGymFavorite(){
         if(this.getFocusedGym() == null) return false;
         return (FavoritesHandler.getFavorites().findGym(this.getFocusedGym()) != null);
     }
 
+    /**
+     * Handle quit.
+     */
     public void handleQuit(){
         Platform.exit();
     }
-    
+
+    /**
+     * Lookup node.
+     *
+     * @param s the s
+     * @return the node
+     */
     public Node lookup(String s){
         return this.getScene().lookup(s);
     }
 
-    // TODO:: sort out positions of setters and getters
+    /**
+     * Get focused gym gym controller.
+     *
+     * @return the gym controller
+     */
+// TODO:: sort out positions of setters and getters
     public GymController getFocusedGym(){
         return focusedGym;
     }
 
+    /**
+     * Set focused gym.
+     *
+     * @param focusedGym the focused gym
+     */
     public void setFocusedGym(GymController focusedGym){
         this.focusedGym = focusedGym;
     }
 
+    /**
+     * Get event manager scene event manager.
+     *
+     * @return the scene event manager
+     */
     public SceneEventManager getEventManager(){
         return eventManager;
     }
 
+    /**
+     * Get instance window.
+     *
+     * @return the window
+     */
     public static Window getInstance(){
         if(Window.instance == null) Window.instance = new Window();
         return Window.instance;
     }
+
+    /**
+     * Get stage stage.
+     *
+     * @return the stage
+     */
     public Stage getStage(){
         return this.getSceneManager().getStage();
     }
+
+    /**
+     * Get scene scene.
+     *
+     * @return the scene
+     */
     public Scene getScene(){
         return this.getSceneManager().getScene();
     }
+
+    /**
+     * Get scene manager scene manager.
+     *
+     * @return the scene manager
+     */
     public SceneManager getSceneManager(){
         return sceneManager;
     }
+
+    /**
+     * Get transform transform.
+     *
+     * @return the transform
+     */
     public Transform getTransform(){
         return transform;
     }
+
+    /**
+     * Get position vector 2 d.
+     *
+     * @return the vector 2 d
+     */
     public Vector2D getPosition(){
         return this.getTransform().getPosition();
     }
+
+    /**
+     * Get rotation double.
+     *
+     * @return the double
+     */
     public double getRotation(){
         return this.getTransform().getRotation();
     }
+
+    /**
+     * Get scale vector 2 d.
+     *
+     * @return the vector 2 d
+     */
     public Vector2D getScale(){
         return this.getTransform().getScale();
     }
+
+    /**
+     * Get x double.
+     *
+     * @return the double
+     */
     public double getX(){
         return this.getPosition().getX();
     }
+
+    /**
+     * Get y double.
+     *
+     * @return the double
+     */
     public double getY(){
         return this.getPosition().getY();
     }
+
+    /**
+     * Get width double.
+     *
+     * @return the double
+     */
     public double getWidth(){
         return this.getScale().getX();
     }
+
+    /**
+     * Get height double.
+     *
+     * @return the double
+     */
     public double getHeight(){
         return this.getScale().getY();
     }
 
+    /**
+     * Get window setup setup.
+     *
+     * @return the setup
+     */
     public Setup getWindowSetup(){
         return windowSetup;
     }
 
+    /**
+     * Set event manager.
+     *
+     * @param eventManager the event manager
+     */
     public void setEventManager(SceneEventManager eventManager){
         this.eventManager = eventManager;
     }
+
+    /**
+     * Set scene manager.
+     *
+     * @param sceneManager the scene manager
+     */
     public void setSceneManager(SceneManager sceneManager){
         this.sceneManager = sceneManager;
     }
+
+    /**
+     * Set transform.
+     *
+     * @param transform the transform
+     */
     public void setTransform(Transform transform){
         this.transform = transform;
     }
+
+    /**
+     * Set position.
+     *
+     * @param position the position
+     */
     public void setPosition(Vector2D position){
         this.getTransform().setPosition(position);
     }
+
+    /**
+     * Set rotation.
+     *
+     * @param rotation the rotation
+     */
     public void setRotation(double rotation){
         this.getTransform().setRotation(rotation);
     }
+
+    /**
+     * Set scale.
+     *
+     * @param scale the scale
+     */
     public void setScale(Vector2D scale){
         this.getTransform().setScale(scale);
     }
+
+    /**
+     * Set x.
+     *
+     * @param x the x
+     */
     public void setX(double x){
         this.getPosition().setX(x);
     }
+
+    /**
+     * Set y.
+     *
+     * @param y the y
+     */
     public void setY(double y){
         this.getPosition().setY(y);
     }
+
+    /**
+     * Set width.
+     *
+     * @param width the width
+     */
     public void setWidth(double width){
         this.getScale().setX(width);
     }
+
+    /**
+     * Set height.
+     *
+     * @param height the height
+     */
     public void setHeight(double height){
         this.getScale().setY(height);
     }
 
+    /**
+     * Set window setup.
+     *
+     * @param windowSetup the window setup
+     */
     public void setWindowSetup(Setup windowSetup){
         this.windowSetup = windowSetup;
     }

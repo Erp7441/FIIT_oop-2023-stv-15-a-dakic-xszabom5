@@ -11,19 +11,36 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.view.FavoritesView;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.View;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
+/**
+ * The type Favorites builder.
+ */
 public class FavoritesBuilder extends BuilderMVC{
 
+    /**
+     * Instantiates a new Favorites builder.
+     */
     public FavoritesBuilder(){
         super(new FavoritesModel(), null, null);
         this.setView(new FavoritesView(this.getModel()));
         this.setController(new FavoritesController(this.getModel(), this.getView()));
     }
 
+    /**
+     * Instantiates a new Favorites builder.
+     *
+     * @param model the model
+     */
     public FavoritesBuilder(FavoritesModel model){
         super(model, new FavoritesView(model), null);
         this.setController(new FavoritesController(this.getModel(), this.getView()));
     }
 
+    /**
+     * Add gym favorites builder.
+     *
+     * @param gym the gym
+     * @return the favorites builder
+     */
     public FavoritesBuilder addGym(GymController gym){
         ((FavoritesModel) this.getController().getModel()).getFavorites().add(gym);
         return this;

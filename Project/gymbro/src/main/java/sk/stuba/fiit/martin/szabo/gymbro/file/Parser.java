@@ -20,17 +20,30 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 
+/**
+ * The type Parser.
+ */
 public class Parser{
     private static int offset = 0;
     private static int line = 1;
     private static byte[] bytes;
 
+    /**
+     * Get bytes byte [ ].
+     *
+     * @return the byte [ ]
+     */
     public static byte[] getBytes(){
         return bytes;
     }
 
     private Parser() {}
 
+    /**
+     * Open file.
+     *
+     * @param fileName the file name
+     */
     public static void openFile(String fileName){
         // Checks if file exists. If it does then get its length.
         File temp = new File(fileName + ".zip");
@@ -58,6 +71,13 @@ public class Parser{
         }
     }
 
+    /**
+     * Read all bytes byte [ ].
+     *
+     * @param stream the stream
+     * @return the byte [ ]
+     * @throws IOException the io exception
+     */
     public static byte[] readAllBytes(InputStream stream) throws IOException{
         byte[] buffer = new byte[1000];
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -68,6 +88,9 @@ public class Parser{
         return bos.toByteArray();
     }
 
+    /**
+     * Skip whitespace.
+     */
     public static void skipWhitespace(){
         while(!atEnd() && (peek() == ' ' || peek() == '\n' || peek() == '\t' || peek() == '\r')){
             if(peek() == '\n') { line++; }
@@ -75,16 +98,31 @@ public class Parser{
         }
     }
 
+    /**
+     * Peek char.
+     *
+     * @return the char
+     */
     public static char peek() {
         return (char)bytes[offset];
     }
 
+    /**
+     * Advance char.
+     *
+     * @return the char
+     */
     public static char advance(){
         char current = peek();
         offset++;
         return current;
     }
 
+    /**
+     * Consume.
+     *
+     * @param character the character
+     */
     public static void consume(char character){
         char current = peek();
         if(current != character){
@@ -94,10 +132,20 @@ public class Parser{
         offset++;
     }
 
+    /**
+     * At end boolean.
+     *
+     * @return the boolean
+     */
     public static boolean atEnd(){
         return offset == (bytes.length)-1;
     }
 
+    /**
+     * Parse int int.
+     *
+     * @return the int
+     */
     public static int parseInt(){
         skipWhitespace();
         char character;
@@ -111,6 +159,11 @@ public class Parser{
         return Integer.parseInt(builder.toString());
     }
 
+    /**
+     * Parse double double.
+     *
+     * @return the double
+     */
     public static double parseDouble(){
         skipWhitespace();
         char character;
@@ -124,12 +177,22 @@ public class Parser{
         return Double.parseDouble(builder.toString());
     }
 
+    /**
+     * Parse float float.
+     *
+     * @return the float
+     */
     public static float parseFloat(){
         float value = (float)parseDouble();
         consume('f');
         return value;
     }
 
+    /**
+     * Parse string string.
+     *
+     * @return the string
+     */
     public static String parseString(){
         skipWhitespace();
         char character;
@@ -143,6 +206,12 @@ public class Parser{
         consume('"');
         return builder.toString();
     }
+
+    /**
+     * Parse boolean boolean.
+     *
+     * @return the boolean
+     */
     public static boolean parseBoolean(){
         skipWhitespace();
         StringBuilder builder = new StringBuilder();
@@ -167,31 +236,74 @@ public class Parser{
         return character >= '0' && character <= '9';
     }
 
+    /**
+     * Consume begin object property.
+     *
+     * @param property the property
+     */
     public static void consumeBeginObjectProperty(String property){
         consumeProperty(property);
         consume('{');
     }
+
+    /**
+     * Consume end object property.
+     */
     public static void consumeEndObjectProperty(){
         skipWhitespace();
         consume('}');
     }
+
+    /**
+     * Consume string property string.
+     *
+     * @param property the property
+     * @return the string
+     */
     public static String consumeStringProperty(String property){
         consumeProperty(property);
         return parseString();
     }
+
+    /**
+     * Consume int property int.
+     *
+     * @param property the property
+     * @return the int
+     */
     public static int consumeIntProperty(String property){
         consumeProperty(property);
         return parseInt();
     }
+
+    /**
+     * Consume double property double.
+     *
+     * @param property the property
+     * @return the double
+     */
     public static double consumeDoubleProperty(String property){
         consumeProperty(property);
         return parseDouble();
     }
+
+    /**
+     * Consume float property float.
+     *
+     * @param property the property
+     * @return the float
+     */
     public static float consumeFloatProperty(String property){
         consumeProperty(property);
         return parseFloat();
     }
 
+    /**
+     * Consume boolean property boolean.
+     *
+     * @param property the property
+     * @return the boolean
+     */
     public static boolean consumeBooleanProperty(String property){
         consumeProperty(property);
         return parseBoolean();
@@ -229,6 +341,11 @@ public class Parser{
         }
     }
 
+    /**
+     * Parse favorites favorites controller.
+     *
+     * @return the favorites controller
+     */
     public static FavoritesController parseFavorites(){
         if(bytes.length == 0 || atEnd()) return null;
 
@@ -239,6 +356,11 @@ public class Parser{
         return new FavoritesController(FavoritesModel.deserialize());
     }
 
+    /**
+     * Parse gym model gym controller.
+     *
+     * @return the gym controller
+     */
     public static GymController parseGymModel(){
 
         Parser.consumeBeginObjectProperty("GymModel");
@@ -273,6 +395,11 @@ public class Parser{
         return controller;
     }
 
+    /**
+     * Parse property property.
+     *
+     * @return the property
+     */
     public static Property parseProperty(){
         Parser.consumeBeginObjectProperty("Property");
         Parser.skipWhitespace();

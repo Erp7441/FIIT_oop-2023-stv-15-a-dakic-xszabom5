@@ -8,19 +8,41 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 import java.util.ArrayList;
 
+/**
+ * The type Properties menu model.
+ */
 public class PropertiesMenuModel extends Model{
     private ArrayList<Property> properties = new ArrayList<>();
     private GymController owner = null;
 
 
+    /**
+     * Instantiates a new Properties menu model.
+     */
     public PropertiesMenuModel(){}
 
+    /**
+     * Instantiates a new Properties menu model.
+     *
+     * @param properties the properties
+     * @param transform  the transform
+     * @param texture    the texture
+     * @param owner      the owner
+     */
     public PropertiesMenuModel(ArrayList<Property> properties, Transform transform, Image texture, GymController owner){
         super(transform, texture);
         this.properties = properties;
         this.owner = owner;
     }
 
+    /**
+     * Instantiates a new Properties menu model.
+     *
+     * @param properties  the properties
+     * @param transform   the transform
+     * @param texturePath the texture path
+     * @param owner       the owner
+     */
     public PropertiesMenuModel(ArrayList<Property> properties, Transform transform, String texturePath, GymController owner){
         super(transform, texturePath);
         this.properties = properties;
@@ -44,6 +66,11 @@ public class PropertiesMenuModel extends Model{
         return builder.toString();
     }
 
+    /**
+     * Deserialize properties menu model.
+     *
+     * @return the properties menu model
+     */
     public static PropertiesMenuModel deserialize(){
         Parser.consumeBeginObjectProperty("Properties");
         Parser.skipWhitespace();
@@ -65,18 +92,38 @@ public class PropertiesMenuModel extends Model{
     }
 
 
+    /**
+     * Get properties array list.
+     *
+     * @return the array list
+     */
     public ArrayList<Property> getProperties(){
         return properties;
     }
 
+    /**
+     * Set properties.
+     *
+     * @param properties the properties
+     */
     public void setProperties(ArrayList<Property> properties){
         this.properties = properties;
     }
 
+    /**
+     * Get owner gym controller.
+     *
+     * @return the gym controller
+     */
     public GymController getOwner(){
         return owner;
     }
 
+    /**
+     * Set owner.
+     *
+     * @param owner the owner
+     */
     public void setOwner(GymController owner){
         this.owner = owner;
     }

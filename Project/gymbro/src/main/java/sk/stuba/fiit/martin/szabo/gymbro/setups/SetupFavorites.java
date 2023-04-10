@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * The type Setup favorites.
+ */
 public class SetupFavorites extends Setup{
 
     @Override

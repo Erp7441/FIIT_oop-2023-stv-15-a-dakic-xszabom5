@@ -1,7 +1,3 @@
-/**
- * The Controller abstract class represents a base controller for game objects.
- */
-
 package sk.stuba.fiit.martin.szabo.gymbro.city.controller;
 
 import javafx.scene.image.Image;
@@ -11,6 +7,9 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.view.View;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
+/**
+ * The type Controller.
+ */
 public abstract class Controller{
 
     private Model model;
@@ -18,8 +17,9 @@ public abstract class Controller{
 
     /**
      * Creates a new Controller object with the given model and view.
+     *
      * @param model the Model object to use
-     * @param view the View object to use
+     * @param view  the View object to use
      */
     protected Controller(Model model, View view){
         this.model = model;
@@ -33,149 +33,228 @@ public abstract class Controller{
         this.getView().draw();
     }
 
+
     /**
-     * Gets the height of the associated model.
-     * @return the height of the model
+     * Get height double.
+     *
+     * @return the double
      */
     public double getHeight(){
         return this.getScale().getY();
     }
 
     /**
-     * Gets the ImageView of the associated model.
-     * @return the ImageView object of the model
+     * Get image view image view.
+     *
+     * @return the image view
      */
     public ImageView getImageView(){
         return this.getModel().getImageView();
     }
 
     /**
-     * Gets the associated model.
-     * @return the Model object associated with this controller
+     * Get model model.
+     *
+     * @return the model
      */
     public Model getModel(){
         return model;
     }
 
     /**
-     * Gets the position of the associated model.
-     * @return the position of the model
+     * Get position vector 2 d.
+     *
+     * @return the vector 2 d
      */
     public Vector2D getPosition(){
         return this.getTransform().getPosition();
     }
 
     /**
-     * Gets the rotation of the associated model.
-     * @return the rotation of the model
+     * Get rotation double.
+     *
+     * @return the double
      */
     public double getRotation(){
         return this.getTransform().getRotation();
     }
 
     /**
-     * Gets the scale of the associated model.
-     * @return the scale of the model
+     * Get scale vector 2 d.
+     *
+     * @return the vector 2 d
      */
     public Vector2D getScale(){
         return this.getTransform().getScale();
     }
 
     /**
-     * Gets the texture of the associated model.
-     * @return the texture of the model
+     * Get texture image.
+     *
+     * @return the image
      */
     public Image getTexture(){
         return this.getModel().getTexture();
     }
 
     /**
-     * Gets the transform of the associated model.
-     * @return the transform of the model
+     * Get transform transform.
+     *
+     * @return the transform
      */
     public Transform getTransform(){
         return this.getModel().getTransform();
     }
 
     /**
-     * Gets the associated view.
-     * @return the View object associated with this controller
+     * Get view view.
+     *
+     * @return the view
      */
     public View getView(){
         return view;
     }
 
     /**
-     * Gets the X coordinate of the associated model.
-     * @return the X coordinate of the model
+     * Get x double.
+     *
+     * @return the double
      */
     public double getX(){
         return this.getPosition().getX();
     }
 
     /**
-     * Gets the Y coordinate of the associated model.
-     * @return the Y coordinate of the model
+     * Get y double.
+     *
+     * @return the double
      */
     public double getY(){
         return this.getPosition().getY();
     }
 
     /**
-     * Gets the width of the associated model.
-     * @return the width of the model
+     * Get width double.
+     *
+     * @return the double
      */
     public double getWidth(){
         return this.getScale().getX();
     }
 
     /**
-     * Sets the height of the associated model.
-     * @param height the new height of the model
+     * Set height.
+     *
+     * @param height the height
      */
     public void setHeight(double height){
         this.getScale().setY(height);
     }
 
     /**
-     * Sets the ImageView of the associated model.
-     * @param view the new ImageView object for the model
+     * Set image view.
+     *
+     * @param view the view
      */
     public void setImageView(ImageView view){
         this.getModel().setImageView(view);
     }
 
-
+    /**
+     * Set model.
+     *
+     * @param model the model
+     */
     public void setModel(Model model){
         this.model = model;
     }
+
+    /**
+     * Set position.
+     *
+     * @param position the position
+     */
     public void setPosition(Vector2D position){
         this.getModel().setPosition(position);
     }
+
+    /**
+     * Set rotation.
+     *
+     * @param rotation the rotation
+     */
     public void setRotation(double rotation){
         this.getTransform().setRotation(rotation);
     }
+
+    /**
+     * Set scale.
+     *
+     * @param scale the scale
+     */
     public void setScale(Vector2D scale){
         this.getTransform().setScale(scale);
     }
+
+    /**
+     * Set texture.
+     *
+     * @param texture the texture
+     */
     public void setTexture(Image texture){
         this.getModel().setTexture(texture);
     }
+
+    /**
+     * Set texture.
+     *
+     * @param texturePath the texture path
+     */
     public void setTexture(String texturePath){
         this.getModel().setTexture(texturePath);
     }
+
+    /**
+     * Set transform.
+     *
+     * @param transform the transform
+     */
     public void setTransform(Transform transform){
         this.getModel().setTransform(transform);
     }
+
+    /**
+     * Set view.
+     *
+     * @param view the view
+     */
     public void setView(View view){
         this.view = view;
     }
+
+    /**
+     * Set x.
+     *
+     * @param x the x
+     */
     public void setX(double x){
         this.getPosition().setX(x);
     }
+
+    /**
+     * Set y.
+     *
+     * @param y the y
+     */
     public void setY(double y){
         this.getPosition().setY(y);
     }
+
+    /**
+     * Set width.
+     *
+     * @param width the width
+     */
     public void setWidth(double width){
         this.getScale().setX(width);
     }

@@ -15,6 +15,7 @@ public class Vector2D implements Serialization{
 
     /**
      * Constructs a new Vector2D that sets the X and Y values
+     *
      * @param x Horizontal coordinate of the vector
      * @param y Vertical coordinate of the vector
      */
@@ -31,24 +32,48 @@ public class Vector2D implements Serialization{
         this.y = 0;
     }
 
+    /**
+     * Add vector 2 d.
+     *
+     * @param vector2D the vector 2 d
+     * @return the vector 2 d
+     */
     public Vector2D add(Vector2D vector2D){
         this.setX(this.getX() + vector2D.getX());
         this.setY(this.getY() + vector2D.getY());
         return this;
     }
 
+    /**
+     * Subtract vector 2 d.
+     *
+     * @param vector2D the vector 2 d
+     * @return the vector 2 d
+     */
     public Vector2D subtract(Vector2D vector2D){
         this.setX(this.getX() - vector2D.getX());
         this.setY(this.getY() - vector2D.getY());
         return this;
     }
 
+    /**
+     * Multiply vector 2 d.
+     *
+     * @param vector2D the vector 2 d
+     * @return the vector 2 d
+     */
     public Vector2D multiply(Vector2D vector2D){
         this.setX(this.getX() * vector2D.getX());
         this.setY(this.getY() * vector2D.getY());
         return this;
     }
 
+    /**
+     * Divide vector 2 d.
+     *
+     * @param vector2D the vector 2 d
+     * @return the vector 2 d
+     */
     public Vector2D divide(Vector2D vector2D){
         this.setX(this.getX() / vector2D.getX());
         this.setY(this.getY() / vector2D.getY());
@@ -56,24 +81,46 @@ public class Vector2D implements Serialization{
     }
 
     /**
+     * Copy vector 2 d.
+     *
      * @return New Vector with same X and Y coordinates as this vector.
      */
     public Vector2D copy(){
         return new Vector2D(this.x, this.y);
     }
 
+    /**
+     * Get x double.
+     *
+     * @return the double
+     */
     public double getX(){
         return x;
     }
 
+    /**
+     * Set x.
+     *
+     * @param x the x
+     */
     public void setX(double x){
         this.x = x;
     }
 
+    /**
+     * Get y double.
+     *
+     * @return the double
+     */
     public double getY(){
         return y;
     }
 
+    /**
+     * Set y.
+     *
+     * @param y the y
+     */
     public void setY(double y){
         this.y = y;
     }
@@ -86,6 +133,11 @@ public class Vector2D implements Serialization{
         return builder.toString();
     }
 
+    /**
+     * Deserialize vector 2 d.
+     *
+     * @return the vector 2 d
+     */
     public static Vector2D deserialize(){
         double x = Parser.consumeDoubleProperty("x");
         Parser.consume(',');

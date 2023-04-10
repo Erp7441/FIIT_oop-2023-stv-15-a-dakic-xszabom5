@@ -12,15 +12,31 @@ import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * The type Map fxml controller.
+ */
 public class MapFxmlController{
 
+    /**
+     * Instantiates a new Map fxml controller.
+     */
     public MapFxmlController(){
     }
 
+    /**
+     * Run.
+     *
+     * @param setup the setup
+     */
     public void run(Setup setup){
         setup.getMap().draw();
     }
 
+    /**
+     * Initialize scene.
+     *
+     * @throws IOException the io exception
+     */
     public void initializeScene() throws IOException{
         Pane root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/map.fxml")));
         Window.getInstance().getSceneManager().addPane(Constants.ID_MAP_PANE, root);
@@ -40,16 +56,25 @@ public class MapFxmlController{
         this.run(setup);
     }
 
+    /**
+     * Show map.
+     */
     @FXML
     public void showMap(){
         this.initializeSetup(new Setup());
     }
 
+    /**
+     * Show favorites map.
+     */
     @FXML
     public void showFavoritesMap(){
         this.initializeSetup(new SetupFavorites());
     }
 
+    /**
+     * Back.
+     */
     public void back(){
         Window.getInstance().handleBackToMainMenu();
     }

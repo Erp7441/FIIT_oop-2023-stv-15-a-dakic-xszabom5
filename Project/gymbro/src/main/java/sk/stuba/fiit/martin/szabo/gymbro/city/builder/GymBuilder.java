@@ -10,40 +10,78 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.View;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
+/**
+ * The type Gym builder.
+ */
 public class GymBuilder extends BuilderMVC{
 
+    /**
+     * Instantiates a new Gym builder.
+     */
     public GymBuilder(){
         super(new GymModel(), null, null);
         this.setView(new GymView(this.getModel()));
         this.setController(new GymController(this.getModel(), this.getView()));
     }
 
+    /**
+     * Instantiates a new Gym builder.
+     *
+     * @param model the model
+     */
     public GymBuilder(GymModel model){
         super(model, new GymView(model), null);
         this.setController(new GymController(this.getModel(), this.getView()));
     }
 
+    /**
+     * Add properties menu gym builder.
+     *
+     * @param menu the menu
+     * @return the gym builder
+     */
     public GymBuilder addPropertiesMenu(PropertiesMenuController menu){
         this.getModel().setPropertiesMenu(menu);
         menu.setOwner(this.getController());
         return this;
     }
 
+    /**
+     * Add amount of equipment gym builder.
+     *
+     * @param amount the amount
+     * @return the gym builder
+     */
     public GymBuilder addAmountOfEquipment(int amount){
         this.getModel().setAmountOfEquipment(amount);
         return this;
     }
 
+    /**
+     * Make clickable gym builder.
+     *
+     * @return the gym builder
+     */
     public GymBuilder makeClickable(){
         this.getController().makeClickable();
         return this;
     }
 
+    /**
+     * Make hoverable gym builder.
+     *
+     * @return the gym builder
+     */
     public GymBuilder makeHoverable(){
         this.getController().makeHoverable();
         return this;
     }
 
+    /**
+     * Make interactive gym builder.
+     *
+     * @return the gym builder
+     */
     public GymBuilder makeInteractive(){
         return this.makeClickable().makeHoverable();
     }

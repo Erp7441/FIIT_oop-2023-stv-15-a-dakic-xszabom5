@@ -13,24 +13,47 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 import java.util.ArrayList;
 
+/**
+ * The type Properties menu builder.
+ */
 public class PropertiesMenuBuilder extends BuilderMVC{
 
+    /**
+     * Instantiates a new Properties menu builder.
+     */
     public PropertiesMenuBuilder(){
         super(new PropertiesMenuModel(), null, null);
         this.setView(new PropertiesMenuView(this.getModel()));
         this.setController(new PropertiesMenuController(this.getModel(), this.getView()));
     }
 
+    /**
+     * Instantiates a new Properties menu builder.
+     *
+     * @param model the model
+     */
     public PropertiesMenuBuilder(PropertiesMenuModel model){
         super(model, new PropertiesMenuView(model), null);
         this.setController(new PropertiesMenuController(this.getModel(), this.getView()));
     }
 
+    /**
+     * Add properties properties menu builder.
+     *
+     * @param properties the properties
+     * @return the properties menu builder
+     */
     public PropertiesMenuBuilder addProperties(ArrayList<Property> properties){
         this.getModel().setProperties(properties);
         return this;
     }
 
+    /**
+     * Add property properties menu builder.
+     *
+     * @param property the property
+     * @return the properties menu builder
+     */
     public PropertiesMenuBuilder addProperty(Property property){
         if(this.getModel().getProperties() == null){
             this.getModel().setProperties(new ArrayList<>());
@@ -39,6 +62,12 @@ public class PropertiesMenuBuilder extends BuilderMVC{
         return this;
     }
 
+    /**
+     * Add owner properties menu builder.
+     *
+     * @param owner the owner
+     * @return the properties menu builder
+     */
     public PropertiesMenuBuilder addOwner(GymController owner){
         this.getModel().setOwner(owner);
         return this;

@@ -13,19 +13,36 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Map builder.
+ */
 public class MapBuilder extends BuilderMVC{
 
+    /**
+     * Instantiates a new Map builder.
+     */
     public MapBuilder(){
         super(new MapModel(), null, null);
         this.setView(new MapView(this.getModel()));
         this.setController(new MapController(this.getModel(), this.getView()));
     }
 
+    /**
+     * Instantiates a new Map builder.
+     *
+     * @param model the model
+     */
     public MapBuilder(MapModel model){
         super(model, new MapView(model), null);
         this.setController(new MapController(this.getModel(), this.getView()));
     }
 
+    /**
+     * Add gyms map builder.
+     *
+     * @param gyms the gyms
+     * @return the map builder
+     */
     public MapBuilder addGyms(List<GymController> gyms){
         if(gyms instanceof ArrayList){
             this.getModel().setGyms((ArrayList<GymController>) gyms);

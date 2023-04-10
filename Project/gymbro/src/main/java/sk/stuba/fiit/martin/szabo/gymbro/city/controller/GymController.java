@@ -7,12 +7,26 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 
 import static java.lang.System.out;
 
+/**
+ * The type Gym controller.
+ */
 public class GymController extends Controller{
 
+    /**
+     * Instantiates a new Gym controller.
+     *
+     * @param model the model
+     */
     public GymController(GymModel model){
         super(model, new GymView(model));
     }
 
+    /**
+     * Instantiates a new Gym controller.
+     *
+     * @param model the model
+     * @param view  the view
+     */
     public GymController(GymModel model, GymView view){
         super(model, view);
     }
@@ -25,11 +39,18 @@ public class GymController extends Controller{
         this.getImageView().addEventHandler(MouseEvent.MOUSE_CLICKED, this::handleClick);
     }
 
+    /**
+     * Make hoverable.
+     */
     public void makeHoverable(){
         if(this.getImageView() == null) return;
         this.getImageView().addEventHandler(MouseEvent.MOUSE_ENTERED, this::handleStartHover);
         this.getImageView().addEventHandler(MouseEvent.MOUSE_EXITED, this::handleEndHover);
     }
+
+    /**
+     * Make interactive.
+     */
     public void makeInteractive(){
         this.makeClickable();
         this.makeHoverable();

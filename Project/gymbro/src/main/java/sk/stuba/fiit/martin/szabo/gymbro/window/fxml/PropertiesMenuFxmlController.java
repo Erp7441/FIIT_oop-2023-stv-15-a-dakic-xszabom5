@@ -6,8 +6,14 @@ import javafx.scene.control.Button;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
+/**
+ * The type Properties menu fxml controller.
+ */
 public class PropertiesMenuFxmlController{
 
+    /**
+     * Back.
+     */
     @FXML
     protected void back(){
         if(Window.getInstance().getSceneManager().getActiveName().equals(Constants.ID_GYM_MENU_PANE)){
@@ -18,11 +24,21 @@ public class PropertiesMenuFxmlController{
         }
     }
 
+    /**
+     * Handle favorites.
+     *
+     * @param event the event
+     */
     public void handleFavorites(ActionEvent event){
         Window.getInstance().handleFavorites();
         initializeFavoritesButtonState((Button) event.getSource());
     }
 
+    /**
+     * Initialize favorites button state.
+     *
+     * @param favoritesButton the favorites button
+     */
     public static void initializeFavoritesButtonState(Button favoritesButton){
         if(favoritesButton == null) return;
 
