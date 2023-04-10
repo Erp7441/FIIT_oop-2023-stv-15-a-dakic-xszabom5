@@ -3,6 +3,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.window;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -83,17 +84,30 @@ public class Window{
         FavoritesController favoritesController = FavoritesHandler.getFavorites();
         FavoritesModel favoritesModel = ((FavoritesModel) favoritesController.getModel());
 
-        if(favoritesController.findGym(this.getFocusedGym()) == null){
-            favoritesModel.getFavorites().add(this.getFocusedGym());
+        if(this.isFocusedGymFavorite()){
+
+            // TODO:: change handling of equality between object to just generated ID
+            // Since the gym objects does not have to be 100% equal (only their properties have to)
+            // we need to find the specific instance from the list that matches current instance of focused gym
+            favoritesModel.getFavorites().remove(favoritesController.findGym(this.getFocusedGym()));
         }
         else{
-            favoritesModel.getFavorites().remove(this.getFocusedGym());
-        }
+            favoritesModel.getFavorites().add(this.getFocusedGym());
 
+        }
+    }
+
+    public boolean isFocusedGymFavorite(){
+        if(this.getFocusedGym() == null) return false;
+        return (FavoritesHandler.getFavorites().findGym(this.getFocusedGym()) != null);
     }
 
     public void handleQuit(){
         Platform.exit();
+    }
+    
+    public Node lookup(String s){
+        return this.getScene().lookup(s);
     }
 
     // TODO:: sort out positions of setters and getters

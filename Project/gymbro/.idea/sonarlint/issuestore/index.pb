@@ -21,11 +21,5 @@ q
 Asrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Places.java,2\1\2160e84dc369b498f67e0b17c6acc36d691a7638
 ‚
 Rsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/TransformBuilder.java,b\9\b969b26a0896aa0765ea68b73d51789c7f490c64
-‚
-Rsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/ModalMenuBuilder.java,8\d\8da6dd2e4d88957e27e31f1bacc02da34c07a958
-ˆ
-Xsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/ModalMenuController.java,3\b\3b97a6d568e321d26267a5bbad5bfa50b7e19fb3
 v
 Fsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/MapView.java,5\e\5ea959010a523e26f419e628d66f5e308fc4a18e
-~
-Nsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/ModalMenuModel.java,0\3\03468c178b06b76f7830382b2e67fb7ebd5c2146

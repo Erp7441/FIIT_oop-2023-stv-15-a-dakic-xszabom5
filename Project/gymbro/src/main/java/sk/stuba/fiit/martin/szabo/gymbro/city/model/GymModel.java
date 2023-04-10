@@ -62,7 +62,7 @@ public class GymModel extends Model implements Serialization{
         GymModel gymModel = (GymModel) o;
 
         if(getAmountOfEquipment() != gymModel.getAmountOfEquipment()) return false;
-        return getPropertiesMenu().equals(gymModel.getPropertiesMenu());
+        return getPropertiesMenu().getModel().equals(gymModel.getPropertiesMenu().getModel());
     }
 
     @Override

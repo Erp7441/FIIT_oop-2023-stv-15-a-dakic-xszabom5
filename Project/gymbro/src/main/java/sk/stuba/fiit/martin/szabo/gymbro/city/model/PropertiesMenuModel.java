@@ -57,4 +57,29 @@ public class PropertiesMenuModel extends Model implements Serialization{
     public void setOwner(GymController owner){
         this.owner = owner;
     }
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+
+        PropertiesMenuModel that = (PropertiesMenuModel) o;
+
+        if(this.getProperties().size() != that.getProperties().size()) return false;
+
+        for(int i = 0; i < this.getProperties().size(); i++){
+            if(
+                !this.getProperties().get(i).getName().equals(that.getProperties().get(i).getName()) ||
+                !this.getProperties().get(i).getValue().equals(that.getProperties().get(i).getValue())
+            ) return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode(){
+        int result = getProperties().hashCode();
+        result = 31 * result + getOwner().hashCode();
+        return result;
+    }
 }

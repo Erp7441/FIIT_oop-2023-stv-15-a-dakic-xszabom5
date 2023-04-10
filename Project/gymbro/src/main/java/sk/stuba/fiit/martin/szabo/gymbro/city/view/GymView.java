@@ -1,8 +1,10 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.view;
 
+import javafx.scene.control.Button;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
+import sk.stuba.fiit.martin.szabo.gymbro.window.fxml.PropertiesMenuFxmlController;
 
 public class GymView extends View{
 
@@ -28,5 +30,8 @@ public class GymView extends View{
         PropertiesMenuController controller = ((GymModel) this.getModel()).getPropertiesMenu();
         controller.getView().draw();
         Window.getInstance().setFocusedGym(controller.getOwner());
+
+        // Initalize favorite button state
+        PropertiesMenuFxmlController.initializeFavoritesButtonState((Button) Window.getInstance().lookup("#favorites"));
     }
 }
