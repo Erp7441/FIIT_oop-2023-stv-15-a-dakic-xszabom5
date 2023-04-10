@@ -25,10 +25,16 @@
       <change beforePath="$PROJECT_DIR$/../../Example Project/bin/resources/img/logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Example Project/bin/resources/img/warning.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Example Project/bin/views/mainframe.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/favorites/favorite_gyms.zip" beforeDir="false" afterPath="$PROJECT_DIR$/favorites/favorite_gyms.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/FavoritesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/FavoritesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/GymController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/PropertiesMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/PropertiesMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/FavoritesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/FavoritesModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/handlers/FavoritesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/handlers/FavoritesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/PropertiesMenuModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/PropertiesMenuModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/file/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/file/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +168,7 @@
       <workItem from="1681038566829" duration="32687000" />
       <workItem from="1681108399974" duration="168000" />
       <workItem from="1681108586529" duration="26438000" />
-      <workItem from="1681135647670" duration="12488000" />
+      <workItem from="1681135647670" duration="16932000" />
     </task>
     <servers />
   </component>

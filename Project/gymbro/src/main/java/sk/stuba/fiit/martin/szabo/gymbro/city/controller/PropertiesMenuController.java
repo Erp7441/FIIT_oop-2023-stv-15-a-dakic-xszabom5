@@ -8,6 +8,9 @@ import java.util.ArrayList;
 
 public class PropertiesMenuController extends Controller{
 
+    public PropertiesMenuController(PropertiesMenuModel model){
+        super(model, new PropertiesMenuView(model));
+    }
     public PropertiesMenuController(PropertiesMenuModel model, PropertiesMenuView view){
         super(model, view);
     }

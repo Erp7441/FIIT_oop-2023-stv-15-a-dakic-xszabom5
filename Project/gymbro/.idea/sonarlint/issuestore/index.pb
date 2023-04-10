@@ -7,8 +7,6 @@ Csrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Vector2D.java,7\c\7c0938
 gymbro.puml,0\7\07f27713dcf39beb75d84c5d696dee368ebd337e
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-t
-Dsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Transform.java,8\8\884cfd5c65cea1e7eab2415382c81dde61fe2c9e
 
 Osrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/Controller.java,5\b\5b989dab84c43cbb5a60a91864f038ce9d7abd0c
 q

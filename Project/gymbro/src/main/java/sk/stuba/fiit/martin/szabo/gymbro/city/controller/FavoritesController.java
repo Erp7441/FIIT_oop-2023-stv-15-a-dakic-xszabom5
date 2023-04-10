@@ -5,6 +5,8 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.view.FavoritesView;
 
 public class FavoritesController extends Controller{
 
+    public FavoritesController(FavoritesModel model) { super(model, new FavoritesView(model)); }
+
     public FavoritesController(FavoritesModel model, FavoritesView view){
         super(model, view);
     }

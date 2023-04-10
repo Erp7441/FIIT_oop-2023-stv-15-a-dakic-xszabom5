@@ -2,6 +2,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
+import sk.stuba.fiit.martin.szabo.gymbro.file.Parser;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
@@ -43,10 +44,24 @@ public class PropertiesMenuModel extends Model{
         return builder.toString();
     }
 
-    public static Property deserialize(){
+    public static PropertiesMenuModel deserialize(){
+        Parser.consumeBeginObjectProperty("Properties");
+        Parser.skipWhitespace();
 
+        PropertiesMenuModel model = new PropertiesMenuModel();
 
-        return null;
+        if(Parser.peek() == '"'){
+            model.getProperties().add(Parser.parseProperty());
+            while(Parser.peek() == ','){
+                Parser.consume(',');
+                Parser.skipWhitespace();
+                model.getProperties().add(Parser.parseProperty());
+            }
+            Parser.skipWhitespace();
+        }
+        Parser.consumeEndObjectProperty();
+
+        return model;
     }
 
 

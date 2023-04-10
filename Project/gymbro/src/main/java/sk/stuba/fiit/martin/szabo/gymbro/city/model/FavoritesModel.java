@@ -53,22 +53,21 @@ public class FavoritesModel extends Model{
 
     public static FavoritesModel deserialize(){
         Parser.consumeBeginObjectProperty("FavoritesModel");
+        Parser.skipWhitespace();
 
         FavoritesModel model = new FavoritesModel();
 
-        if(Parser.peek() == ','){
-            Parser.consume(',');
-            Parser.consumeBeginObjectProperty("GymModel");
+        if(Parser.peek() == '"'){
             model.getFavorites().add(Parser.parseGymModel());
-
             while(Parser.peek() == ','){
                 Parser.consume(',');
+                Parser.skipWhitespace();
                 model.getFavorites().add(Parser.parseGymModel());
             }
-            Parser.consumeEndObjectProperty();
+            Parser.skipWhitespace();
         }
-
         Parser.consumeEndObjectProperty();
+
         return model;
     }
 

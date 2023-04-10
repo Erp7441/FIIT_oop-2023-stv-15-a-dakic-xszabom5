@@ -9,6 +9,10 @@ import static java.lang.System.out;
 
 public class GymController extends Controller{
 
+    public GymController(GymModel model){
+        super(model, new GymView(model));
+    }
+
     public GymController(GymModel model, GymView view){
         super(model, view);
     }

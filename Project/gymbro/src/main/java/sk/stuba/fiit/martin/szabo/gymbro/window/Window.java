@@ -13,6 +13,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.Main;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.FavoritesController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel;
+import sk.stuba.fiit.martin.szabo.gymbro.file.Parser;
 import sk.stuba.fiit.martin.szabo.gymbro.handlers.FavoritesHandler;
 import sk.stuba.fiit.martin.szabo.gymbro.managers.event.SceneEventManager;
 import sk.stuba.fiit.martin.szabo.gymbro.managers.scene.SceneManager;
@@ -41,6 +42,8 @@ public class Window{
     }
 
     public void start(Stage stage) throws IOException{
+
+        this.importFavorites("favorite_gyms");
 
         Pane root = new FXMLLoader(Main.class.getResource("fxml/mainMenu.fxml")).load();
         this.sceneManager = new SceneManager(new Scene(root, this.getWidth(), this.getHeight()));
@@ -96,6 +99,17 @@ public class Window{
             favoritesModel.getFavorites().add(this.getFocusedGym());
 
         }
+    }
+
+    public void importFavorites(String fileName){
+        try{
+            Parser.openFile(fileName);
+            Parser.consume('{');
+            FavoritesHandler.setFavorites(Parser.parseFavorites());
+            Parser.skipWhitespace();
+            Parser.consume('}');
+        }
+        catch(Exception ignored){}
     }
 
     public boolean isFocusedGymFavorite(){

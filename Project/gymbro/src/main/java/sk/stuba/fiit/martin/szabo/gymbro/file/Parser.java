@@ -1,6 +1,15 @@
 package sk.stuba.fiit.martin.szabo.gymbro.file;
 
+import sk.stuba.fiit.martin.szabo.gymbro.city.builder.FavoritesBuilder;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.FavoritesController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.PropertiesMenuModel;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -23,11 +32,11 @@ public class Parser{
 
     public static void openFile(String fileName){
         // Checks if file exists. If it does then get its length.
-        File temp = new File("levels/" + fileName + ".zip");
+        File temp = new File("favorites/" + fileName + ".zip");
         if(!temp.exists()){ return; }
 
         try {
-            ZipFile zip = new ZipFile("levels/" + fileName + ".zip");
+            ZipFile zip = new ZipFile("favorites/" + fileName + ".zip");
             ZipEntry json = zip.getEntry(fileName + ".json");
             InputStream stream = zip.getInputStream(json);
             bytes = readAllBytes(stream);
@@ -219,7 +228,63 @@ public class Parser{
         }
     }
 
+    public static FavoritesController parseFavorites(){
+        if(bytes.length == 0 || atEnd()) return null;
+
+        if(peek() == ',') consume(',');
+        skipWhitespace();
+        if(atEnd()) return null;
+
+        return new FavoritesController(FavoritesModel.deserialize());
+    }
+
     public static GymController parseGymModel(){
-        return null; // TODO:: Implement
+
+        Parser.consumeBeginObjectProperty("GymModel");
+        Parser.skipWhitespace();
+
+        GymModel model = new GymModel();
+
+        model.setTransform(Transform.deserialize());
+        skipWhitespace();
+        if(peek() == ',') consume(',');
+        skipWhitespace();
+
+        model.setAmountOfEquipment(Parser.consumeIntProperty("AmountOfEquipment"));
+        if(peek() == ',') consume(',');
+        skipWhitespace();
+
+        model.setTexture(Parser.consumeStringProperty("Texture"));
+        if(peek() == ',') consume(',');
+        skipWhitespace();
+
+        PropertiesMenuModel propertiesMenuModel = PropertiesMenuModel.deserialize();
+        if(peek() == ',') consume(',');
+        skipWhitespace();
+        model.setPropertiesMenu(new PropertiesMenuController(propertiesMenuModel));
+
+        Parser.skipWhitespace();
+        Parser.consumeEndObjectProperty();
+
+        return new GymController(model);
+    }
+
+    public static Property parseProperty(){
+        Parser.consumeBeginObjectProperty("Property");
+        Parser.skipWhitespace();
+
+        Property property = new Property();
+
+        property.setName(Parser.consumeStringProperty("Name"));
+        if(Parser.peek() == ',') Parser.consume(',');
+        Parser.skipWhitespace();
+
+        property.setValue(Parser.consumeStringProperty("Value"));
+        if(Parser.peek() == ',') Parser.consume(',');
+        Parser.skipWhitespace();
+
+        Parser.consumeEndObjectProperty();
+
+        return property;
     }
 }
