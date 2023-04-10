@@ -7,6 +7,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuControlle
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.PropertiesMenuModel;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Places;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
@@ -282,12 +283,28 @@ public class Parser{
         if(Parser.peek() == ',') Parser.consume(',');
         Parser.skipWhitespace();
 
-        property.setValue(Parser.consumeStringProperty("Value"));
+        // Converts location to enum value
+        if(property.getName().equals("Location")){
+            property.setValue(findPlace(Parser.consumeStringProperty("Value")));
+        }
+        else{
+            property.setValue(Parser.consumeStringProperty("Value"));
+        }
+
         if(Parser.peek() == ',') Parser.consume(',');
         Parser.skipWhitespace();
 
         Parser.consumeEndObjectProperty();
 
         return property;
+    }
+
+    private static Object findPlace(String value){
+        for (Places place : Places.values()){
+            if(place.getLabel().equals(value)){
+                return place;
+            }
+        }
+        return value;
     }
 }

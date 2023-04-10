@@ -9,8 +9,6 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 
 Osrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/Controller.java,5\b\5b989dab84c43cbb5a60a91864f038ce9d7abd0c
-q
-Asrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Places.java,2\1\2160e84dc369b498f67e0b17c6acc36d691a7638
 ‚
 Rsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/TransformBuilder.java,b\9\b969b26a0896aa0765ea68b73d51789c7f490c64
 v
