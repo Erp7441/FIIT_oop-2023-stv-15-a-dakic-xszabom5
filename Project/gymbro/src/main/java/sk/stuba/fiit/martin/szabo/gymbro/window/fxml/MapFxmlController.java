@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 import sk.stuba.fiit.martin.szabo.gymbro.Main;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Setup;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
@@ -21,8 +22,8 @@ public class MapFxmlController{
 
     public void initializeScene() throws IOException{
         Pane root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/map.fxml")));
-        Window.getInstance().getSceneManager().addPane("Map", root);
-        Window.getInstance().getSceneManager().activate("Map");
+        Window.getInstance().getSceneManager().addPane(Constants.ID_MAP, root);
+        Window.getInstance().getSceneManager().activate(Constants.ID_MAP);
     }
 
     @FXML

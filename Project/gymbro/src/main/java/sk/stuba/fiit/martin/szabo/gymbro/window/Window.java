@@ -31,7 +31,7 @@ public class Window{
 
         Pane root = new FXMLLoader(Main.class.getResource("fxml/mainMenu.fxml")).load();
         this.sceneManager = new SceneManager(new Scene(root, this.getWidth(), this.getHeight()));
-        this.getSceneManager().addPane("MainMenu", root);
+        this.getSceneManager().addPane("MAIN_MENU", root);
 
         stage.setScene(this.getSceneManager().getScene());
         stage.setResizable(Constants.SCREEN_RESIZABLE);

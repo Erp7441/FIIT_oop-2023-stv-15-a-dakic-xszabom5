@@ -1,58 +1,61 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.view;
 
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import sk.stuba.fiit.martin.szabo.gymbro.city.model.ModalMenuModel;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.PropertiesMenuModel;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.window.SceneManager;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
-public class ModalMenuView extends View{
+public class PropertiesMenuView extends View{
 
-    public ModalMenuView(){
-        super(new ModalMenuModel());
+    public PropertiesMenuView(){
+        super(new PropertiesMenuModel());
     }
 
-    public ModalMenuView(ModalMenuModel model){
+    public PropertiesMenuView(PropertiesMenuModel model){
         super(model);
     }
 
     @Override
     public void draw(){
 
-        Pane root = SceneManager.loadFxml("fxml/modalMenu.fxml");
-        ModalMenuModel model = ((ModalMenuModel) this.getModel());
+        Pane root = SceneManager.loadFxml("fxml/propertiesMenu.fxml");
+        PropertiesMenuModel model = ((PropertiesMenuModel) this.getModel());
 
         if(root == null || model == null || model.getProperties() == null || model.getProperties().isEmpty()) return;
 
 
-        int row = 50;
+        double row = Constants.LABLE_LAYOUT_Y;
         for(Property property : model.getProperties()){
-            Text text = new Text(100, row, property.toString());
-            text.setFont(new Font("Consolas", 25));
+            Label text = new Label(property.toString());
+            text.setLayoutX(Constants.LABLE_LAYOUT_X);
+            text.setLayoutY(row);
+            text.setFont(new Font(Constants.LABLE_FONT_TYPE, Constants.LABLE_FONT_SIZE));
             root.getChildren().add(text);
-            row += 50;
+            row += Constants.LABLE_LAYOUT_Y;
         }
 
-        // TODO:: Add back button
+        Window.getInstance().getSceneManager().addPane(Constants.ID_GYM_MENU, root);
+        Window.getInstance().getSceneManager().activate(Constants.ID_GYM_MENU);
 
-        Window.getInstance().getSceneManager().addPane("GYM_MENU", root);
-        Window.getInstance().getSceneManager().activate("GYM_MENU");
-
-        this.removeOnEscapeEvent();
+        this.addRemoveOnEscapeEvent();
     }
 
     public void removeFromView(){
-        Window.getInstance().getSceneManager().activate("Map");
-        Window.getInstance().getSceneManager().removePane("GYM_MENU");
+        Window.getInstance().getSceneManager().activate(Constants.ID_MAP);
+        Window.getInstance().getSceneManager().removePane(Constants.ID_GYM_MENU);
     }
 
-    private void removeOnEscapeEvent(){
-        ModalMenuView view = this;
+    private void addRemoveOnEscapeEvent(){
+        PropertiesMenuView view = this;
         EventHandler<KeyEvent> removeOnEscape = new EventHandler<>(){
             @Override
             public void handle(KeyEvent keyEvent){
@@ -65,7 +68,7 @@ public class ModalMenuView extends View{
         };
 
         Window.getInstance().getEventManager().getKeys().addEvent(
-            "MODAL_MENU_REMOVE_ON_ESCAPE",
+            Constants.ID_PROPERTY_REMOVE_ON_ESCAPE,
             KeyEvent.KEY_PRESSED,
             removeOnEscape
         );

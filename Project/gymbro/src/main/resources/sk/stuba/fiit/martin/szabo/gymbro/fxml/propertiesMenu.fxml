@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane   fx:controller="sk.stuba.fiit.martin.szabo.gymbro.window.fxml.PropertiesMenuFxmlController"
+        maxHeight="-Infinity"
+        maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="840.0"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+>
+
+    <Button id="Back" onAction="#back" layoutX="400.0" layoutY="921.0" mnemonicParsing="false" text="Back"/>
+</Pane>

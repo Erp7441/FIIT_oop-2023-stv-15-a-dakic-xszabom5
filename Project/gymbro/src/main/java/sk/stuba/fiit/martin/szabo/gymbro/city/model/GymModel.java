@@ -1,7 +1,7 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
-import sk.stuba.fiit.martin.szabo.gymbro.city.controller.ModalMenuController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuController;
 import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
@@ -9,7 +9,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 public class GymModel extends Model implements Serialization{
 
     private int amountOfEquipment;
-    private ModalMenuController modalMenu = null;
+    private PropertiesMenuController propertiesMenu = null;
 
     public GymModel(){ super(); }
 
@@ -46,11 +46,11 @@ public class GymModel extends Model implements Serialization{
         this.amountOfEquipment = amountOfEquipment;
     }
 
-    public ModalMenuController getModalMenu(){
-        return modalMenu;
+    public PropertiesMenuController getPropertiesMenu(){
+        return propertiesMenu;
     }
 
-    public void setModalMenu(ModalMenuController modalMenu){
-        this.modalMenu = modalMenu;
+    public void setPropertiesMenu(PropertiesMenuController propertiesMenu){
+        this.propertiesMenu = propertiesMenu;
     }
 }

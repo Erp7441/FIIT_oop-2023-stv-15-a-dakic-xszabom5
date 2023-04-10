@@ -1,6 +1,7 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -28,6 +29,20 @@ public class SceneManager{
 
     public void activate(String name){
         this.getScene().setRoot(this.getPaneMap().get(name));
+    }
+
+    public Parent getActive(){
+        return this.getScene().getRoot();
+    }
+
+    public String getActiveName(){
+        String name = null;
+        for(String key : this.getPaneMap().keySet()){
+            if(this.getPaneMap().get(key).equals(this.getActive())){
+                name = key;
+            }
+        }
+        return name;
     }
 
     public static Pane loadFxml(String path){

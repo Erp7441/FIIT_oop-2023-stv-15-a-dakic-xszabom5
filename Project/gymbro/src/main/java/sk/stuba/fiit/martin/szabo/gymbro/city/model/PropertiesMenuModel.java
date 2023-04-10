@@ -7,18 +7,18 @@ import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 import java.util.ArrayList;
 
-public class ModalMenuModel extends Model implements Serialization{
+public class PropertiesMenuModel extends Model implements Serialization{
     private ArrayList<Property> properties = new ArrayList<>();
 
 
-    public ModalMenuModel(){}
+    public PropertiesMenuModel(){}
 
-    public ModalMenuModel(ArrayList<Property> properties, Transform transform, Image texture){
+    public PropertiesMenuModel(ArrayList<Property> properties, Transform transform, Image texture){
         super(transform, texture);
         this.properties = properties;
     }
 
-    public ModalMenuModel(ArrayList<Property> properties, Transform transform, String texturePath){
+    public PropertiesMenuModel(ArrayList<Property> properties, Transform transform, String texturePath){
         super(transform, texturePath);
         this.properties = properties;
     }

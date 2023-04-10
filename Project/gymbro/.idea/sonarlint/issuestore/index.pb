@@ -1,6 +1,4 @@
 
-t
-Dsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Constants.java,9\d\9d00fd8cd766129073d0884014df182e457bf15d
 s
 Csrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Vector2D.java,7\c\7c09387fde3cb39b335a4fec71c5fdf3ebb126c3
 
@@ -13,8 +11,6 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 t
 Dsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Transform.java,8\8\884cfd5c65cea1e7eab2415382c81dde61fe2c9e
-x
-Hsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/GymModel.java,3\0\300ac99f3859be1ada913a96a8817e31cb4356ef
 u
 Esrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/Model.java,a\8\a86cbac68371d5b38c02c47f6a29d31eaa135e75
 s
@@ -33,8 +29,6 @@ q
 Asrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Places.java,2\1\2160e84dc369b498f67e0b17c6acc36d691a7638
 ‚
 Rsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/TransformBuilder.java,b\9\b969b26a0896aa0765ea68b73d51789c7f490c64
-|
-Lsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/GymBuilder.java,b\2\b2dd1ac1d28701bcdbf367ca6b1f9e9f973d91b4
 |
 Lsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/MapBuilder.java,9\b\9bec86eff587d94380959e7e35127dc6fb3b9a96
 |
@@ -55,18 +49,5 @@ Rsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/MapController.j
 Xsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/ModalMenuController.java,3\b\3b97a6d568e321d26267a5bbad5bfa50b7e19fb3
 v
 Fsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/MapView.java,5\e\5ea959010a523e26f419e628d66f5e308fc4a18e
-‚
-Rsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/MapFxmlController.java,e\e\eeedc329d871a993526cc679228b67ffbed2ac9a
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-ˆ
-Xsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/ModalMenuFxmlController.java,d\c\dc08e087f29ba6ea10c36e14718c34a0a1ead36f
 ~
 Nsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/ModalMenuModel.java,0\3\03468c178b06b76f7830382b2e67fb7ebd5c2146
-s
-Csrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/View.java,8\b\8be4e5d881d791f49a2c18af3aa654223ec6a8b8
-q
-Asrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Setup.java,3\0\301621370dd16c2576ede571ef48c9eb3b1ae9e0
-x
-Hsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/SceneManager.java,a\9\a941aeb41f6d31750c8974e5a84dd4df890c8ed5

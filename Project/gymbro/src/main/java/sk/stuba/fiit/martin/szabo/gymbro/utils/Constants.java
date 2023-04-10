@@ -3,16 +3,31 @@ package sk.stuba.fiit.martin.szabo.gymbro.utils;
 public class Constants{
     private Constants(){}
 
+    //* Screen setup
     public static final int SCREEN_WIDTH = 840;
     public static final int SCREEN_HEIGHT = 960;
     public static final String SCREEN_TITLE = "GymBro";
     public static final boolean SCREEN_RESIZABLE = false;
-    public static final double MOUSE_OFFSET_X = 420.0;
-    public static final double MOUSE_OFFSET_Y = 480.0;
+
+
+    //* Labels
+    public static final double LABLE_LAYOUT_X = 50;
+    public static final double LABLE_LAYOUT_Y = 50;
+    public static final String LABLE_FONT_TYPE = "Consolas";
+    public static final double LABLE_FONT_SIZE = 25;
+
+    //* Identifiers
+    public static final String ID_GYM_MENU = "GYM_MENU";
+    public static final String ID_MAP = "MAP";
+    public static final String ID_PROPERTY_REMOVE_ON_ESCAPE = "PROPERTY_MENU_REMOVE_ON_ESCAPE_EVENT";
+
+
 
 
     // TODO:: Remove unused constants
 
+    public static final double MOUSE_OFFSET_X = 420.0;
+    public static final double MOUSE_OFFSET_Y = 480.0;
     public static final int BUTTON_OFFSET_X = 400;
     public static final int BUTTON_OFFSET_Y = 560;
     public static final  int BUTTON_SPACING_HZ = 10;

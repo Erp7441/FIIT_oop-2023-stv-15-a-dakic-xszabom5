@@ -29,6 +29,7 @@ application {
     mainClass = 'sk.stuba.fiit.martin.szabo.gymbro.Main'
 }
 
+// TODO:: Sort out versioning
 javafx {
     version = '17.0.2'
     modules = ['javafx.controls', 'javafx.fxml']

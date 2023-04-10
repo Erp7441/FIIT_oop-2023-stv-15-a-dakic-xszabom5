@@ -6,7 +6,7 @@
       xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="sk.stuba.fiit.martin.szabo.gymbro.window.fxml.MainMenuFxmlController"
-      prefHeight="400.0" prefWidth="600.0">
+      prefHeight="960.0" prefWidth="840.0">
 
     <Button id="start" onAction="#startMap">Start</Button>
 

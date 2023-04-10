@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sk.stuba.fiit.martin.szabo.gymbro.window.fxml.MapFxmlController"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sk.stuba.fiit.martin.szabo.gymbro.window.fxml.MapFxmlController"
+      prefHeight="960.0" prefWidth="840.0">
 
-</AnchorPane>
+</Pane>

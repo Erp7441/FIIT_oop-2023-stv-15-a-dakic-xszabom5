@@ -3,7 +3,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.builder;
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
-import sk.stuba.fiit.martin.szabo.gymbro.city.controller.ModalMenuController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.Model;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
@@ -23,8 +23,8 @@ public class GymBuilder extends BuilderMVC{
         this.setController(new GymController(this.getModel(), this.getView()));
     }
 
-    public GymBuilder addModalMenu(ModalMenuController menu){
-        this.getModel().setModalMenu(menu);
+    public GymBuilder addPropertiesMenu(PropertiesMenuController menu){
+        this.getModel().setPropertiesMenu(menu);
         return this;
     }
 

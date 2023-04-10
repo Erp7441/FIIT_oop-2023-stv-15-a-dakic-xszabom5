@@ -1,7 +1,7 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.factory;
 
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.GymBuilder;
-import sk.stuba.fiit.martin.szabo.gymbro.city.builder.ModalMenuBuilder;
+import sk.stuba.fiit.martin.szabo.gymbro.city.builder.PropertiesMenuBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.TransformBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Places;
@@ -24,8 +24,8 @@ public class GymFactory{
                     addPosition(location.getPosition()).
                     build()
             ).
-            addModalMenu(
-                new ModalMenuBuilder().
+            addPropertiesMenu(
+                new PropertiesMenuBuilder().
                     addTransform(
                         new TransformBuilder().
                             addScale(new Vector2D(Window.getInstance().getWidth(), Window.getInstance().getHeight())).
@@ -50,8 +50,8 @@ public class GymFactory{
                     addPosition(location.getPosition()).
                     build()
             ).
-            addModalMenu(
-                new ModalMenuBuilder().
+            addPropertiesMenu(
+                new PropertiesMenuBuilder().
                     addProperty(new Property("Name", "FITINN")).
                     addProperty(new Property("Location", location)).
                     build()

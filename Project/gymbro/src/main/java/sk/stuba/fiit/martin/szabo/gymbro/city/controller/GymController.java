@@ -33,7 +33,7 @@ public class GymController extends Controller{
     private void handleClick(MouseEvent event){
 
         if(event.getButton().equals(MouseButton.PRIMARY)){
-            ModalMenuController controller = ((GymModel) this.getModel()).getModalMenu();
+            PropertiesMenuController controller = ((GymModel) this.getModel()).getPropertiesMenu();
             controller.getView().draw();
         }
         else if(event.getButton().equals(MouseButton.SECONDARY)){
