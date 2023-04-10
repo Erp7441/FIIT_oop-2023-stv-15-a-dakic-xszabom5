@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ce3646f-4fa9-4e2e-be05-4370be681e7b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/Launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro Doc.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1 Diagram Szabo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1.docx" beforeDir="false" />
@@ -129,7 +128,7 @@
       <command value="gradle packStandaloneJar" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.gymbro [jar]">
+  <component name="RunManager" selected="Gradle.gymbro [build]">
     <configuration name="gymbro [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -222,9 +221,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.gymbro [build]" />
         <item itemvalue="Gradle.gymbro [jar]" />
         <item itemvalue="Gradle.gymbro [packStandaloneJar]" />
-        <item itemvalue="Gradle.gymbro [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +258,7 @@
       <workItem from="1681108399974" duration="168000" />
       <workItem from="1681108586529" duration="26438000" />
       <workItem from="1681135647670" duration="21998000" />
-      <workItem from="1681158302776" duration="1234000" />
+      <workItem from="1681158302776" duration="2245000" />
     </task>
     <servers />
   </component>

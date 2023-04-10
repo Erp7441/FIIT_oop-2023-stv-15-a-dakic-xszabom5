@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'sk.stuba.fiit.martin.szabo'
-version '1.0-SNAPSHOT'
+version '0.1'
 
 mainClassName = 'sk.stuba.fiit.martin.szabo.gymbro.Launcher'
 
