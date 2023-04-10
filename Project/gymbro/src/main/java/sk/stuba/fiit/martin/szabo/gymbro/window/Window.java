@@ -1,14 +1,24 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window;
 
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import sk.stuba.fiit.martin.szabo.gymbro.Main;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.FavoritesController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
+import sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel;
+import sk.stuba.fiit.martin.szabo.gymbro.managers.scene.SceneManager;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
+import sk.stuba.fiit.martin.szabo.gymbro.handlers.FavoritesHandler;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
-import sk.stuba.fiit.martin.szabo.gymbro.window.eventmanager.SceneEventManager;
+import sk.stuba.fiit.martin.szabo.gymbro.managers.event.SceneEventManager;
+import sk.stuba.fiit.martin.szabo.gymbro.setups.Setup;
 
 import java.io.IOException;
 
@@ -18,6 +28,8 @@ public class Window{
     private SceneManager sceneManager = null;
     private SceneEventManager eventManager = null;
     private Transform transform;
+    private Setup windowSetup = null;
+    private GymController focusedGym = null;
 
     private Window(){
         this.transform = new Transform(
@@ -31,19 +43,72 @@ public class Window{
 
         Pane root = new FXMLLoader(Main.class.getResource("fxml/mainMenu.fxml")).load();
         this.sceneManager = new SceneManager(new Scene(root, this.getWidth(), this.getHeight()));
-        this.getSceneManager().addPane("MAIN_MENU", root);
+        this.getSceneManager().addPane(Constants.ID_MAIN_MENU_PANE, root);
 
         stage.setScene(this.getSceneManager().getScene());
         stage.setResizable(Constants.SCREEN_RESIZABLE);
         stage.setTitle(Constants.SCREEN_TITLE);
         stage.show();
+
         this.getSceneManager().setStage(stage);
         this.eventManager = new SceneEventManager(this.getSceneManager().getScene());
+
+        // TODO:: add back button
+        this.setupBackToMainMenuEvent();
+    }
+
+    private void setupBackToMainMenuEvent(){
+        EventHandler<KeyEvent> backToMainMenu = keyEvent -> {
+            if(
+                keyEvent.getCode().equals(KeyCode.ESCAPE) &&
+                this.getSceneManager().getActiveName().equals(Constants.ID_MAP_PANE)
+            ){
+                this.handleBackToMainMenu();
+            }
+        };
+
+        this.getEventManager().getKeys().addEvent(
+            Constants.ID_BACK_TO_MAIN_MENU_EVENT,
+            KeyEvent.KEY_PRESSED,
+            backToMainMenu
+        );
+    }
+
+    public void handleBackToMainMenu(){
+        this.getSceneManager().activate(Constants.ID_MAIN_MENU_PANE);
+        this.getSceneManager().removePane(Constants.ID_MAP_PANE);
+    }
+
+    public void handleFavorites(){
+        FavoritesController favoritesController = FavoritesHandler.getFavorites();
+        FavoritesModel favoritesModel = ((FavoritesModel) favoritesController.getModel());
+
+        if(favoritesController.findGym(this.getFocusedGym()) == null){
+            favoritesModel.getFavorites().add(this.getFocusedGym());
+        }
+        else{
+            favoritesModel.getFavorites().remove(this.getFocusedGym());
+        }
+
+    }
+
+    public void handleQuit(){
+        Platform.exit();
+    }
+
+    // TODO:: sort out positions of setters and getters
+    public GymController getFocusedGym(){
+        return focusedGym;
+    }
+
+    public void setFocusedGym(GymController focusedGym){
+        this.focusedGym = focusedGym;
     }
 
     public SceneEventManager getEventManager(){
         return eventManager;
     }
+
     public static Window getInstance(){
         if(Window.instance == null) Window.instance = new Window();
         return Window.instance;
@@ -82,6 +147,9 @@ public class Window{
         return this.getScale().getY();
     }
 
+    public Setup getWindowSetup(){
+        return windowSetup;
+    }
 
     public void setEventManager(SceneEventManager eventManager){
         this.eventManager = eventManager;
@@ -112,5 +180,9 @@ public class Window{
     }
     public void setHeight(double height){
         this.getScale().setY(height);
+    }
+
+    public void setWindowSetup(Setup windowSetup){
+        this.windowSetup = windowSetup;
     }
 }

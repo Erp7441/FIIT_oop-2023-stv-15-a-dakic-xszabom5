@@ -11,5 +11,6 @@
         xmlns:fx="http://javafx.com/fxml"
 >
 
-    <Button id="Back" onAction="#back" layoutX="400.0" layoutY="921.0" mnemonicParsing="false" text="Back"/>
+    <Button id="back" onAction="#back" layoutX="25.0" layoutY="921.0" mnemonicParsing="false" text="Back"/>
+    <Button id="favorites" onAction="#handleFavorites" layoutX="710.0" layoutY="921.0" mnemonicParsing="false" text="Favorites"/>
 </Pane>

@@ -1,12 +1,14 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window.fxml;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 import sk.stuba.fiit.martin.szabo.gymbro.Main;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
-import sk.stuba.fiit.martin.szabo.gymbro.window.Setup;
+import sk.stuba.fiit.martin.szabo.gymbro.setups.Setup;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
+import sk.stuba.fiit.martin.szabo.gymbro.setups.SetupFavorites;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -22,13 +24,11 @@ public class MapFxmlController{
 
     public void initializeScene() throws IOException{
         Pane root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("fxml/map.fxml")));
-        Window.getInstance().getSceneManager().addPane(Constants.ID_MAP, root);
-        Window.getInstance().getSceneManager().activate(Constants.ID_MAP);
+        Window.getInstance().getSceneManager().addPane(Constants.ID_MAP_PANE, root);
+        Window.getInstance().getSceneManager().activate(Constants.ID_MAP_PANE);
     }
 
-    @FXML
-    public void showMap(){
-        Setup setup = new Setup();
+    private void initializeSetup(Setup setup){
         if(setup.getMap() == null) setup.initializeMap();
 
         try{
@@ -41,4 +41,17 @@ public class MapFxmlController{
         this.run(setup);
     }
 
+    @FXML
+    public void showMap(){
+        this.initializeSetup(new Setup());
+    }
+
+    @FXML
+    public void showFavoritesMap(){
+        this.initializeSetup(new SetupFavorites());
+    }
+
+    public void back(){
+        Window.getInstance().handleBackToMainMenu();
+    }
 }

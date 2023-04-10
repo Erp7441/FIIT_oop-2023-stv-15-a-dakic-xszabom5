@@ -1,8 +1,9 @@
-package sk.stuba.fiit.martin.szabo.gymbro.window.eventmanager;
+package sk.stuba.fiit.martin.szabo.gymbro.managers.event;
 
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import sk.stuba.fiit.martin.szabo.gymbro.managers.event.EventManager;
 
 public class SceneEventManager{
     private EventManager<? extends KeyEvent> keyEventManager;

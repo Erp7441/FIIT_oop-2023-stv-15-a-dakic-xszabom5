@@ -1,4 +1,4 @@
-package sk.stuba.fiit.martin.szabo.gymbro.window.eventmanager;
+package sk.stuba.fiit.martin.szabo.gymbro.managers.event;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;

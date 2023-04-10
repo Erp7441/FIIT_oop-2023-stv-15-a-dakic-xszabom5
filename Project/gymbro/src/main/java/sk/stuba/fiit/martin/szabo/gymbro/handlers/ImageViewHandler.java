@@ -1,13 +1,14 @@
-package sk.stuba.fiit.martin.szabo.gymbro.utils;
+package sk.stuba.fiit.martin.szabo.gymbro.handlers;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
-public class ImageViewInitializer{
+public class ImageViewHandler{
 
     private ImageView view;
 
-    public ImageViewInitializer(){
+    public ImageViewHandler(){
         this.view = null;
     }
 

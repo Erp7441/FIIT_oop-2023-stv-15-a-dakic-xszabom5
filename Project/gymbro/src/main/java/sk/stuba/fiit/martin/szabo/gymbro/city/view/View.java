@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.Model;
-import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
+import sk.stuba.fiit.martin.szabo.gymbro.handlers.ImageViewHandler;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
@@ -22,7 +22,7 @@ public abstract class View{
 
         // If we don't have image view to place in the screen we create it
         if(this.getImageView() == null && this.getTexture() != null){
-            this.setImageView(new ImageViewInitializer().initialize(
+            this.setImageView(new ImageViewHandler().initialize(
                     this.getTexture(),
                     this.getTransform()
             ));

@@ -53,4 +53,22 @@ public class GymModel extends Model implements Serialization{
     public void setPropertiesMenu(PropertiesMenuController propertiesMenu){
         this.propertiesMenu = propertiesMenu;
     }
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+
+        GymModel gymModel = (GymModel) o;
+
+        if(getAmountOfEquipment() != gymModel.getAmountOfEquipment()) return false;
+        return getPropertiesMenu().equals(gymModel.getPropertiesMenu());
+    }
+
+    @Override
+    public int hashCode(){
+        int result = getAmountOfEquipment();
+        result = 31 * result + getPropertiesMenu().hashCode();
+        return result;
+    }
 }

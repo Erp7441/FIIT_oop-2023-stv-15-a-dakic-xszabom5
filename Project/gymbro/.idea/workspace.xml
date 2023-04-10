@@ -10,8 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ce3646f-4fa9-4e2e-be05-4370be681e7b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/PropertiesMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/PropertiesMenuFxmlController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/FavoritesBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/FavoritesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/FavoritesModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/FavoritesView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/handlers/FavoritesHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/setups/SetupFavorites.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro Doc.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1 Diagram Szabo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Documentation/GymBro KB1.docx" beforeDir="false" />
@@ -29,23 +33,32 @@
       <change beforePath="$PROJECT_DIR$/../../Example Project/bin/views/mainframe.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/GymBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/GymBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/ModalMenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/PropertiesMenuBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/PropertiesMenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/builder/PropertiesMenuBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/GymController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/ModalMenuController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/PropertiesMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/PropertiesMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/factory/GymFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/factory/GymFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/GymModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/GymModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/ModalMenuModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/PropertiesMenuModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/ModalMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/PropertiesMenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/PropertiesMenuModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/model/PropertiesMenuModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/GymView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/GymView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/PropertiesMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/PropertiesMenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/view/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/ImageViewInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/handlers/ImageViewHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/managers/scene/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/setups/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/eventmanager/EventEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/managers/event/EventEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/eventmanager/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/managers/event/EventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/eventmanager/SceneEventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/managers/event/SceneEventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/MainMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/MainMenuFxmlController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/MapFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/MapFxmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/ModalMenuFxmlController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/PropertiesMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/window/fxml/PropertiesMenuFxmlController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/mainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/mainMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/modalMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/propertiesMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/propertiesMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sk/stuba/fiit/martin/szabo/gymbro/fxml/propertiesMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +191,7 @@
       <workItem from="1680730370116" duration="20471000" />
       <workItem from="1681038566829" duration="32687000" />
       <workItem from="1681108399974" duration="168000" />
-      <workItem from="1681108586529" duration="12531000" />
+      <workItem from="1681108586529" duration="23124000" />
     </task>
     <servers />
   </component>
@@ -196,11 +209,18 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="13" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/stuba/fiit/martin/szabo/gymbro/setups/Setup.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="javafx.scene.Scene" memberName="root" />
         <PinnedItemInfo parentTag="com.sun.javafx.event.EventHandlerManager" memberName="eventHandlerMap" />
+        <PinnedItemInfo parentTag="sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel" memberName="imageView" />
         <PinnedItemInfo parentTag="javafx.scene.image.ImageView$5" memberName="value" />
         <PinnedItemInfo parentTag="javafx.beans.property.SimpleObjectProperty" memberName="value" />
         <PinnedItemInfo parentTag="com.sun.javafx.scene.SceneEventDispatcher" memberName="eventHandlerManager" />

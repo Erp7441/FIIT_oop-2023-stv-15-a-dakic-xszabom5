@@ -8,10 +8,14 @@ public class PropertiesMenuFxmlController{
 
     @FXML
     protected void back(){
-        if(Window.getInstance().getSceneManager().getActiveName().equals(Constants.ID_GYM_MENU)){
-            Window.getInstance().getSceneManager().activate(Constants.ID_MAP);
-            Window.getInstance().getSceneManager().removePane(Constants.ID_GYM_MENU);
-            Window.getInstance().getEventManager().getKeys().removeEvent(Constants.ID_PROPERTY_REMOVE_ON_ESCAPE);
+        if(Window.getInstance().getSceneManager().getActiveName().equals(Constants.ID_GYM_MENU_PANE)){
+            Window.getInstance().getSceneManager().activate(Constants.ID_MAP_PANE);
+            Window.getInstance().getSceneManager().removePane(Constants.ID_GYM_MENU_PANE);
+            Window.getInstance().getEventManager().getKeys().removeEvent(Constants.ID_PROPERTY_REMOVE_ON_ESCAPE_EVENT);
         }
+    }
+
+    public void handleFavorites(){
+        Window.getInstance().handleFavorites();
     }
 }

@@ -1,4 +1,4 @@
-package sk.stuba.fiit.martin.szabo.gymbro.window;
+package sk.stuba.fiit.martin.szabo.gymbro.setups;
 
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.MapBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.builder.TransformBuilder;
@@ -7,6 +7,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.factory.GymFactory;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Places;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
+import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class Setup{
 
     public void initializeMap(){
         Window window = Window.getInstance();
+        window.setWindowSetup(this);
 
         // Creating map
         this.setMap(

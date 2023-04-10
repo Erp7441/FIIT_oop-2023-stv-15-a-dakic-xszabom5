@@ -33,8 +33,7 @@ public class GymController extends Controller{
     private void handleClick(MouseEvent event){
 
         if(event.getButton().equals(MouseButton.PRIMARY)){
-            PropertiesMenuController controller = ((GymModel) this.getModel()).getPropertiesMenu();
-            controller.getView().draw();
+            ((GymView) this.getView()).showProperties();
         }
         else if(event.getButton().equals(MouseButton.SECONDARY)){
             // TODO:: Show context menu here

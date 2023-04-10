@@ -2,7 +2,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import sk.stuba.fiit.martin.szabo.gymbro.utils.ImageViewInitializer;
+import sk.stuba.fiit.martin.szabo.gymbro.handlers.ImageViewHandler;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
@@ -73,7 +73,7 @@ public abstract class Model{
     }
     public void setTexture(Image texture){
         this.texture = texture;
-        this.setImageView(new ImageViewInitializer().initialize(
+        this.setImageView(new ImageViewHandler().initialize(
                 this.getTexture(),
                 this.getTransform()
         ));
@@ -82,7 +82,7 @@ public abstract class Model{
         try{
             this.texture = new Image(new FileInputStream(texturePath));
 
-            this.setImageView(new ImageViewInitializer().initialize(
+            this.setImageView(new ImageViewHandler().initialize(
                     this.getTexture(),
                     this.getTransform()
             ));

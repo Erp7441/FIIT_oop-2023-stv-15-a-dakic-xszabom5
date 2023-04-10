@@ -1,9 +1,10 @@
-package sk.stuba.fiit.martin.szabo.gymbro.window.eventmanager;
+package sk.stuba.fiit.martin.szabo.gymbro.managers.event;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Scene;
+import sk.stuba.fiit.martin.szabo.gymbro.managers.event.EventEntry;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,6 +43,7 @@ public class EventManager<T extends Event>{
             for(String key : this.getHandlers().keySet()){
                 if(this.getHandlers().get(key).equals(entry)){
                     this.getHandlers().remove(key);
+                    return;
                 }
             }
 
@@ -57,6 +59,7 @@ public class EventManager<T extends Event>{
         for(String key : this.getHandlers().keySet()){
             if(this.getHandlers().get(key).getHandler().equals(handler)){
                 this.removeEventEntry(this.getHandlers().get(key));
+                return;
             }
         }
     }

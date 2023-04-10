@@ -25,6 +25,7 @@ public class GymBuilder extends BuilderMVC{
 
     public GymBuilder addPropertiesMenu(PropertiesMenuController menu){
         this.getModel().setPropertiesMenu(menu);
+        menu.setOwner(this.getController());
         return this;
     }
 

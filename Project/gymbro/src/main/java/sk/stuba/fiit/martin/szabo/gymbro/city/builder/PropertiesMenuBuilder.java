@@ -2,6 +2,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.builder;
 
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller;
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.PropertiesMenuModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.Model;
@@ -38,6 +39,10 @@ public class PropertiesMenuBuilder extends BuilderMVC{
         return this;
     }
 
+    public PropertiesMenuBuilder addOwner(GymController owner){
+        this.getModel().setOwner(owner);
+        return this;
+    }
 
     //* Mandatory casting overrides
     @Override

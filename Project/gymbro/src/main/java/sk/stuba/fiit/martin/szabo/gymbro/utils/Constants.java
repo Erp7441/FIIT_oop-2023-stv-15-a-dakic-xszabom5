@@ -3,7 +3,7 @@ package sk.stuba.fiit.martin.szabo.gymbro.utils;
 public class Constants{
     private Constants(){}
 
-    //* Screen setup
+    //* Screen setups
     public static final int SCREEN_WIDTH = 840;
     public static final int SCREEN_HEIGHT = 960;
     public static final String SCREEN_TITLE = "GymBro";
@@ -17,9 +17,13 @@ public class Constants{
     public static final double LABLE_FONT_SIZE = 25;
 
     //* Identifiers
-    public static final String ID_GYM_MENU = "GYM_MENU";
-    public static final String ID_MAP = "MAP";
-    public static final String ID_PROPERTY_REMOVE_ON_ESCAPE = "PROPERTY_MENU_REMOVE_ON_ESCAPE_EVENT";
+
+    // TODO:: append "_PANE" or "_EVENT" to names of these constants
+    public static final String ID_GYM_MENU_PANE = "GYM_MENU_PANE";
+    public static final String ID_MAP_PANE = "MAP_PANE";
+    public static final String ID_MAIN_MENU_PANE = "MAIN_MENU_PANE";
+    public static final String ID_PROPERTY_REMOVE_ON_ESCAPE_EVENT = "PROPERTY_MENU_REMOVE_ON_ESCAPE_EVENT";
+    public static final String ID_BACK_TO_MAIN_MENU_EVENT = "BACK_TO_MAIN_MENU_EVENT";
 
 
 
