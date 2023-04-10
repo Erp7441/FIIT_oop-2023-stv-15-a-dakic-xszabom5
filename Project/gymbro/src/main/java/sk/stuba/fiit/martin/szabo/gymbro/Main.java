@@ -7,7 +7,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 /**
  * Patterns:<br /><br />
  * <p>
- * 1. ✔ BuilderMVC to implement add methods that add values to object attributes. Can be used on Gym and Map classes.<br /><br />
+ * 1. ✔ Builder to implement add methods that add values to object attributes. Can be used on Gym and Map classes.<br /><br />
  * <p>
  * 2. Observer Can be implemented when clicking. We can have multiple
  * {@link sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController Gym}
