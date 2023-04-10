@@ -43,7 +43,7 @@ public class Window{
 
     public void start(Stage stage) throws IOException{
 
-        this.importFavorites("favorite_gyms");
+        FavoritesHandler.load();
 
         Pane root = new FXMLLoader(Main.class.getResource("fxml/mainMenu.fxml")).load();
         this.sceneManager = new SceneManager(new Scene(root, this.getWidth(), this.getHeight()));
@@ -85,6 +85,8 @@ public class Window{
     }
 
     public void handleFavorites(){
+        if(this.getFocusedGym() == null) return;
+
         FavoritesController favoritesController = FavoritesHandler.getFavorites();
         FavoritesModel favoritesModel = ((FavoritesModel) favoritesController.getModel());
 
@@ -99,17 +101,6 @@ public class Window{
             favoritesModel.getFavorites().add(this.getFocusedGym());
 
         }
-    }
-
-    public void importFavorites(String fileName){
-        try{
-            Parser.openFile(fileName);
-            Parser.consume('{');
-            FavoritesHandler.setFavorites(Parser.parseFavorites());
-            Parser.skipWhitespace();
-            Parser.consume('}');
-        }
-        catch(Exception ignored){}
     }
 
     public boolean isFocusedGymFavorite(){

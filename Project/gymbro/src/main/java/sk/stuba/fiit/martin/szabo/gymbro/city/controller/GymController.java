@@ -30,6 +30,10 @@ public class GymController extends Controller{
         this.getImageView().addEventHandler(MouseEvent.MOUSE_ENTERED, this::handleStartHover);
         this.getImageView().addEventHandler(MouseEvent.MOUSE_EXITED, this::handleEndHover);
     }
+    public void makeInteractive(){
+        this.makeClickable();
+        this.makeHoverable();
+    }
 
     /**
      * Handles click event

@@ -266,7 +266,10 @@ public class Parser{
         Parser.skipWhitespace();
         Parser.consumeEndObjectProperty();
 
-        return new GymController(model);
+        GymController controller = new GymController(model);
+        model.getPropertiesMenu().setOwner(controller);
+
+        return controller;
     }
 
     public static Property parseProperty(){

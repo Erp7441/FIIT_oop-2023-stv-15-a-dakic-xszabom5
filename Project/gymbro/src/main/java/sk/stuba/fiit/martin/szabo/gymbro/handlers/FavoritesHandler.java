@@ -4,6 +4,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.builder.FavoritesBuilder;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.FavoritesController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel;
+import sk.stuba.fiit.martin.szabo.gymbro.file.Parser;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,8 +19,8 @@ public class FavoritesHandler{
     private FavoritesHandler(){}
 
     public static FavoritesController initalizeFavorites(){
-        // TODO:: Serialize this
-        return new FavoritesBuilder().build();
+        if(getFavorites() == null) return new FavoritesBuilder().build();
+        else return getFavorites();
     }
 
     public static FavoritesController getFavorites(){
@@ -51,5 +52,21 @@ public class FavoritesHandler{
             e.printStackTrace();
             System.exit(-1);
         }
+    }
+
+    public static void load(){
+        try{
+            Parser.openFile("favorite_gyms");
+            Parser.consume('{');
+
+            FavoritesHandler.setFavorites(Parser.parseFavorites());
+
+            ((FavoritesModel) FavoritesHandler.getFavorites().getModel()).
+            getFavorites().forEach(GymController::makeInteractive);
+
+            Parser.skipWhitespace();
+            Parser.consume('}');
+        }
+        catch(Exception ignored){}
     }
 }

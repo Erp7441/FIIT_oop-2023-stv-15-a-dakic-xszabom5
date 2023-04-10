@@ -16,7 +16,7 @@ public class MapController extends Controller{
     @Override
     public void draw(){
         this.getView().draw();
-        for(GymController gym: this.getGyms()){
+        for(GymController gym : this.getGyms()){
             gym.draw();
         }
     }
