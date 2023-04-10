@@ -27,9 +27,8 @@ public class ModalMenuView extends View{
         Pane root = SceneManager.loadFxml("fxml/modalMenu.fxml");
         ModalMenuModel model = ((ModalMenuModel) this.getModel());
 
-        if(root == null || model == null || model.getProperties() == null || model.getProperties().size() == 0) return;
+        if(root == null || model == null || model.getProperties() == null || model.getProperties().isEmpty()) return;
 
-        model.setId(model.getProperties().get(0) + "-" + model.getProperties().get(1));
 
         int row = 50;
         for(Property property : model.getProperties()){
@@ -41,16 +40,15 @@ public class ModalMenuView extends View{
 
         // TODO:: Add back button
 
-        Window.getInstance().getSceneManager().addPane(model.getId(), root);
-        Window.getInstance().getSceneManager().activate(model.getId());
+        Window.getInstance().getSceneManager().addPane("GYM_MENU", root);
+        Window.getInstance().getSceneManager().activate("GYM_MENU");
 
         this.removeOnEscapeEvent();
     }
 
     public void removeFromView(){
         Window.getInstance().getSceneManager().activate("Map");
-        Window.getInstance().getSceneManager().removePane(((ModalMenuModel) this.getModel()).getId());
-        ((ModalMenuModel) this.getModel()).setId("");
+        Window.getInstance().getSceneManager().removePane("GYM_MENU");
     }
 
     private void removeOnEscapeEvent(){
@@ -60,11 +58,16 @@ public class ModalMenuView extends View{
             public void handle(KeyEvent keyEvent){
                 if(keyEvent.getCode().equals(KeyCode.ESCAPE)){
                     view.removeFromView();
-                    Window.getInstance().getScene().removeEventHandler(keyEvent.getEventType(), this);
+                    Window.getInstance().getEventManager().getKeys().removeEvent(this);
                     keyEvent.consume();
                 }
             }
         };
-        Window.getInstance().getScene().addEventHandler(KeyEvent.KEY_PRESSED, removeOnEscape);
+
+        Window.getInstance().getEventManager().getKeys().addEvent(
+            "MODAL_MENU_REMOVE_ON_ESCAPE",
+            KeyEvent.KEY_PRESSED,
+            removeOnEscape
+        );
     }
 }

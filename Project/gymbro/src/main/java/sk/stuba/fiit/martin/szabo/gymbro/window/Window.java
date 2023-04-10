@@ -8,6 +8,7 @@ import sk.stuba.fiit.martin.szabo.gymbro.Main;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
+import sk.stuba.fiit.martin.szabo.gymbro.window.eventmanager.SceneEventManager;
 
 import java.io.IOException;
 
@@ -15,6 +16,7 @@ public class Window{
 
     private static Window instance = null;
     private SceneManager sceneManager = null;
+    private SceneEventManager eventManager = null;
     private Transform transform;
 
     private Window(){
@@ -36,13 +38,16 @@ public class Window{
         stage.setTitle(Constants.SCREEN_TITLE);
         stage.show();
         this.getSceneManager().setStage(stage);
+        this.eventManager = new SceneEventManager(this.getSceneManager().getScene());
     }
 
+    public SceneEventManager getEventManager(){
+        return eventManager;
+    }
     public static Window getInstance(){
         if(Window.instance == null) Window.instance = new Window();
         return Window.instance;
     }
-
     public Stage getStage(){
         return this.getSceneManager().getStage();
     }
@@ -77,6 +82,10 @@ public class Window{
         return this.getScale().getY();
     }
 
+
+    public void setEventManager(SceneEventManager eventManager){
+        this.eventManager = eventManager;
+    }
     public void setSceneManager(SceneManager sceneManager){
         this.sceneManager = sceneManager;
     }

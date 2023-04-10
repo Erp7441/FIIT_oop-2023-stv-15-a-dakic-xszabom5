@@ -14,4 +14,6 @@ module sk.stuba.fiit.martin.szabo.gymbro {
     opens sk.stuba.fiit.martin.szabo.gymbro to javafx.fxml;
     exports sk.stuba.fiit.martin.szabo.gymbro.window.fxml;
     opens sk.stuba.fiit.martin.szabo.gymbro.window.fxml to javafx.fxml;
+    exports sk.stuba.fiit.martin.szabo.gymbro.window.eventmanager;
+    opens sk.stuba.fiit.martin.szabo.gymbro.window.eventmanager to javafx.fxml;
 }

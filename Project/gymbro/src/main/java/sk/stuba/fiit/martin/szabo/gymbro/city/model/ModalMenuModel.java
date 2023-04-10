@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 public class ModalMenuModel extends Model implements Serialization{
     private ArrayList<Property> properties = new ArrayList<>();
-    private String id = null;
 
 
     public ModalMenuModel(){}
@@ -45,13 +44,5 @@ public class ModalMenuModel extends Model implements Serialization{
 
     public void setProperties(ArrayList<Property> properties){
         this.properties = properties;
-    }
-
-    public String getId(){
-        return id;
-    }
-
-    public void setId(String id){
-        this.id = id;
     }
 }
