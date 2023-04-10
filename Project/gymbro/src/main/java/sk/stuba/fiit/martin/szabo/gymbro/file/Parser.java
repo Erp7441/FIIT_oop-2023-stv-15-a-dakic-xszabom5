@@ -33,11 +33,11 @@ public class Parser{
 
     public static void openFile(String fileName){
         // Checks if file exists. If it does then get its length.
-        File temp = new File("favorites/" + fileName + ".zip");
+        File temp = new File(fileName + ".zip");
         if(!temp.exists()){ return; }
 
         try {
-            ZipFile zip = new ZipFile("favorites/" + fileName + ".zip");
+            ZipFile zip = new ZipFile(fileName + ".zip");
             ZipEntry json = zip.getEntry(fileName + ".json");
             InputStream stream = zip.getInputStream(json);
             bytes = readAllBytes(stream);

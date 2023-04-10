@@ -74,5 +74,10 @@ jar{
     }
     archiveFileName = "GymBro.jar"
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
-    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    from('/'){
+        include 'assets/**'
+    }
 }

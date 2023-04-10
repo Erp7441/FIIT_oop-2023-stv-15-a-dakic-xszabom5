@@ -35,7 +35,7 @@ public class FavoritesHandler{
         if(getFavorites() == null) return;
 
         try{
-            FileOutputStream fos = new FileOutputStream("favorites/" + fileName + ".zip");
+            FileOutputStream fos = new FileOutputStream(fileName + ".zip");
             ZipOutputStream zos = new ZipOutputStream(fos);
             zos.putNextEntry(new ZipEntry(fileName + ".json"));
 
