@@ -9,6 +9,8 @@ plugins {
 group 'sk.stuba.fiit.martin.szabo'
 version '1.0-SNAPSHOT'
 
+mainClassName = 'sk.stuba.fiit.martin.szabo.gymbro.Launcher'
+
 repositories {
     mavenCentral()
 }
@@ -26,7 +28,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'sk.stuba.fiit.martin.szabo.gymbro'
-    mainClass = 'sk.stuba.fiit.martin.szabo.gymbro.Main'
+    mainClass = "$mainClassName"
 }
 
 // TODO:: Sort out versioning
@@ -64,4 +66,13 @@ jlink {
 
 jlinkZip {
     group = 'distribution'
+}
+
+jar{
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+    archiveFileName = "GymBro.jar"
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
 }
