@@ -11,7 +11,7 @@
 >
 
     <Button id="start" onAction="#startMap" text="Start"/>
-    <Button id="favorites" onAction="#favoritesMap" text="Favorites"/>
+    <Button id="favorites" onAction="#goToFavoritesMenu" text="Favorites"/>
     <Button id="quit" onAction="#quit" text="Quit"/>
 
 </VBox>

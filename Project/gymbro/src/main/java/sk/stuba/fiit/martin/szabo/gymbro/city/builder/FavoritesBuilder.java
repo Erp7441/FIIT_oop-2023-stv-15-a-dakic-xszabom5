@@ -6,10 +6,8 @@ import sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.FavoritesController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel;
-import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.Model;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.FavoritesView;
-import sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.View;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 

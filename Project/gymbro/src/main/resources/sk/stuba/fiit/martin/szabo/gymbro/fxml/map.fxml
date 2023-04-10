@@ -10,7 +10,7 @@
 >
 
     <Button id="back" onAction="#back" layoutX="25.0" layoutY="921.0"
-            mnemonicParsing="false" text="Back" style="-fx-view-order: -1"
+            mnemonicParsing="false" text="Back to main menu" style="-fx-view-order: -1"
     />
 
 </Pane>

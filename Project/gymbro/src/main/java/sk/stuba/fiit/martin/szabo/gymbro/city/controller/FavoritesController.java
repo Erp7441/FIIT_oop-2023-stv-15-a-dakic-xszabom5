@@ -1,10 +1,7 @@
 package sk.stuba.fiit.martin.szabo.gymbro.city.controller;
 
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel;
-import sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel;
-import sk.stuba.fiit.martin.szabo.gymbro.city.model.Model;
 import sk.stuba.fiit.martin.szabo.gymbro.city.view.FavoritesView;
-import sk.stuba.fiit.martin.szabo.gymbro.city.view.View;
 
 public class FavoritesController extends Controller{
 

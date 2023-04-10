@@ -1,14 +1,13 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window.fxml;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 import sk.stuba.fiit.martin.szabo.gymbro.Main;
-import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.setups.Setup;
-import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 import sk.stuba.fiit.martin.szabo.gymbro.setups.SetupFavorites;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
+import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
 import java.io.IOException;
 import java.util.Objects;

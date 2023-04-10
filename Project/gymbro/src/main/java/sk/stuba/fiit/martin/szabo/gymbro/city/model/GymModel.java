@@ -2,11 +2,10 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuController;
-import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
-public class GymModel extends Model implements Serialization{
+public class GymModel extends Model{
 
     private int amountOfEquipment;
     private PropertiesMenuController propertiesMenu = null;
@@ -24,11 +23,24 @@ public class GymModel extends Model implements Serialization{
     }
 
     // TODO:: Move to controller
+    @Override
     public String serialize(int tabSize){
         StringBuilder builder = new StringBuilder();
 
+        builder.append(beginObjectProperty("GymModel", tabSize));
 
+        builder.append(this.getTransform().serialize(tabSize + 1));
+        builder.append(addEnding(true, true));
 
+        builder.append(addIntProperty("AmountOfEquipment", this.getAmountOfEquipment(), tabSize + 1, true, true));
+        builder.append(addStringProperty("Texture", this.getTexture().getUrl(), tabSize + 1, true, true));
+
+        if(this.getPropertiesMenu() != null){
+            builder.append(this.getPropertiesMenu().getModel().serialize(tabSize + 1));
+        }
+
+        builder.append(addEnding(true, false));
+        builder.append(endObjectProperty(tabSize));
         return builder.toString();
     }
 

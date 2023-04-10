@@ -32,7 +32,12 @@ public class Property implements Serialization{
     public String serialize(int tabSize){
         StringBuilder builder = new StringBuilder();
 
+        builder.append(beginObjectProperty("Property", tabSize));
 
+        builder.append(addStringProperty("Name", this.getName(), tabSize + 1, true, true));
+        builder.append(addStringProperty("Value", this.getValue().toString(), tabSize + 1, true, false));
+
+        builder.append(endObjectProperty(tabSize));
 
         return builder.toString();
     }

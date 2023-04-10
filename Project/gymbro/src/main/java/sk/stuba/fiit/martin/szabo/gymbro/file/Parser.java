@@ -1,5 +1,7 @@
 package sk.stuba.fiit.martin.szabo.gymbro.file;
 
+import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -215,5 +217,9 @@ public class Parser{
             consume('s');
             consume('e');
         }
+    }
+
+    public static GymController parseGymModel(){
+        return null; // TODO:: Implement
     }
 }

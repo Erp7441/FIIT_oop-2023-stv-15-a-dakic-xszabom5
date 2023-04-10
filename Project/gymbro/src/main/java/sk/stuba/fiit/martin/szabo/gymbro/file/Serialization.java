@@ -42,5 +42,7 @@ public interface Serialization{
         return str;
     }
 
+    String serialize(int tabSize);
+
 
 }

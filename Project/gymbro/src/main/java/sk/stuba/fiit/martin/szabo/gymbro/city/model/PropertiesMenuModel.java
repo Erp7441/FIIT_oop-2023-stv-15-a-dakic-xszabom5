@@ -2,13 +2,12 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
-import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 import java.util.ArrayList;
 
-public class PropertiesMenuModel extends Model implements Serialization{
+public class PropertiesMenuModel extends Model{
     private ArrayList<Property> properties = new ArrayList<>();
     private GymController owner = null;
 
@@ -27,11 +26,20 @@ public class PropertiesMenuModel extends Model implements Serialization{
         this.owner = owner;
     }
 
+    @Override
     public String serialize(int tabSize){
         StringBuilder builder = new StringBuilder();
 
+        builder.append(beginObjectProperty("Properties", tabSize));
 
+        int count = 0;
+        for(Property property : this.getProperties()){
+            builder.append(property.serialize(tabSize + 1));
+            builder.append(addEnding(true, count != this.getProperties().size() - 1));
+            count++;
+        }
 
+        builder.append(endObjectProperty(tabSize));
         return builder.toString();
     }
 

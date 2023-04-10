@@ -1,7 +1,5 @@
 package sk.stuba.fiit.martin.szabo.gymbro.window.fxml;
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import sk.stuba.fiit.martin.szabo.gymbro.window.Window;
 
@@ -12,9 +10,10 @@ public class MainMenuFxmlController{
         controller.showMap();
     }
 
-    public void favoritesMap(){
-        MapFxmlController controller = new MapFxmlController();
-        controller.showFavoritesMap();
+    @FXML
+    protected void goToFavoritesMenu(){
+        FavoritesMenuFxmlController controller = new FavoritesMenuFxmlController();
+        controller.showMenu();
     }
 
     public void quit(){

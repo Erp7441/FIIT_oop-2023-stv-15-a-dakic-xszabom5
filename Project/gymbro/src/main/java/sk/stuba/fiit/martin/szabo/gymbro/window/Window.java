@@ -13,13 +13,13 @@ import sk.stuba.fiit.martin.szabo.gymbro.Main;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.FavoritesController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
 import sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel;
-import sk.stuba.fiit.martin.szabo.gymbro.managers.scene.SceneManager;
-import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.handlers.FavoritesHandler;
+import sk.stuba.fiit.martin.szabo.gymbro.managers.event.SceneEventManager;
+import sk.stuba.fiit.martin.szabo.gymbro.managers.scene.SceneManager;
+import sk.stuba.fiit.martin.szabo.gymbro.setups.Setup;
+import sk.stuba.fiit.martin.szabo.gymbro.utils.Constants;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
-import sk.stuba.fiit.martin.szabo.gymbro.managers.event.SceneEventManager;
-import sk.stuba.fiit.martin.szabo.gymbro.setups.Setup;
 
 import java.io.IOException;
 
@@ -76,8 +76,9 @@ public class Window{
     }
 
     public void handleBackToMainMenu(){
+        String current = this.getSceneManager().getActiveName();
         this.getSceneManager().activate(Constants.ID_MAIN_MENU_PANE);
-        this.getSceneManager().removePane(Constants.ID_MAP_PANE);
+        this.getSceneManager().removePane(current);
     }
 
     public void handleFavorites(){

@@ -4,7 +4,6 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Scene;
-import sk.stuba.fiit.martin.szabo.gymbro.managers.event.EventEntry;
 
 import java.util.HashMap;
 import java.util.Map;

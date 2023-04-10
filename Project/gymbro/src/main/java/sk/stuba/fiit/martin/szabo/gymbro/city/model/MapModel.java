@@ -2,14 +2,13 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
 import sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController;
-import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Property;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapModel extends Model implements Serialization{
+public class MapModel extends Model{
 
     private ArrayList<GymController> gyms = new ArrayList<>();
 
@@ -25,6 +24,7 @@ public class MapModel extends Model implements Serialization{
         this.gyms = (ArrayList<GymController>) gyms;
     }
 
+    @Override
     public String serialize(int tabSize){
         StringBuilder builder = new StringBuilder();
 

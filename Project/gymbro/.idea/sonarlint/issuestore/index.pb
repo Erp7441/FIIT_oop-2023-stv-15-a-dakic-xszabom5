@@ -9,12 +9,6 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 t
 Dsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Transform.java,8\8\884cfd5c65cea1e7eab2415382c81dde61fe2c9e
-s
-Csrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/utils/Property.java,1\5\15f6f0873659c18bf87d62528d237444ed454149
-p
-@src/main/java/sk/stuba/fiit/martin/szabo/gymbro/file/Parser.java,8\9\894a61157ab756670daa2f4285bbb5c066edaa6b
-w
-Gsrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/file/Serialization.java,b\e\beb5d3e7f486283a2750ff1902b77e597c06e082
 
 Osrc/main/java/sk/stuba/fiit/martin/szabo/gymbro/city/controller/Controller.java,5\b\5b989dab84c43cbb5a60a91864f038ce9d7abd0c
 q

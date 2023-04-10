@@ -2,13 +2,14 @@ package sk.stuba.fiit.martin.szabo.gymbro.city.model;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import sk.stuba.fiit.martin.szabo.gymbro.file.Serialization;
 import sk.stuba.fiit.martin.szabo.gymbro.handlers.ImageViewHandler;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Transform;
 import sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D;
 
 import java.io.FileInputStream;
 
-public abstract class Model{
+public abstract class Model implements Serialization{
     ImageView imageView = null;
     Transform transform = new Transform();
     Image texture = null;
@@ -80,11 +81,12 @@ public abstract class Model{
     }
     public void setTexture(String texturePath){
         try{
-            this.texture = new Image(new FileInputStream(texturePath));
+            this.texture = new Image(texturePath);
+
 
             this.setImageView(new ImageViewHandler().initialize(
-                    this.getTexture(),
-                    this.getTransform()
+                this.getTexture(),
+                this.getTransform()
             ));
         }
         catch(Exception e){

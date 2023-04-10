@@ -1,6 +1,7 @@
 package sk.stuba.fiit.martin.szabo.gymbro.utils;
 
 public class Constants{
+
     private Constants(){}
 
     //* Screen setups
@@ -24,6 +25,7 @@ public class Constants{
     public static final String ID_MAIN_MENU_PANE = "MAIN_MENU_PANE";
     public static final String ID_PROPERTY_REMOVE_ON_ESCAPE_EVENT = "PROPERTY_MENU_REMOVE_ON_ESCAPE_EVENT";
     public static final String ID_BACK_TO_MAIN_MENU_EVENT = "BACK_TO_MAIN_MENU_EVENT";
+    public static final String ID_FAVORITES_MENU_PANE = "FAVORITES_MENU_PANE";
 
 
 
