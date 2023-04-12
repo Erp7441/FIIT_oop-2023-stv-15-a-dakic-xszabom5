@@ -68,7 +68,7 @@ jlinkZip {
     group = 'distribution'
 }
 
-jar{
+task fatJar(type: Jar) {
     manifest {
         attributes 'Main-Class': "$mainClassName"
     }
