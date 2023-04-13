@@ -80,4 +80,5 @@ task fatJar(type: Jar) {
     from('/'){
         include 'assets/**'
     }
+    with jar
 }
