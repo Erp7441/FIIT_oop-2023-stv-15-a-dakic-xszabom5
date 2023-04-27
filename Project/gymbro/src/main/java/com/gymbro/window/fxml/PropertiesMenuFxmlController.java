@@ -1,10 +1,15 @@
 package com.gymbro.window.fxml;
 
+import com.gymbro.utils.Constants;
+import com.gymbro.window.Window;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+<<<<<<< HEAD
 import com.gymbro.utils.Constants;
 import com.gymbro.window.Window;
+=======
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 
 /**
  * The type Properties menu fxml controller.

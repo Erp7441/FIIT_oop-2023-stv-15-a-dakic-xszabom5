@@ -1,5 +1,6 @@
 package com.gymbro.setups;
 
+<<<<<<< HEAD
 import com.gymbro.window.Window;
 import com.gymbro.city.builder.MapBuilder;
 import com.gymbro.city.builder.TransformBuilder;
@@ -8,6 +9,16 @@ import com.gymbro.city.controller.MapController;
 import com.gymbro.city.factory.GymFactory;
 import com.gymbro.utils.Places;
 import com.gymbro.utils.Vector2D;
+=======
+import com.gymbro.city.builder.MapBuilder;
+import com.gymbro.city.builder.TransformBuilder;
+import com.gymbro.city.factory.GymFactory;
+import com.gymbro.utils.Vector2D;
+import com.gymbro.window.Window;
+import com.gymbro.city.controller.GymController;
+import com.gymbro.city.controller.MapController;
+import com.gymbro.utils.Places;
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 
 import java.util.ArrayList;
 import java.util.List;

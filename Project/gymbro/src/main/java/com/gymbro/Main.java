@@ -1,9 +1,15 @@
 package com.gymbro;
 
 import com.gymbro.city.controller.GymController;
+<<<<<<< HEAD
 import javafx.application.Application;
 import javafx.stage.Stage;
 import com.gymbro.window.Window;
+=======
+import com.gymbro.window.Window;
+import javafx.application.Application;
+import javafx.stage.Stage;
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 
 /**
  * Patterns:<br /><br />

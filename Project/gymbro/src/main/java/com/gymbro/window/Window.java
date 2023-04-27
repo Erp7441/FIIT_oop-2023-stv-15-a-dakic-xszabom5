@@ -1,10 +1,14 @@
 package com.gymbro.window;
 
+<<<<<<< HEAD
 import com.gymbro.Main;
 import com.gymbro.city.model.FavoritesModel;
 import com.gymbro.handlers.FavoritesHandler;
 import com.gymbro.managers.event.SceneEventManager;
 import com.gymbro.managers.scene.SceneManager;
+=======
+import com.gymbro.city.model.FavoritesModel;
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +18,17 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+<<<<<<< HEAD
 import com.gymbro.city.controller.FavoritesController;
 import com.gymbro.city.controller.GymController;
+=======
+import com.gymbro.Main;
+import com.gymbro.city.controller.FavoritesController;
+import com.gymbro.city.controller.GymController;
+import com.gymbro.handlers.FavoritesHandler;
+import com.gymbro.managers.event.SceneEventManager;
+import com.gymbro.managers.scene.SceneManager;
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 import com.gymbro.setups.Setup;
 import com.gymbro.utils.Constants;
 import com.gymbro.utils.Transform;

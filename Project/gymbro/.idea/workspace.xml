@@ -10,8 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ce3646f-4fa9-4e2e-be05-4370be681e7b" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
       <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
@@ -118,17 +121,28 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
     "git-widget-placeholder": "main",
+=======
+    "git-widget-placeholder": "dev",
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
     "last_opened_file_path": "C:/Users/Martin/Repos/FIIT/oop-2023-stv-15-a-dakic-xszabom5/Project/gymbro",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15136719",
     "project.structure.side.proportion": "0.38824886",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+=======
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15136719",
+    "project.structure.side.proportion": "0.38824886",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

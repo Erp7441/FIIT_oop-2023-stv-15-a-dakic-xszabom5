@@ -1,6 +1,7 @@
 package com.gymbro.window.fxml;
 
 import com.gymbro.Main;
+<<<<<<< HEAD
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
@@ -8,6 +9,15 @@ import com.gymbro.setups.Setup;
 import com.gymbro.setups.SetupFavorites;
 import com.gymbro.utils.Constants;
 import com.gymbro.window.Window;
+=======
+import com.gymbro.setups.Setup;
+import com.gymbro.setups.SetupFavorites;
+import com.gymbro.utils.Constants;
+import com.gymbro.window.Window;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.Pane;
+>>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 
 import java.io.IOException;
 import java.util.Objects;
