@@ -6,10 +6,10 @@ plugins {
     id 'org.beryx.jlink' version '2.25.0'
 }
 
-group 'sk.stuba.fiit.martin.szabo'
+group 'com'
 version '0.1'
 
-mainClassName = 'sk.stuba.fiit.martin.szabo.gymbro.Launcher'
+mainClassName = 'com.gymbro.Launcher'
 
 repositories {
     mavenCentral()
@@ -27,7 +27,7 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'sk.stuba.fiit.martin.szabo.gymbro'
+    mainModule = 'com.gymbro'
     mainClass = "$mainClassName"
 }
 
