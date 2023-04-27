@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: sk.stuba.fiit.martin.szabo.gymbro.Launcher
+Main-Class: com.gymbro.Launcher
 
