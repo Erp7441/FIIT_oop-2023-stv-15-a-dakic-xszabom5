@@ -1,14 +1,10 @@
 package com.gymbro.handlers;
 
-<<<<<<< HEAD
-import com.gymbro.city.model.FavoritesModel;
+
 import com.gymbro.city.builder.FavoritesBuilder;
-=======
-import com.gymbro.city.builder.FavoritesBuilder;
-import com.gymbro.city.model.FavoritesModel;
->>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 import com.gymbro.city.controller.FavoritesController;
 import com.gymbro.city.controller.GymController;
+import com.gymbro.city.model.FavoritesModel;
 import com.gymbro.file.Parser;
 
 import java.io.FileOutputStream;

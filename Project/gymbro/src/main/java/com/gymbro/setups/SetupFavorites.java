@@ -1,8 +1,8 @@
 package com.gymbro.setups;
 
+import com.gymbro.city.controller.GymController;
 import com.gymbro.city.model.FavoritesModel;
 import com.gymbro.handlers.FavoritesHandler;
-import com.gymbro.city.controller.GymController;
 
 import java.util.ArrayList;
 import java.util.Collections;

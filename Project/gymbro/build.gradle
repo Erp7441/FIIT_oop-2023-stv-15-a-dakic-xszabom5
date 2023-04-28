@@ -22,6 +22,20 @@ ext {
 sourceCompatibility = '11'
 targetCompatibility = '11'
 
+//import org.apache.tools.ant.taskdefs.condition.Os
+//if(Os.isFamily(Os.FAMILY_WINDOWS)){
+//    compileJava.options.fork = true
+//    compileJava.options.forkOptions.executable = "$projectDir/.jdks/jdk-11.0.19+7-windows/bin/javac.exe"
+//}
+//else if(Os.isFamily(Os.FAMILY_UNIX)){
+//    compileJava.options.fork = true
+//    compileJava.options.forkOptions.executable = "$projectDir/.jdks/jdk-11.0.19+7-linux/bin/javac"
+//}
+//else if(Os.isFamily(Os.FAMILY_MAC)){
+//    compileJava.options.fork = true
+//    compileJava.options.forkOptions.executable = "$projectDir/.jdks/jdk-11.0.19+7-mac/bin/javac"
+//}
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
@@ -31,9 +45,8 @@ application {
     mainClass = "$mainClassName"
 }
 
-// TODO:: Sort out versioning
 javafx {
-    version = '17.0.2'
+    version = '11.0.2'
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
@@ -45,7 +58,7 @@ dependencies {
     implementation('net.synedra:validatorfx:0.4.0') {
         exclude(group: 'org.openjfx')
     }
-    implementation('org.kordamp.ikonli:ikonli-javafx:12.3.1')
+    implementation('org.kordamp.ikonli:ikonli-javafx:11.5.0')
     implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
@@ -68,16 +81,16 @@ jlinkZip {
     group = 'distribution'
 }
 
-task fatJar(type: Jar) {
+tasks.register('fatJar', Jar) {
     manifest {
         attributes 'Main-Class': "$mainClassName"
     }
-    archiveFileName = "GymBro.jar"
+    archiveFileName = "GymBro-fat.jar"
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
-    from('/'){
+    from('/') {
         include 'assets/**'
     }
     with jar

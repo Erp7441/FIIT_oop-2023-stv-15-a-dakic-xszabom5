@@ -1,10 +1,10 @@
 package com.gymbro.city.model;
 
-import javafx.scene.image.Image;
 import com.gymbro.city.controller.GymController;
 import com.gymbro.file.Parser;
 import com.gymbro.utils.Property;
 import com.gymbro.utils.Transform;
+import javafx.scene.image.Image;
 
 import java.util.ArrayList;
 

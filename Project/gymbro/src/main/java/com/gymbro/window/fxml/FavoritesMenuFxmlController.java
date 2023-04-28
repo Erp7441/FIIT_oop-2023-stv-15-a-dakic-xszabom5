@@ -2,17 +2,10 @@ package com.gymbro.window.fxml;
 
 import com.gymbro.Main;
 import com.gymbro.handlers.FavoritesHandler;
-<<<<<<< HEAD
-import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.Pane;
-import com.gymbro.utils.Constants;
-import com.gymbro.window.Window;
-=======
 import com.gymbro.utils.Constants;
 import com.gymbro.window.Window;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
->>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 
 import java.io.IOException;
 

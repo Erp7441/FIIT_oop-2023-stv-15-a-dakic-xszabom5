@@ -2,10 +2,6 @@ package com.gymbro.window.fxml;
 
 import com.gymbro.window.Window;
 import javafx.fxml.FXML;
-<<<<<<< HEAD
-import com.gymbro.window.Window;
-=======
->>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 
 /**
  * The type Main menu fxml controller.

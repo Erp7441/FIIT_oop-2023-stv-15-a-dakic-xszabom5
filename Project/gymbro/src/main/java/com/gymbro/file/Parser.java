@@ -1,14 +1,14 @@
 package com.gymbro.file;
 
+import com.gymbro.city.controller.FavoritesController;
+import com.gymbro.city.controller.GymController;
+import com.gymbro.city.controller.PropertiesMenuController;
 import com.gymbro.city.model.FavoritesModel;
 import com.gymbro.city.model.GymModel;
 import com.gymbro.city.model.PropertiesMenuModel;
 import com.gymbro.utils.Places;
 import com.gymbro.utils.Property;
 import com.gymbro.utils.Transform;
-import com.gymbro.city.controller.FavoritesController;
-import com.gymbro.city.controller.GymController;
-import com.gymbro.city.controller.PropertiesMenuController;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

@@ -1,16 +1,15 @@
 package com.gymbro.city.model;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import com.gymbro.file.Serialization;
 import com.gymbro.handlers.ImageViewHandler;
 import com.gymbro.utils.Transform;
 import com.gymbro.utils.Vector2D;
-<<<<<<< HEAD
-=======
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
-import java.io.FileInputStream;
->>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
+import com.gymbro.Main;
+
+import java.util.Objects;
 
 /**
  * The type Model.
@@ -207,11 +206,12 @@ public abstract class Model implements Serialization{
     /**
      * Set texture.
      *
-     * @param texturePath the texture path
+     * @param resource the texture path
      */
-    public void setTexture(String texturePath){
+    public void setTexture(String resource){
         try{
-            this.texture = new Image(texturePath);
+            String path = Objects.requireNonNull(Main.class.getResource(resource)).toExternalForm();
+            this.texture = new Image(path);
 
 
             this.setImageView(new ImageViewHandler().initialize(
@@ -220,7 +220,7 @@ public abstract class Model implements Serialization{
             ));
         }
         catch(Exception e){
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 

@@ -1,16 +1,16 @@
 package com.gymbro.city.view;
 
 import com.gymbro.city.model.PropertiesMenuModel;
+import com.gymbro.managers.scene.SceneManager;
+import com.gymbro.utils.Constants;
+import com.gymbro.utils.Property;
+import com.gymbro.window.Window;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
-import com.gymbro.managers.scene.SceneManager;
-import com.gymbro.utils.Constants;
-import com.gymbro.utils.Property;
-import com.gymbro.window.Window;
 
 /**
  * The type Properties menu view.

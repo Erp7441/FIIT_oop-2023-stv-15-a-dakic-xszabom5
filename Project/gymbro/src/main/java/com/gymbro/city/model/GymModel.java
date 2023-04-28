@@ -1,9 +1,9 @@
 package com.gymbro.city.model;
 
-import javafx.scene.image.Image;
 import com.gymbro.city.controller.PropertiesMenuController;
 import com.gymbro.utils.Property;
 import com.gymbro.utils.Transform;
+import javafx.scene.image.Image;
 
 /**
  * The type Gym model.

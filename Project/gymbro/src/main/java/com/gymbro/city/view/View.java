@@ -1,14 +1,14 @@
 package com.gymbro.city.view;
 
 import com.gymbro.city.model.Model;
-import javafx.scene.Parent;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
 import com.gymbro.handlers.ImageViewHandler;
 import com.gymbro.utils.Transform;
 import com.gymbro.utils.Vector2D;
 import com.gymbro.window.Window;
+import javafx.scene.Parent;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 
 /**
  * The type View.

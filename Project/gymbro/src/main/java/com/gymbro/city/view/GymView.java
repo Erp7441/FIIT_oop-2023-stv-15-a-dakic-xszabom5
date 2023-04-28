@@ -1,10 +1,10 @@
 package com.gymbro.city.view;
 
-import com.gymbro.city.model.GymModel;
-import javafx.scene.control.Button;
 import com.gymbro.city.controller.PropertiesMenuController;
+import com.gymbro.city.model.GymModel;
 import com.gymbro.window.Window;
 import com.gymbro.window.fxml.PropertiesMenuFxmlController;
+import javafx.scene.control.Button;
 
 /**
  * The type Gym view.

@@ -1,22 +1,13 @@
 package com.gymbro.city.factory;
 
-<<<<<<< HEAD
-=======
-import com.gymbro.city.builder.TransformBuilder;
 import com.gymbro.city.builder.GymBuilder;
 import com.gymbro.city.builder.PropertiesMenuBuilder;
->>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
+import com.gymbro.city.builder.TransformBuilder;
 import com.gymbro.city.controller.GymController;
 import com.gymbro.utils.Places;
 import com.gymbro.utils.Property;
 import com.gymbro.utils.Vector2D;
 import com.gymbro.window.Window;
-<<<<<<< HEAD
-import com.gymbro.city.builder.GymBuilder;
-import com.gymbro.city.builder.PropertiesMenuBuilder;
-import com.gymbro.city.builder.TransformBuilder;
-=======
->>>>>>> 9079eeaea8be65203256d1a56dedc2d96de92a57
 
 /**
  * The type Gym factory.
