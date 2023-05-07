@@ -14,7 +14,7 @@ public class GymsHandler{
 
     public static List<GymController> load(){
         try{
-            String path = Objects.requireNonNull(Main.class.getResource("assets/layout.zip")).getPath();
+            String path = Objects.requireNonNull(Main.class.getResource("config/layout.zip")).getPath();
             Parser.openFilePath(path, "layout");
             Parser.consume('{');
 
