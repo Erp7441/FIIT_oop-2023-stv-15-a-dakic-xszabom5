@@ -47,17 +47,6 @@ public class GymBuilder extends BuilderMVC{
     }
 
     /**
-     * Add amount of equipment gym builder.
-     *
-     * @param amount the amount
-     * @return the gym builder
-     */
-    public GymBuilder addAmountOfEquipment(int amount){
-        this.getModel().setAmountOfEquipment(amount);
-        return this;
-    }
-
-    /**
      * Make clickable gym builder.
      *
      * @return the gym builder

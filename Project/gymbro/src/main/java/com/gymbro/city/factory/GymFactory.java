@@ -45,11 +45,11 @@ public class GymFactory{
                     ).
                     addProperty(new Property("Name", "LifeGym")).
                     addProperty(new Property("Location", location)).
+                    addProperty(new Property("Amount of equipment", 5)).
                     addTexture("assets/Bratislava_Map.png").
                     build()
             ).
             addTexture("assets/lifegym.png").
-            addAmountOfEquipment(0).
             makeInteractive().
             build();
     }
@@ -72,10 +72,10 @@ public class GymFactory{
                 new PropertiesMenuBuilder().
                     addProperty(new Property("Name", "FITINN")).
                     addProperty(new Property("Location", location)).
+                    addProperty(new Property("Amount of equipment", 15)).
                     build()
             ).
             addTexture("assets/fitinn.png").
-            addAmountOfEquipment(0).
             makeInteractive().
             build();
     }

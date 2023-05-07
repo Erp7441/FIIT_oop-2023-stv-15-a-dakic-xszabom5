@@ -10,7 +10,6 @@ import javafx.scene.image.Image;
  */
 public class GymModel extends Model{
 
-    private int amountOfEquipment;
     private PropertiesMenuController propertiesMenu = null;
 
     /**
@@ -22,12 +21,10 @@ public class GymModel extends Model{
      * Instantiates a new Gym model.
      *
      * @param transform         the transform
-     * @param amountOfEquipment the amount of equipment
      * @param texture           the texture
      */
-    public GymModel(Transform transform, int amountOfEquipment, Image texture){
+    public GymModel(Transform transform, Image texture){
         super(transform, texture);
-        this.amountOfEquipment = amountOfEquipment;
     }
 
     /**
@@ -39,7 +36,6 @@ public class GymModel extends Model{
      */
     public GymModel(Transform transform, int amountOfEquipment, String texturePath){
         super(transform, texturePath);
-        this.amountOfEquipment = amountOfEquipment;
     }
 
     // TODO:: Move to controller
@@ -52,7 +48,6 @@ public class GymModel extends Model{
         builder.append(this.getTransform().serialize(tabSize + 1));
         builder.append(addEnding(true, true));
 
-        builder.append(addIntProperty("AmountOfEquipment", this.getAmountOfEquipment(), tabSize + 1, true, true));
         builder.append(addStringProperty("Texture", this.getTexture().getUrl(), tabSize + 1, true, true));
 
         if(this.getPropertiesMenu() != null){
@@ -75,23 +70,6 @@ public class GymModel extends Model{
         return null;
     }
 
-    /**
-     * Get amount of equipment int.
-     *
-     * @return the int
-     */
-    public int getAmountOfEquipment(){
-        return amountOfEquipment;
-    }
-
-    /**
-     * Set amount of equipment.
-     *
-     * @param amountOfEquipment the amount of equipment
-     */
-    public void setAmountOfEquipment(int amountOfEquipment){
-        this.amountOfEquipment = amountOfEquipment;
-    }
 
     /**
      * Get properties menu properties menu controller.
@@ -118,14 +96,11 @@ public class GymModel extends Model{
 
         GymModel gymModel = (GymModel) o;
 
-        if(getAmountOfEquipment() != gymModel.getAmountOfEquipment()) return false;
         return getPropertiesMenu().getModel().equals(gymModel.getPropertiesMenu().getModel());
     }
 
     @Override
     public int hashCode(){
-        int result = getAmountOfEquipment();
-        result = 31 * result + getPropertiesMenu().hashCode();
-        return result;
+        return getPropertiesMenu() != null ? getPropertiesMenu().hashCode() : 0;
     }
 }

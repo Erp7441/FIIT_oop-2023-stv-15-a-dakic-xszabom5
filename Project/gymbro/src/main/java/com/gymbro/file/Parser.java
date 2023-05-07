@@ -371,10 +371,6 @@ public class Parser{
         if(peek() == ',') consume(',');
         skipWhitespace();
 
-        model.setAmountOfEquipment(Parser.consumeIntProperty("AmountOfEquipment"));
-        if(peek() == ',') consume(',');
-        skipWhitespace();
-
         model.setTexture(Parser.consumeStringProperty("Texture"));
         if(peek() == ',') consume(',');
         skipWhitespace();
