@@ -1,5 +1,7 @@
 package com.gymbro.utils;
 
+import javafx.scene.text.Font;
+
 /**
  * The type Constants.
  */
@@ -27,22 +29,18 @@ public class Constants{
 
 
     /**
-     * The constant LABLE_LAYOUT_X.
+     * The constant LABEL_LAYOUT_X.
      */
 //* Labels
-    public static final double LABLE_LAYOUT_X = 50;
+    public static final double LABEL_LAYOUT_X = 50;
     /**
-     * The constant LABLE_LAYOUT_Y.
+     * The constant LABEL_LAYOUT_Y.
      */
-    public static final double LABLE_LAYOUT_Y = 50;
+    public static final double LABEL_LAYOUT_Y = 50;
     /**
-     * The constant LABLE_FONT_TYPE.
+     * The constant LABEL_FONT_TYPE.
      */
-    public static final String LABLE_FONT_TYPE = "Consolas";
-    /**
-     * The constant LABLE_FONT_SIZE.
-     */
-    public static final double LABLE_FONT_SIZE = 25;
+    public static final Font LABEL_FONT_TYPE = Font.font("Consolas", 25);
 
     //* Identifiers
 

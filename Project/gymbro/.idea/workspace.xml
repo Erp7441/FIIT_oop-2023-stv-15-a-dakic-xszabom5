@@ -5,51 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69cb2913-17ca-45c5-8011-7238bbe170a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/gymbro_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Bratislava_Map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Bratislava_Map.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/lifegym.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/BuilderMVC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/BuilderMVC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/FavoritesBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/FavoritesBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/GymBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/GymBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/MapBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/MapBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/PropertiesMenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/builder/PropertiesMenuBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/factory/GymFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/factory/GymFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/FavoritesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/FavoritesModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/GymModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/GymModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/MapModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/MapModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/view/GymView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/view/GymView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/view/PropertiesMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/view/PropertiesMenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/ImageViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/ImageViewHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/setups/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/setups/Setup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/setups/SetupFavorites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/setups/SetupFavorites.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/MapFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/MapFxmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/PropertiesMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/PropertiesMenuFxmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/favoritesMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/favoritesMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/mainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/mainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/propertiesMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/propertiesMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,25 +78,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15136719",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Martin\Repos\FIIT\oop-2023-stv-15-a-dakic-xszabom5\Project\gymbro\src\main\resources\com\gymbro\assets" />
@@ -143,7 +104,7 @@
       <recent name="C:\Users\Martin\Repos\FIIT\oop-2023-stv-15-a-dakic-xszabom5\Project\gymbro\src\main\resources\com\gymbro\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.gymbro [fatJar]">
+  <component name="RunManager" selected="Gradle.gymbro [build]">
     <configuration name="gymbro [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -240,8 +201,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.gymbro [clean]" />
         <item itemvalue="Gradle.gymbro [build]" />
+        <item itemvalue="Gradle.gymbro [clean]" />
         <item itemvalue="Gradle.gymbro [run]" />
       </list>
     </recent_temporary>
@@ -257,6 +218,8 @@
       <workItem from="1682672084262" duration="98000" />
       <workItem from="1682672203344" duration="2423000" />
       <workItem from="1682674644758" duration="3251000" />
+      <workItem from="1683310613956" duration="587000" />
+      <workItem from="1683489669396" duration="388000" />
     </task>
     <servers />
   </component>

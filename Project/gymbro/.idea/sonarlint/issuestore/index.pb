@@ -11,9 +11,3 @@ e
 .src/main/java/com/gymbro/city/model/Model.java,7\0\70ba2322e254cae9de00b8d7ecc159cec55285dd
 g
 7src/main/java/com/gymbro/handlers/ImageViewHandler.java,f\a\fa8703f23d405d8cfce66872b4fddf63ea73beed
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-?
-settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
-X
-(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e

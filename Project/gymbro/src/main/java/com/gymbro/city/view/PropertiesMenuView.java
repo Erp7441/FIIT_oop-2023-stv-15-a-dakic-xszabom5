@@ -7,6 +7,7 @@ import com.gymbro.utils.Property;
 import com.gymbro.window.Window;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
@@ -38,17 +39,17 @@ public class PropertiesMenuView extends View{
 
         Pane root = SceneManager.loadFxml("fxml/propertiesMenu.fxml");
         PropertiesMenuModel model = ((PropertiesMenuModel) this.getModel());
+        TextArea area = null;
+
+        if(root != null){
+            area = (TextArea) root.lookup("#propertiesArea");
+            area.setFont(Constants.LABEL_FONT_TYPE);
+        }
 
         if(root == null || model == null || model.getProperties() == null || model.getProperties().isEmpty()) return;
 
-        double row = Constants.LABLE_LAYOUT_Y;
         for(Property property : model.getProperties()){
-            Label text = new Label(property.toString());
-            text.setLayoutX(Constants.LABLE_LAYOUT_X);
-            text.setLayoutY(row);
-            text.setFont(new Font(Constants.LABLE_FONT_TYPE, Constants.LABLE_FONT_SIZE));
-            root.getChildren().add(text);
-            row += Constants.LABLE_LAYOUT_Y;
+            area.appendText(property.toString() + "\n");
         }
 
         Window.getInstance().getSceneManager().addPane(Constants.ID_GYM_MENU_PANE, root);

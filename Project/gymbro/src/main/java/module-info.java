@@ -20,4 +20,6 @@ module com.gymbro {
     opens com.gymbro.managers.scene to javafx.fxml;
     exports com.gymbro.managers.event;
     opens com.gymbro.managers.event to javafx.fxml;
+    exports com.gymbro.utils;
+    opens com.gymbro.utils to javafx.fxml;
 }
