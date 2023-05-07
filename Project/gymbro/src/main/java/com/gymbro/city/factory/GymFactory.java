@@ -9,6 +9,8 @@ import com.gymbro.utils.Property;
 import com.gymbro.utils.Vector2D;
 import com.gymbro.window.Window;
 
+import java.net.URL;
+
 /**
  * The type Gym factory.
  */
@@ -28,7 +30,7 @@ public class GymFactory{
      * @param location the location
      * @return the gym controller
      */
-    public GymController createLifeGymGym(Places location){
+    public GymController createLifeGymGym(Places location, Integer amountOfEquipment, URL website){
         return new GymBuilder().
             addTransform(
                 new TransformBuilder().
@@ -45,7 +47,8 @@ public class GymFactory{
                     ).
                     addProperty(new Property("Name", "LifeGym")).
                     addProperty(new Property("Location", location)).
-                    addProperty(new Property("Amount of equipment", 5)).
+                    addProperty(new Property("Amount of equipment", amountOfEquipment)).
+                    addProperty(new Property("Website", website)).
                     addTexture("assets/Bratislava_Map.png").
                     build()
             ).
@@ -60,7 +63,7 @@ public class GymFactory{
      * @param location the location
      * @return the gym controller
      */
-    public GymController createFitinnGym(Places location){
+    public GymController createFitinnGym(Places location, Integer amountOfEquipment, URL website){
         return new GymBuilder().
             addTransform(
                 new TransformBuilder().
@@ -72,7 +75,8 @@ public class GymFactory{
                 new PropertiesMenuBuilder().
                     addProperty(new Property("Name", "FITINN")).
                     addProperty(new Property("Location", location)).
-                    addProperty(new Property("Amount of equipment", 15)).
+                    addProperty(new Property("Amount of equipment", amountOfEquipment)).
+                    addProperty(new Property("Website", website)).
                     build()
             ).
             addTexture("assets/fitinn.png").

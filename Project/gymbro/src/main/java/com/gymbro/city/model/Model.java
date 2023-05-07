@@ -1,13 +1,12 @@
 package com.gymbro.city.model;
 
+import com.gymbro.Main;
 import com.gymbro.file.Serialization;
 import com.gymbro.handlers.ImageViewHandler;
 import com.gymbro.utils.Transform;
 import com.gymbro.utils.Vector2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
-import com.gymbro.Main;
 
 import java.util.Objects;
 

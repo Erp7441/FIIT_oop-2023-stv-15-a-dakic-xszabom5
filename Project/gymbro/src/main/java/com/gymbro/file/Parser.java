@@ -69,6 +69,33 @@ public class Parser{
         }
     }
 
+    public static void openFilePath(String filePath, String fileName){
+        // Checks if file exists. If it does then get its length.
+        File temp = new File(filePath);
+        if(!temp.exists()){ return; }
+
+        try {
+            ZipFile zip = new ZipFile(filePath);
+            ZipEntry json = zip.getEntry(fileName + ".json");
+            InputStream stream = zip.getInputStream(json);
+            bytes = readAllBytes(stream);
+
+            // Resets variables
+            if(offset != 0){
+                offset = 0;
+            }
+            if(line != 1){
+                line = 1;
+            }
+
+            zip.close();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.exit(-1);
+        }
+    }
+
     /**
      * Read all bytes byte [ ].
      *
@@ -371,7 +398,9 @@ public class Parser{
         if(peek() == ',') consume(',');
         skipWhitespace();
 
-        model.setTexture(Parser.consumeStringProperty("Texture"));
+        String path = Parser.consumeStringProperty("Texture");
+        path = path.replaceAll(".*(/assets/.*)", "$1").substring(1);
+        model.setTexture(path);
         if(peek() == ',') consume(',');
         skipWhitespace();
 
