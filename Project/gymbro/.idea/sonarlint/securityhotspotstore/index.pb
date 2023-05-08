@@ -33,7 +33,5 @@ Z
 *src/main/java/com/gymbro/setups/Setup.java,7\6\764127f512417fce683df2e133ad0ecde8775401
 e
 5src/main/java/com/gymbro/city/factory/GymFactory.java,3\d\3da049402531179a4667c1e629b2c6a337d9a34b
-[
-+src/main/java/com/gymbro/window/Window.java,2\3\238ca1f3997e037f622010645ff5ba5ae6704f42
 b
 2src/main/java/com/gymbro/handlers/GymsHandler.java,9\a\9a9f3c358d7902c97193a7d3476d13fe55573c0f

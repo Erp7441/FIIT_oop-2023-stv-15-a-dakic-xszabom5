@@ -33,7 +33,5 @@ k
 ;src/main/java/com/gymbro/window/fxml/MapFxmlController.java,0\9\094788af2102c075d840099af480f19ca2c1e254
 e
 5src/main/java/com/gymbro/city/factory/GymFactory.java,3\d\3da049402531179a4667c1e629b2c6a337d9a34b
-[
-+src/main/java/com/gymbro/window/Window.java,2\3\238ca1f3997e037f622010645ff5ba5ae6704f42
 b
 2src/main/java/com/gymbro/handlers/GymsHandler.java,9\a\9a9f3c358d7902c97193a7d3476d13fe55573c0f

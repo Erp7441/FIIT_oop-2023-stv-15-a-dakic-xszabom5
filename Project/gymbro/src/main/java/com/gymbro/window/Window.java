@@ -17,12 +17,14 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * The type Window.
@@ -66,8 +68,10 @@ public class Window{
         this.getSceneManager().setStage(stage);
         this.eventManager = new SceneEventManager(this.getSceneManager().getScene());
 
-        // TODO:: add back button
         this.setupBackToMainMenuEvent();
+
+        Image favicon = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("assets/favicon.png")));
+        stage.getIcons().add(favicon);
     }
 
     private void setupBackToMainMenuEvent(){
