@@ -9,8 +9,6 @@ X
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
-V
-&src/main/java/com/gymbro/Launcher.java,7\a\7a603a2fd6aa267df21832944ad990e2bb556e55
 Z
 *src/main/java/com/gymbro/utils/Places.java,d\d\dd68d3edaddff66d2bfb2a8a97ff62b79030e85d
 i
@@ -29,20 +27,14 @@ g
 7src/main/java/com/gymbro/handlers/FavoritesHandler.java,a\e\ae00ebbcdc29319ac29dd4858c50b8569ffa0a88
 k
 ;src/main/java/com/gymbro/window/fxml/MapFxmlController.java,0\9\094788af2102c075d840099af480f19ca2c1e254
-[
-+src/main/java/com/gymbro/window/Window.java,2\3\238ca1f3997e037f622010645ff5ba5ae6704f42
 ^
 .src/main/java/com/gymbro/city/model/Model.java,7\0\70ba2322e254cae9de00b8d7ecc159cec55285dd
-Y
-)src/main/java/com/gymbro/file/Parser.java,2\c\2c2369a88ce7d0c3afccadcec1b7173e2761532f
 c
 3src/main/java/com/gymbro/setups/SetupFavorites.java,b\8\b8b522e26fe15928478db10819317670617e2647
 e
 5src/main/java/com/gymbro/city/builder/GymBuilder.java,4\8\48b8e8ca75425899fdfea3f6c791fd05253f74b9
 Z
 *src/main/java/com/gymbro/setups/Setup.java,7\6\764127f512417fce683df2e133ad0ecde8775401
-R
-"src/main/java/com/gymbro/Main.java,4\a\4a4b442f2ec9898c8ada0ed11ded3e659f1b5fd8
 e
 5src/main/java/com/gymbro/city/factory/GymFactory.java,3\d\3da049402531179a4667c1e629b2c6a337d9a34b
 b

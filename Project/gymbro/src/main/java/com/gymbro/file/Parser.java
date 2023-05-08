@@ -6,6 +6,7 @@ import com.gymbro.city.controller.PropertiesMenuController;
 import com.gymbro.city.model.FavoritesModel;
 import com.gymbro.city.model.GymModel;
 import com.gymbro.city.model.PropertiesMenuModel;
+import com.gymbro.utils.FileNameException;
 import com.gymbro.utils.Places;
 import com.gymbro.utils.Property;
 import com.gymbro.utils.Transform;
@@ -65,7 +66,7 @@ public class Parser{
         }
         catch(IOException e){
             e.printStackTrace();
-            System.exit(-1);
+            throw new FileNameException("Could not open file for parsing!");
         }
     }
 
