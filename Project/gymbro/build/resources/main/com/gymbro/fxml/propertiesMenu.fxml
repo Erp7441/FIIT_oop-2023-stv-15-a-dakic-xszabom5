@@ -10,7 +10,7 @@
       xmlns:fx="http://javafx.com/fxml"
 >
     <TextArea id="propertiesArea" editable="false" layoutX="20.0" layoutY="21.0"
-              prefHeight="870.0" prefWidth="800.0"
+              prefHeight="870.0" prefWidth="800.0" wrapText="true"
     ></TextArea>
     <Button id="back" onAction="#back" layoutX="25.0" layoutY="921.0" mnemonicParsing="false" text="Back"/>
     <Button id="favorites" onAction="#handleFavorites" layoutX="710.0" layoutY="921.0" mnemonicParsing="false" text="Add to favorites"/>

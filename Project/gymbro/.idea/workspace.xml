@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69cb2913-17ca-45c5-8011-7238bbe170a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/com/gymbro/config/layout.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/gymbro/config/layout.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gymbro/assets/irongym.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gymbro/config/layout.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gymbro/config/layout.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/propertiesMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gymbro/fxml/propertiesMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +131,7 @@
       <workItem from="1683310613956" duration="587000" />
       <workItem from="1683489669396" duration="388000" />
       <workItem from="1683490147934" duration="9276000" />
-      <workItem from="1683560134673" duration="872000" />
+      <workItem from="1683560134673" duration="3387000" />
     </task>
     <servers />
   </component>
