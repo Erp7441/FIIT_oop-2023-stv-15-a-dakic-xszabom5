@@ -6,6 +6,7 @@ import com.gymbro.city.controller.FavoritesController;
 import com.gymbro.city.controller.GymController;
 import com.gymbro.city.model.FavoritesModel;
 import com.gymbro.file.Parser;
+import com.gymbro.utils.WriteFileException;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -73,8 +74,7 @@ public class FavoritesHandler{
             fos.close();
         }
         catch (IOException e){
-            e.printStackTrace();
-            System.exit(-1);
+            throw new WriteFileException(e.getMessage());
         }
     }
 

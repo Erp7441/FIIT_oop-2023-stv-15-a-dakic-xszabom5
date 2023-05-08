@@ -43,7 +43,7 @@ public class Parser{
      *
      * @param fileName the file name
      */
-    public static void openFile(String fileName){
+    public static void openFile(String fileName) throws FileNameException{
         // Checks if file exists. If it does then get its length.
         File temp = new File(fileName + ".zip");
         if(!temp.exists()){ return; }
@@ -70,7 +70,7 @@ public class Parser{
         }
     }
 
-    public static void openFilePath(String filePath, String fileName){
+    public static void openFilePath(String filePath, String fileName) throws FileNameException{
         // Checks if file exists. If it does then get its length.
         File temp = new File(filePath);
         if(!temp.exists()){ return; }
@@ -93,7 +93,7 @@ public class Parser{
         }
         catch(IOException e){
             e.printStackTrace();
-            System.exit(-1);
+            throw new FileNameException("Could not open file for parsing!");
         }
     }
 
