@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69cb2913-17ca-45c5-8011-7238bbe170a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/WriteFileException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9a9f3c358d7902c97193a7d3476d13fe55573c0f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae00ebbcdc29319ac29dd4858c50b8569ffa0a88" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/a/9a9f3c358d7902c97193a7d3476d13fe55573c0f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/e/ae00ebbcdc29319ac29dd4858c50b8569ffa0a88" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/GymsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/GymsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/FileNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/FileNameException.java" afterDir="false" />
-    </list>
+    <list default="true" id="69cb2913-17ca-45c5-8011-7238bbe170a8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,7 +127,7 @@
       <workItem from="1683310613956" duration="587000" />
       <workItem from="1683489669396" duration="388000" />
       <workItem from="1683490147934" duration="9276000" />
-      <workItem from="1683560134673" duration="6607000" />
+      <workItem from="1683560134673" duration="6935000" />
     </task>
     <servers />
   </component>

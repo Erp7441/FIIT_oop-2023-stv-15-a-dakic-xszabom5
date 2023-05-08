@@ -1,0 +1,40 @@
+DONE:
+Program musí byť funkčný a zodpovedať zadaniu a zámeru projektu, ktoré schválil vyučujúci, a zásadným požiadavkám vyučujúceho, ktoré vznikli počas realizácie projektu. 
+Program musí obsahovať zmysluplné dedenie medzi vlastnými triedami s prekonávaním vlastných metód. 
+V programe musí byť použité zapuzdrenie. 
+Program musí obsahovať dostatok komentáru na pochopenie kódu. 
+program v súlade so zadaním a zámerom projektu, ako aj pokynmi vyučujúceho, 
+s adekvátne použitým dedením a polymorfizmom v aspoň dvoch oddelených hierarchiách dedenia, 
+vrátane použitia rozhraní, 
+a s korektným zapuzdrením a vhodným použitím agregácie; 
+dôsledné oddelenie aplikačnej logiky od používateľského rozhrania; 
+kód vhodne organizovaný do balíkov; 
+použitie generickosti vo vlastných triedach – implementácia a použitie vlastnej generickej triedy (ako v príklade spájaného zoznamu poskytnutého k prednáške 5) 
+použitie návrhových vzorov okrem návrhového vzoru Singleton – každý implementovaný návrhový vzor sa počíta ako splnenie jedného ďalšieho kritériá, ale implementácia všetkých návrhových vzorov sa posudzuje maximálne na úrovni splnenia troch ďalších kritérií 
+poskytnutie grafického používateľského rozhrania oddelene od aplikačnej logiky a s aspoň časťou spracovateľov udalostí (handlers) vytvorenou manuálne – počíta sa ako splnenie dvoch ďalších kritérií 
+použitie implicitnej implementácie metód v rozhraniach (default method implementation) 
+použitie serializácie 
+použitie lambda výrazov alebo referencií na metódy (method references) – počíta sa iba použitie v aplikačnej logike, nie v GUI (jedna možnosť je v príklade referencií na metódy a lambda výrazov k prednáške 4) 
+explicitné použitie viacniťovosti (multithreading) – spustenie vlastnej nite priamo alebo prostredníctvom API vyššej úrovne (trieda **Task** a pod.)
+ošetrenie mimoriadnych stavov prostredníctvom vlastných výnimiek – stačí jedna vlastná výnimka, ale musí byť skutočne vyhadzovaná a ošetrovaná
+Create
+Read
+Update
+Delete
+
+NOT DONE:
+
+Vranic:
+
+Odovzdaný zdrojový kód musí zahŕňať všetky potrebné súbory a musí sa dať preložiť v prostredí Eclipse inštalovanom v učebni, v ktorej sa realizujú cvičenia.
+Dokumentácia musí zodpovedať programu a musí obsahovať diagram tried.
+Pri záverečnej prezentácii študent musí vedieť zodpovedať otázky vyučujúceho v súvislosti s projektom.
+
+Dakic:
+JAR Kinda DONE
+
+
+HARD PASS
+explicitné použitie RTTI – napr. na zistenie typu objektu alebo vytvorenie objektu príslušného typu (ako v hre s obrami a rytiermi pri zisťovaní počtu bytostí)
+použitie vhniezdených tried a rozhraní – počíta sa iba použitie v aplikačnej logike, nie v GUI, pričom rozhrania musia byť vlastné (jedna možnosť je v príklade vnútorných tried k prednáške 4)
+použitie aspektovo-orientovaného programovania (AspectJ)
