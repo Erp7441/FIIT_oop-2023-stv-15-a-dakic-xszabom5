@@ -1,0 +1,9 @@
+
+„
+java:S13194"iThe type of "favorites" should be an interface such as "List" rather than the implementation "ArrayList".(ÊÙÒñüÿÿÿÿ
+„
+java:S1319@"iThe type of "favorites" should be an interface such as "List" rather than the implementation "ArrayList".(¢ç ùÿÿÿÿÿ
+‹
+java:S1319t"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ê‚ßŠúÿÿÿÿ
+„
+java:S1319}"iThe type of "favorites" should be an interface such as "List" rather than the implementation "ArrayList".(ÑØÉøÿÿÿÿ
