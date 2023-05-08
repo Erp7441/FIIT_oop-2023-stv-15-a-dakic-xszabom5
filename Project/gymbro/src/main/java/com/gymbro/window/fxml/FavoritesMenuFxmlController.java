@@ -4,15 +4,30 @@ import com.gymbro.Main;
 import com.gymbro.handlers.FavoritesHandler;
 import com.gymbro.utils.Constants;
 import com.gymbro.window.Window;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * The type Favorites menu fxml controller.
  */
 public class FavoritesMenuFxmlController{
+
+    @FXML
+    private ImageView logo;
+
+    public void initialize(){
+        Image logo2Normal = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("assets/logo2_normal.png")));
+        logo.setImage(logo2Normal);
+        logo.setFitWidth(logo2Normal.getWidth() / 2);
+        logo.setFitHeight(logo2Normal.getHeight() / 2);
+        logo.setLayoutX(Window.getInstance().getWidth() / 4);
+    }
 
 
     /**

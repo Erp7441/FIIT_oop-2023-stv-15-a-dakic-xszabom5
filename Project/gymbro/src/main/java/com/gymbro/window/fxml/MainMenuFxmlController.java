@@ -1,12 +1,29 @@
 package com.gymbro.window.fxml;
 
+import com.gymbro.Main;
 import com.gymbro.window.Window;
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.util.Objects;
 
 /**
  * The type Main menu fxml controller.
  */
 public class MainMenuFxmlController{
+
+    @FXML
+    private ImageView logo;
+
+    public void initialize(){
+        Image logo2Normal = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("assets/logo2_normal.png")));
+        logo.setImage(logo2Normal);
+        logo.setFitWidth(logo2Normal.getWidth() / 2);
+        logo.setFitHeight(logo2Normal.getHeight() / 2);
+        logo.setLayoutX(Window.getInstance().getWidth() / 4);
+    }
+
     /**
      * Start map.
      */
@@ -31,4 +48,5 @@ public class MainMenuFxmlController{
     public void quit(){
         Window.getInstance().handleQuit();
     }
+
 }

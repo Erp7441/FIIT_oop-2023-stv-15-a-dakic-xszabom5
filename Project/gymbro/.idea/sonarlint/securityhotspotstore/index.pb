@@ -25,8 +25,6 @@ g
 7src/main/java/com/gymbro/city/model/FavoritesModel.java,8\0\803bf2f622473cd39c88f6daad4db0c93b337b38
 k
 ;src/main/java/com/gymbro/window/fxml/MapFxmlController.java,0\9\094788af2102c075d840099af480f19ca2c1e254
-^
-.src/main/java/com/gymbro/city/model/Model.java,7\0\70ba2322e254cae9de00b8d7ecc159cec55285dd
 c
 3src/main/java/com/gymbro/setups/SetupFavorites.java,b\8\b8b522e26fe15928478db10819317670617e2647
 e
@@ -35,3 +33,7 @@ Z
 *src/main/java/com/gymbro/setups/Setup.java,7\6\764127f512417fce683df2e133ad0ecde8775401
 e
 5src/main/java/com/gymbro/city/factory/GymFactory.java,3\d\3da049402531179a4667c1e629b2c6a337d9a34b
+[
++src/main/java/com/gymbro/window/Window.java,2\3\238ca1f3997e037f622010645ff5ba5ae6704f42
+b
+2src/main/java/com/gymbro/handlers/GymsHandler.java,9\a\9a9f3c358d7902c97193a7d3476d13fe55573c0f

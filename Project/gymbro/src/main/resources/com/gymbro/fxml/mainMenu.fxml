@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<VBox alignment="CENTER"
+<?import javafx.scene.text.Font?>
+<Pane fx:controller="com.gymbro.window.fxml.MainMenuFxmlController"
+      maxHeight="-Infinity"
+      maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="840.0"
       xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.gymbro.window.fxml.MainMenuFxmlController"
-      prefHeight="960.0" prefWidth="840.0"
-      spacing="5"
 >
 
-    <Button id="start" onAction="#startMap" text="Start"/>
-    <Button id="favorites" onAction="#goToFavoritesMenu" text="Favorites"/>
-    <Button id="quit" onAction="#quit" text="Quit"/>
+    <ImageView fx:id="logo"></ImageView>
 
-</VBox>
+    <VBox alignment="CENTER"
+          prefHeight="960.0" prefWidth="840.0"
+          spacing="20"
+    >
+        <fx:define>
+            <Font fx:id="buttonFont" name="Consolas" size="25" />
+        </fx:define>
+
+        <Button id="start" onAction="#startMap" text="Start" minWidth="225" minHeight="50" font="$buttonFont"/>
+        <Button id="favorites" onAction="#goToFavoritesMenu" text="Favorites"  minWidth="225" minHeight="50" font="$buttonFont"/>
+        <Button id="quit" onAction="#quit" text="Quit" minWidth="225" minHeight="50" font="$buttonFont"/>
+
+    </VBox>
+</Pane>
