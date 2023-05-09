@@ -83,4 +83,46 @@ public class GymFactory{
             makeInteractive().
             build();
     }
+
+    public GymController createGolemGym(Places location, Integer amountOfEquipment, URL website){
+        return new GymBuilder().
+                addTransform(
+                        new TransformBuilder().
+                                addScale(new Vector2D(75, 27)).
+                                addPosition(location.getPosition()).
+                                build()
+                ).
+                addPropertiesMenu(
+                        new PropertiesMenuBuilder().
+                                addProperty(new Property("Name", "GolemGym")).
+                                addProperty(new Property("Location", location)).
+                                addProperty(new Property("Amount of equipment", amountOfEquipment)).
+                                addProperty(new Property("Website", website)).
+                                build()
+                ).
+                addTexture("assets/golem.png").
+                makeInteractive().
+                build();
+    }
+
+    public GymController createNobelGymGym(Places location, Integer amountOfEquipment, URL website){
+        return new GymBuilder().
+                addTransform(
+                        new TransformBuilder().
+                                addScale(new Vector2D(75, 27)).
+                                addPosition(location.getPosition()).
+                                build()
+                ).
+                addPropertiesMenu(
+                        new PropertiesMenuBuilder().
+                                addProperty(new Property("Name", "NobelGym")).
+                                addProperty(new Property("Location", location)).
+                                addProperty(new Property("Amount of equipment", amountOfEquipment)).
+                                addProperty(new Property("Website", website)).
+                                build()
+                ).
+                addTexture("assets/nobelgym.png").
+                makeInteractive().
+                build();
+    }
 }
