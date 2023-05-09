@@ -1,5 +1,263 @@
 @startuml
-class sk.stuba.fiit.martin.szabo.gymbro.window.Window {
+interface com.gymbro.file.Serialization {
+~ String addStringProperty(String,String,int,boolean,boolean)
+~ String addIntProperty(String,int,int,boolean,boolean)
+~ String addFloatProperty(String,float,int,boolean,boolean)
+~ String addDoubleProperty(String,double,int,boolean,boolean)
+~ String addBooleanProperty(String,boolean,int,boolean,boolean)
+~ String beginObjectProperty(String,int)
+~ String endObjectProperty(int)
+~ String addTabs(int)
+~ String addEnding(boolean,boolean)
+~ String serialize(int)
+}
+class com.gymbro.city.controller.MapController {
++ <<Create>> MapController(MapModel,MapView)
++ void draw()
++ void calculatePath(GymController,Vector2D)
++ List<GymController> getGyms()
++ void setGyms(List<GymController>)
+}
+class com.gymbro.Main {
++ void start(Stage)
++ {static} void main(String[])
+}
+class com.gymbro.managers.event.EventManager {
+- Scene owner
+- HashMap<String,EventEntry<T>> handlers
++ <<Create>> EventManager(Scene)
++ void addEvent(String,EventType<? super T>,EventHandler<? super T>)
+- void removeEventEntry(EventEntry<T>)
++ void removeEvent(String)
++ void removeEvent(EventHandler<? super T>)
++ Map<String,EventEntry<T>> getHandlers()
++ Scene getOwner()
+}
+class com.gymbro.utils.Transform {
+- Vector2D position
+- double rotation
+- Vector2D scale
++ <<Create>> Transform(Vector2D)
++ <<Create>> Transform()
++ <<Create>> Transform(Vector2D,double,Vector2D)
++ Transform copy()
++ String toString()
++ Vector2D getPosition()
++ void setPosition(Vector2D)
++ double getRotation()
++ void setRotation(double)
++ Vector2D getScale()
++ void setScale(Vector2D)
++ String serialize(int)
++ {static} Transform deserialize()
+}
+class com.gymbro.city.model.GymModel {
+- PropertiesMenuController propertiesMenu
++ <<Create>> GymModel()
++ <<Create>> GymModel(Transform,Image)
++ <<Create>> GymModel(Transform,int,String)
++ String serialize(int)
++ {static} Property deserialize()
++ PropertiesMenuController getPropertiesMenu()
++ void setPropertiesMenu(PropertiesMenuController)
++ boolean equals(Object)
++ int hashCode()
+}
+class com.gymbro.city.builder.FavoritesBuilder {
++ <<Create>> FavoritesBuilder()
++ <<Create>> FavoritesBuilder(FavoritesModel)
++ FavoritesBuilder addGym(GymController)
++ FavoritesController build()
++ FavoritesBuilder addController(Controller)
++ FavoritesBuilder addModel(Model)
++ FavoritesBuilder addView(View)
++ FavoritesBuilder addTransform(Transform)
++ FavoritesBuilder addTexture(Image)
++ FavoritesBuilder addTexture(String)
++ FavoritesController getController()
++ FavoritesModel getModel()
++ FavoritesView getView()
+}
+class com.gymbro.utils.UnknownGymException {
++ <<Create>> UnknownGymException(String)
+}
+class com.gymbro.city.controller.FavoritesController {
++ <<Create>> FavoritesController(FavoritesModel)
++ <<Create>> FavoritesController(FavoritesModel,FavoritesView)
++ GymController findGym(GymController)
+}
+class com.gymbro.city.view.MapView {
++ <<Create>> MapView()
++ <<Create>> MapView(MapModel)
+}
+class com.gymbro.city.view.PropertiesMenuView {
++ <<Create>> PropertiesMenuView()
++ <<Create>> PropertiesMenuView(PropertiesMenuModel)
++ void draw()
++ void removeFromView()
+- void addRemoveOnEscapeEvent()
+}
+class com.gymbro.setups.SetupFavorites {
++ List<GymController> initializeGyms()
+}
+class com.gymbro.city.view.GymView {
++ <<Create>> GymView()
++ <<Create>> GymView(GymModel)
++ void zoomIn()
++ void zoomOut()
++ void showProperties()
+}
+class com.gymbro.city.controller.GymController {
++ <<Create>> GymController(GymModel)
++ <<Create>> GymController(GymModel,GymView)
++ void makeClickable()
++ void makeHoverable()
++ void makeInteractive()
+- void handleClick(MouseEvent)
+- void handleStartHover(MouseEvent)
+- void handleEndHover(MouseEvent)
+}
+class com.gymbro.city.factory.GymFactory {
++ <<Create>> GymFactory()
++ GymController createLifeGymGym(Places,Integer,URL)
++ GymController createFitinnGym(Places,Integer,URL)
++ GymController createGolemGym(Places,Integer,URL)
++ GymController createNobelGymGym(Places,Integer,URL)
+}
+abstract class com.gymbro.city.model.Model {
+~ ImageView imageView
+~ Transform transform
+~ Image texture
+# <<Create>> Model()
+# <<Create>> Model(Transform,Image)
+# <<Create>> Model(Transform,String)
++ double getHeight()
++ ImageView getImageView()
++ Vector2D getPosition()
++ double getRotation()
++ Vector2D getScale()
++ Image getTexture()
++ Transform getTransform()
++ double getX()
++ double getY()
++ double getWidth()
++ void setHeight(double)
++ void setImageView(ImageView)
++ void setPosition(Vector2D)
++ void setRotation(double)
++ void setScale(Vector2D)
++ void setTexture(Image)
++ void setTexture(String)
++ void setTransform(Transform)
++ void setX(double)
++ void setY(double)
++ void setWidth(double)
+}
+class com.gymbro.utils.Constants {
++ {static} int SCREEN_WIDTH
++ {static} int SCREEN_HEIGHT
++ {static} String SCREEN_TITLE
++ {static} boolean SCREEN_RESIZABLE
++ {static} double LABEL_LAYOUT_X
++ {static} double LABEL_LAYOUT_Y
++ {static} Font LABEL_FONT_TYPE
++ {static} String ID_GYM_MENU_PANE
++ {static} String ID_MAP_PANE
++ {static} String ID_MAIN_MENU_PANE
++ {static} String ID_PROPERTY_REMOVE_ON_ESCAPE_EVENT
++ {static} String ID_BACK_TO_MAIN_MENU_EVENT
++ {static} String ID_FAVORITES_MENU_PANE
++ {static} double MOUSE_OFFSET_X
++ {static} double MOUSE_OFFSET_Y
++ {static} int BUTTON_OFFSET_X
++ {static} int BUTTON_OFFSET_Y
++ {static} int BUTTON_SPACING_HZ
++ {static} int BUTTON_SPACING_VT
++ {static} int BUTTON_HEIGHT
++ {static} int BUTTON_WIDTH
++ {static} int TAB_WIDTH
++ {static} int TAB_HEIGHT
++ {static} int TAB_OFFSET_X
++ {static} int TAB_OFFSET_Y
++ {static} int TAB_HORIZONTAL_SPACING
+- <<Create>> Constants()
+}
+enum com.gymbro.utils.Places {
++  DUBRAVKA
++  LAMAC
++  DEVIN
++  KARLOVA_VES
++  DEVINSKA_NOVA_VES
++  ZAHORSKA_BYSTRICA
++  STARE_MESTO
++  NOVE_MESTO
++  RACA
++  VAJNORY
++  PETRZALKA
++  RUZINOV
++  VRAKUNA
++  PODUNAJSKE_BISKUPICE
++  JAROVCE
++  RUSOVCE
++  CUNOVO
+- String label
+- Vector2D position
+~ <<Create>> Places(String,Vector2D)
++ String getLabel()
++ Vector2D getPosition()
++ String toString()
+}
+class com.gymbro.city.controller.PropertiesMenuController {
++ <<Create>> PropertiesMenuController(PropertiesMenuModel)
++ <<Create>> PropertiesMenuController(PropertiesMenuModel,PropertiesMenuView)
++ ArrayList<Property> getProperties()
++ void setProperties(ArrayList<Property>)
++ GymController getOwner()
++ void setOwner(GymController)
+}
+class com.gymbro.managers.event.EventEntry {
+- EventType<T> event
+- EventHandler<? super T> handler
++ <<Create>> EventEntry(EventType<T>,EventHandler<? super T>)
++ EventType<T> getEvent()
++ void setEvent(EventType<T>)
++ EventHandler<? super T> getHandler()
++ void setHandler(EventHandler<? super T>)
+}
+class com.gymbro.managers.scene.SceneManager {
+- HashMap<String,Pane> paneMap
+- Scene scene
+- Stage stage
++ <<Create>> SceneManager(Scene)
++ void addPane(String,Pane)
++ void removePane(String)
++ void activate(String)
++ Parent getActive()
++ String getActiveName()
++ {static} Pane loadFxml(String)
++ Scene getScene()
++ HashMap<String,Pane> getPaneMap()
++ Stage getStage()
++ void setStage(Stage)
+}
+class com.gymbro.window.fxml.MainMenuFxmlController {
+- ImageView logo
++ void initialize()
+# void startMap()
+# void goToFavoritesMenu()
++ void quit()
+}
+class com.gymbro.city.model.MapModel {
+- ArrayList<GymController> gyms
++ <<Create>> MapModel()
++ <<Create>> MapModel(ArrayList<GymController>,Transform,Image)
++ <<Create>> MapModel(List<GymController>,Transform,String)
++ String serialize(int)
++ {static} Property deserialize()
++ List<GymController> getGyms()
++ void setGyms(ArrayList<GymController>)
+}
+class com.gymbro.window.Window {
 - {static} Window instance
 - SceneManager sceneManager
 - SceneEventManager eventManager
@@ -42,38 +300,7 @@ class sk.stuba.fiit.martin.szabo.gymbro.window.Window {
 + void setHeight(double)
 + void setWindowSetup(Setup)
 }
-class sk.stuba.fiit.martin.szabo.gymbro.managers.event.EventEntry {
-- EventType<T> event
-- EventHandler<? super T> handler
-+ <<Create>> EventEntry(EventType<T>,EventHandler<? super T>)
-+ EventType<T> getEvent()
-+ void setEvent(EventType<T>)
-+ EventHandler<? super T> getHandler()
-+ void setHandler(EventHandler<? super T>)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.window.fxml.PropertiesMenuFxmlController {
-# void back()
-+ void handleFavorites(ActionEvent)
-+ {static} void initializeFavoritesButtonState(Button)
-}
-interface sk.stuba.fiit.martin.szabo.gymbro.file.Serialization {
-~ String addStringProperty(String,String,int,boolean,boolean)
-~ String addIntProperty(String,int,int,boolean,boolean)
-~ String addFloatProperty(String,float,int,boolean,boolean)
-~ String addDoubleProperty(String,double,int,boolean,boolean)
-~ String addBooleanProperty(String,boolean,int,boolean,boolean)
-~ String beginObjectProperty(String,int)
-~ String endObjectProperty(int)
-~ String addTabs(int)
-~ String addEnding(boolean,boolean)
-~ String serialize(int)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.factory.GymFactory {
-+ <<Create>> GymFactory()
-+ GymController createLifeGymGym(Places)
-+ GymController createFitinnGym(Places)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.utils.Property {
+class com.gymbro.utils.Property {
 - String name
 - Object value
 + <<Create>> Property()
@@ -86,75 +313,21 @@ class sk.stuba.fiit.martin.szabo.gymbro.utils.Property {
 + {static} Property deserialize()
 + String toString()
 }
-abstract class sk.stuba.fiit.martin.szabo.gymbro.city.model.Model {
-~ ImageView imageView
-~ Transform transform
-~ Image texture
-# <<Create>> Model()
-# <<Create>> Model(Transform,Image)
-# <<Create>> Model(Transform,String)
-+ double getHeight()
-+ ImageView getImageView()
-+ Vector2D getPosition()
-+ double getRotation()
-+ Vector2D getScale()
-+ Image getTexture()
-+ Transform getTransform()
-+ double getX()
-+ double getY()
-+ double getWidth()
-+ void setHeight(double)
-+ void setImageView(ImageView)
-+ void setPosition(Vector2D)
-+ void setRotation(double)
-+ void setScale(Vector2D)
-+ void setTexture(Image)
-+ void setTexture(String)
-+ void setTransform(Transform)
-+ void setX(double)
-+ void setY(double)
-+ void setWidth(double)
+class com.gymbro.utils.WriteFileException {
++ <<Create>> WriteFileException(String)
 }
-class sk.stuba.fiit.martin.szabo.gymbro.window.fxml.FavoritesMenuFxmlController {
-+ void favoritesMap()
-+ void showMenu()
-+ void backToMainMenu()
-+ void saveFavorites()
+class com.gymbro.city.view.FavoritesView {
++ <<Create>> FavoritesView()
++ <<Create>> FavoritesView(FavoritesModel)
 }
-class sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController {
-+ <<Create>> GymController(GymModel)
-+ <<Create>> GymController(GymModel,GymView)
-+ void makeClickable()
-+ void makeHoverable()
-+ void makeInteractive()
-- void handleClick(MouseEvent)
-- void handleStartHover(MouseEvent)
-- void handleEndHover(MouseEvent)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.builder.PropertiesMenuBuilder {
-+ <<Create>> PropertiesMenuBuilder()
-+ <<Create>> PropertiesMenuBuilder(PropertiesMenuModel)
-+ PropertiesMenuBuilder addProperties(ArrayList<Property>)
-+ PropertiesMenuBuilder addProperty(Property)
-+ PropertiesMenuBuilder addOwner(GymController)
-+ PropertiesMenuController build()
-+ PropertiesMenuBuilder addController(Controller)
-+ PropertiesMenuBuilder addModel(Model)
-+ PropertiesMenuBuilder addView(View)
-+ PropertiesMenuBuilder addTransform(Transform)
-+ PropertiesMenuBuilder addTexture(Image)
-+ PropertiesMenuBuilder addTexture(String)
-+ PropertiesMenuController getController()
-+ PropertiesMenuModel getModel()
-+ PropertiesMenuView getView()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.file.Parser {
+class com.gymbro.file.Parser {
 - {static} int offset
 - {static} int line
 - {static} byte[] bytes
 - <<Create>> Parser()
 + {static} byte[] getBytes()
 + {static} void openFile(String)
++ {static} void openFilePath(String,String)
 + {static} byte[] readAllBytes(InputStream)
 + {static} void skipWhitespace()
 + {static} char peek()
@@ -182,100 +355,26 @@ class sk.stuba.fiit.martin.szabo.gymbro.file.Parser {
 + {static} Property parseProperty()
 - {static} Object findPlace(String)
 }
-class sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView {
-+ <<Create>> GymView()
-+ <<Create>> GymView(GymModel)
-+ void zoomIn()
-+ void zoomOut()
-+ void showProperties()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.builder.FavoritesBuilder {
-+ <<Create>> FavoritesBuilder()
-+ <<Create>> FavoritesBuilder(FavoritesModel)
-+ FavoritesBuilder addGym(GymController)
-+ FavoritesController build()
-+ FavoritesBuilder addController(Controller)
-+ FavoritesBuilder addModel(Model)
-+ FavoritesBuilder addView(View)
-+ FavoritesBuilder addTransform(Transform)
-+ FavoritesBuilder addTexture(Image)
-+ FavoritesBuilder addTexture(String)
-+ FavoritesController getController()
-+ FavoritesModel getModel()
-+ FavoritesView getView()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.view.PropertiesMenuView {
-+ <<Create>> PropertiesMenuView()
-+ <<Create>> PropertiesMenuView(PropertiesMenuModel)
-+ void draw()
-+ void removeFromView()
-- void addRemoveOnEscapeEvent()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.handlers.FavoritesHandler {
-- {static} FavoritesController favorites
-- <<Create>> FavoritesHandler()
-+ {static} FavoritesController initalizeFavorites()
-+ {static} FavoritesController getFavorites()
-+ {static} void setFavorites(FavoritesController)
-+ {static} void save(String)
-+ {static} void load()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.setups.Setup {
-- MapController map
-+ <<Create>> Setup()
-+ <<Create>> Setup(MapController)
-+ void initializeMap()
-+ List<GymController> initializeGyms()
-+ MapController getMap()
-+ void setMap(MapController)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.window.fxml.MapFxmlController {
-+ <<Create>> MapFxmlController()
-+ void run(Setup)
-+ void initializeScene()
-- void initializeSetup(Setup)
-+ void showMap()
-+ void showFavoritesMap()
-+ void back()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.window.fxml.MainMenuFxmlController {
-# void startMap()
-# void goToFavoritesMenu()
-+ void quit()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.builder.TransformBuilder {
-- Transform transform
-+ <<Create>> TransformBuilder()
-+ <<Create>> TransformBuilder(Vector2D)
-+ <<Create>> TransformBuilder(Vector2D,double,Vector2D)
-+ <<Create>> TransformBuilder(Transform)
-+ Transform build()
-+ TransformBuilder addPosition(Vector2D)
-+ TransformBuilder addRotation(double)
-+ TransformBuilder addScale(Vector2D)
-+ TransformBuilder addPositionX(double)
-+ TransformBuilder addPositionY(double)
-+ TransformBuilder addScaleX(double)
-+ TransformBuilder addScaleY(double)
-+ Transform getTransform()
-+ void setTransform(Transform)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel {
-- ArrayList<GymController> favorites
-+ <<Create>> FavoritesModel()
-+ <<Create>> FavoritesModel(Transform,Image)
-+ <<Create>> FavoritesModel(Transform,String)
-+ <<Create>> FavoritesModel(Transform,Image,ArrayList<GymController>)
-+ <<Create>> FavoritesModel(Transform,String,ArrayList<GymController>)
+class com.gymbro.utils.Vector2D {
+- double x
+- double y
++ <<Create>> Vector2D(double,double)
++ <<Create>> Vector2D()
++ Vector2D add(Vector2D)
++ Vector2D subtract(Vector2D)
++ Vector2D multiply(Vector2D)
++ Vector2D divide(Vector2D)
++ Vector2D copy()
++ double getX()
++ void setX(double)
++ double getY()
++ void setY(double)
 + String serialize(int)
-+ {static} FavoritesModel deserialize()
-+ ArrayList<GymController> getFavorites()
-+ void setFavorites(ArrayList<GymController>)
++ {static} Vector2D deserialize()
++ boolean equals(Object)
++ int hashCode()
 }
-class sk.stuba.fiit.martin.szabo.gymbro.Launcher {
-+ {static} void main(String[])
-}
-class sk.stuba.fiit.martin.szabo.gymbro.managers.event.SceneEventManager {
+class com.gymbro.managers.event.SceneEventManager {
 - EventManager<? extends KeyEvent> keyEventManager
 - EventManager<? extends MouseEvent> mouseEventManager
 - Scene owner
@@ -287,7 +386,16 @@ class sk.stuba.fiit.martin.szabo.gymbro.managers.event.SceneEventManager {
 + Scene getOwner()
 + void setOwner(Scene)
 }
-abstract class sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller {
+class com.gymbro.window.fxml.MapFxmlController {
++ <<Create>> MapFxmlController()
++ void run(Setup)
++ void initializeScene()
+- void initializeSetup(Setup)
++ void showMap()
++ void showFavoritesMap()
++ void back()
+}
+abstract class com.gymbro.city.controller.Controller {
 - Model model
 - View view
 # <<Create>> Controller(Model,View)
@@ -318,60 +426,7 @@ abstract class sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller {
 + void setY(double)
 + void setWidth(double)
 }
-class sk.stuba.fiit.martin.szabo.gymbro.utils.Transform {
-- Vector2D position
-- double rotation
-- Vector2D scale
-+ <<Create>> Transform(Vector2D)
-+ <<Create>> Transform()
-+ <<Create>> Transform(Vector2D,double,Vector2D)
-+ Transform copy()
-+ String toString()
-+ Vector2D getPosition()
-+ void setPosition(Vector2D)
-+ double getRotation()
-+ void setRotation(double)
-+ Vector2D getScale()
-+ void setScale(Vector2D)
-+ String serialize(int)
-+ {static} Transform deserialize()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D {
-- double x
-- double y
-+ <<Create>> Vector2D(double,double)
-+ <<Create>> Vector2D()
-+ Vector2D add(Vector2D)
-+ Vector2D subtract(Vector2D)
-+ Vector2D multiply(Vector2D)
-+ Vector2D divide(Vector2D)
-+ Vector2D copy()
-+ double getX()
-+ void setX(double)
-+ double getY()
-+ void setY(double)
-+ String serialize(int)
-+ {static} Vector2D deserialize()
-+ boolean equals(Object)
-+ int hashCode()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.managers.scene.SceneManager {
-- HashMap<String,Pane> paneMap
-- Scene scene
-- Stage stage
-+ <<Create>> SceneManager(Scene)
-+ void addPane(String,Pane)
-+ void removePane(String)
-+ void activate(String)
-+ Parent getActive()
-+ String getActiveName()
-+ {static} Pane loadFxml(String)
-+ Scene getScene()
-+ HashMap<String,Pane> getPaneMap()
-+ Stage getStage()
-+ void setStage(Stage)
-}
-abstract class sk.stuba.fiit.martin.szabo.gymbro.city.view.View {
+abstract class com.gymbro.city.view.View {
 ~ Model model
 + <<Create>> View(Model)
 + void draw()
@@ -399,7 +454,70 @@ abstract class sk.stuba.fiit.martin.szabo.gymbro.city.view.View {
 + void setWidth(double)
 + void setImageView(ImageView)
 }
-class sk.stuba.fiit.martin.szabo.gymbro.city.model.PropertiesMenuModel {
+class com.gymbro.window.fxml.PropertiesMenuFxmlController {
+# void back()
++ void handleFavorites(ActionEvent)
++ {static} void initializeFavoritesButtonState(Button)
+}
+class com.gymbro.setups.Setup {
+- MapController map
++ <<Create>> Setup()
++ <<Create>> Setup(MapController)
++ void initializeMap()
++ List<GymController> initializeGyms()
++ MapController getMap()
++ void setMap(MapController)
+}
+class com.gymbro.handlers.FavoritesHandler {
+- {static} FavoritesController favorites
+- <<Create>> FavoritesHandler()
++ {static} FavoritesController initalizeFavorites()
++ {static} FavoritesController getFavorites()
++ {static} void setFavorites(FavoritesController)
++ {static} void save(String)
++ {static} void load()
+}
+class com.gymbro.Launcher {
+- {static} Thread mainThread
++ {static} void main(String[])
+}
+class com.gymbro.city.builder.PropertiesMenuBuilder {
++ <<Create>> PropertiesMenuBuilder()
++ <<Create>> PropertiesMenuBuilder(PropertiesMenuModel)
++ PropertiesMenuBuilder addProperties(ArrayList<Property>)
++ PropertiesMenuBuilder addProperty(Property)
++ PropertiesMenuBuilder addOwner(GymController)
++ PropertiesMenuController build()
++ PropertiesMenuBuilder addController(Controller)
++ PropertiesMenuBuilder addModel(Model)
++ PropertiesMenuBuilder addView(View)
++ PropertiesMenuBuilder addTransform(Transform)
++ PropertiesMenuBuilder addTexture(Image)
++ PropertiesMenuBuilder addTexture(String)
++ PropertiesMenuController getController()
++ PropertiesMenuModel getModel()
++ PropertiesMenuView getView()
+}
+class com.gymbro.handlers.ImageViewHandler {
+- ImageView view
++ <<Create>> ImageViewHandler()
++ ImageView initialize(Image,Transform)
++ ImageView getView()
++ void setView(ImageView)
+}
+class com.gymbro.city.model.FavoritesModel {
+- ArrayList<GymController> favorites
++ <<Create>> FavoritesModel()
++ <<Create>> FavoritesModel(Transform,Image)
++ <<Create>> FavoritesModel(Transform,String)
++ <<Create>> FavoritesModel(Transform,Image,ArrayList<GymController>)
++ <<Create>> FavoritesModel(Transform,String,ArrayList<GymController>)
++ String serialize(int)
++ {static} FavoritesModel deserialize()
++ ArrayList<GymController> getFavorites()
++ void setFavorites(ArrayList<GymController>)
+}
+class com.gymbro.city.model.PropertiesMenuModel {
 - ArrayList<Property> properties
 - GymController owner
 + <<Create>> PropertiesMenuModel()
@@ -414,89 +532,42 @@ class sk.stuba.fiit.martin.szabo.gymbro.city.model.PropertiesMenuModel {
 + boolean equals(Object)
 + int hashCode()
 }
-class sk.stuba.fiit.martin.szabo.gymbro.handlers.ImageViewHandler {
-- ImageView view
-+ <<Create>> ImageViewHandler()
-+ ImageView initialize(Image,Transform)
-+ ImageView getView()
-+ void setView(ImageView)
+class com.gymbro.city.builder.GymBuilder {
++ <<Create>> GymBuilder()
++ <<Create>> GymBuilder(GymModel)
++ GymBuilder addPropertiesMenu(PropertiesMenuController)
++ GymBuilder makeClickable()
++ GymBuilder makeHoverable()
++ GymBuilder makeInteractive()
++ GymController build()
++ GymBuilder addController(Controller)
++ GymBuilder addModel(Model)
++ GymBuilder addView(View)
++ GymBuilder addTransform(Transform)
++ GymBuilder addTexture(Image)
++ GymBuilder addTexture(String)
++ GymController getController()
++ GymModel getModel()
++ GymView getView()
 }
-class sk.stuba.fiit.martin.szabo.gymbro.managers.event.EventManager {
-- Scene owner
-- HashMap<String,EventEntry<T>> handlers
-+ <<Create>> EventManager(Scene)
-+ void addEvent(String,EventType<? super T>,EventHandler<? super T>)
-- void removeEventEntry(EventEntry<T>)
-+ void removeEvent(String)
-+ void removeEvent(EventHandler<? super T>)
-+ Map<String,EventEntry<T>> getHandlers()
-+ Scene getOwner()
+class com.gymbro.city.builder.TransformBuilder {
+- Transform transform
++ <<Create>> TransformBuilder()
++ <<Create>> TransformBuilder(Vector2D)
++ <<Create>> TransformBuilder(Vector2D,double,Vector2D)
++ <<Create>> TransformBuilder(Transform)
++ Transform build()
++ TransformBuilder addPosition(Vector2D)
++ TransformBuilder addRotation(double)
++ TransformBuilder addScale(Vector2D)
++ TransformBuilder addPositionX(double)
++ TransformBuilder addPositionY(double)
++ TransformBuilder addScaleX(double)
++ TransformBuilder addScaleY(double)
++ Transform getTransform()
++ void setTransform(Transform)
 }
-class sk.stuba.fiit.martin.szabo.gymbro.city.controller.FavoritesController {
-+ <<Create>> FavoritesController(FavoritesModel)
-+ <<Create>> FavoritesController(FavoritesModel,FavoritesView)
-+ GymController findGym(GymController)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.utils.Constants {
-+ {static} int SCREEN_WIDTH
-+ {static} int SCREEN_HEIGHT
-+ {static} String SCREEN_TITLE
-+ {static} boolean SCREEN_RESIZABLE
-+ {static} double LABLE_LAYOUT_X
-+ {static} double LABLE_LAYOUT_Y
-+ {static} String LABLE_FONT_TYPE
-+ {static} double LABLE_FONT_SIZE
-+ {static} String ID_GYM_MENU_PANE
-+ {static} String ID_MAP_PANE
-+ {static} String ID_MAIN_MENU_PANE
-+ {static} String ID_PROPERTY_REMOVE_ON_ESCAPE_EVENT
-+ {static} String ID_BACK_TO_MAIN_MENU_EVENT
-+ {static} String ID_FAVORITES_MENU_PANE
-+ {static} double MOUSE_OFFSET_X
-+ {static} double MOUSE_OFFSET_Y
-+ {static} int BUTTON_OFFSET_X
-+ {static} int BUTTON_OFFSET_Y
-+ {static} int BUTTON_SPACING_HZ
-+ {static} int BUTTON_SPACING_VT
-+ {static} int BUTTON_HEIGHT
-+ {static} int BUTTON_WIDTH
-+ {static} int TAB_WIDTH
-+ {static} int TAB_HEIGHT
-+ {static} int TAB_OFFSET_X
-+ {static} int TAB_OFFSET_Y
-+ {static} int TAB_HORIZONTAL_SPACING
-- <<Create>> Constants()
-}
-enum sk.stuba.fiit.martin.szabo.gymbro.utils.Places {
-+  DUBRAVKA
-+  LAMAC
-+  DEVIN
-+  KARLOVA_VES
-+  DEVINSKA_NOVA_VES
-+  ZAHORSKA_BYSTRICA
-+  STARE_MESTO
-+  NOVE_MESTO
-+  RACA
-+  VAJNORY
-+  PETRZALKA
-+  RUZINOV
-+  VRAKUNA
-+  PODUNAJSKE_BISKUPICE
-+  JAROVCE
-+  RUSOVCE
-+  CUNOVO
-- String label
-- Vector2D position
-~ <<Create>> Places(String,Vector2D)
-+ String getLabel()
-+ Vector2D getPosition()
-+ String toString()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.Main {
-+ void start(Stage)
-+ {static} void main(String[])
-}
-abstract class sk.stuba.fiit.martin.szabo.gymbro.city.builder.BuilderMVC {
+abstract class com.gymbro.city.builder.BuilderMVC {
 - Controller controller
 - Model model
 - View view
@@ -515,7 +586,15 @@ abstract class sk.stuba.fiit.martin.szabo.gymbro.city.builder.BuilderMVC {
 + View getView()
 + void setView(View)
 }
-class sk.stuba.fiit.martin.szabo.gymbro.city.builder.MapBuilder {
+class com.gymbro.handlers.GymsHandler {
+- <<Create>> GymsHandler()
++ {static} List<GymController> load()
++ GymController createGym(String,Places,Integer,URL)
+}
+class com.gymbro.utils.FileNameException {
++ <<Create>> FileNameException(String)
+}
+class com.gymbro.city.builder.MapBuilder {
 + <<Create>> MapBuilder()
 + <<Create>> MapBuilder(MapModel)
 + MapBuilder addGyms(List<GymController>)
@@ -530,98 +609,65 @@ class sk.stuba.fiit.martin.szabo.gymbro.city.builder.MapBuilder {
 + MapModel getModel()
 + MapView getView()
 }
-class sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel {
-- int amountOfEquipment
-- PropertiesMenuController propertiesMenu
-+ <<Create>> GymModel()
-+ <<Create>> GymModel(Transform,int,Image)
-+ <<Create>> GymModel(Transform,int,String)
-+ String serialize(int)
-+ {static} Property deserialize()
-+ int getAmountOfEquipment()
-+ void setAmountOfEquipment(int)
-+ PropertiesMenuController getPropertiesMenu()
-+ void setPropertiesMenu(PropertiesMenuController)
-+ boolean equals(Object)
-+ int hashCode()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController {
-+ <<Create>> MapController(MapModel,MapView)
-+ void draw()
-+ void calculatePath(GymController,Vector2D)
-+ List<GymController> getGyms()
-+ void setGyms(List<GymController>)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.setups.SetupFavorites {
-+ List<GymController> initializeGyms()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.view.FavoritesView {
-+ <<Create>> FavoritesView()
-+ <<Create>> FavoritesView(FavoritesModel)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.builder.GymBuilder {
-+ <<Create>> GymBuilder()
-+ <<Create>> GymBuilder(GymModel)
-+ GymBuilder addPropertiesMenu(PropertiesMenuController)
-+ GymBuilder addAmountOfEquipment(int)
-+ GymBuilder makeClickable()
-+ GymBuilder makeHoverable()
-+ GymBuilder makeInteractive()
-+ GymController build()
-+ GymBuilder addController(Controller)
-+ GymBuilder addModel(Model)
-+ GymBuilder addView(View)
-+ GymBuilder addTransform(Transform)
-+ GymBuilder addTexture(Image)
-+ GymBuilder addTexture(String)
-+ GymController getController()
-+ GymModel getModel()
-+ GymView getView()
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuController {
-+ <<Create>> PropertiesMenuController(PropertiesMenuModel)
-+ <<Create>> PropertiesMenuController(PropertiesMenuModel,PropertiesMenuView)
-+ ArrayList<Property> getProperties()
-+ void setProperties(ArrayList<Property>)
-+ GymController getOwner()
-+ void setOwner(GymController)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel {
-- ArrayList<GymController> gyms
-+ <<Create>> MapModel()
-+ <<Create>> MapModel(ArrayList<GymController>,Transform,Image)
-+ <<Create>> MapModel(List<GymController>,Transform,String)
-+ String serialize(int)
-+ {static} Property deserialize()
-+ List<GymController> getGyms()
-+ void setGyms(ArrayList<GymController>)
-}
-class sk.stuba.fiit.martin.szabo.gymbro.city.view.MapView {
-+ <<Create>> MapView()
-+ <<Create>> MapView(MapModel)
+class com.gymbro.window.fxml.FavoritesMenuFxmlController {
+- ImageView logo
++ void initialize()
++ void favoritesMap()
++ void showMenu()
++ void backToMainMenu()
++ void saveFavorites()
 }
 
 
-sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|.. sk.stuba.fiit.martin.szabo.gymbro.utils.Property
-sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|.. sk.stuba.fiit.martin.szabo.gymbro.city.model.Model
-sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller <|-- sk.stuba.fiit.martin.szabo.gymbro.city.controller.GymController
-sk.stuba.fiit.martin.szabo.gymbro.city.builder.BuilderMVC <|-- sk.stuba.fiit.martin.szabo.gymbro.city.builder.PropertiesMenuBuilder
-sk.stuba.fiit.martin.szabo.gymbro.city.view.View <|-- sk.stuba.fiit.martin.szabo.gymbro.city.view.GymView
-sk.stuba.fiit.martin.szabo.gymbro.city.builder.BuilderMVC <|-- sk.stuba.fiit.martin.szabo.gymbro.city.builder.FavoritesBuilder
-sk.stuba.fiit.martin.szabo.gymbro.city.view.View <|-- sk.stuba.fiit.martin.szabo.gymbro.city.view.PropertiesMenuView
-sk.stuba.fiit.martin.szabo.gymbro.city.model.Model <|-- sk.stuba.fiit.martin.szabo.gymbro.city.model.FavoritesModel
-sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|.. sk.stuba.fiit.martin.szabo.gymbro.utils.Transform
-sk.stuba.fiit.martin.szabo.gymbro.file.Serialization <|.. sk.stuba.fiit.martin.szabo.gymbro.utils.Vector2D
-sk.stuba.fiit.martin.szabo.gymbro.city.model.Model <|-- sk.stuba.fiit.martin.szabo.gymbro.city.model.PropertiesMenuModel
-sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller <|-- sk.stuba.fiit.martin.szabo.gymbro.city.controller.FavoritesController
-javafx.application.Application <|-- sk.stuba.fiit.martin.szabo.gymbro.Main
-sk.stuba.fiit.martin.szabo.gymbro.city.builder.BuilderMVC <|-- sk.stuba.fiit.martin.szabo.gymbro.city.builder.MapBuilder
-sk.stuba.fiit.martin.szabo.gymbro.city.model.Model <|-- sk.stuba.fiit.martin.szabo.gymbro.city.model.GymModel
-sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller <|-- sk.stuba.fiit.martin.szabo.gymbro.city.controller.MapController
-sk.stuba.fiit.martin.szabo.gymbro.setups.Setup <|-- sk.stuba.fiit.martin.szabo.gymbro.setups.SetupFavorites
-sk.stuba.fiit.martin.szabo.gymbro.city.view.View <|-- sk.stuba.fiit.martin.szabo.gymbro.city.view.FavoritesView
-sk.stuba.fiit.martin.szabo.gymbro.city.builder.BuilderMVC <|-- sk.stuba.fiit.martin.szabo.gymbro.city.builder.GymBuilder
-sk.stuba.fiit.martin.szabo.gymbro.city.controller.Controller <|-- sk.stuba.fiit.martin.szabo.gymbro.city.controller.PropertiesMenuController
-sk.stuba.fiit.martin.szabo.gymbro.city.model.Model <|-- sk.stuba.fiit.martin.szabo.gymbro.city.model.MapModel
-sk.stuba.fiit.martin.szabo.gymbro.city.view.View <|-- sk.stuba.fiit.martin.szabo.gymbro.city.view.MapView
+com.gymbro.city.controller.Controller <|-- com.gymbro.city.controller.MapController
+com.gymbro.city.controller.Controller <|-- com.gymbro.city.controller.FavoritesController
+com.gymbro.city.controller.Controller <|-- com.gymbro.city.controller.GymController
+com.gymbro.city.controller.Controller <|-- com.gymbro.city.controller.PropertiesMenuController
+
+com.gymbro.city.builder.BuilderMVC <|-- com.gymbro.city.builder.FavoritesBuilder
+com.gymbro.city.builder.BuilderMVC <|-- com.gymbro.city.builder.GymBuilder
+com.gymbro.city.builder.BuilderMVC <|-- com.gymbro.city.builder.MapBuilder
+com.gymbro.city.builder.BuilderMVC <|-- com.gymbro.city.builder.PropertiesMenuBuilder
+
+com.gymbro.city.view.View <|-- com.gymbro.city.view.MapView
+com.gymbro.city.view.View <|-- com.gymbro.city.view.FavoritesView
+com.gymbro.city.view.View <|-- com.gymbro.city.view.GymView
+com.gymbro.city.view.View <|-- com.gymbro.city.view.PropertiesMenuView
+
+com.gymbro.setups.Setup <|-- com.gymbro.setups.SetupFavorites
+
+javafx.application.Application <|-- com.gymbro.Main
+
+com.gymbro.file.Serialization <|.. com.gymbro.utils.Transform
+com.gymbro.file.Serialization <|.. com.gymbro.city.model.Model
+com.gymbro.file.Serialization <|.. com.gymbro.utils.Property
+com.gymbro.file.Serialization <|.. com.gymbro.utils.Vector2D
+
+com.gymbro.city.model.Model <|-- com.gymbro.city.model.GymModel
+com.gymbro.city.model.Model <|-- com.gymbro.city.model.MapModel
+com.gymbro.city.model.Model <|-- com.gymbro.city.model.FavoritesModel
+com.gymbro.city.model.Model <|-- com.gymbro.city.model.PropertiesMenuModel
+
+com.gymbro.utils.Exception <|-- com.gymbro.utils.FileNameException
+com.gymbro.utils.RuntimeException <|-- com.gymbro.utils.UnknownGymException
+com.gymbro.utils.RuntimeException <|-- com.gymbro.utils.WriteFileException
+
+com.gymbro.city.builder.PropertiesMenuBuilder *-- com.gymbro.city.view.PropertiesMenuView
+com.gymbro.city.builder.MapBuilder *-- com.gymbro.city.view.MapView
+com.gymbro.city.builder.FavoritesBuilder *-- com.gymbro.city.view.FavoritesView
+com.gymbro.city.builder.GymBuilder *-- com.gymbro.city.view.GymView
+
+com.gymbro.city.controller.MapController o-- com.gymbro.city.model.MapModel
+com.gymbro.city.controller.FavoritesController o-- com.gymbro.city.model.FavoritesModel
+com.gymbro.city.controller.GymController o-- com.gymbro.city.model.GymModel
+com.gymbro.city.controller.PropertiesMenuController o-- com.gymbro.city.model.PropertiesMenuModel
+
+com.gymbro.city.view.MapView *-- com.gymbro.city.view.GymView : contains
+com.gymbro.city.view.MapView *-- com.gymbro.city.view.FavoritesView : contains
+
+com.gymbro.city.model.GymModel --> com.gymbro.setups.SetupFavorites
+com.gymbro.city.model.GymModel o-- com.gymbro.utils.Vector2D : position
+com.gymbro.city.model.GymModel *-- com.gymbro.utils.Property : properties
+
+com.gymbro.city.model.MapModel *-- com.gymbro.utils.Vector2D
 @enduml
