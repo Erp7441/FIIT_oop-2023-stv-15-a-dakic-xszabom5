@@ -22,8 +22,7 @@ public class GymsHandler{
 
 
         try{
-            String path = Objects.requireNonNull(Main.class.getResource("config/layout.zip")).getPath();
-            Parser.openFilePath(path, "layout");
+            Parser.openFilePath("config/layout.json");
         }
         catch(FileNameException e){
             e.printStackTrace();

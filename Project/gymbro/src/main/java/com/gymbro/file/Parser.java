@@ -1,5 +1,6 @@
 package com.gymbro.file;
 
+import com.gymbro.Main;
 import com.gymbro.city.controller.FavoritesController;
 import com.gymbro.city.controller.GymController;
 import com.gymbro.city.controller.PropertiesMenuController;
@@ -70,15 +71,10 @@ public class Parser{
         }
     }
 
-    public static void openFilePath(String filePath, String fileName) throws FileNameException{
-        // Checks if file exists. If it does then get its length.
-        File temp = new File(filePath);
-        if(!temp.exists()){ return; }
-
+    public static void openFilePath(String filePath) throws FileNameException{
         try {
-            ZipFile zip = new ZipFile(filePath);
-            ZipEntry json = zip.getEntry(fileName + ".json");
-            InputStream stream = zip.getInputStream(json);
+            InputStream stream = Main.class.getResourceAsStream(filePath);
+            assert stream != null;
             bytes = readAllBytes(stream);
 
             // Resets variables
@@ -88,8 +84,6 @@ public class Parser{
             if(line != 1){
                 line = 1;
             }
-
-            zip.close();
         }
         catch(IOException e){
             e.printStackTrace();

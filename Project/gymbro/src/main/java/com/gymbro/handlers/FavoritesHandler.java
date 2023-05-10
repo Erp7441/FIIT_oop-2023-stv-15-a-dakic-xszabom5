@@ -1,6 +1,7 @@
 package com.gymbro.handlers;
 
 
+import com.gymbro.Main;
 import com.gymbro.city.builder.FavoritesBuilder;
 import com.gymbro.city.controller.FavoritesController;
 import com.gymbro.city.controller.GymController;
@@ -8,8 +9,14 @@ import com.gymbro.city.model.FavoritesModel;
 import com.gymbro.file.Parser;
 import com.gymbro.utils.WriteFileException;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -59,8 +66,12 @@ public class FavoritesHandler{
     public static void save(String fileName){
         if(getFavorites() == null) return;
 
+
         try{
-            FileOutputStream fos = new FileOutputStream(fileName + ".zip");
+            String path = Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
+            String folderPath = path.substring(0, path.lastIndexOf("/") + 1);
+
+            FileOutputStream fos = new FileOutputStream(folderPath + "/" + fileName + ".zip");
             ZipOutputStream zos = new ZipOutputStream(fos);
             zos.putNextEntry(new ZipEntry(fileName + ".json"));
 
@@ -73,7 +84,7 @@ public class FavoritesHandler{
             zos.close();
             fos.close();
         }
-        catch (IOException e){
+        catch (IOException | URISyntaxException e){
             throw new WriteFileException(e.getMessage());
         }
     }

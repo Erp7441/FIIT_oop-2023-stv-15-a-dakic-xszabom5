@@ -5,8 +5,6 @@ g
 7src/main/java/com/gymbro/handlers/ImageViewHandler.java,f\a\fa8703f23d405d8cfce66872b4fddf63ea73beed
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 Z
@@ -15,8 +13,6 @@ i
 9src/main/java/com/gymbro/managers/scene/SceneManager.java,6\d\6db2f5ae68fc1e2a6ae01a767a2b7113f2d7314c
 N
 src/main/java/module-info.java,1\c\1c89a5491fbfda3fb050196d6a239f20200296e7
-]
--src/main/java/com/gymbro/utils/Constants.java,5\b\5b7bd4929129af683488c2ec38764721b946a6e0
 j
 :src/main/java/com/gymbro/city/view/PropertiesMenuView.java,c\e\ceb962bcea23b7f364f8e62f1a1bd8d0fb492389
 a
@@ -27,11 +23,7 @@ k
 ;src/main/java/com/gymbro/window/fxml/MapFxmlController.java,0\9\094788af2102c075d840099af480f19ca2c1e254
 e
 5src/main/java/com/gymbro/city/builder/GymBuilder.java,4\8\48b8e8ca75425899fdfea3f6c791fd05253f74b9
-Y
-)src/main/java/com/gymbro/file/Parser.java,2\c\2c2369a88ce7d0c3afccadcec1b7173e2761532f
 `
 0src/main/java/com/gymbro/file/Serialization.java,7\b\7b28d84bcfb126c58e1e941f7439b9a45c746c08
 f
 6src/main/java/com/gymbro/utils/WriteFileException.java,5\7\57dd7bf91fed21499a3e90d5e0d2b9fa48202eb1
-g
-7src/main/java/com/gymbro/handlers/FavoritesHandler.java,a\e\ae00ebbcdc29319ac29dd4858c50b8569ffa0a88
