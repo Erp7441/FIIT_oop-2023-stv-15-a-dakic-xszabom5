@@ -218,9 +218,7 @@ public abstract class Model implements Serialization{
                 this.getTransform()
             ));
         }
-        catch(Exception e){
-            //e.printStackTrace();
-        }
+        catch(Exception ignored){}
     }
 
     /**

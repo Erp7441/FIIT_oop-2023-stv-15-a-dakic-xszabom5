@@ -62,15 +62,9 @@ public class GymController extends Controller{
      * @param event mouse click event
      */
     private void handleClick(MouseEvent event){
-
         if(event.getButton().equals(MouseButton.PRIMARY)){
             ((GymView) this.getView()).showProperties();
         }
-        else if(event.getButton().equals(MouseButton.SECONDARY)){
-            // TODO:: Show context menu here
-            out.println("Test right click");
-        }
-
     }
 
     private void handleStartHover(MouseEvent event){

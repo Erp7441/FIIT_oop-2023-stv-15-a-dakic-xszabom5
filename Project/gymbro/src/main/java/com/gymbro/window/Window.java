@@ -111,7 +111,6 @@ public class Window{
 
         if(this.isFocusedGymFavorite()){
 
-            // TODO:: change handling of equality between object to just generated ID
             // Since the gym objects does not have to be 100% equal (only their properties have to)
             // we need to find the specific instance from the list that matches current instance of focused gym
             favoritesModel.getFavorites().remove(favoritesController.findGym(this.getFocusedGym()));
@@ -154,7 +153,6 @@ public class Window{
      *
      * @return the gym controller
      */
-// TODO:: sort out positions of setters and getters
     public GymController getFocusedGym(){
         return focusedGym;
     }

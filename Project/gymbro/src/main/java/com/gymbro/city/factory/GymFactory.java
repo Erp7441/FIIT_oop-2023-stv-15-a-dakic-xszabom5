@@ -16,9 +16,6 @@ import java.net.URL;
  */
 public class GymFactory{
 
-    // TODO:: Implement this class in setups so it will create gym types that are most commonly used
-
-
     /**
      * Instantiates a new Gym factory.
      */

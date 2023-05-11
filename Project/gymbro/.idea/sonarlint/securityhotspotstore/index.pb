@@ -13,8 +13,6 @@ N
 src/main/java/module-info.java,1\c\1c89a5491fbfda3fb050196d6a239f20200296e7
 j
 :src/main/java/com/gymbro/city/view/PropertiesMenuView.java,c\e\ceb962bcea23b7f364f8e62f1a1bd8d0fb492389
-a
-1src/main/java/com/gymbro/city/model/GymModel.java,b\e\be57d222ab069fb9dc4edbaa4d314c6be8a7a900
 g
 7src/main/java/com/gymbro/city/model/FavoritesModel.java,8\0\803bf2f622473cd39c88f6daad4db0c93b337b38
 k
@@ -25,14 +23,8 @@ f
 6src/main/java/com/gymbro/utils/WriteFileException.java,5\7\57dd7bf91fed21499a3e90d5e0d2b9fa48202eb1
 \
 ,src/main/java/com/gymbro/utils/Property.java,e\5\e58c846ffd6b9e60a92a9f2c3eefb0b1252766e2
-[
-+src/main/java/com/gymbro/window/Window.java,2\3\238ca1f3997e037f622010645ff5ba5ae6704f42
 n
 >src/main/java/com/gymbro/managers/event/SceneEventManager.java,1\3\13ae90dbb09324a5998963eca3b87eaca3f54f29
-i
-9src/main/java/com/gymbro/managers/event/EventManager.java,6\3\6376d239f5876cdf23a0d65d1dc6258c58d62050
-k
-;src/main/java/com/gymbro/city/controller/GymController.java,9\e\9ed78953175621e489db33da9747c38c3c5ad586
 L
 diagrams/BuilderExample.puml,1\a\1a20c86e6ba560808d94c7ce8ff3880064bf9e17
 L

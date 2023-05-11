@@ -38,7 +38,6 @@ public class GymModel extends Model{
         super(transform, texturePath);
     }
 
-    // TODO:: Move to controller
     @Override
     public String serialize(int tabSize){
         StringBuilder builder = new StringBuilder();

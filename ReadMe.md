@@ -2,70 +2,105 @@
 
 ## Table of Contents
 
-* [Project documentation](Documentation/GymBro_CP1_Szabo_EN.pdf)
-  * [JavaDoc documentation](Documentation/JavaDoc/index.html)
-* [UML diagrams](Documentation/Diagrams/GymBro.svg)
-* [Versions](Documentation/002_versions)
-* [Technical details](Documentation/003_tech_details)
-* Simulation and demonstration  
-  * [Video demonstration](Documentation/Video/Video.mp4)
+* [Project documentation](Documentation/KB3/GymBro_Documentation.pdf)
+  * [JavaDoc documentation](Documentation/KB3/JavaDoc/protected/index.html)
+* [UML diagrams](Documentation/KB3/Diagrams/GymBro.svg)
+* [Versions](https://github.com/OOP-FIIT/oop-2023-stv-15-a-dakic-xszabom5/releases)
+* [Technical details](Documentation/KB3/GymBro_Documentation.pdf)
+* Simulation and demonstration
+  * [Video demonstration](Documentation/KB2/Video/Video.mp4)
 
 ## Fulfillment of criteria
 
-* Total amount of class inheritance hierarchies: 7
+* Total amount of class inheritance hierarchies: 9
 * Total amount of interface inheritance hierarchies: 1
-* Total amount of polymorphisms: 4 classes; 5 objects
-* Total amount of aggregations: 36
+* Total amount of polymorphisms: 7 classes; 12 objects
+* Total amount of aggregations: 20
 * Total amount of compositions: 28
-* Total amount of encapsulated classes: 39 out of 42
+* Total amount of encapsulated classes: 44 out of 47
 
 ## Certain implementations
 
 ### Inheritence hierarchies
 ---Inheritance hierarchy 1---
 * BuilderMVC
-    * FavoritesBuilder
-    * GymBuilder
-    * MapBuilder
-    * PropertiesMenuBuilder
+  * FavoritesBuilder
+  * GymBuilder
+  * MapBuilder
+  * PropertiesMenuBuilder
 
 ---Inheritance hierarchy 2---
 * Controller
-    * FavoritesController
-    * GymController
-    * MapController
-    * PropertiesMenuController
+  * FavoritesController
+  * GymController
+  * MapController
+  * PropertiesMenuController
 
 ---Inheritance hierarchy 3---
-* Model
-    * FavoritesModel
-    * GymModel
-    * MapModel
-    * PropertiesMenuModel
+* View
+  * FavoritesView
+  * GymView
+  * MapView
+  * PropertiesMenuView
 
 ---Inheritance hierarchy 4---
-* View
-    * FavoritesView
-    * GymView
-    * MapView
-    * PropertiesMenuView
+* Setup
+  * SetupFavorites
 
 ---Inheritance hierarchy 5---
-* Setup
-    * SetupFavorites
+* Model
+  * FavoritesModel
+  * GymModel
+  * MapModel
+  * PropertiesMenuModel
 
----Inheritance hierarchy 6 (Parent not declared in the input files)---
+---Inheritance hierarchy 6---
 * Application
-    * Main
+  * Main
 
----Inheritance hierarchy 7 (Parent not declared in the input files)---
+---Inheritance hierarchy 7---
 * Event
-    * EventEntry
-    * EventManager
+  * EventEntry
+  * EventManager
+
+---Inheritance hierarchy 8---
+* Exception
+  * FileNameException
+
+---Inheritance hierarchy 9---
+* RuntimeException
+  * UnknownGymException
+  * WriteFileException
+
+---Interface hierarchy 1---
+* Serialization
+  * Model
+  * Property
+  * Transform
+  * Vector2D
 
 ### Main criteria
 
-#### Encapsulation
+* application of design patterns except the Singleton design pattern (builder, factory, MVC)
+* handling exceptional states using own exceptions – one exception is sufficient, but it has to be actually thrown and handled
+* providing a graphical user interface separated from application logic and with at least part of the event handlers created manually
+* explicit use of multithreading – starting an own thread directly or using a higher level API
+* using generics in own classes – implementing and using an own generic class
+* using lambda expressions or method references
+* using default method implementation in interfaces
+* using serialization
+* using agregation, composition and asociation
+* using interfaces
+* organize code base into packages
+* using encapsulation
+* using polymorphism
+* overriding (for example serialize method in serialization interface. "com.gymbro.model.GymModel" overrides this method)
+* overloading (for example setTexture method in "com.gymbro.city.model.Model")
+* at least 2 inheritance hierarchies (9 are present in the projecrt)
+
+#### OOP Principles
+
+##### Encapsulation
 * "BuilderMVC" class encapsulates the "model" attribute.
 * "BuilderMVC" class encapsulates the "view" attribute.
 * "BuilderMVC" class encapsulates the "controller" attribute.
@@ -73,16 +108,18 @@
 * "Controller" class encapsulates the "model" attribute.
 * "Controller" class encapsulates the "view" attribute.
 * "FavoritesModel" class encapsulates the "favorites" attribute.
-* "GymModel" class encapsulates the "amountOfEquipment" attribute.
 * "GymModel" class encapsulates the "propertiesMenu" attribute.
 * "MapModel" class encapsulates the "gyms" attribute.
+* The "Model" class doesn't encapsulate all of its attributes!
 * "PropertiesMenuModel" class encapsulates the "properties" attribute.
 * "PropertiesMenuModel" class encapsulates the "owner" attribute.
+* The "View" class doesn't encapsulate all of its attributes!
 * "Parser" class encapsulates the "bytes" attribute.
 * "Parser" class encapsulates the "offset" attribute.
 * "Parser" class encapsulates the "line" attribute.
 * "FavoritesHandler" class encapsulates the "favorites" attribute.
 * "ImageViewHandler" class encapsulates the "view" attribute.
+* "Launcher" class encapsulates the "mainThread" attribute.
 * "EventEntry" class encapsulates the "event" attribute.
 * "EventEntry" class encapsulates the "handler" attribute.
 * "EventManager" class encapsulates the "handlers" attribute.
@@ -95,6 +132,7 @@
 * "SceneManager" class encapsulates the "paneMap" attribute.
 * "SceneManager" class encapsulates the "stage" attribute.
 * "Setup" class encapsulates the "map" attribute.
+* The "Constants" class doesn't encapsulate all of its attributes!
 * "Property" class encapsulates the "name" attribute.
 * "Property" class encapsulates the "value" attribute.
 * "Transform" class encapsulates the "position" attribute.
@@ -109,290 +147,214 @@
 * "Window" class encapsulates the "instance" attribute.
 * "Window" class encapsulates the "windowSetup" attribute.
 
-#### Composition
-* The "FavoritesBuilder" class composites the "FavoritesModel" class.
-* The "FavoritesBuilder" class composites the "FavoritesView" class.
-* The "FavoritesBuilder" class composites the "FavoritesController" class.
-* The "GymBuilder" class composites the "GymModel" class.
-* The "GymBuilder" class composites the "GymView" class.
-* The "GymBuilder" class composites the "GymController" class.
-* The "MapBuilder" class composites the "MapModel" class.
-* The "MapBuilder" class composites the "MapView" class.
-* The "MapBuilder" class composites the "MapController" class.
-* The "PropertiesMenuBuilder" class composites the "PropertiesMenuModel" class.
-* The "PropertiesMenuBuilder" class composites the "PropertiesMenuView" class.
-* The "PropertiesMenuBuilder" class composites the "PropertiesMenuController" class.
-* The "TransformBuilder" class composites the "Transform" class.
-* The "FavoritesController" class composites the "FavoritesView" class.
-* The "GymController" class composites the "GymView" class.
-* The "PropertiesMenuController" class composites the "PropertiesMenuView" class.
-* The "FavoritesView" class composites the "FavoritesModel" class.
-* The "GymView" class composites the "GymModel" class.
-* The "MapView" class composites the "MapModel" class.
-* The "PropertiesMenuView" class composites the "PropertiesMenuModel" class.
-* The "Parser" class composites the "GymModel" class.
-* The "Parser" class composites the "PropertiesMenuController" class.
-* The "Parser" class composites the "GymController" class.
-* The "Parser" class composites the "Property" class.
-* The "SceneEventManager" class composites the "EventManager" class.
-* The "Transform" class composites the "Vector2D" class.
-* The "Window" class composites the "Transform" class.
-* The "Window" class composites the "Vector2D" class.
+##### Composition
+* The "FavoritesBuilder" type composites the "FavoritesModel" type.
+* The "FavoritesBuilder" type composites the "FavoritesView" type.
+* The "FavoritesBuilder" type composites the "FavoritesController" type.
+* The "GymBuilder" type composites the "GymModel" type.
+* The "GymBuilder" type composites the "GymView" type.
+* The "GymBuilder" type composites the "GymController" type.
+* The "MapBuilder" type composites the "MapModel" type.
+* The "MapBuilder" type composites the "MapView" type.
+* The "MapBuilder" type composites the "MapController" type.
+* The "PropertiesMenuBuilder" type composites the "PropertiesMenuModel" type.
+* The "PropertiesMenuBuilder" type composites the "PropertiesMenuView" type.
+* The "PropertiesMenuBuilder" type composites the "PropertiesMenuController" type.
+* The "TransformBuilder" type composites the "Transform" type.
+* The "FavoritesController" type composites the "FavoritesView" type.
+* The "GymController" type composites the "GymView" type.
+* The "PropertiesMenuController" type composites the "PropertiesMenuView" type.
+* The "FavoritesView" type composites the "FavoritesModel" type.
+* The "GymView" type composites the "GymModel" type.
+* The "MapView" type composites the "MapModel" type.
+* The "PropertiesMenuView" type composites the "PropertiesMenuModel" type.
+* The "Parser" type composites the "GymModel" type.
+* The "Parser" type composites the "PropertiesMenuController" type.
+* The "Parser" type composites the "GymController" type.
+* The "Parser" type composites the "Property" type.
+* The "SceneEventManager" type composites the "EventManager" type.
+* The "Transform" type composites the "Vector2D" type.
+* The "Window" type composites the "Transform" type.
+* The "Window" type composites the "Vector2D" type.
 
-#### Agregation
-* The "BuilderMVC" class aggregates the "Controller" class.
-* The "BuilderMVC" class aggregates the "View" class.
-* The "BuilderMVC" class aggregates the "Model" class.
-* The "FavoritesBuilder" class aggregates the "FavoritesController" class.
-* The "FavoritesBuilder" class aggregates the "FavoritesModel" class.
-* The "FavoritesBuilder" class aggregates the "FavoritesView" class.
-* The "GymBuilder" class aggregates the "GymController" class.
-* The "GymBuilder" class aggregates the "GymModel" class.
-* The "GymBuilder" class aggregates the "GymView" class.
-* The "MapBuilder" class aggregates the "MapController" class.
-* The "MapBuilder" class aggregates the "MapModel" class.
-* The "MapBuilder" class aggregates the "MapView" class.
-* The "PropertiesMenuBuilder" class aggregates the "PropertiesMenuController" class.
-* The "PropertiesMenuBuilder" class aggregates the "PropertiesMenuModel" class.
-* The "PropertiesMenuBuilder" class aggregates the "PropertiesMenuView" class.
-* The "Controller" class aggregates the "Model" class.
-* The "Controller" class aggregates the "View" class.
-* The "MapController" class aggregates the "MapModel" class.
-* The "PropertiesMenuController" class aggregates the "PropertiesMenuModel" class.
-* The "FavoritesModel" class aggregates the "GymController" class.
-* The "GymModel" class aggregates the "PropertiesMenuController" class.
-* The "MapModel" class aggregates the "GymController" class.
-* The "Model" class aggregates the "Transform" class.
-* The "PropertiesMenuModel" class aggregates the "Property" class.
-* The "PropertiesMenuModel" class aggregates the "GymController" class.
-* The "View" class aggregates the "Model" class.
-* The "FavoritesHandler" class aggregates the "FavoritesController" class.
-* The "EventManager" class aggregates the "EventEntry" class.
-* The "Setup" class aggregates the "MapController" class.
-* The "SetupFavorites" class aggregates the "FavoritesHandler" class.
-* The "Transform" class aggregates the "Vector2D" class.
-* The "Window" class aggregates the "FavoritesHandler" class.
-* The "Window" class aggregates the "SceneManager" class.
-* The "Window" class aggregates the "SceneEventManager" class.
-* The "Window" class aggregates the "Setup" class.
-* The "Window" class aggregates the "GymController" class.
+##### Agregation
+* The "BuilderMVC" type aggregates the "Controller" type.
+* The "BuilderMVC" type aggregates the "View" type.
+* The "BuilderMVC" type aggregates the "Model" type.
+* The "Controller" type aggregates the "Model" type.
+* The "Controller" type aggregates the "View" type.
+* The "FavoritesModel" type aggregates the "GymController" type.
+* The "GymModel" type aggregates the "PropertiesMenuController" type.
+* The "MapModel" type aggregates the "GymController" type.
+* The "Model" type aggregates the "Transform" type.
+* The "PropertiesMenuModel" type aggregates the "Property" type.
+* The "PropertiesMenuModel" type aggregates the "GymController" type.
+* The "View" type aggregates the "Model" type.
+* The "FavoritesHandler" type aggregates the "FavoritesController" type.
+* The "EventManager" type aggregates the "EventEntry" type.
+* The "Setup" type aggregates the "MapController" type.
+* The "Transform" type aggregates the "Vector2D" type.
+* The "Window" type aggregates the "SceneManager" type.
+* The "Window" type aggregates the "SceneEventManager" type.
+* The "Window" type aggregates the "Setup" type.
+* The "Window" type aggregates the "GymController" type.
 
-#### Associations
-* The "BuilderMVC" class is associated with the "Transform" class.
-* The "FavoritesBuilder" class is associated with the "GymController" class.
-* The "FavoritesBuilder" class is associated with the "Controller" class.
-* The "FavoritesBuilder" class is associated with the "Model" class.
-* The "FavoritesBuilder" class is associated with the "View" class.
-* The "FavoritesBuilder" class is associated with the "Transform" class.
-* The "GymBuilder" class is associated with the "PropertiesMenuController" class.
-* The "GymBuilder" class is associated with the "Controller" class.
-* The "GymBuilder" class is associated with the "Model" class.
-* The "GymBuilder" class is associated with the "View" class.
-* The "GymBuilder" class is associated with the "Transform" class.
-* The "MapBuilder" class is associated with the "GymController" class.
-* The "MapBuilder" class is associated with the "Controller" class.
-* The "MapBuilder" class is associated with the "Model" class.
-* The "MapBuilder" class is associated with the "View" class.
-* The "MapBuilder" class is associated with the "Transform" class.
-* The "PropertiesMenuBuilder" class is associated with the "Property" class.
-* The "PropertiesMenuBuilder" class is associated with the "GymController" class.
-* The "PropertiesMenuBuilder" class is associated with the "Controller" class.
-* The "PropertiesMenuBuilder" class is associated with the "Model" class.
-* The "PropertiesMenuBuilder" class is associated with the "View" class.
-* The "PropertiesMenuBuilder" class is associated with the "Transform" class.
-* The "TransformBuilder" class is associated with the "Vector2D" class.
-* The "FavoritesController" class is associated with the "FavoritesModel" class.
-* The "FavoritesController" class is associated with the "GymController" class.
-* The "GymController" class is associated with the "GymModel" class.
-* The "MapController" class is associated with the "MapView" class.
-* The "MapController" class is associated with the "GymController" class.
-* The "MapController" class is associated with the "Vector2D" class.
-* The "MapController" class is associated with the "MapModel" class.
-* The "PropertiesMenuController" class is associated with the "Property" class.
-* The "PropertiesMenuController" class is associated with the "GymController" class.
-* The "PropertiesMenuController" class is associated with the "PropertiesMenuModel" class.
-* The "GymFactory" class is associated with the "GymController" class.
-* The "FavoritesModel" class is associated with the "Transform" class.
-* The "FavoritesModel" class is associated with the "Parser" class.
-* The "GymModel" class is associated with the "Transform" class.
-* The "GymModel" class is associated with the "Property" class.
-* The "MapModel" class is associated with the "Transform" class.
-* The "MapModel" class is associated with the "Property" class.
-* The "Model" class is associated with the "Vector2D" class.
-* The "Model" class is associated with the "ImageViewHandler" class.
-* The "PropertiesMenuModel" class is associated with the "Transform" class.
-* The "PropertiesMenuModel" class is associated with the "Parser" class.
-* The "GymView" class is associated with the "PropertiesMenuController" class.
-* The "GymView" class is associated with the "Window" class.
-* The "GymView" class is associated with the "PropertiesMenuFxmlController" class.
-* The "PropertiesMenuView" class is associated with the "SceneManager" class.
-* The "PropertiesMenuView" class is associated with the "Constants" class.
-* The "PropertiesMenuView" class is associated with the "Property" class.
-* The "PropertiesMenuView" class is associated with the "Window" class.
-* The "View" class is associated with the "ImageViewHandler" class.
-* The "View" class is associated with the "Window" class.
-* The "View" class is associated with the "Vector2D" class.
-* The "View" class is associated with the "Transform" class.
-* The "Parser" class is associated with the "Transform" class.
-* The "Parser" class is associated with the "PropertiesMenuModel" class.
-* The "FavoritesHandler" class is associated with the "Parser" class.
-* The "FavoritesHandler" class is associated with the "GymController" class.
-* The "FavoritesHandler" class is associated with the "FavoritesModel" class.
-* The "ImageViewHandler" class is associated with the "Transform" class.
-* The "Launcher" class is associated with the "Main" class.
-* The "Main" class is associated with the "Window" class.
-* The "Setup" class is associated with the "Window" class.
-* The "Setup" class is associated with the "MapBuilder" class.
-* The "Setup" class is associated with the "TransformBuilder" class.
-* The "Setup" class is associated with the "Vector2D" class.
-* The "Setup" class is associated with the "GymController" class.
-* The "Setup" class is associated with the "GymFactory" class.
-* The "SetupFavorites" class is associated with the "GymController" class.
-* The "Transform" class is associated with the "Parser" class.
-* The "Vector2D" class is associated with the "Parser" class.
-* The "FavoritesMenuFxmlController" class is associated with the "MapFxmlController" class.
-* The "FavoritesMenuFxmlController" class is associated with the "Main" class.
-* The "FavoritesMenuFxmlController" class is associated with the "Constants" class.
-* The "FavoritesMenuFxmlController" class is associated with the "Window" class.
-* The "FavoritesMenuFxmlController" class is associated with the "FavoritesHandler" class.
-* The "MainMenuFxmlController" class is associated with the "MapFxmlController" class.
-* The "MainMenuFxmlController" class is associated with the "FavoritesMenuFxmlController" class.
-* The "MainMenuFxmlController" class is associated with the "Window" class.
-* The "MapFxmlController" class is associated with the "Setup" class.
-* The "MapFxmlController" class is associated with the "Main" class.
-* The "MapFxmlController" class is associated with the "Constants" class.
-* The "MapFxmlController" class is associated with the "Window" class.
-* The "MapFxmlController" class is associated with the "SetupFavorites" class.
-* The "PropertiesMenuFxmlController" class is associated with the "Constants" class.
-* The "PropertiesMenuFxmlController" class is associated with the "Window" class.
-* The "GymFactory" class is associeted with the "GymBuilder" class.
-* The "GymFactory" class is associeted with the "PropertiesMenuBuilder" class.
-* The "GymFactory" class is associeted with the "TransformBuilder" class.
-* The "GymFactory" class is associeted with the "Property" class.
-* The "GymFactory" class is associeted with the "Vector2D" class.
-* The "GymFactory" class is associeted with the "Window" class.
-* The "Parser" class is associeted with the "FavoritesController" class.
-* The "Parser" class is associeted with the "FavoritesModel" class.
-* The "FavoritesHandler" class is associeted with the "FavoritesBuilder" class.
-* The "SceneManager" class is associeted with the "Main" class.
-* The "SetupFavorites" class is associeted with the "FavoritesModel" class.
-* The "SetupFavorites" class is associeted with the "FavoritesHandler" class.
+##### Associations
+* The "GymView" type is associated with the "Window" type.
+* The "PropertiesMenuView" type is associated with the "Window" type.
+* The "View" type is associated with the "Window" type.
+* The "Main" type is associated with the "Window" type.
+* The "Setup" type is associated with the "Window" type.
+* The "FavoritesMenuFxmlController" type is associated with the "Window" type.
+* The "MainMenuFxmlController" type is associated with the "Window" type.
+* The "MapFxmlController" type is associated with the "Window" type.
+* The "PropertiesMenuFxmlController" type is associated with the "Window" type.
 
-#### Polymorphism
-* The "property" object implements polymorphism.
-* The "property" object implements polymorphism.
-* The "controller" object implements polymorphism.
-* The "setup" object implements polymorphism.
-* The "setup" object implements polymorphism.
+##### Polymorphism
+* Class FavoritesModel:
+  * The "model" object implements polymorphism.
+* Class PropertiesMenuModel:
+  * The "property" object implements polymorphism.
+  * The "model" object implements polymorphism.
+* Class PropertiesMenuView:
+  * The "property" object implements polymorphism.
+* Class Parser:
+  * The "model" object implements polymorphism.
+  * The "model" object implements polymorphism.
+  * The "model" object implements polymorphism.
+* Class FavoritesMenuFxmlController:
+  * The "controller" object implements polymorphism.
+* Class MainMenuFxmlController:
+  * The "controller" object implements polymorphism.
+  * The "controller" object implements polymorphism.
+* Class MapFxmlController:
+  * The "setup" object implements polymorphism.
+  * The "setup" object implements polymorphism.
 
 
-#### Inheritence and Implementations
+
+##### Inheritence and Implementations
 * FavoritesBuilder.java:
-    * Inheritance found at line 17:
-    * "public class FavoritesBuilder extends BuilderMVC{"
+  * Inheritance found at line 17:
+  * "public class FavoritesBuilder extends BuilderMVC{"
 
 * GymBuilder.java:
-    * Inheritance found at line 16:
-    * "public class GymBuilder extends BuilderMVC{"
+  * Inheritance found at line 16:
+  * "public class GymBuilder extends BuilderMVC{"
 
 * MapBuilder.java:
-    * Inheritance found at line 19:
-    * "public class MapBuilder extends BuilderMVC{"
+  * Inheritance found at line 19:
+  * "public class MapBuilder extends BuilderMVC{"
 
 * PropertiesMenuBuilder.java:
-    * Inheritance found at line 19:
-    * "public class PropertiesMenuBuilder extends BuilderMVC{"
+  * Inheritance found at line 19:
+  * "public class PropertiesMenuBuilder extends BuilderMVC{"
 
 * FavoritesController.java:
-    * Inheritance found at line 9:
-    * "public class FavoritesController extends Controller{"
+  * Inheritance found at line 9:
+  * "public class FavoritesController extends Controller{"
 
 * GymController.java:
-    * Inheritance found at line 13:
-    * "public class GymController extends Controller{"
+  * Inheritance found at line 13:
+  * "public class GymController extends Controller{"
 
 * MapController.java:
-    * Inheritance found at line 13:
-    * "public class MapController extends Controller{"
+  * Inheritance found at line 13:
+  * "public class MapController extends Controller{"
 
 * PropertiesMenuController.java:
-    * Inheritance found at line 12:
-    * "public class PropertiesMenuController extends Controller{"
+  * Inheritance found at line 12:
+  * "public class PropertiesMenuController extends Controller{"
 
 * FavoritesModel.java:
-    * Inheritance found at line 13:
-    * "public class FavoritesModel extends Model{"
+  * Inheritance found at line 13:
+  * "public class FavoritesModel extends Model{"
 
 * GymModel.java:
-    * Inheritance found at line 11:
-    * "public class GymModel extends Model{"
+  * Inheritance found at line 11:
+  * "public class GymModel extends Model{"
 
 * MapModel.java:
-    * Inheritance found at line 14:
-    * "public class MapModel extends Model{"
+  * Inheritance found at line 14:
+  * "public class MapModel extends Model{"
 
 * Model.java:
-    * Implementation of an interface found at line 15:
-    * "public abstract class Model implements Serialization{"
+  * Implementation of an interface found at line 16:
+  * "public abstract class Model implements Serialization{"
 
 * PropertiesMenuModel.java:
-    * Inheritance found at line 14:
-    * "public class PropertiesMenuModel extends Model{"
+  * Inheritance found at line 14:
+  * "public class PropertiesMenuModel extends Model{"
 
 * FavoritesView.java:
-    * Inheritance found at line 8:
-    * "public class FavoritesView extends View{"
+  * Inheritance found at line 8:
+  * "public class FavoritesView extends View{"
 
 * GymView.java:
-    * Inheritance found at line 12:
-    * "public class GymView extends View{"
+  * Inheritance found at line 12:
+  * "public class GymView extends View{"
 
 * MapView.java:
-    * Inheritance found at line 8:
-    * "public class MapView extends View{"
+  * Inheritance found at line 8:
+  * "public class MapView extends View{"
 
 * PropertiesMenuView.java:
-    * Inheritance found at line 18:
-    * "public class PropertiesMenuView extends View{"
+  * Inheritance found at line 17:
+  * "public class PropertiesMenuView extends View{"
 
 * Main.java:
-    * Inheritance found at line 36:
-    * "public class Main extends Application{"
+  * Inheritance found at line 25:
+  * "public class Main extends Application{"
 
 * EventEntry.java:
-    * Inheritance found at line 12:
-    * "public class EventEntry<T extends Event>{"
+  * Inheritance found at line 12:
+  * "public class EventEntry<T extends Event>{"
 
 * EventManager.java:
-    * Inheritance found at line 16:
-    * "public class EventManager<T extends Event>{"
+  * Inheritance found at line 16:
+  * "public class EventManager<T extends Event>{"
 
 * SetupFavorites.java:
-    * Inheritance found at line 14:
-    * "public class SetupFavorites extends Setup{"
+  * Inheritance found at line 14:
+  * "public class SetupFavorites extends Setup{"
+
+* FileNameException.java:
+  * Inheritance found at line 6:
+  * "public class FileNameException extends Exception{"
 
 * Property.java:
-    * Implementation of an interface found at line 8:
-    * "public class Property implements Serialization{"
+  * Implementation of an interface found at line 8:
+  * "public class Property implements Serialization{"
 
 * Transform.java:
-    * Implementation of an interface found at line 11:
-    * "public class Transform implements Serialization{"
+  * Implementation of an interface found at line 11:
+  * "public class Transform implements Serialization{"
+
+* UnknownGymException.java:
+  * Inheritance found at line 6:
+  * "public class UnknownGymException extends RuntimeException{"
 
 * Vector2D.java:
-    * Implementation of an interface found at line 12:
-    * "public class Vector2D implements Serialization{"
+  * Implementation of an interface found at line 12:
+  * "public class Vector2D implements Serialization{"
+
+* WriteFileException.java:
+  * Inheritance found at line 6:
+  * "public class WriteFileException extends RuntimeException {"
 
 ### Secondary criteria
 
+* CRUD Principle - Create, Read, Update, Delete (GymBro's favorites system)
+* JAR File
+
 #### OOP Design patterns
 * Builder
-  * sk.stuba.fiit.martin.szabo.gymbro.city.builder
+  * com.gymbro.city.builder
 * Factory
-  * sk.stuba.fiit.martin.szabo.gymbro.city.factory
+  * com.gymbro.city.factory
 * MVC
-  * sk.stuba.fiit.martin.szabo.gymbro.city.model
-  * sk.stuba.fiit.martin.szabo.gymbro.city.view
-  * sk.stuba.fiit.martin.szabo.gymbro.city.controller
+  * com.gymbro.city.model
+  * com.gymbro.city.view
+  * com.gymbro.city.controller
 * Singleton
-  * sk.stuba.fiit.martin.szabo.gymbro.city.window.Window (singleton class)
+  * com.gymbro.city.window.Window (singleton class)

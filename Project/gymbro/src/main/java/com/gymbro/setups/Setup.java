@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * The type Setup.
  */
-// TODO:: Refactor this class (package, name...)
+
 public class Setup{
     private MapController map = null;
 

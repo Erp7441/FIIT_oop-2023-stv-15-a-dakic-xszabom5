@@ -36,7 +36,7 @@ public class EventManager<T extends Event>{
      */
     public void addEvent(String id, EventType<? super T> eventType, EventHandler<? super T> handler) {
         try {
-            // TODO:: Maybe refactor to avoid suppressing this unchecked cast?
+
 
             // Warning can be suppressed since we are try catching class cast exception
             @SuppressWarnings("unchecked")

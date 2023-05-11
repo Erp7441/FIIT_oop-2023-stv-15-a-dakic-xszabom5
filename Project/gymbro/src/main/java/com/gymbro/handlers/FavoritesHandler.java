@@ -18,7 +18,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * The type Favorites handler.
  */
-// TODO:: refactor placement of Favorites MVC package?
+
 public class FavoritesHandler{
 
     private static FavoritesController favorites = initalizeFavorites();

@@ -3,7 +3,7 @@ package com.gymbro.file;
 /**
  * The interface Serialization.
  */
-// TODO:: Refactor to interface with static/default methods?
+
 public interface Serialization{
 
     /**

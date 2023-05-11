@@ -47,7 +47,6 @@ public class Constants{
     /**
      * The constant ID_GYM_MENU_PANE.
      */
-// TODO:: append "_PANE" or "_EVENT" to names of these constants
     public static final String ID_GYM_MENU_PANE = "GYM_MENU_PANE";
     /**
      * The constant ID_MAP_PANE.
@@ -73,7 +72,6 @@ public class Constants{
 
 
 
-    // TODO:: Remove unused constants
 
     /**
      * The constant MOUSE_OFFSET_X.
