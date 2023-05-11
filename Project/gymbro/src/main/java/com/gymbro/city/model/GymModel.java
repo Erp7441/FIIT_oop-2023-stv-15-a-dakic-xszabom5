@@ -20,8 +20,8 @@ public class GymModel extends Model{
     /**
      * Instantiates a new Gym model.
      *
-     * @param transform         the transform
-     * @param texture           the texture
+     * @param transform the transform
+     * @param texture   the texture
      */
     public GymModel(Transform transform, Image texture){
         super(transform, texture);

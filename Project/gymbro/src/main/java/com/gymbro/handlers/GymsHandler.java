@@ -1,6 +1,5 @@
 package com.gymbro.handlers;
 
-import com.gymbro.Main;
 import com.gymbro.city.controller.GymController;
 import com.gymbro.city.factory.GymFactory;
 import com.gymbro.file.Parser;
@@ -12,12 +11,19 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
+/**
+ * The type Gyms handler.
+ */
 public class GymsHandler{
 
     private GymsHandler(){}
 
+    /**
+     * Load list.
+     *
+     * @return the list
+     */
     public static List<GymController> load(){
 
 
@@ -57,6 +63,15 @@ public class GymsHandler{
         return Collections.emptyList();
     }
 
+    /**
+     * Create gym gym controller.
+     *
+     * @param type              the type
+     * @param location          the location
+     * @param amountOfEquipment the amount of equipment
+     * @param website           the website
+     * @return the gym controller
+     */
     public GymController createGym(String type, Places location, Integer amountOfEquipment, URL website){
         GymFactory gymFactory = new GymFactory();
 

@@ -16,6 +16,9 @@ public class MainMenuFxmlController{
     @FXML
     private ImageView logo;
 
+    /**
+     * Initialize.
+     */
     public void initialize(){
         Image logo2Normal = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("assets/logo2_normal.png")));
         logo.setImage(logo2Normal);

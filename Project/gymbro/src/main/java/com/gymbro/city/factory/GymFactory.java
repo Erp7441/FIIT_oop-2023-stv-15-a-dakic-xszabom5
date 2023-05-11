@@ -27,7 +27,9 @@ public class GymFactory{
     /**
      * Create life gym gym gym controller.
      *
-     * @param location the location
+     * @param location          the location
+     * @param amountOfEquipment the amount of equipment
+     * @param website           the website
      * @return the gym controller
      */
     public GymController createLifeGymGym(Places location, Integer amountOfEquipment, URL website){
@@ -60,7 +62,9 @@ public class GymFactory{
     /**
      * Create fitinn gym gym controller.
      *
-     * @param location the location
+     * @param location          the location
+     * @param amountOfEquipment the amount of equipment
+     * @param website           the website
      * @return the gym controller
      */
     public GymController createFitinnGym(Places location, Integer amountOfEquipment, URL website){
@@ -84,6 +88,14 @@ public class GymFactory{
             build();
     }
 
+    /**
+     * Create golem gym gym controller.
+     *
+     * @param location          the location
+     * @param amountOfEquipment the amount of equipment
+     * @param website           the website
+     * @return the gym controller
+     */
     public GymController createGolemGym(Places location, Integer amountOfEquipment, URL website){
         return new GymBuilder().
                 addTransform(
@@ -105,6 +117,14 @@ public class GymFactory{
                 build();
     }
 
+    /**
+     * Create nobel gym gym gym controller.
+     *
+     * @param location          the location
+     * @param amountOfEquipment the amount of equipment
+     * @param website           the website
+     * @return the gym controller
+     */
     public GymController createNobelGymGym(Places location, Integer amountOfEquipment, URL website){
         return new GymBuilder().
                 addTransform(

@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69cb2913-17ca-45c5-8011-7238bbe170a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-fat.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/favorite_gyms.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/favorite_gyms.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/controller/GymController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/factory/GymFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/factory/GymFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/GymModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/GymModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/GymsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/GymsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/FileNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/FileNameException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/UnknownGymException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/UnknownGymException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/WriteFileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/WriteFileException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,26 +95,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Martin/Repos/FIIT/oop-2023-stv-15-a-dakic-xszabom5/Project/gymbro&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/Martin/Repos/FIIT/oop-2023-stv-15-a-dakic-xszabom5/Project/gymbro/diagrams",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15136719",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Martin\Repos\FIIT\oop-2023-stv-15-a-dakic-xszabom5\Project\gymbro\src\main\resources\com\gymbro\config" />
@@ -111,7 +123,7 @@
       <recent name="C:\Users\Martin\Repos\FIIT\oop-2023-stv-15-a-dakic-xszabom5\Project\gymbro\src\main\resources\com\gymbro\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.gymbro [fatJar]">
+  <component name="RunManager" selected="Gradle.gymbro [run]">
     <list>
       <item itemvalue="Gradle.gymbro [fatJar]" />
       <item itemvalue="Gradle.gymbro [build]" />
@@ -143,5 +155,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="javafx.scene.Scene" memberName="root" />
+        <PinnedItemInfo parentTag="com.sun.javafx.event.EventHandlerManager" memberName="eventHandlerMap" />
+        <PinnedItemInfo parentTag="javafx.scene.image.ImageView$5" memberName="value" />
+        <PinnedItemInfo parentTag="javafx.beans.property.SimpleObjectProperty" memberName="value" />
+        <PinnedItemInfo parentTag="com.sun.javafx.scene.SceneEventDispatcher" memberName="eventHandlerManager" />
+        <PinnedItemInfo parentTag="javafx.scene.Scene" memberName="eventDispatcher" />
+        <PinnedItemInfo parentTag="sk.stuba.fiit.martin.szabo.gymbro.window.Window" memberName="focusedGym" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

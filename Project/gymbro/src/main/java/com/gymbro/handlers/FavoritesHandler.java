@@ -9,14 +9,9 @@ import com.gymbro.city.model.FavoritesModel;
 import com.gymbro.file.Parser;
 import com.gymbro.utils.WriteFileException;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URL;
-import java.net.URLDecoder;
-import java.nio.file.Paths;
-import java.util.Objects;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 

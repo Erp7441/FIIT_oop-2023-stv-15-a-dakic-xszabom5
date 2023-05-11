@@ -43,6 +43,7 @@ public class Parser{
      * Open file.
      *
      * @param fileName the file name
+     * @throws FileNameException the file name exception
      */
     public static void openFile(String fileName) throws FileNameException{
         // Checks if file exists. If it does then get its length.
@@ -71,6 +72,12 @@ public class Parser{
         }
     }
 
+    /**
+     * Open file path.
+     *
+     * @param filePath the file path
+     * @throws FileNameException the file name exception
+     */
     public static void openFilePath(String filePath) throws FileNameException{
         try {
             InputStream stream = Main.class.getResourceAsStream(filePath);

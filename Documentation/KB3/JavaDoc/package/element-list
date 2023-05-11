@@ -1,0 +1,15 @@
+module:com.gymbro
+com.gymbro
+com.gymbro.city.builder
+com.gymbro.city.controller
+com.gymbro.city.factory
+com.gymbro.city.model
+com.gymbro.city.view
+com.gymbro.file
+com.gymbro.handlers
+com.gymbro.managers.event
+com.gymbro.managers.scene
+com.gymbro.setups
+com.gymbro.utils
+com.gymbro.window
+com.gymbro.window.fxml

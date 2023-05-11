@@ -58,6 +58,8 @@ public class GymController extends Controller{
 
     /**
      * Handles click event
+     *
+     * @param event mouse click event
      */
     private void handleClick(MouseEvent event){
 
