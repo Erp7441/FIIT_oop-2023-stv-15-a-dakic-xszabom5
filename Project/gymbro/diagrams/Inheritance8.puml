@@ -1,0 +1,8 @@
+@startuml
+
+class com.gymbro.utils.FileNameException {
++ <<Create>> FileNameException(String)
+}
+
+java.lang.Exception <|-- com.gymbro.utils.FileNameException
+@enduml

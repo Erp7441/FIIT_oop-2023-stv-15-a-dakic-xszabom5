@@ -1,0 +1,69 @@
+@startuml
+class com.gymbro.city.controller.MapController {
++ <<Create>> MapController(MapModel,MapView)
++ void draw()
++ void calculatePath(GymController,Vector2D)
++ List<GymController> getGyms()
++ void setGyms(List<GymController>)
+}
+class com.gymbro.city.controller.FavoritesController {
++ <<Create>> FavoritesController(FavoritesModel)
++ <<Create>> FavoritesController(FavoritesModel,FavoritesView)
++ GymController findGym(GymController)
+}
+class com.gymbro.city.controller.GymController {
++ <<Create>> GymController(GymModel)
++ <<Create>> GymController(GymModel,GymView)
++ void makeClickable()
++ void makeHoverable()
++ void makeInteractive()
+- void handleClick(MouseEvent)
+- void handleStartHover(MouseEvent)
+- void handleEndHover(MouseEvent)
+}
+class com.gymbro.city.controller.PropertiesMenuController {
++ <<Create>> PropertiesMenuController(PropertiesMenuModel)
++ <<Create>> PropertiesMenuController(PropertiesMenuModel,PropertiesMenuView)
++ ArrayList<Property> getProperties()
++ void setProperties(ArrayList<Property>)
++ GymController getOwner()
++ void setOwner(GymController)
+}
+abstract class com.gymbro.city.controller.Controller {
+- Model model
+- View view
+# <<Create>> Controller(Model,View)
++ void draw()
++ double getHeight()
++ ImageView getImageView()
++ Model getModel()
++ Vector2D getPosition()
++ double getRotation()
++ Vector2D getScale()
++ Image getTexture()
++ Transform getTransform()
++ View getView()
++ double getX()
++ double getY()
++ double getWidth()
++ void setHeight(double)
++ void setImageView(ImageView)
++ void setModel(Model)
++ void setPosition(Vector2D)
++ void setRotation(double)
++ void setScale(Vector2D)
++ void setTexture(Image)
++ void setTexture(String)
++ void setTransform(Transform)
++ void setView(View)
++ void setX(double)
++ void setY(double)
++ void setWidth(double)
+}
+
+com.gymbro.city.controller.Controller <|-- com.gymbro.city.controller.MapController
+com.gymbro.city.controller.Controller <|-- com.gymbro.city.controller.FavoritesController
+com.gymbro.city.controller.Controller <|-- com.gymbro.city.controller.GymController
+com.gymbro.city.controller.Controller <|-- com.gymbro.city.controller.PropertiesMenuController
+
+@enduml

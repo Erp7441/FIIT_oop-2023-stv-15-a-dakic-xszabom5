@@ -1,0 +1,85 @@
+@startuml
+class com.gymbro.city.model.GymModel {
+- PropertiesMenuController propertiesMenu
++ <<Create>> GymModel()
++ <<Create>> GymModel(Transform,Image)
++ <<Create>> GymModel(Transform,int,String)
++ String serialize(int)
++ {static} Property deserialize()
++ PropertiesMenuController getPropertiesMenu()
++ void setPropertiesMenu(PropertiesMenuController)
++ boolean equals(Object)
++ int hashCode()
+}
+abstract class com.gymbro.city.model.Model {
+~ ImageView imageView
+~ Transform transform
+~ Image texture
+# <<Create>> Model()
+# <<Create>> Model(Transform,Image)
+# <<Create>> Model(Transform,String)
++ double getHeight()
++ ImageView getImageView()
++ Vector2D getPosition()
++ double getRotation()
++ Vector2D getScale()
++ Image getTexture()
++ Transform getTransform()
++ double getX()
++ double getY()
++ double getWidth()
++ void setHeight(double)
++ void setImageView(ImageView)
++ void setPosition(Vector2D)
++ void setRotation(double)
++ void setScale(Vector2D)
++ void setTexture(Image)
++ void setTexture(String)
++ void setTransform(Transform)
++ void setX(double)
++ void setY(double)
++ void setWidth(double)
+}
+class com.gymbro.city.model.MapModel {
+- ArrayList<GymController> gyms
++ <<Create>> MapModel()
++ <<Create>> MapModel(ArrayList<GymController>,Transform,Image)
++ <<Create>> MapModel(List<GymController>,Transform,String)
++ String serialize(int)
++ {static} Property deserialize()
++ List<GymController> getGyms()
++ void setGyms(ArrayList<GymController>)
+}
+class com.gymbro.city.model.FavoritesModel {
+- ArrayList<GymController> favorites
++ <<Create>> FavoritesModel()
++ <<Create>> FavoritesModel(Transform,Image)
++ <<Create>> FavoritesModel(Transform,String)
++ <<Create>> FavoritesModel(Transform,Image,ArrayList<GymController>)
++ <<Create>> FavoritesModel(Transform,String,ArrayList<GymController>)
++ String serialize(int)
++ {static} FavoritesModel deserialize()
++ ArrayList<GymController> getFavorites()
++ void setFavorites(ArrayList<GymController>)
+}
+class com.gymbro.city.model.PropertiesMenuModel {
+- ArrayList<Property> properties
+- GymController owner
++ <<Create>> PropertiesMenuModel()
++ <<Create>> PropertiesMenuModel(ArrayList<Property>,Transform,Image,GymController)
++ <<Create>> PropertiesMenuModel(ArrayList<Property>,Transform,String,GymController)
++ String serialize(int)
++ {static} PropertiesMenuModel deserialize()
++ ArrayList<Property> getProperties()
++ void setProperties(ArrayList<Property>)
++ GymController getOwner()
++ void setOwner(GymController)
++ boolean equals(Object)
++ int hashCode()
+}
+
+com.gymbro.city.model.Model <|-- com.gymbro.city.model.GymModel
+com.gymbro.city.model.Model <|-- com.gymbro.city.model.MapModel
+com.gymbro.city.model.Model <|-- com.gymbro.city.model.FavoritesModel
+com.gymbro.city.model.Model <|-- com.gymbro.city.model.PropertiesMenuModel
+@enduml

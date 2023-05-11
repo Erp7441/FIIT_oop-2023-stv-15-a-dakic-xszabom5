@@ -1,0 +1,34 @@
+@startuml
+class com.gymbro.city.model.GymModel {
+- PropertiesMenuController propertiesMenu
++ <<Create>> GymModel()
++ <<Create>> GymModel(Transform,Image)
++ <<Create>> GymModel(Transform,int,String)
++ String serialize(int)
++ {static} Property deserialize()
++ PropertiesMenuController getPropertiesMenu()
++ void setPropertiesMenu(PropertiesMenuController)
++ boolean equals(Object)
++ int hashCode()
+}
+class com.gymbro.city.view.GymView {
++ <<Create>> GymView()
++ <<Create>> GymView(GymModel)
++ void zoomIn()
++ void zoomOut()
++ void showProperties()
+}
+class com.gymbro.city.controller.GymController {
++ <<Create>> GymController(GymModel)
++ <<Create>> GymController(GymModel,GymView)
++ void makeClickable()
++ void makeHoverable()
++ void makeInteractive()
+- void handleClick(MouseEvent)
+- void handleStartHover(MouseEvent)
+- void handleEndHover(MouseEvent)
+}
+
+com.gymbro.city.controller.GymController o-- com.gymbro.city.view.GymView
+com.gymbro.city.controller.GymController o-- com.gymbro.city.model.GymModel
+@enduml

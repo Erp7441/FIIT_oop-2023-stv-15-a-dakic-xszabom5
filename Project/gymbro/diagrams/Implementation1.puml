@@ -1,0 +1,98 @@
+@startuml
+interface com.gymbro.file.Serialization {
+~ String addStringProperty(String,String,int,boolean,boolean)
+~ String addIntProperty(String,int,int,boolean,boolean)
+~ String addFloatProperty(String,float,int,boolean,boolean)
+~ String addDoubleProperty(String,double,int,boolean,boolean)
+~ String addBooleanProperty(String,boolean,int,boolean,boolean)
+~ String beginObjectProperty(String,int)
+~ String endObjectProperty(int)
+~ String addTabs(int)
+~ String addEnding(boolean,boolean)
+~ String serialize(int)
+}
+abstract class com.gymbro.city.model.Model {
+~ ImageView imageView
+~ Transform transform
+~ Image texture
+# <<Create>> Model()
+# <<Create>> Model(Transform,Image)
+# <<Create>> Model(Transform,String)
++ double getHeight()
++ ImageView getImageView()
++ Vector2D getPosition()
++ double getRotation()
++ Vector2D getScale()
++ Image getTexture()
++ Transform getTransform()
++ double getX()
++ double getY()
++ double getWidth()
++ void setHeight(double)
++ void setImageView(ImageView)
++ void setPosition(Vector2D)
++ void setRotation(double)
++ void setScale(Vector2D)
++ void setTexture(Image)
++ void setTexture(String)
++ void setTransform(Transform)
++ void setX(double)
++ void setY(double)
++ void setWidth(double)
+}
+class com.gymbro.utils.Vector2D {
+- double x
+- double y
++ <<Create>> Vector2D(double,double)
++ <<Create>> Vector2D()
++ Vector2D add(Vector2D)
++ Vector2D subtract(Vector2D)
++ Vector2D multiply(Vector2D)
++ Vector2D divide(Vector2D)
++ Vector2D copy()
++ double getX()
++ void setX(double)
++ double getY()
++ void setY(double)
++ String serialize(int)
++ {static} Vector2D deserialize()
++ boolean equals(Object)
++ int hashCode()
+}
+class com.gymbro.utils.Property {
+- String name
+- Object value
++ <<Create>> Property()
++ <<Create>> Property(String,Object)
++ String getName()
++ void setName(String)
++ Object getValue()
++ void setValue(Object)
++ String serialize(int)
++ {static} Property deserialize()
++ String toString()
+}
+class com.gymbro.utils.Transform {
+- Vector2D position
+- double rotation
+- Vector2D scale
++ <<Create>> Transform(Vector2D)
++ <<Create>> Transform()
++ <<Create>> Transform(Vector2D,double,Vector2D)
++ Transform copy()
++ String toString()
++ Vector2D getPosition()
++ void setPosition(Vector2D)
++ double getRotation()
++ void setRotation(double)
++ Vector2D getScale()
++ void setScale(Vector2D)
++ String serialize(int)
++ {static} Transform deserialize()
+}
+
+com.gymbro.file.Serialization <|.. com.gymbro.utils.Transform
+com.gymbro.file.Serialization <|.. com.gymbro.city.model.Model
+com.gymbro.file.Serialization <|.. com.gymbro.utils.Property
+com.gymbro.file.Serialization <|.. com.gymbro.utils.Vector2D
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+class com.gymbro.setups.SetupFavorites {
++ List<GymController> initializeGyms()
+}
+class com.gymbro.setups.Setup {
+- MapController map
++ <<Create>> Setup()
++ <<Create>> Setup(MapController)
++ void initializeMap()
++ List<GymController> initializeGyms()
++ MapController getMap()
++ void setMap(MapController)
+}
+com.gymbro.setups.Setup <|-- com.gymbro.setups.SetupFavorites
+@enduml

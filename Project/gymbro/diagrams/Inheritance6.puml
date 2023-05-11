@@ -1,0 +1,7 @@
+@startuml
+class com.gymbro.Main {
++ void start(Stage)
++ {static} void main(String[])
+}
+javafx.application.Application <|-- com.gymbro.Main
+@enduml

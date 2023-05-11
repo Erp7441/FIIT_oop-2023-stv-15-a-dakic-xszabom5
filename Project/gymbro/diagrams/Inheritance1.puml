@@ -1,0 +1,92 @@
+@startuml
+class com.gymbro.city.builder.FavoritesBuilder {
++ <<Create>> FavoritesBuilder()
++ <<Create>> FavoritesBuilder(FavoritesModel)
++ FavoritesBuilder addGym(GymController)
++ FavoritesController build()
++ FavoritesBuilder addController(Controller)
++ FavoritesBuilder addModel(Model)
++ FavoritesBuilder addView(View)
++ FavoritesBuilder addTransform(Transform)
++ FavoritesBuilder addTexture(Image)
++ FavoritesBuilder addTexture(String)
++ FavoritesController getController()
++ FavoritesModel getModel()
++ FavoritesView getView()
+}
+class com.gymbro.city.builder.PropertiesMenuBuilder {
++ <<Create>> PropertiesMenuBuilder()
++ <<Create>> PropertiesMenuBuilder(PropertiesMenuModel)
++ PropertiesMenuBuilder addProperties(ArrayList<Property>)
++ PropertiesMenuBuilder addProperty(Property)
++ PropertiesMenuBuilder addOwner(GymController)
++ PropertiesMenuController build()
++ PropertiesMenuBuilder addController(Controller)
++ PropertiesMenuBuilder addModel(Model)
++ PropertiesMenuBuilder addView(View)
++ PropertiesMenuBuilder addTransform(Transform)
++ PropertiesMenuBuilder addTexture(Image)
++ PropertiesMenuBuilder addTexture(String)
++ PropertiesMenuController getController()
++ PropertiesMenuModel getModel()
++ PropertiesMenuView getView()
+}
+class com.gymbro.city.builder.GymBuilder {
++ <<Create>> GymBuilder()
++ <<Create>> GymBuilder(GymModel)
++ GymBuilder addPropertiesMenu(PropertiesMenuController)
++ GymBuilder makeClickable()
++ GymBuilder makeHoverable()
++ GymBuilder makeInteractive()
++ GymController build()
++ GymBuilder addController(Controller)
++ GymBuilder addModel(Model)
++ GymBuilder addView(View)
++ GymBuilder addTransform(Transform)
++ GymBuilder addTexture(Image)
++ GymBuilder addTexture(String)
++ GymController getController()
++ GymModel getModel()
++ GymView getView()
+}
+abstract class com.gymbro.city.builder.BuilderMVC {
+- Controller controller
+- Model model
+- View view
++ <<Create>> BuilderMVC(Model,View,Controller)
++ Controller build()
++ BuilderMVC addController(Controller)
++ BuilderMVC addModel(Model)
++ BuilderMVC addView(View)
++ BuilderMVC addTransform(Transform)
++ BuilderMVC addTexture(Image)
++ BuilderMVC addTexture(String)
++ Controller getController()
++ void setController(Controller)
++ Model getModel()
++ void setModel(Model)
++ View getView()
++ void setView(View)
+}
+class com.gymbro.city.builder.MapBuilder {
++ <<Create>> MapBuilder()
++ <<Create>> MapBuilder(MapModel)
++ MapBuilder addGyms(List<GymController>)
++ MapController build()
++ MapBuilder addController(Controller)
++ MapBuilder addModel(Model)
++ MapBuilder addView(View)
++ MapBuilder addTransform(Transform)
++ MapBuilder addTexture(Image)
++ MapBuilder addTexture(String)
++ MapController getController()
++ MapModel getModel()
++ MapView getView()
+}
+
+com.gymbro.city.builder.BuilderMVC <|-- com.gymbro.city.builder.FavoritesBuilder
+com.gymbro.city.builder.BuilderMVC <|-- com.gymbro.city.builder.GymBuilder
+com.gymbro.city.builder.BuilderMVC <|-- com.gymbro.city.builder.MapBuilder
+com.gymbro.city.builder.BuilderMVC <|-- com.gymbro.city.builder.PropertiesMenuBuilder
+
+@enduml

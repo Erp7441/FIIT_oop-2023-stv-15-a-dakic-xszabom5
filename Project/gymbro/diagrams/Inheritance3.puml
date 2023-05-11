@@ -1,0 +1,57 @@
+@startuml
+class com.gymbro.city.view.FavoritesView {
++ <<Create>> FavoritesView()
++ <<Create>> FavoritesView(FavoritesModel)
+}
+class com.gymbro.city.view.MapView {
++ <<Create>> MapView()
++ <<Create>> MapView(MapModel)
+}
+class com.gymbro.city.view.PropertiesMenuView {
++ <<Create>> PropertiesMenuView()
++ <<Create>> PropertiesMenuView(PropertiesMenuModel)
++ void draw()
++ void removeFromView()
+- void addRemoveOnEscapeEvent()
+}
+class com.gymbro.city.view.GymView {
++ <<Create>> GymView()
++ <<Create>> GymView(GymModel)
++ void zoomIn()
++ void zoomOut()
++ void showProperties()
+}
+abstract class com.gymbro.city.view.View {
+~ Model model
++ <<Create>> View(Model)
++ void draw()
++ double getHeight()
++ Model getModel()
++ Vector2D getPosition()
++ double getRotation()
++ Vector2D getScale()
++ Image getTexture()
++ Transform getTransform()
++ double getX()
++ double getY()
++ double getWidth()
++ ImageView getImageView()
++ void setHeight(double)
++ void setModel(Model)
++ void setPosition(Vector2D)
++ void setRotation(double)
++ void setScale(Vector2D)
++ void setTexture(Image)
++ void setTexture(String)
++ void setTransform(Transform)
++ void setX(double)
++ void setY(double)
++ void setWidth(double)
++ void setImageView(ImageView)
+}
+
+com.gymbro.city.view.View <|-- com.gymbro.city.view.MapView
+com.gymbro.city.view.View <|-- com.gymbro.city.view.FavoritesView
+com.gymbro.city.view.View <|-- com.gymbro.city.view.GymView
+com.gymbro.city.view.View <|-- com.gymbro.city.view.PropertiesMenuView
+@enduml

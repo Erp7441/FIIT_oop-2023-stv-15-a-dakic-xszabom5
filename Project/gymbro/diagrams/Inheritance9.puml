@@ -1,0 +1,12 @@
+@startuml
+
+class com.gymbro.utils.UnknownGymException {
++ <<Create>> UnknownGymException(String)
+}
+class com.gymbro.utils.WriteFileException {
++ <<Create>> WriteFileException(String)
+}
+
+java.lang.RuntimeException <|-- com.gymbro.utils.UnknownGymException
+java.lang.RuntimeException <|-- com.gymbro.utils.WriteFileException
+@enduml

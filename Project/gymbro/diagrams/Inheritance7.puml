@@ -1,0 +1,26 @@
+@startuml
+class com.gymbro.managers.event.EventManager {
+- Scene owner
+- HashMap<String,EventEntry<T>> handlers
++ <<Create>> EventManager(Scene)
++ void addEvent(String,EventType<? super T>,EventHandler<? super T>)
+- void removeEventEntry(EventEntry<T>)
++ void removeEvent(String)
++ void removeEvent(EventHandler<? super T>)
++ Map<String,EventEntry<T>> getHandlers()
++ Scene getOwner()
+}
+class com.gymbro.managers.event.EventEntry {
+- EventType<T> event
+- EventHandler<? super T> handler
++ <<Create>> EventEntry(EventType<T>,EventHandler<? super T>)
++ EventType<T> getEvent()
++ void setEvent(EventType<T>)
++ EventHandler<? super T> getHandler()
++ void setHandler(EventHandler<? super T>)
+}
+
+javafx.event.Event <|-- com.gymbro.managers.event.EventManager
+javafx.event.Event <|-- com.gymbro.managers.event.EventEntry
+
+@enduml

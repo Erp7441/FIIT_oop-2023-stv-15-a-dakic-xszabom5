@@ -1,0 +1,70 @@
+@startuml
+class com.gymbro.city.factory.GymFactory {
++ <<Create>> GymFactory()
++ GymController createLifeGymGym(Places,Integer,URL)
++ GymController createFitinnGym(Places,Integer,URL)
++ GymController createGolemGym(Places,Integer,URL)
++ GymController createNobelGymGym(Places,Integer,URL)
+}
+class com.gymbro.city.builder.GymBuilder {
++ <<Create>> GymBuilder()
++ <<Create>> GymBuilder(GymModel)
++ GymBuilder addPropertiesMenu(PropertiesMenuController)
++ GymBuilder makeClickable()
++ GymBuilder makeHoverable()
++ GymBuilder makeInteractive()
++ GymController build()
++ GymBuilder addController(Controller)
++ GymBuilder addModel(Model)
++ GymBuilder addView(View)
++ GymBuilder addTransform(Transform)
++ GymBuilder addTexture(Image)
++ GymBuilder addTexture(String)
++ GymController getController()
++ GymModel getModel()
++ GymView getView()
+}
+
+
+class com.gymbro.city.model.GymModel {
+- PropertiesMenuController propertiesMenu
++ <<Create>> GymModel()
++ <<Create>> GymModel(Transform,Image)
++ <<Create>> GymModel(Transform,int,String)
++ String serialize(int)
++ {static} Property deserialize()
++ PropertiesMenuController getPropertiesMenu()
++ void setPropertiesMenu(PropertiesMenuController)
++ boolean equals(Object)
++ int hashCode()
+}
+class com.gymbro.city.view.GymView {
++ <<Create>> GymView()
++ <<Create>> GymView(GymModel)
++ void zoomIn()
++ void zoomOut()
++ void showProperties()
+}
+class com.gymbro.city.controller.GymController {
++ <<Create>> GymController(GymModel)
++ <<Create>> GymController(GymModel,GymView)
++ void makeClickable()
++ void makeHoverable()
++ void makeInteractive()
+- void handleClick(MouseEvent)
+- void handleStartHover(MouseEvent)
+- void handleEndHover(MouseEvent)
+}
+
+com.gymbro.city.controller.GymController o-- com.gymbro.city.view.GymView
+com.gymbro.city.controller.GymController o-- com.gymbro.city.model.GymModel
+
+com.gymbro.city.builder.GymBuilder *-- com.gymbro.city.model.GymModel
+com.gymbro.city.builder.GymBuilder *-- com.gymbro.city.view.GymView
+com.gymbro.city.builder.GymBuilder *-- com.gymbro.city.controller.GymController
+
+com.gymbro.city.factory.GymFactory *-- com.gymbro.city.builder.GymBuilder
+com.gymbro.city.factory.GymFactory *-- com.gymbro.city.controller.GymController
+
+com.gymbro.city.controller.GymController <|.. com.gymbro.city.builder.GymBuilder
+@enduml
