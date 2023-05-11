@@ -1,8 +1,6 @@
 
 e
 5src/main/java/com/gymbro/city/builder/BuilderMVC.java,d\d\dd807eb6fa3f530db74a89a5202f66370c4d6352
-g
-7src/main/java/com/gymbro/handlers/ImageViewHandler.java,f\a\fa8703f23d405d8cfce66872b4fddf63ea73beed
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 X
@@ -23,18 +21,10 @@ e
 5src/main/java/com/gymbro/city/builder/GymBuilder.java,4\8\48b8e8ca75425899fdfea3f6c791fd05253f74b9
 k
 ;src/main/java/com/gymbro/window/fxml/MapFxmlController.java,0\9\094788af2102c075d840099af480f19ca2c1e254
-`
-0src/main/java/com/gymbro/file/Serialization.java,7\b\7b28d84bcfb126c58e1e941f7439b9a45c746c08
 f
 6src/main/java/com/gymbro/utils/WriteFileException.java,5\7\57dd7bf91fed21499a3e90d5e0d2b9fa48202eb1
 [
 +src/main/java/com/gymbro/window/Window.java,2\3\238ca1f3997e037f622010645ff5ba5ae6704f42
-Y
-)src/main/java/com/gymbro/file/Parser.java,2\c\2c2369a88ce7d0c3afccadcec1b7173e2761532f
-b
-2src/main/java/com/gymbro/handlers/GymsHandler.java,9\a\9a9f3c358d7902c97193a7d3476d13fe55573c0f
-R
-"src/main/java/com/gymbro/Main.java,4\a\4a4b442f2ec9898c8ada0ed11ded3e659f1b5fd8
 L
 diagrams/BuilderExample.puml,1\a\1a20c86e6ba560808d94c7ce8ff3880064bf9e17
 k
@@ -55,17 +45,3 @@ J
 diagrams/Inheritance2.puml,0\8\088803c4f8b8f47047c41018269c3e015b73494f
 J
 diagrams/Inheritance3.puml,3\2\32c7c49fec55aaaa854b830bceba65a6a16e8f66
-J
-diagrams/Inheritance4.puml,3\e\3e766226997caa21fb9b47bd6808e81cc1dd72ad
-J
-diagrams/Inheritance5.puml,3\8\38135a77d5197b45b4a047f21a6c68a79dbad709
-J
-diagrams/Inheritance6.puml,b\7\b7e22ff4907cf06b729217673f8ee68712cd314d
-J
-diagrams/Inheritance7.puml,6\7\67a9bf87fbd8a1353426c3661fd0a7db6c488545
-J
-diagrams/Inheritance8.puml,1\7\1722dcfb20fdc1f2f026364a840df937b1a786af
-J
-diagrams/Inheritance9.puml,c\c\cc327e4a7b99d9ae4aea71d4e7e1239af8ee0055
-H
-diagrams/MVCExample.puml,5\a\5aa530e8a59bb04f3ded9e9802eaa759cb475cbd

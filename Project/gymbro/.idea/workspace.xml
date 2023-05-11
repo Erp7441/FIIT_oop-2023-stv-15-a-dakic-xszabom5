@@ -5,22 +5,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69cb2913-17ca-45c5-8011-7238bbe170a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/controller/GymController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/factory/GymFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/factory/GymFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/GymModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/GymModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0eb5a151af7fa29ff8a115380d8198455308a7f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1722dcfb20fdc1f2f026364a840df937b1a786af" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c2369a88ce7d0c3afccadcec1b7173e2761532f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38135a77d5197b45b4a047f21a6c68a79dbad709" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/e/3e766226997caa21fb9b47bd6808e81cc1dd72ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a4b442f2ec9898c8ada0ed11ded3e659f1b5fd8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5aa530e8a59bb04f3ded9e9802eaa759cb475cbd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67a9bf87fbd8a1353426c3661fd0a7db6c488545" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b28d84bcfb126c58e1e941f7439b9a45c746c08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9a9f3c358d7902c97193a7d3476d13fe55573c0f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae00ebbcdc29319ac29dd4858c50b8569ffa0a88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7e22ff4907cf06b729217673f8ee68712cd314d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cc327e4a7b99d9ae4aea71d4e7e1239af8ee0055" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f08543f2d870b85b9d75ce0836aef086afa95d76" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa8703f23d405d8cfce66872b4fddf63ea73beed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/e/0eb5a151af7fa29ff8a115380d8198455308a7f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/7/1722dcfb20fdc1f2f026364a840df937b1a786af" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/c/2c2369a88ce7d0c3afccadcec1b7173e2761532f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/8/38135a77d5197b45b4a047f21a6c68a79dbad709" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/e/3e766226997caa21fb9b47bd6808e81cc1dd72ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/a/4a4b442f2ec9898c8ada0ed11ded3e659f1b5fd8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/a/5aa530e8a59bb04f3ded9e9802eaa759cb475cbd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/7/67a9bf87fbd8a1353426c3661fd0a7db6c488545" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/b/7b28d84bcfb126c58e1e941f7439b9a45c746c08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/a/9a9f3c358d7902c97193a7d3476d13fe55573c0f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/e/ae00ebbcdc29319ac29dd4858c50b8569ffa0a88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/7/b7e22ff4907cf06b729217673f8ee68712cd314d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/c/cc327e4a7b99d9ae4aea71d4e7e1239af8ee0055" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f08543f2d870b85b9d75ce0836aef086afa95d76" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/a/fa8703f23d405d8cfce66872b4fddf63ea73beed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/controller/GymController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/controller/GymController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/factory/GymFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/factory/GymFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/file/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/file/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/handlers/FavoritesHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/handlers/FavoritesHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/handlers/GymsHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/handlers/GymsHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/utils/FileNameException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/utils/FileNameException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/utils/UnknownGymException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/utils/UnknownGymException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/utils/WriteFileException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/utils/WriteFileException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/fxml/FavoritesMenuFxmlController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/fxml/FavoritesMenuFxmlController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/fxml/MainMenuFxmlController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/fxml/MainMenuFxmlController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/favorite_gyms.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/favorite_gyms.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FavoritesMenuFxmlController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GymFactory.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GymView.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Main.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MainMenuFxmlController.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MapFxmlController.class.uniqueId9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PropertiesMenuView$1.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PropertiesMenuView.class.uniqueId12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Setup.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/View.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Window.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/GymsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/GymsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/FileNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/FileNameException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/UnknownGymException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/UnknownGymException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/WriteFileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/utils/WriteFileException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,26 +146,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/Martin/Repos/FIIT/oop-2023-stv-15-a-dakic-xszabom5/Project/gymbro/diagrams",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15136719",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Martin/Repos/FIIT/oop-2023-stv-15-a-dakic-xszabom5/Project/gymbro/diagrams&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Martin\Repos\FIIT\oop-2023-stv-15-a-dakic-xszabom5\Project\gymbro\src\main\resources\com\gymbro\config" />
@@ -150,6 +201,7 @@
       <workItem from="1683575390850" duration="881000" />
       <workItem from="1683576286665" duration="2790000" />
       <workItem from="1683661295542" duration="2264000" />
+      <workItem from="1683803948425" duration="429000" />
     </task>
     <servers />
   </component>
@@ -157,6 +209,15 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="javafx.scene.Scene" memberName="root" />

@@ -16,6 +16,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URISyntaxException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -46,12 +47,16 @@ public class Parser{
      * @throws FileNameException the file name exception
      */
     public static void openFile(String fileName) throws FileNameException{
-        // Checks if file exists. If it does then get its length.
-        File temp = new File(fileName + ".zip");
-        if(!temp.exists()){ return; }
-
         try {
-            ZipFile zip = new ZipFile(fileName + ".zip");
+
+            String path = Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
+            String folderPath = path.substring(0, path.lastIndexOf("/") + 1);
+
+            // Checks if file exists. If it does then get its length.
+            File temp = new File(folderPath + "/" + fileName + ".zip");
+            if(!temp.exists()){ return; }
+
+            ZipFile zip = new ZipFile(folderPath + "/" + fileName + ".zip");
             ZipEntry json = zip.getEntry(fileName + ".json");
             InputStream stream = zip.getInputStream(json);
             bytes = readAllBytes(stream);
@@ -66,7 +71,7 @@ public class Parser{
 
             zip.close();
         }
-        catch(IOException e){
+        catch(IOException | URISyntaxException e){
             e.printStackTrace();
             throw new FileNameException("Could not open file for parsing!");
         }
