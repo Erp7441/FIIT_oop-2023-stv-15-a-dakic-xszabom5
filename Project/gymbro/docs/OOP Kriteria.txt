@@ -21,6 +21,7 @@ Create
 Read
 Update
 Delete
+Jar
 
 NOT DONE:
 
@@ -30,8 +31,6 @@ Odovzdaný zdrojový kód musí zahŕňať všetky potrebné súbory a musí sa 
 Dokumentácia musí zodpovedať programu a musí obsahovať diagram tried.
 Pri záverečnej prezentácii študent musí vedieť zodpovedať otázky vyučujúceho v súvislosti s projektom.
 
-Dakic:
-JAR Kinda DONE
 
 
 HARD PASS
