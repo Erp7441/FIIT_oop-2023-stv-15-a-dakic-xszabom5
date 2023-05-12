@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69cb2913-17ca-45c5-8011-7238bbe170a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-0.1.tar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-0.1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-linux.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-windows.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/expanded.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/fatJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-1.0.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/gymbro-1.0.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-1.0.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/gymbro-1.0.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/gymbro-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/gymbro-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/gymbro" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/gymbro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +144,7 @@
       <workItem from="1683661295542" duration="2264000" />
       <workItem from="1683803948425" duration="429000" />
       <workItem from="1683892780192" duration="110000" />
+      <workItem from="1683897393533" duration="65000" />
     </task>
     <servers />
   </component>
