@@ -24,61 +24,61 @@
 
 ### Inheritence hierarchies
 ---Inheritance hierarchy 1---
-* BuilderMVC
-  * FavoritesBuilder
-  * GymBuilder
-  * MapBuilder
-  * PropertiesMenuBuilder
+* [BuilderMVC](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java)
+  * [FavoritesBuilder](Project/gymbro/src/main/java/com/gymbro/city/builder/FavoritesBuilder.java)
+  * [GymBuilder](Project/gymbro/src/main/java/com/gymbro/city/builder/GymBuilder.java)
+  * [MapBuilder](Project/gymbro/src/main/java/com/gymbro/city/builder/MapBuilder.java)
+  * [PropertiesMenuBuilder](Project/gymbro/src/main/java/com/gymbro/city/builder/PropertiesMenuBuilder.java)
 
 ---Inheritance hierarchy 2---
-* Controller
-  * FavoritesController
-  * GymController
-  * MapController
-  * PropertiesMenuController
+* [Controller](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java)
+  * [FavoritesController](Project/gymbro/src/main/java/com/gymbro/city/controller/FavoritesController.java)
+  * [GymController](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java)
+  * [MapController](Project/gymbro/src/main/java/com/gymbro/city/controller/MapController.java)
+  * [PropertiesMenuController](Project/gymbro/src/main/java/com/gymbro/city/controller/PropertiesMenuController.java)
 
 ---Inheritance hierarchy 3---
-* View
-  * FavoritesView
-  * GymView
-  * MapView
-  * PropertiesMenuView
+* [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java)
+  * [FavoritesView](Project/gymbro/src/main/java/com/gymbro/city/view/FavoritesView.java)
+  * [GymView](Project/gymbro/src/main/java/com/gymbro/city/view/GymView.java)
+  * [MapView](Project/gymbro/src/main/java/com/gymbro/city/view/MapView.java)
+  * [PropertiesMenuView](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java)
 
 ---Inheritance hierarchy 4---
-* Setup
-  * SetupFavorites
+* [Setup](Project/gymbro/src/main/java/com/gymbro/setups/Setup.java)
+  * [SetupFavorites](Project/gymbro/src/main/java/com/gymbro/setups/SetupFavorites.java)
 
 ---Inheritance hierarchy 5---
-* Model
-  * FavoritesModel
-  * GymModel
-  * MapModel
-  * PropertiesMenuModel
+* [Model](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java)
+  * [FavoritesModel](Project/gymbro/src/main/java/com/gymbro/city/model/FavoritesModel.java)
+  * [GymModel](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java)
+  * [MapModel](Project/gymbro/src/main/java/com/gymbro/city/model/MapModel.java)
+  * [PropertiesMenuModel](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java)
 
 ---Inheritance hierarchy 6---
 * Application
-  * Main
+  * [Main](Project/gymbro/src/main/java/com/gymbro/Main.java)
 
 ---Inheritance hierarchy 7---
 * Event
-  * EventEntry
-  * EventManager
+  * [EventEntry](Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java)
+  * [EventManager](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java)
 
 ---Inheritance hierarchy 8---
 * Exception
-  * FileNameException
+  * [FileNameException](Project/gymbro/src/main/java/com/gymbro/utils/FileNameException.java)
 
 ---Inheritance hierarchy 9---
 * RuntimeException
-  * UnknownGymException
-  * WriteFileException
+  * [UnknownGymException](Project/gymbro/src/main/java/com/gymbro/utils/UnknownGymException.java)
+  * [WriteFileException](Project/gymbro/src/main/java/com/gymbro/utils/WriteFileException.java)
 
 ---Interface hierarchy 1---
-* Serialization
-  * Model
-  * Property
-  * Transform
-  * Vector2D
+* [Serialization](Project/gymbro/src/main/java/com/gymbro/file/Serialization.java)
+  * [Model](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java)
+  * [Property](Project/gymbro/src/main/java/com/gymbro/utils/Property.java)
+  * [Transform](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java)
+  * [Vector2D](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java)
 
 ### Main criteria
 
@@ -90,246 +90,243 @@
 #### OOP Principles
 
 ##### Encapsulation
-* "BuilderMVC" class encapsulates the "model" attribute.
-* "BuilderMVC" class encapsulates the "view" attribute.
-* "BuilderMVC" class encapsulates the "controller" attribute.
-* "TransformBuilder" class encapsulates the "transform" attribute.
-* "Controller" class encapsulates the "model" attribute.
-* "Controller" class encapsulates the "view" attribute.
-* "FavoritesModel" class encapsulates the "favorites" attribute.
-* "GymModel" class encapsulates the "propertiesMenu" attribute.
-* "MapModel" class encapsulates the "gyms" attribute.
-* The "Model" class doesn't encapsulate all of its attributes!
-* "PropertiesMenuModel" class encapsulates the "properties" attribute.
-* "PropertiesMenuModel" class encapsulates the "owner" attribute.
-* The "View" class doesn't encapsulate all of its attributes!
-* "Parser" class encapsulates the "bytes" attribute.
-* "Parser" class encapsulates the "offset" attribute.
-* "Parser" class encapsulates the "line" attribute.
-* "FavoritesHandler" class encapsulates the "favorites" attribute.
-* "ImageViewHandler" class encapsulates the "view" attribute.
-* "Launcher" class encapsulates the "mainThread" attribute.
-* "EventEntry" class encapsulates the "event" attribute.
-* "EventEntry" class encapsulates the "handler" attribute.
-* "EventManager" class encapsulates the "handlers" attribute.
-* "EventManager" class encapsulates the "owner" attribute.
-* "EventManager" class encapsulates the "EventEntry" attribute.
-* "SceneEventManager" class encapsulates the "owner" attribute.
-* "SceneEventManager" class encapsulates the "keyEventManager" attribute.
-* "SceneEventManager" class encapsulates the "mouseEventManager" attribute.
-* "SceneManager" class encapsulates the "scene" attribute.
-* "SceneManager" class encapsulates the "paneMap" attribute.
-* "SceneManager" class encapsulates the "stage" attribute.
-* "Setup" class encapsulates the "map" attribute.
-* The "Constants" class doesn't encapsulate all of its attributes!
-* "Property" class encapsulates the "name" attribute.
-* "Property" class encapsulates the "value" attribute.
-* "Transform" class encapsulates the "position" attribute.
-* "Transform" class encapsulates the "rotation" attribute.
-* "Transform" class encapsulates the "scale" attribute.
-* "Vector2D" class encapsulates the "x" attribute.
-* "Vector2D" class encapsulates the "y" attribute.
-* "Window" class encapsulates the "transform" attribute.
-* "Window" class encapsulates the "sceneManager" attribute.
-* "Window" class encapsulates the "eventManager" attribute.
-* "Window" class encapsulates the "focusedGym" attribute.
-* "Window" class encapsulates the "instance" attribute.
-* "Window" class encapsulates the "windowSetup" attribute.
+* ["BuilderMVC" class](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java) encapsulates the "model" attribute.
+* ["BuilderMVC class"](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java) encapsulates the "view" attribute.
+* ["BuilderMVC class"](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java) encapsulates the "controller" attribute.
+* ["TransformBuilder" class](Project/gymbro/src/main/java/com/gymbro/city/builder/TransformBuilder.java) encapsulates the "transform" attribute.
+* ["Controller" class](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java) encapsulates the "model" attribute.
+* ["Controller" class](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java) encapsulates the "view" attribute.
+* ["FavoritesModel" class](Project/gymbro/src/main/java/com/gymbro/city/model/FavoritesModel.java) encapsulates the "favorites" attribute.
+* ["GymModel" class](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java) encapsulates the "propertiesMenu" attribute.
+* ["MapModel" class](Project/gymbro/src/main/java/com/gymbro/city/model/MapModel.java) encapsulates the "gyms" attribute.
+* ["PropertiesMenuModel" class](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java) encapsulates the "properties" attribute.
+* ["PropertiesMenuModel" class](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java) encapsulates the "owner" attribute.
+* ["Parser" class](Project/gymbro/src/main/java/com/gymbro/file/Parser.java) encapsulates the "bytes" attribute.
+* ["Parser" class](Project/gymbro/src/main/java/com/gymbro/file/Parser.java) encapsulates the "offset" attribute.
+* ["Parser" class](Project/gymbro/src/main/java/com/gymbro/file/Parser.java) encapsulates the "line" attribute.
+* ["FavoritesHandler" class](Project/gymbro/src/main/java/com/gymbro/handlers/FavoritesHandler.java) encapsulates the "favorites" attribute.
+* ["ImageViewHandler" class](Project/gymbro/src/main/java/com/gymbro/handlers/ImageViewHandler.java) encapsulates the "view" attribute.
+* ["Launcher" class](Project/gymbro/src/main/java/com/gymbro/Launcher.java) encapsulates the "mainThread" attribute.
+* ["EventEntry" class](Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java) encapsulates the "event" attribute.
+* ["EventEntry" class](Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java) encapsulates the "handler" attribute.
+* ["EventManager" class](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java) encapsulates the "handlers" attribute.
+* ["EventManager" class](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java) encapsulates the "owner" attribute.
+* ["EventManager" class](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java) encapsulates the "EventEntry" attribute.
+* ["SceneEventManager" class](Project/gymbro/src/main/java/com/gymbro/managers/event/SceneEventManager.java) encapsulates the "owner" attribute.
+* ["SceneEventManager" class](Project/gymbro/src/main/java/com/gymbro/managers/event/SceneEventManager.java) encapsulates the "keyEventManager" attribute.
+* ["SceneEventManager" class](Project/gymbro/src/main/java/com/gymbro/managers/event/SceneEventManager.java) encapsulates the "mouseEventManager" attribute.
+* ["SceneManager" class](Project/gymbro/src/main/java/com/gymbro/managers/scene/SceneManager.java) encapsulates the "scene" attribute.
+* ["SceneManager" class](Project/gymbro/src/main/java/com/gymbro/managers/scene/SceneManager.java) encapsulates the "paneMap" attribute.
+* ["SceneManager" class](Project/gymbro/src/main/java/com/gymbro/managers/scene/SceneManager.java) encapsulates the "stage" attribute.
+* ["Setup" class](Project/gymbro/src/main/java/com/gymbro/setups/Setup.java) encapsulates the "map" attribute.
+* ["Property" class](Project/gymbro/src/main/java/com/gymbro/utils/Property.java) encapsulates the "name" attribute.
+* ["Property" class](Project/gymbro/src/main/java/com/gymbro/utils/Property.java) encapsulates the "value" attribute.
+* ["Transform" class](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java) encapsulates the "position" attribute.
+* ["Transform" class](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java) encapsulates the "rotation" attribute.
+* ["Transform" class](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java) encapsulates the "scale" attribute.
+* ["Vector2D" class](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java) encapsulates the "x" attribute.
+* ["Vector2D" class](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java) encapsulates the "y" attribute.
+* ["Window" class](Project/gymbro/src/main/java/com/gymbro/window/Window.java) encapsulates the "transform" attribute.
+* ["Window" class](Project/gymbro/src/main/java/com/gymbro/window/Window.java) encapsulates the "sceneManager" attribute.
+* ["Window" class](Project/gymbro/src/main/java/com/gymbro/window/Window.java) encapsulates the "eventManager" attribute.
+* ["Window" class](Project/gymbro/src/main/java/com/gymbro/window/Window.java) encapsulates the "focusedGym" attribute.
+* ["Window" class](Project/gymbro/src/main/java/com/gymbro/window/Window.java) encapsulates the "instance" attribute.
+* ["Window" class](Project/gymbro/src/main/java/com/gymbro/window/Window.java) encapsulates the "windowSetup" attribute.
 
 ##### Composition
-* The "FavoritesBuilder" type composites the "FavoritesModel" type.
-* The "FavoritesBuilder" type composites the "FavoritesView" type.
-* The "FavoritesBuilder" type composites the "FavoritesController" type.
-* The "GymBuilder" type composites the "GymModel" type.
-* The "GymBuilder" type composites the "GymView" type.
-* The "GymBuilder" type composites the "GymController" type.
-* The "MapBuilder" type composites the "MapModel" type.
-* The "MapBuilder" type composites the "MapView" type.
-* The "MapBuilder" type composites the "MapController" type.
-* The "PropertiesMenuBuilder" type composites the "PropertiesMenuModel" type.
-* The "PropertiesMenuBuilder" type composites the "PropertiesMenuView" type.
-* The "PropertiesMenuBuilder" type composites the "PropertiesMenuController" type.
-* The "TransformBuilder" type composites the "Transform" type.
-* The "FavoritesController" type composites the "FavoritesView" type.
-* The "GymController" type composites the "GymView" type.
-* The "PropertiesMenuController" type composites the "PropertiesMenuView" type.
-* The "FavoritesView" type composites the "FavoritesModel" type.
-* The "GymView" type composites the "GymModel" type.
-* The "MapView" type composites the "MapModel" type.
-* The "PropertiesMenuView" type composites the "PropertiesMenuModel" type.
-* The "Parser" type composites the "GymModel" type.
-* The "Parser" type composites the "PropertiesMenuController" type.
-* The "Parser" type composites the "GymController" type.
-* The "Parser" type composites the "Property" type.
-* The "SceneEventManager" type composites the "EventManager" type.
-* The "Transform" type composites the "Vector2D" type.
-* The "Window" type composites the "Transform" type.
-* The "Window" type composites the "Vector2D" type.
+* The ["FavoritesBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/[FavoritesBuilder.java](Project/gymbro/src/main/java/com/gymbro/city/builder/FavoritesBuilder.java)) composites the ["FavoritesModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/FavoritesModel.java).
+* The ["FavoritesBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/[FavoritesBuilder.java](Project/gymbro/src/main/java/com/gymbro/city/builder/FavoritesBuilder.java)) composites the ["FavoritesView" type](Project/gymbro/src/main/java/com/gymbro/city/view/FavoritesView.java).
+* The ["FavoritesBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/[FavoritesBuilder.java](Project/gymbro/src/main/java/com/gymbro/city/builder/FavoritesBuilder.java)) composites the ["FavoritesController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/FavoritesController.java).
+* The ["GymBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/GymBuilder.java) composites the ["GymModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java).
+* The ["GymBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/GymBuilder.java) composites the ["GymView" type](Project/gymbro/src/main/java/com/gymbro/city/view/GymView.java).
+* The ["GymBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/GymBuilder.java) composites the ["GymController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java).
+* The ["MapBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/MapBuilder.java) composites the ["MapModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/MapModel.java).
+* The ["MapBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/MapBuilder.java) composites the ["MapView" type](Project/gymbro/src/main/java/com/gymbro/city/view/MapView.java).
+* The ["MapBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/MapBuilder.java) composites the ["MapController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/MapController.java).
+* The ["PropertiesMenuBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/PropertiesMenuBuilder.java) composites the ["PropertiesMenuModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java).
+* The ["PropertiesMenuBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/PropertiesMenuBuilder.java) composites the ["PropertiesMenuView" type](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java).
+* The ["PropertiesMenuBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/PropertiesMenuBuilder.java) composites the ["PropertiesMenuController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/PropertiesMenuController.java).
+* The ["TransformBuilder" type](Project/gymbro/src/main/java/com/gymbro/city/builder/TransformBuilder.java) composites the ["Transform" type](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java).
+* The ["FavoritesController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/FavoritesController.java) composites the ["FavoritesView" type](Project/gymbro/src/main/java/com/gymbro/city/view/FavoritesView.java).
+* The ["GymController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java) composites the ["GymView" type](Project/gymbro/src/main/java/com/gymbro/city/view/GymView.java).
+* The ["PropertiesMenuController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/PropertiesMenuController.java) composites the ["PropertiesMenuView" type](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java).
+* The ["FavoritesView" type](Project/gymbro/src/main/java/com/gymbro/city/view/FavoritesView.java) composites the ["FavoritesModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/FavoritesModel.java).
+* The ["GymView" type](Project/gymbro/src/main/java/com/gymbro/city/view/GymView.java) composites the ["GymModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java).
+* The ["MapView" type](Project/gymbro/src/main/java/com/gymbro/city/view/MapView.java) composites the ["MapModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/MapModel.java).
+* The ["PropertiesMenuView" type](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java) composites the ["PropertiesMenuModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java).
+* The ["Parser" type](Project/gymbro/src/main/java/com/gymbro/file/Parser.java) composites the ["GymModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java).
+* The ["Parser" type](Project/gymbro/src/main/java/com/gymbro/file/Parser.java) composites the ["PropertiesMenuController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/PropertiesMenuController.java).
+* The ["Parser" type](Project/gymbro/src/main/java/com/gymbro/file/Parser.java) composites the ["GymController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java).
+* The ["Parser" type](Project/gymbro/src/main/java/com/gymbro/file/Parser.java) composites the ["Property" type](Project/gymbro/src/main/java/com/gymbro/utils/Property.java).
+* The ["SceneEventManager" type](Project/gymbro/src/main/java/com/gymbro/managers/event/SceneEventManager.java) composites the ["EventManager" type](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java).
+* The ["Transform" type](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java) composites the ["Vector2D" type](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java).
+* The ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java) composites the ["Transform" type](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java).
+* The ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java) composites the ["Vector2D" type](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java).
 
 ##### Aggregation
-* The "BuilderMVC" type aggregates the "Controller" type.
-* The "BuilderMVC" type aggregates the "View" type.
-* The "BuilderMVC" type aggregates the "Model" type.
-* The "Controller" type aggregates the "Model" type.
-* The "Controller" type aggregates the "View" type.
-* The "FavoritesModel" type aggregates the "GymController" type.
-* The "GymModel" type aggregates the "PropertiesMenuController" type.
-* The "MapModel" type aggregates the "GymController" type.
-* The "Model" type aggregates the "Transform" type.
-* The "PropertiesMenuModel" type aggregates the "Property" type.
-* The "PropertiesMenuModel" type aggregates the "GymController" type.
-* The "View" type aggregates the "Model" type.
-* The "FavoritesHandler" type aggregates the "FavoritesController" type.
-* The "EventManager" type aggregates the "EventEntry" type.
-* The "Setup" type aggregates the "MapController" type.
-* The "Transform" type aggregates the "Vector2D" type.
-* The "Window" type aggregates the "SceneManager" type.
-* The "Window" type aggregates the "SceneEventManager" type.
-* The "Window" type aggregates the "Setup" type.
-* The "Window" type aggregates the "GymController" type.
+* The ["BuilderMVC" type](Project/gymbro/src/main/java/com/gymbro/city/builder/[BuilderMVC](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java).java) aggregates the ["Controller" type](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java).
+* The ["BuilderMVC" type](Project/gymbro/src/main/java/com/gymbro/city/builder/[BuilderMVC](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java).java) aggregates the ["View" type](Project/gymbro/src/main/java/com/gymbro/city/view/View.java).
+* The ["BuilderMVC" type](Project/gymbro/src/main/java/com/gymbro/city/builder/[BuilderMVC](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java).java) aggregates the ["Model" type](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java).
+* The ["Controller" type](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java) aggregates the ["Model" type](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java).
+* The ["Controller" type](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java) aggregates the ["View" type](Project/gymbro/src/main/java/com/gymbro/city/view/View.java).
+* The ["FavoritesModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/FavoritesModel.java) aggregates the ["GymController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java).
+* The ["GymModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java) aggregates the ["PropertiesMenuController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/PropertiesMenuController.java).
+* The ["MapModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/MapModel.java) aggregates the ["GymController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java).
+* The ["Model" type](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java) aggregates the ["Transform" type](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java).
+* The ["PropertiesMenuModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java) aggregates the ["Property" type](Project/gymbro/src/main/java/com/gymbro/utils/Property.java).
+* The ["PropertiesMenuModel" type](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java) aggregates the ["GymController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java).
+* The ["View" type](Project/gymbro/src/main/java/com/gymbro/city/view/View.java) aggregates the ["Model" type](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java).
+* The ["FavoritesHandler" type](Project/gymbro/src/main/java/com/gymbro/handlers/FavoritesHandler.java) aggregates the ["FavoritesController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/FavoritesController.java).
+* The ["EventManager" type](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java) aggregates the ["EventEntry" type](Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java).
+* The ["Setup" type](Project/gymbro/src/main/java/com/gymbro/setups/Setup.java) aggregates the ["MapController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/MapController.java).
+* The ["Transform" type](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java) aggregates the ["Vector2D" type](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java).
+* The ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java) aggregates the ["SceneManager" type](Project/gymbro/src/main/java/com/gymbro/managers/scene/SceneManager.java).
+* The ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java) aggregates the ["SceneEventManager" type](Project/gymbro/src/main/java/com/gymbro/managers/event/SceneEventManager.java).
+* The ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java) aggregates the ["Setup" type](Project/gymbro/src/main/java/com/gymbro/setups/Setup.java).
+* The ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java) aggregates the ["GymController" type](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java).
 
 ##### Associations
-* The "GymView" type is associated with the "Window" type.
-* The "PropertiesMenuView" type is associated with the "Window" type.
-* The "View" type is associated with the "Window" type.
-* The "Main" type is associated with the "Window" type.
-* The "Setup" type is associated with the "Window" type.
-* The "FavoritesMenuFxmlController" type is associated with the "Window" type.
-* The "MainMenuFxmlController" type is associated with the "Window" type.
-* The "MapFxmlController" type is associated with the "Window" type.
-* The "PropertiesMenuFxmlController" type is associated with the "Window" type.
+* The ["GymView" type](Project/gymbro/src/main/java/com/gymbro/city/view/GymView.java) is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
+* The ["PropertiesMenuView" type](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java) is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
+* The ["View" type](Project/gymbro/src/main/java/com/gymbro/city/view/View.java) is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
+* The ["Main" type](Project/gymbro/src/main/java/com/gymbro/Main.java) is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
+* The ["Setup" type](Project/gymbro/src/main/java/com/gymbro/setups/Setup.java) is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
+* The ["FavoritesMenuFxmlController" type](Project/gymbro/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java) is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
+* The ["MainMenuFxmlController" type](Project/gymbro/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java) is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
+* The ["MapFxmlController" type](Project/gymbro/src/main/java/com/gymbro/window/fxml/MapFxmlController.java) is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
+* The ["PropertiesMenuFxmlController"](Project/gymbro/src/main/java/com/gymbro/window/fxml/PropertiesMenuFxmlController.java) type is associated with the ["Window" type](Project/gymbro/src/main/java/com/gymbro/window/Window.java).
 
 ##### Polymorphism
-* Class FavoritesModel:
+* [Class FavoritesModel](Project/gymbro/src/main/java/com/gymbro/city/model/FavoritesModel.java):
   * The "model" object implements polymorphism.
-* Class PropertiesMenuModel:
+* [Class PropertiesMenuModel](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java):
   * The "property" object implements polymorphism.
   * The "model" object implements polymorphism.
-* Class PropertiesMenuView:
+* [Class PropertiesMenuView](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java):
   * The "property" object implements polymorphism.
-* Class Parser:
+* [Class Parser](Project/gymbro/src/main/java/com/gymbro/file/Parser.java):
   * The "model" object implements polymorphism.
   * The "model" object implements polymorphism.
   * The "model" object implements polymorphism.
-* Class FavoritesMenuFxmlController:
+* [Class FavoritesMenuFxmlController](Project/gymbro/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java):
   * The "controller" object implements polymorphism.
-* Class MainMenuFxmlController:
+* [[Class Main](Project/gymbro/src/main/java/com/gymbro/Main.java)MenuFxmlController](Project/gymbro/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java):
   * The "controller" object implements polymorphism.
   * The "controller" object implements polymorphism.
-* Class MapFxmlController:
+* [Class MapFxmlController](Project/gymbro/src/main/java/com/gymbro/window/fxml/MapFxmlController.java):
   * The "setup" object implements polymorphism.
   * The "setup" object implements polymorphism.
 
 
 
 ##### Inheritence and Implementations
-* FavoritesBuilder.java:
+* [FavoritesBuilder.java](Project/gymbro/src/main/java/com/gymbro/city/builder/FavoritesBuilder.java):
   * Inheritance found at line 17:
-  * "public class FavoritesBuilder extends BuilderMVC{"
+  * "public [class FavoritesBuilder](Project/gymbro/src/main/java/com/gymbro/city/builder/FavoritesBuilder.java) extends [BuilderMVC](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java){"
 
-* GymBuilder.java:
+* [GymBuilder.java](Project/gymbro/src/main/java/com/gymbro/city/builder/GymBuilder.java):
   * Inheritance found at line 16:
-  * "public class GymBuilder extends BuilderMVC{"
+  * "public [class GymBuilder](Project/gymbro/src/main/java/com/gymbro/city/builder/GymBuilder.java) extends [BuilderMVC](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java){"
 
-* MapBuilder.java:
+* [MapBuilder.java](Project/gymbro/src/main/java/com/gymbro/city/builder/MapBuilder.java):
   * Inheritance found at line 19:
-  * "public class MapBuilder extends BuilderMVC{"
+  * "public [class MapBuilder](Project/gymbro/src/main/java/com/gymbro/city/builder/MapBuilder.java) extends [BuilderMVC](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java){"
 
-* PropertiesMenuBuilder.java:
+* [PropertiesMenuBuilder.java](Project/gymbro/src/main/java/com/gymbro/city/builder/PropertiesMenuBuilder.java):
   * Inheritance found at line 19:
-  * "public class PropertiesMenuBuilder extends BuilderMVC{"
+  * "public [class PropertiesMenuBuilder](Project/gymbro/src/main/java/com/gymbro/city/builder/PropertiesMenuBuilder.java) extends [BuilderMVC](Project/gymbro/src/main/java/com/gymbro/city/builder/BuilderMVC.java){"
 
-* FavoritesController.java:
+* [FavoritesController.java](Project/gymbro/src/main/java/com/gymbro/city/controller/FavoritesController.java):
   * Inheritance found at line 9:
-  * "public class FavoritesController extends Controller{"
+  * "public [class FavoritesController](Project/gymbro/src/main/java/com/gymbro/city/controller/FavoritesController.java) extends [Controller](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java){"
 
-* GymController.java:
+* [GymController.java](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java):
   * Inheritance found at line 13:
-  * "public class GymController extends Controller{"
+  * "public [class GymController](Project/gymbro/src/main/java/com/gymbro/city/controller/GymController.java) extends [Controller](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java){"
 
-* MapController.java:
+* [MapController.java](Project/gymbro/src/main/java/com/gymbro/city/controller/MapController.java):
   * Inheritance found at line 13:
-  * "public class MapController extends Controller{"
+  * "public [class MapController](Project/gymbro/src/main/java/com/gymbro/city/controller/MapController.java) extends [Controller](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java){"
 
-* PropertiesMenuController.java:
+* [PropertiesMenuController.java](Project/gymbro/src/main/java/com/gymbro/city/controller/PropertiesMenuController.java):
   * Inheritance found at line 12:
-  * "public class PropertiesMenuController extends Controller{"
+  * "public [class PropertiesMenuController](Project/gymbro/src/main/java/com/gymbro/city/controller/PropertiesMenuController.java) extends [Controller](Project/gymbro/src/main/java/com/gymbro/city/controller/Controller.java){"
 
-* FavoritesModel.java:
+* [FavoritesModel.java](Project/gymbro/src/main/java/com/gymbro/city/model/FavoritesModel.java):
   * Inheritance found at line 13:
-  * "public class FavoritesModel extends Model{"
+  * "public [class FavoritesModel](Project/gymbro/src/main/java/com/gymbro/city/model/FavoritesModel.java) extends [Model](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java){"
 
-* GymModel.java:
+* [GymModel.java](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java):
   * Inheritance found at line 11:
-  * "public class GymModel extends Model{"
+  * "public [class GymModel](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java) extends [Model](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java){"
 
-* MapModel.java:
+* [MapModel.java](Project/gymbro/src/main/java/com/gymbro/city/model/MapModel.java):
   * Inheritance found at line 14:
-  * "public class MapModel extends Model{"
+  * "public [class MapModel](Project/gymbro/src/main/java/com/gymbro/city/model/MapModel.java) extends [Model](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java){"
 
-* Model.java:
+* [Model.java](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java):
   * Implementation of an interface found at line 16:
-  * "public abstract class Model implements Serialization{"
+  * "public [abstract class Model](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java) implements [Serialization](Project/gymbro/src/main/java/com/gymbro/file/Serialization.java){"
 
-* PropertiesMenuModel.java:
+* [PropertiesMenuModel.java](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java):
   * Inheritance found at line 14:
-  * "public class PropertiesMenuModel extends Model{"
+  * "public [class PropertiesMenuModel](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java) extends [Model](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java){"
 
-* FavoritesView.java:
+* [FavoritesView.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 8:
-  * "public class FavoritesView extends View{"
+  * "public [class FavoritesView](Project/gymbro/src/main/java/com/gymbro/city/view/FavoritesView.java) extends [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java){"
 
-* GymView.java:
+* [GymView.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 12:
-  * "public class GymView extends View{"
+  * "public [class GymView](Project/gymbro/src/main/java/com/gymbro/city/view/GymView.java) extends [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java){"
 
-* MapView.java:
+* [MapView.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 8:
-  * "public class MapView extends View{"
+  * "public [class MapView](Project/gymbro/src/main/java/com/gymbro/city/view/MapView.java) extends [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java){"
 
-* PropertiesMenuView.java:
+* [PropertiesMenuView.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 17:
-  * "public class PropertiesMenuView extends View{"
+  * "public [class PropertiesMenuView](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java) extends [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java){"
 
-* Main.java:
+* [Main.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 25:
-  * "public class Main extends Application{"
+  * "public [class Main](Project/gymbro/src/main/java/com/gymbro/Main.java) extends Application{"
 
-* EventEntry.java:
+* [EventEntry.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 12:
-  * "public class EventEntry<T extends Event>{"
+  * "public [class EventEntry](Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java)\<T extends Event>{"
 
-* EventManager.java:
+* [EventManager.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 16:
-  * "public class EventManager<T extends Event>{"
+  * "public [class EventManager](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java)\<T extends Event>{"
 
-* SetupFavorites.java:
+* [SetupFavorites.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 14:
-  * "public class SetupFavorites extends Setup{"
+  * "public [class SetupFavorites](Project/gymbro/src/main/java/com/gymbro/setups/SetupFavorites.java) extends [Setup](Project/gymbro/src/main/java/com/gymbro/setups/Setup.java){"
 
-* FileNameException.java:
+* [FileNameException.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 6:
-  * "public class FileNameException extends Exception{"
+  * "public [class FileNameException](Project/gymbro/src/main/java/com/gymbro/utils/FileNameException.java) extends Exception{"
 
-* Property.java:
+* [Property.java](Project/gymbro/src/main/java/com/gymbro/):
   * Implementation of an interface found at line 8:
-  * "public class Property implements Serialization{"
+  * "public [class Property](Project/gymbro/src/main/java/com/gymbro/utils/Property.java) implements [Serialization](Project/gymbro/src/main/java/com/gymbro/file/Serialization.java){"
 
-* Transform.java:
+* [Transform.java](Project/gymbro/src/main/java/com/gymbro/):
   * Implementation of an interface found at line 11:
-  * "public class Transform implements Serialization{"
+  * "public [class Transform](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java) implements [Serialization](Project/gymbro/src/main/java/com/gymbro/file/Serialization.java){"
 
-* UnknownGymException.java:
+* [UnknownGymException.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 6:
-  * "public class UnknownGymException extends RuntimeException{"
+  * "public [class UnknownGymException](Project/gymbro/src/main/java/com/gymbro/utils/UnknownGymException.java) extends RuntimeException{"
 
-* Vector2D.java:
+* [Vector2D.java](Project/gymbro/src/main/java/com/gymbro/):
   * Implementation of an interface found at line 12:
-  * "public class Vector2D implements Serialization{"
+  * "public [class Vector2D](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java) implements [Serialization](Project/gymbro/src/main/java/com/gymbro/file/Serialization.java){"
 
-* WriteFileException.java:
+* [WriteFileException.java](Project/gymbro/src/main/java/com/gymbro/):
   * Inheritance found at line 6:
-  * "public class WriteFileException extends RuntimeException {"
+  * "public [class WriteFileException](Project/gymbro/src/main/java/com/gymbro/utils/WriteFileException.java) extends RuntimeException {"
 
 ### Secondary criteria
 
@@ -353,16 +350,16 @@
 * JAR File
 
 #### OOP Design patterns
-* Builder
-  * com.gymbro.city.builder
-* Factory
-  * com.gymbro.city.factory
-* MVC
-  * com.gymbro.city.model
-  * com.gymbro.city.view
-  * com.gymbro.city.controller
-* Singleton
-  * com.gymbro.city.window.Window (singleton class)
+* [Builder](Project/gymbro/src/main/java/com/gymbro/city/builder/)
+  * [com.gymbro.city.builder](Project/gymbro/src/main/java/com/gymbro/city/builder/)
+* [Factory](Project/gymbro/src/main/java/com/gymbro/city/factory/)
+  * [com.gymbro.city.factory](Project/gymbro/src/main/java/com/gymbro/city/factory/)
+* [MVC](Project/gymbro/src/main/java/com/gymbro/city)
+  * [com.gymbro.city.model](Project/gymbro/src/main/java/com/gymbro/city/model/)
+  * [com.gymbro.city.view](Project/gymbro/src/main/java/com/gymbro/city/view/)
+  * [com.gymbro.city.controller](Project/gymbro/src/main/java/com/gymbro/city/controller/)
+* [Singleton](Project/gymbro/src/main/java/com/gymbro/window/Window.java)
+  * [com.gymbro.city.window.Window](Project/gymbro/src/main/java/com/gymbro/window/Window.java) (singleton class)
 
 ### Final words
 All of the OOP principles, design patterns and other details about the project are thoroughly described in [project documentation](Documentation/KB3/GymBro_Documentation.pdf).
