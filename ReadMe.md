@@ -9,6 +9,7 @@
 * [Technical details](Documentation/KB3/GymBro_Documentation.pdf)
 * Simulation and demonstration
   * [Video demonstration](Documentation/KB2/Video/Video.mp4)
+* [Importing project to Eclipse IDE](Documentation/Eclipse_Project_Import_Guide.pdf)
 
 ## Fulfillment of criteria
 
@@ -81,22 +82,10 @@
 
 ### Main criteria
 
-* application of design patterns except the Singleton design pattern (builder, factory, MVC)
-* handling exceptional states using own exceptions – one exception is sufficient, but it has to be actually thrown and handled
-* providing a graphical user interface separated from application logic and with at least part of the event handlers created manually
-* explicit use of multithreading – starting an own thread directly or using a higher level API
-* using generics in own classes – implementing and using an own generic class
-* using lambda expressions or method references
-* using default method implementation in interfaces
-* using serialization
-* using agregation, composition and asociation
-* using interfaces
-* organize code base into packages
-* using encapsulation
-* using polymorphism
-* overriding (for example serialize method in serialization interface. "com.gymbro.model.GymModel" overrides this method)
-* overloading (for example setTexture method in "com.gymbro.city.model.Model")
-* at least 2 inheritance hierarchies (9 are present in the projecrt)
+* application of object-oriented mechanisms in the program (See section [OOP Principles](#oop-principles) and [Fulfillment of criteria](#fulfillment-of-criteria))
+* an appropriate use of inheritance, encapsulation, and aggregation (See section [OOP Principles](#oop-principles) and [Fulfillment of criteria](#fulfillment-of-criteria))
+* code organization, and documentation quality. (See [project documentation](Documentation/KB3/GymBro_Documentation.pdf))
+
 
 #### OOP Principles
 
@@ -344,6 +333,22 @@
 
 ### Secondary criteria
 
+* application of [design patterns](#oop-design-patterns) except the Singleton design pattern (builder, factory, MVC)
+* handling exceptional states using own exceptions – one exception is sufficient, but it has to be actually thrown and handled
+* providing a graphical user interface separated from application logic and with at least part of the event handlers created manually
+* explicit use of multithreading – starting an own thread directly or using a higher level API
+* using generics in own classes – implementing and using an own generic class
+* using lambda expressions or method references
+* using default method implementation in interfaces
+* using serialization
+* using [aggregation](#aggregation), [composition](#composition) and [asociation](#associations)
+* using interfaces
+* organize code base into packages
+* using [encapsulation](#encapsulation)
+* using [polymorphism](#polymorphism)
+* overriding (for example serialize method in serialization interface. "com.gymbro.model.GymModel" overrides this method)
+* overloading (for example setTexture method in "com.gymbro.city.model.Model")
+* at least 2 [inheritance hierarchies](#inheritence-hierarchies) (9 are present in the project)
 * CRUD Principle - Create, Read, Update, Delete (GymBro's favorites system)
 * JAR File
 
@@ -358,3 +363,6 @@
   * com.gymbro.city.controller
 * Singleton
   * com.gymbro.city.window.Window (singleton class)
+
+### Final words
+All of the OOP principles, design patterns and other details about the project are thoroughly described in [project documentation](Documentation/KB3/GymBro_Documentation.pdf).
