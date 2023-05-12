@@ -5,58 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69cb2913-17ca-45c5-8011-7238bbe170a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/BuilderExample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/BuilderExample.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/FactoryExample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/FactoryExample.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/GymBro Documentation.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/GymBro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/GymBro.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Implementation1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Implementation1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance6.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance7.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance8.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/Inheritance9.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/MVCExample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/KB3/MVCExample.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Documentation/Video/Video.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/238ca1f3997e037f622010645ff5ba5ae6704f42" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/6376d239f5876cdf23a0d65d1dc6258c58d62050" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9ed78953175621e489db33da9747c38c3c5ad586" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/be57d222ab069fb9dc4edbaa4d314c6be8a7a900" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/3/238ca1f3997e037f622010645ff5ba5ae6704f42" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/3/6376d239f5876cdf23a0d65d1dc6258c58d62050" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/e/9ed78953175621e489db33da9747c38c3c5ad586" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/e/be57d222ab069fb9dc4edbaa4d314c6be8a7a900" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/controller/GymController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/factory/GymFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/factory/GymFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/GymModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/GymModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/city/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Serialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/file/Serialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/handlers/FavoritesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/managers/event/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/managers/event/EventManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/setups/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/setups/Setup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymbro/window/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymbro/window/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/controller/GymController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/controller/GymController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/factory/GymFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/factory/GymFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/model/GymModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/model/GymModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/model/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-fat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/GymBro-fat.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/favorite_gyms.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/expanded.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FavoritesHandler.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FavoritesModel.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GymsHandler.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Parser.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PropertiesMenuModel.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Transform.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Vector2D.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/fatJar/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +139,7 @@
       <recent name="C:\Users\Martin\Repos\FIIT\oop-2023-stv-15-a-dakic-xszabom5\Project\gymbro\src\main\resources\com\gymbro\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.gymbro [run]">
+  <component name="RunManager" selected="Gradle.gymbro [fatJar]">
     <list>
       <item itemvalue="Gradle.gymbro [fatJar]" />
       <item itemvalue="Gradle.gymbro [build]" />
