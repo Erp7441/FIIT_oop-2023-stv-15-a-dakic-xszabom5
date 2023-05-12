@@ -336,8 +336,8 @@
 * explicit use of multithreading – starting an [own thread](/Project/gymbro/src/main/java/com/gymbro/Launcher.java) directly or using a higher level API
 * using generics in [own classes](/Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java) – implementing and using an [own generic class](/Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java)
 * using lambda expressions or method references
-* using [default method implementation in interfaces]((/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java))
-* using [serialization]((/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java))
+* using [default method implementation in interfaces](/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java)
+* using [serialization](/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java)
 * using [aggregation](#aggregation), [composition](#composition) and [asociation](#associations)
 * using [interfaces](/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java)
 * organize code base into [packages](Project/gymbro/src/main/java/com/gymbro)
