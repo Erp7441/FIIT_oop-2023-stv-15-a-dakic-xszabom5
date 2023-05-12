@@ -8,7 +8,7 @@
 * [Versions](https://github.com/OOP-FIIT/oop-2023-stv-15-a-dakic-xszabom5/releases)
 * [Technical details](Documentation/KB3/GymBro_Documentation.pdf)
 * Simulation and demonstration
-  * [Video demonstration](Documentation/KB2/Video/Video.mp4)
+  * [Video demonstration](Documentation/KB3/Video/GymBro_Showcase.mp4)
 * [Importing project to Eclipse IDE](Documentation/Eclipse_Project_Import_Guide.pdf)
 
 ## Fulfillment of criteria
