@@ -166,7 +166,7 @@
 * The "Window" type composites the "Transform" type.
 * The "Window" type composites the "Vector2D" type.
 
-##### Agregation
+##### Aggregation
 * The "BuilderMVC" type aggregates the "Controller" type.
 * The "BuilderMVC" type aggregates the "View" type.
 * The "BuilderMVC" type aggregates the "Model" type.
