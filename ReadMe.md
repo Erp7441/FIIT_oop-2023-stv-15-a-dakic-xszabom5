@@ -210,7 +210,7 @@
   * The "model" object implements polymorphism.
 * [Class FavoritesMenuFxmlController](Project/gymbro/src/main/java/com/gymbro/window/fxml/FavoritesMenuFxmlController.java):
   * The "controller" object implements polymorphism.
-* [[Class Main](Project/gymbro/src/main/java/com/gymbro/Main.java)MenuFxmlController](Project/gymbro/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java):
+* [Class MainMenuFxmlController](Project/gymbro/src/main/java/com/gymbro/window/fxml/MainMenuFxmlController.java):
   * The "controller" object implements polymorphism.
   * The "controller" object implements polymorphism.
 * [Class MapFxmlController](Project/gymbro/src/main/java/com/gymbro/window/fxml/MapFxmlController.java):
