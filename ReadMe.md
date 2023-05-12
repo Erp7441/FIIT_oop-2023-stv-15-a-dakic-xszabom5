@@ -272,82 +272,82 @@
   * Inheritance found at line 14:
   * "public [class PropertiesMenuModel](Project/gymbro/src/main/java/com/gymbro/city/model/PropertiesMenuModel.java) extends [Model](Project/gymbro/src/main/java/com/gymbro/city/model/Model.java){"
 
-* [FavoritesView.java](Project/gymbro/src/main/java/com/gymbro/):
+* [FavoritesView.java](Project/gymbro/src/main/java/com/gymbro/city/view/FavoritesView.java):
   * Inheritance found at line 8:
   * "public [class FavoritesView](Project/gymbro/src/main/java/com/gymbro/city/view/FavoritesView.java) extends [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java){"
 
-* [GymView.java](Project/gymbro/src/main/java/com/gymbro/):
+* [GymView.java](Project/gymbro/src/main/java/com/gymbro/city/view/GymView.java):
   * Inheritance found at line 12:
   * "public [class GymView](Project/gymbro/src/main/java/com/gymbro/city/view/GymView.java) extends [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java){"
 
-* [MapView.java](Project/gymbro/src/main/java/com/gymbro/):
+* [MapView.java](Project/gymbro/src/main/java/com/gymbro/city/view/MapView.java):
   * Inheritance found at line 8:
   * "public [class MapView](Project/gymbro/src/main/java/com/gymbro/city/view/MapView.java) extends [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java){"
 
-* [PropertiesMenuView.java](Project/gymbro/src/main/java/com/gymbro/):
+* [PropertiesMenuView.java](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java):
   * Inheritance found at line 17:
   * "public [class PropertiesMenuView](Project/gymbro/src/main/java/com/gymbro/city/view/PropertiesMenuView.java) extends [View](Project/gymbro/src/main/java/com/gymbro/city/view/View.java){"
 
-* [Main.java](Project/gymbro/src/main/java/com/gymbro/):
+* [Main.java](Project/gymbro/src/main/java/com/gymbro/Main.java):
   * Inheritance found at line 25:
   * "public [class Main](Project/gymbro/src/main/java/com/gymbro/Main.java) extends Application{"
 
-* [EventEntry.java](Project/gymbro/src/main/java/com/gymbro/):
+* [EventEntry.java](Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java):
   * Inheritance found at line 12:
   * "public [class EventEntry](Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java)\<T extends Event>{"
 
-* [EventManager.java](Project/gymbro/src/main/java/com/gymbro/):
+* [EventManager.java](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java):
   * Inheritance found at line 16:
   * "public [class EventManager](Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java)\<T extends Event>{"
 
-* [SetupFavorites.java](Project/gymbro/src/main/java/com/gymbro/):
+* [SetupFavorites.java](Project/gymbro/src/main/java/com/gymbro/setups/SetupFavorites.java):
   * Inheritance found at line 14:
   * "public [class SetupFavorites](Project/gymbro/src/main/java/com/gymbro/setups/SetupFavorites.java) extends [Setup](Project/gymbro/src/main/java/com/gymbro/setups/Setup.java){"
 
-* [FileNameException.java](Project/gymbro/src/main/java/com/gymbro/):
+* [FileNameException.java](Project/gymbro/src/main/java/com/gymbro/utils/FileNameException.java):
   * Inheritance found at line 6:
   * "public [class FileNameException](Project/gymbro/src/main/java/com/gymbro/utils/FileNameException.java) extends Exception{"
 
-* [Property.java](Project/gymbro/src/main/java/com/gymbro/):
+* [Property.java](Project/gymbro/src/main/java/com/gymbro/utils/Property.java):
   * Implementation of an interface found at line 8:
   * "public [class Property](Project/gymbro/src/main/java/com/gymbro/utils/Property.java) implements [Serialization](Project/gymbro/src/main/java/com/gymbro/file/Serialization.java){"
 
-* [Transform.java](Project/gymbro/src/main/java/com/gymbro/):
+* [Transform.java](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java):
   * Implementation of an interface found at line 11:
   * "public [class Transform](Project/gymbro/src/main/java/com/gymbro/utils/Transform.java) implements [Serialization](Project/gymbro/src/main/java/com/gymbro/file/Serialization.java){"
 
-* [UnknownGymException.java](Project/gymbro/src/main/java/com/gymbro/):
+* [UnknownGymException.java](Project/gymbro/src/main/java/com/gymbro/utils/UnknownGymException.java):
   * Inheritance found at line 6:
   * "public [class UnknownGymException](Project/gymbro/src/main/java/com/gymbro/utils/UnknownGymException.java) extends RuntimeException{"
 
-* [Vector2D.java](Project/gymbro/src/main/java/com/gymbro/):
+* [Vector2D.java](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java):
   * Implementation of an interface found at line 12:
   * "public [class Vector2D](Project/gymbro/src/main/java/com/gymbro/utils/Vector2D.java) implements [Serialization](Project/gymbro/src/main/java/com/gymbro/file/Serialization.java){"
 
-* [WriteFileException.java](Project/gymbro/src/main/java/com/gymbro/):
+* [WriteFileException.java](Project/gymbro/src/main/java/com/gymbro/utils/WriteFileException.java):
   * Inheritance found at line 6:
   * "public [class WriteFileException](Project/gymbro/src/main/java/com/gymbro/utils/WriteFileException.java) extends RuntimeException {"
 
 ### Secondary criteria
 
-* application of [design patterns](#oop-design-patterns) except the Singleton design pattern (builder, factory, MVC)
-* handling exceptional states using own exceptions – one exception is sufficient, but it has to be actually thrown and handled
-* providing a graphical user interface separated from application logic and with at least part of the event handlers created manually
-* explicit use of multithreading – starting an own thread directly or using a higher level API
-* using generics in own classes – implementing and using an own generic class
+* application of [design patterns](#oop-design-patterns) except the [Singleton](Project/gymbro/src/main/java/com/gymbro/window/Window.java) design pattern - [Builder](Project/gymbro/src/main/java/com/gymbro/city/builder/), [Factory](Project/gymbro/src/main/java/com/gymbro/city/factory/), [MVC (Model-View-Controller)](Project/gymbro/src/main/java/com/gymbro/city/)
+* handling exceptional states using [own exceptions](/Project/gymbro/src/main/java/com/gymbro/utils/FileNameException.java) – one exception is sufficient, but it has to be actually [thrown](/Project/gymbro/src/main/java/com/gymbro/file/Parser.java) and [handled](/Project/gymbro/src/main/java/com/gymbro/handlers/GymsHandler.java)
+* providing a graphical user interface separated from application logic and with at least part of the [event handlers created manually](/Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java)
+* explicit use of multithreading – starting an [own thread](/Project/gymbro/src/main/java/com/gymbro/Launcher.java) directly or using a higher level API
+* using generics in [own classes](/Project/gymbro/src/main/java/com/gymbro/managers/event/EventManager.java) – implementing and using an [own generic class](/Project/gymbro/src/main/java/com/gymbro/managers/event/EventEntry.java)
 * using lambda expressions or method references
-* using default method implementation in interfaces
-* using serialization
+* using [default method implementation in interfaces]((/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java))
+* using [serialization]((/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java))
 * using [aggregation](#aggregation), [composition](#composition) and [asociation](#associations)
-* using interfaces
-* organize code base into packages
+* using [interfaces](/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java)
+* organize code base into [packages](Project/gymbro/src/main/java/com/gymbro)
 * using [encapsulation](#encapsulation)
 * using [polymorphism](#polymorphism)
-* overriding (for example serialize method in serialization interface. "com.gymbro.model.GymModel" overrides this method)
-* overloading (for example setTexture method in "com.gymbro.city.model.Model")
+* overriding (for example "serialize" method in "[Serialization](/Project/gymbro/src/main/java/com/gymbro/file/Serialization.java)" interface. "[com.gymbro.city.model.GymModel](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java)" overrides this method)
+* overloading (for example setTexture method in "[com.gymbro.city.model.GymModel](Project/gymbro/src/main/java/com/gymbro/city/model/GymModel.java)")
 * at least 2 [inheritance hierarchies](#inheritence-hierarchies) (9 are present in the project)
 * CRUD Principle - Create, Read, Update, Delete (GymBro's favorites system)
-* JAR File
+* JAR File - Fat jar file for both [Windows](/Project/gymbro/build/libs/GymBro-windows.jar) and [Linux](/Project/gymbro/build/libs/GymBro-linux.jar)
 
 #### OOP Design patterns
 * [Builder](Project/gymbro/src/main/java/com/gymbro/city/builder/)
