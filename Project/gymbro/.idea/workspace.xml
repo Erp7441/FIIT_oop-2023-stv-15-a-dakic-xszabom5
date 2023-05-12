@@ -11,13 +11,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-0.1.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/gymbro-0.1.tar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-0.1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/gymbro-0.1.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/scripts/gymbro" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/gymbro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-0.1.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-0.1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/expanded.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/fatJar/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
