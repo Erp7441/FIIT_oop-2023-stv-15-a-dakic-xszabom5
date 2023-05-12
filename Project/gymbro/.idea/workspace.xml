@@ -11,29 +11,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/controller/GymController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/controller/GymController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/factory/GymFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/factory/GymFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/model/GymModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/model/GymModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/city/model/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gymbro/window/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-fat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/GymBro-fat.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-linux.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/GymBro-windows.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/favorite_gyms.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-0.1.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/gymbro-0.1.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/gymbro-0.1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/gymbro-0.1.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/gymbro-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/expanded.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FavoritesHandler.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FavoritesModel.class.uniqueId6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GymsHandler.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Parser.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PropertiesMenuModel.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Transform.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Vector2D.class.uniqueId5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/gymbro" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/gymbro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/fatJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ReadMe.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,26 +95,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/martin/Desktop/oop-2023-stv-15-a-dakic-xszabom5/ReadMe.md",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15136719",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "indent.rainbow.settings.IrConfigurableAdvanced",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/martin/Desktop/oop-2023-stv-15-a-dakic-xszabom5/ReadMe.md&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;indent.rainbow.settings.IrConfigurableAdvanced&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Martin\Repos\FIIT\oop-2023-stv-15-a-dakic-xszabom5\Project\gymbro\src\main\resources\com\gymbro\config" />
@@ -167,6 +151,7 @@
       <workItem from="1683576286665" duration="2790000" />
       <workItem from="1683661295542" duration="2264000" />
       <workItem from="1683803948425" duration="429000" />
+      <workItem from="1683892780192" duration="110000" />
     </task>
     <servers />
   </component>
